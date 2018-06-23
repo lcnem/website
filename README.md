@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## 動かし方by宮川
+```
+# ディレクトリを保存したいところに移動してから
+git clone https://github.com/LCNEM/lcnem.git
+cd lcnem
+npm install # nodeのインストールがまだなら先にしてから
+ng serve
+```
+これで、http://localhost:4200/にアクセスしたら表示されるはず。
