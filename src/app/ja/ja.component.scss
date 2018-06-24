@@ -1,22 +1,64 @@
 mat-sidenav-content {
-    background-image: url(../../assets/images/background.jpg);
-    background-attachment: fixed;
+    // background-image: url(../../assets/images/background.jpg);
+    // background-attachment: fixed;
+    color: #333;
 }
 
-h3 {
+h2 {
     text-align: center;
-    font-size: 300%;
-    color: white;
+    font-size: 38px;
+    margin-bottom: 70px;
+    &::after {
+        display: block;
+        content: "";
+        width: 50px;
+        margin: 0 auto;
+        background-color: #f7a800;
+        height: 5px;
+        margin-top: 15px;
+    }
+}
+p { 
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 img {
     max-width: 100%;
+    // &.main {
+    //     position: absolute;
+    //     width: 60%;
+    //     right: -5%;
+    //     top: 50vh;
+    // }
+}
+
+.background-contain {
+    text-align: center;
+    h1 {
+        margin-top: 150px;
+        font-size: 300%;
+        padding: 0 16px;
+    }
+    p {
+        font-size: 20px;
+        color: #888888;
+        margin-top: 60px;
+        padding: 0 30px;
+    }
 }
 
 .item {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    margin: 60px -16px;
+    margin: -16px;
+    padding: 90px 16px;
+    .contentZone {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &.bg-white {
+        background-color: #fff;
+    }
 }
 
 .item > div {
@@ -24,11 +66,14 @@ img {
 }
 
 .members {
-    background-color: #f6f6f6;
+    h2 {
+        margin-top: 0;
+    }
+    background-color: #fff;
     .membersListWrapper {
         display: flex;
         flex-wrap: wrap;
-        padding: 0 5%;
+        padding: 0;
         justify-content: space-around;
         max-width: 900px;
         margin: 0 auto;
@@ -38,7 +83,7 @@ img {
             text-align: center;
             &.dammy {
                 width: 140px;
-                margin: 0;
+                margin: 0 10px;
             }
             .imgBox {
                 width: 140px;
@@ -74,8 +119,29 @@ img {
                     &.fa-2x {
                         font-size: 1.5em
                     }
+                    &.disabled {
+                        color: #aaa;
+                    }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .background-contain {
+        text-align: center;
+        h1 {
+            margin-top: 100px;
+            font-size: 300%;
+            padding: 0 16px;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 16px;
+            color: #888888;
+            margin-top: 30px;
+            padding: 0 30px;
         }
     }
 }

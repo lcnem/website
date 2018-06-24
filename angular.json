@@ -24,7 +24,7 @@
             ],
             "styles": [
               {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+                "input": "src/theme/nem-theme.scss"
               },
               "src/styles.css"
             ],

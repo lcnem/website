@@ -1,3 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 600 600" width="600" height="600"><defs><path d="M280 350C280 405.19 235.2 450 180 450C124.81 450 80 405.19 80 350C80 294.81 124.81 250 180 250C235.2 250 280 294.81 280 350Z" id="brESFVI33"></path><path d="M520 350C520 405.19 475.19 450 420 450C364.81 450 320 405.19 320 350C320 294.81 364.81 250 420 250C475.19 250 520 294.81 520 350Z" id="g3fAFojj0"></path><path d="M400 200C400 255.19 355.19 300 300 300C244.81 300 200 255.19 200 200C200 144.81 244.81 100 300 100C355.19 100 400 144.81 400 200Z" id="awKnshogY"></path></defs><g><g><g><use xlink:href="#brESFVI33" opacity="1" fill="#6495ed" fill-opacity="1"></use></g><g><use xlink:href="#g3fAFojj0" opacity="1" fill="#6495ed" fill-opacity="1"></use></g><g><use xlink:href="#awKnshogY" opacity="1" fill="#6495ed" fill-opacity="1"></use></g></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6495ED;}
+</style>
+<g>
+	<g>
+		<g>
+			<g>
+				<path id="brESFVI33" class="st0" d="M280,350c0,55.2-44.8,100-100,100c-55.2,0-100-44.8-100-100s44.8-100,100-100
+					C235.2,250,280,294.8,280,350z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path id="g3fAFojj0" class="st0" d="M520,350c0,55.2-44.8,100-100,100s-100-44.8-100-100s44.8-100,100-100S520,294.8,520,350z"
+					/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path id="awKnshogY" class="st0" d="M400,200c0,55.2-44.8,100-100,100s-100-44.8-100-100s44.8-100,100-100S400,144.8,400,200z"
+					/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
