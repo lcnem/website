@@ -1,0 +1,81 @@
+mat-sidenav-content {
+    background-image: url(../../assets/images/background.jpg);
+    background-attachment: fixed;
+}
+
+h3 {
+    text-align: center;
+    font-size: 300%;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 60px -16px;
+}
+
+.item > div {
+    padding: 16px;
+}
+
+.members {
+    background-color: #f6f6f6;
+    .membersListWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 5%;
+        justify-content: space-around;
+        max-width: 900px;
+        margin: 0 auto;
+        .membersList {
+            list-style: none;
+            margin: 30px 10px;
+            text-align: center;
+            &.dammy {
+                width: 140px;
+                margin: 0;
+            }
+            .imgBox {
+                width: 140px;
+                height: 140px;
+                margin: 0 auto;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    transition-duration: .3s;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                        filter: contrast(130%);
+                    }
+                }
+            }
+            .position{
+                color: #888;
+                margin: 10px 0 0 0;
+            }
+            .name {
+                font-size: 18px;
+                color: #444;
+                margin-bottom: 0 0 10px 0;
+            }
+            .snsLinks {
+                display: inline-flex;
+                width: 75px;
+                justify-content: space-between;
+                i {
+                    color: #333;
+                    &.fa-2x {
+                        font-size: 1.5em
+                    }
+                }
+            }
+        }
+    }
+}
