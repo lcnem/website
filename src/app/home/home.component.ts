@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
     constructor(private router: Router) { }
 
     ngOnInit() {
-        this.router.navigate(["/en"]);
+        let lang = window.navigator.language.substr(0, 2) == "ja" ? "ja" : "en";
+        this.router.navigate(["/" + lang]);
     }
 }
