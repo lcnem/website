@@ -17,20 +17,8 @@ mat-toolbar {
     z-index: 100;
 }
 
-mat-toolbar .mat-button {
-    min-width: 0 !important;
-}
-
 mat-sidenav {
     width: 240px;
-}
-
-mat-sidenav .mat-button {
-    text-align: left !important;
-}
-
-mat-toolbar *{
-    color:white;
 }
 
 .fill-remaining-space{
