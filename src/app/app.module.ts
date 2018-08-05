@@ -6,8 +6,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EnComponent } from './en/en.component';
-import { JaComponent } from './ja/ja.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 
@@ -21,19 +19,19 @@ import {
     MatDividerModule,
     MatButtonModule
 } from '@angular/material';
+import { FormsModule } from '../../node_modules/@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    EnComponent,
-    JaComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     FlexLayoutModule,
     MatButtonModule,
     MatDividerModule,
