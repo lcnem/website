@@ -6,5 +6,7 @@ import { Injectable } from '@angular/core';
 export class GlobalDataService {
   public lang = "en";
 
-  constructor() { }
+  constructor() {
+    this.lang = window.navigator.language.substr(0,2) == "ja" ? "ja" : "en";
+  }
 }
