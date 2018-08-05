@@ -13,10 +13,7 @@ export class HomeComponent implements OnInit {
       public global: GlobalDataService
     ) { }
 
-    ngOnInit() {
-        let lang = window.navigator.language.substr(0, 2) == "ja" ? "ja" : "en";
-        this.router.navigate(["/" + lang]);
-    }
+    ngOnInit() {}
 
     public translation = {
       language: {
