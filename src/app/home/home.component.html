@@ -4,21 +4,20 @@
         </mat-toolbar>
         <div fxLayout="column">
             <mat-form-field fxFlex="100">
-                <mat-select placeholder="{{translation.language[global.lang]}}" value="ja">
-                    <mat-option routerLink="/en">English</mat-option>
+                <mat-select placeholder="{{translation.language[global.lang]}}" [(ngModel)]="global.lang">
+                    <mat-option value="en">English</mat-option>
                     <mat-option value="ja">日本語</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-nav-list>
-                <a mat-list-item href="https://twitter.com/lcnem_ja" target="_blank">
+                <a mat-list-item href="https://twitter.com/lcnem_{{global.lang}}" target="_blank">
                     <mat-icon></mat-icon>
                     Twitter
                 </a>
                 <mat-divider></mat-divider>
-                <a mat-list-item href="https://docs.google.com/forms/d/e/1FAIpQLSd-BEM6KW-rwJaGblfWHMxo5zXPgViCq-442UB8nqkV7f1rTw/viewform?usp=sf_link"
-                    target="_blank">
+                <a mat-list-item href="{{translation.contactsForm[global.lang]}}" target="_blank">
                     <mat-icon>contacts</mat-icon>
-                    問い合わせ
+                    {{translation.contacts[global.lang]}}
                 </a>
             </mat-nav-list>
         </div>
@@ -34,17 +33,17 @@
         </mat-toolbar>
         <div class="out-toolbar mat-typography">
             <div class="top">
-                <h1>デジタル通貨のその先へ</h1>
-                <p>法で守られたブロックチェーン上の電子マネー</p>
+                <h1>{{translation.beyondDigitalCurrencies[global.lang]}}</h1>
+                <p>{{translation.underRegulations[global.lang]}}</p>
             </div>
             <div fxLayout="row wrap" class="item">
                 <div fxFlex="50" fxFlex.xs="100">
                     <h2>LCNEMとは</h2>
                     <p>
-                        ブロックチェーンに取引が記録される仮想通貨は、従来の送金システムよりも手数料が極めて安い一方、使用には相場変動リスクが伴います。 <br />
-                        LCNEMは、仮想通貨ではない法定通貨の電子マネーをブロックチェーン上に発行し、取引を記録します。<br />
-                        担保となる資産は日本国の法律により政府に供託するため、裏付けなき発行の心配がありません。<br />
-                        ブロックチェーンにはNEMを使います。
+                        ブロックチェーンに取引が記録される仮想通貨は、従来の送金システムよりも手数料が極めて安い一方、使用には相場変動リスクが伴います。
+                        <br /> LCNEMは、仮想通貨ではない法定通貨の電子マネーをブロックチェーン上に発行し、取引を記録します。
+                        <br /> 担保となる資産は日本国の法律により政府に供託するため、裏付けなき発行の心配がありません。
+                        <br /> ブロックチェーンにはNEMを使います。
                     </p>
                 </div>
                 <div fxFlex="50" fxFlex.xs="100">
@@ -57,8 +56,8 @@
                 <div fxFlex="50" fxFlex.xs="100">
                     <h2>優しい経済</h2>
                     <p>
-                        従来のシステムよりも極めて安い手数料により、送金や決済に適しています。<br />
-                        それだけではなく、プレゼントやチップ、サポートなどにも適しています。
+                        従来のシステムよりも極めて安い手数料により、送金や決済に適しています。
+                        <br /> それだけではなく、プレゼントやチップ、サポートなどにも適しています。
                     </p>
                 </div>
                 <div fxFlex="50" fxFlex.xs="100">
@@ -71,8 +70,8 @@
                 <div fxFlex="50" fxFlex.xs="100">
                     <h2>LCNEM Wallet</h2>
                     <p style="margin-bottom: 40px;">
-                        GoogleアカウントでログインできるNEMブロックチェーンのウォレットです。<br />
-                        Googleアカウントと秘密鍵を結びつけるため、従来のウォレットに必須であった秘密鍵管理なしにNEMブロックチェーン上の取引が可能です。
+                        GoogleアカウントでログインできるNEMブロックチェーンのウォレットです。
+                        <br /> Googleアカウントと秘密鍵を結びつけるため、従来のウォレットに必須であった秘密鍵管理なしにNEMブロックチェーン上の取引が可能です。
                     </p>
                     <p style="text-align: center;">
                         <a mat-button color="accent" href="https://wallet.lcnem.cc" target="_blank">いますぐつかう</a>
@@ -84,22 +83,25 @@
                     </p>
                 </div>
             </div>
-            <div fxLayout="row-reverse wrap" class="item bg-white">
-                <div fxFlex="50" fxFlex.xs="100">
-                    <h2>Consulting</h2>
-                    <p>
-                        NEMブロックチェーンの技術コンサルティングを行っています。実績:PoliPoli
-                    </p>
-                    <p style="text-align: center;">
-                        <a mat-button color="accent" href="https://docs.google.com/forms/d/e/1FAIpQLSd-BEM6KW-rwJaGblfWHMxo5zXPgViCq-442UB8nqkV7f1rTw/viewform?usp=sf_link" target="_blank">問い合わせ</a>
-                    </p>
+            <ng-template *ngIf="global.lang == 'ja'">
+                <div fxLayout="row-reverse wrap" class="item bg-white">
+                    <div fxFlex="50" fxFlex.xs="100">
+                        <h2>Consulting</h2>
+                        <p>
+                            NEMブロックチェーンの技術コンサルティングを行っています。実績:PoliPoli
+                        </p>
+                        <p style="text-align: center;">
+                            <a mat-button color="accent" href="{{translation.contacts[global.lang]}}"
+                                target="_blank">問い合わせ</a>
+                        </p>
+                    </div>
+                    <div fxFlex="50" fxFlex.xs="100">
+                        <p style="text-align: center;">
+                            <img src="assets/images/polipoli.png" />
+                        </p>
+                    </div>
                 </div>
-                <div fxFlex="50" fxFlex.xs="100">
-                    <p style="text-align: center;">
-                        <img src="assets/images/polipoli.png" />
-                    </p>
-                </div>
-            </div>
+            </ng-template>
             <div class="item members bg-white">
                 <h2>Members</h2>
                 <ul class="membersListWrapper">
@@ -110,9 +112,15 @@
                         <p class="position">CEO</p>
                         <p class="name">Yu Kimura</p>
                         <div class="snsLinks">
-                            <a target="_blank" href="https://twitter.com/YuKimura45z"><i class="fab fa-twitter-square fa-2x"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/YuKimura45z"><i class="fab fa-facebook-square fa-2x"></i></a>
-                            <a target="_blank" href="https://github.com/YuKimura45z" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+                            <a target="_blank" href="https://twitter.com/YuKimura45z">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/YuKimura45z">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/YuKimura45z" target="_blank">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
                         </div>
                     </li>
                     <li class="membersList">
@@ -122,9 +130,15 @@
                         <p class="position">Marketing,Translation</p>
                         <p class="name">Takeru</p>
                         <div class="snsLinks">
-                            <span><i class="fab fa-twitter-square fa-2x disabled"></i></span>
-                            <span><i class="fab fa-facebook-square fa-2x disabled"></i></span>
-                            <a target="_blank" href="https://github.com/Takeruakira"><i class="fab fa-github-square fa-2x"></i></a>
+                            <span>
+                                <i class="fab fa-twitter-square fa-2x disabled"></i>
+                            </span>
+                            <span>
+                                <i class="fab fa-facebook-square fa-2x disabled"></i>
+                            </span>
+                            <a target="_blank" href="https://github.com/Takeruakira">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
                         </div>
                     </li>
                     <li class="membersList">
@@ -134,9 +148,15 @@
                         <p class="position">Marketing,Development</p>
                         <p class="name">Ryusei Kurata</p>
                         <div class="snsLinks">
-                            <a target="_blank" href="https://twitter.com/amnosmusic13"><i class="fab fa-twitter-square fa-2x"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100018072949254"><i class="fab fa-facebook-square fa-2x"></i></a>
-                            <a target="_blank" href="https://github.com/ryuseikurata"><i class="fab fa-github-square fa-2x"></i></a>
+                            <a target="_blank" href="https://twitter.com/amnosmusic13">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100018072949254">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/ryuseikurata">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
                         </div>
                     </li>
                     <li class="membersList">
@@ -146,9 +166,15 @@
                         <p class="position">Marketing,Development</p>
                         <p class="name">Ryotaro Miyagawa</p>
                         <div class="snsLinks">
-                            <a target="_blank" href="https://twitter.com/pareriva_d_taro?lang=ja"><i class="fab fa-twitter-square fa-2x"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100015198604331"><i class="fab fa-facebook-square fa-2x"></i></a>
-                            <a target="_blank" href="https://github.com/Dragon-taro"><i class="fab fa-github-square fa-2x"></i></a>
+                            <a target="_blank" href="https://twitter.com/pareriva_d_taro?lang=ja">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100015198604331">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/Dragon-taro">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
                         </div>
                     </li>
                     <li class="membersList">
@@ -158,9 +184,15 @@
                         <p class="position">Marketing</p>
                         <p class="name">Ryoma Ogawa</p>
                         <div class="snsLinks">
-                            <a target="_blank" href="https://twitter.com/dragonhorser?lang=ja"><i class="fab fa-twitter-square fa-2x"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100018072949254"><i class="fab fa-facebook-square fa-2x"></i></a>
-                            <a target="_blank" href="https://github.com/ryoma0110"><i class="fab fa-github-square fa-2x"></i></a>
+                            <a target="_blank" href="https://twitter.com/dragonhorser?lang=ja">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100018072949254">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/ryoma0110">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
                         </div>
                     </li>
                 </ul>
