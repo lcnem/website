@@ -10,8 +10,7 @@ import { GlobalDataService } from '../services/global-data.service';
 export class HomeComponent implements OnInit {
 
     constructor(
-      public global: GlobalDataService,
-      private router: Router
+      public global: GlobalDataService
     ) { }
 
     ngOnInit() {
@@ -21,7 +20,7 @@ export class HomeComponent implements OnInit {
 
     public translation = {
       language: {
-        en: "language",
+        en: "Language",
         ja: "言語"
       }
     }
