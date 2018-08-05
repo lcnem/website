@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalDataService } from '../services/global-data.service';
 
 @Component({
     selector: 'app-home',
@@ -8,10 +9,20 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-    constructor(private router: Router) { }
+    constructor(
+      public global: GlobalDataService,
+      private router: Router
+    ) { }
 
     ngOnInit() {
         let lang = window.navigator.language.substr(0, 2) == "ja" ? "ja" : "en";
         this.router.navigate(["/" + lang]);
+    }
+
+    public translation = {
+      language: {
+        en: "language",
+        ja: "言語"
+      }
     }
 }
