@@ -8,7 +8,7 @@ h2 {
         content: "";
         width: 50px;
         margin: 0 auto;
-        background-color: #f7a800;
+        background-color: blue;
         height: 5px;
         margin-top: 15px;
     }
@@ -46,9 +46,6 @@ img {
 .item {
     margin: -16px;
     padding: 90px 16px;
-    &.bg-white {
-        background-color: #fff;
-    }
 }
 
 .item > div {
@@ -59,7 +56,6 @@ img {
     h2 {
         margin-top: 0;
     }
-    background-color: #fff;
     .membersListWrapper {
         display: flex;
         flex-wrap: wrap;
@@ -91,12 +87,10 @@ img {
                 }
             }
             .position{
-                color: #888;
                 margin: 10px 0 0 0;
             }
             .name {
                 font-size: 18px;
-                color: #444;
                 margin-bottom: 0 0 10px 0;
             }
             .snsLinks {

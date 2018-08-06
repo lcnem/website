@@ -24,7 +24,7 @@
             ],
             "styles": [
               {
-                "input": "src/theme/nem-theme.scss"
+                "input": "src/theme/light-theme.scss"
               },
               "src/styles.css"
             ],
