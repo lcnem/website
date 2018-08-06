@@ -33,18 +33,18 @@
         </mat-toolbar>
         <div class="out-toolbar mat-typography">
             <div fxLayout="row-reverse wrap" class="item top">
-                <div fxFlex="50" fxFlex.xs="100">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
                     <h1>{{translation.beyondDigitalCurrencies[global.lang]}}</h1>
                     <p>{{translation.underRegulations[global.lang]}}</p>
                 </div>
-                <div fxFlex="50" fxFlex.xs="100">
+                <div fxFlex="50" fxFlex.xs="100" class="imgWrapper">
                     <p style="text-align: center;">
                         <img src="favicon.svg" />
                     </p>
                 </div>
             </div>
             <div fxLayout="row wrap" class="item">
-                <div fxFlex="50" fxFlex.xs="100">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
                     <h2>LCNEMとは</h2>
                     <p>
                         ブロックチェーンに取引が記録される仮想通貨は、従来の送金システムよりも手数料が極めて安い一方、使用には相場変動リスクが伴います。
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div fxLayout="row-reverse wrap" class="item">
-                <div fxFlex="50" fxFlex.xs="100">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
                     <h2>優しい経済</h2>
                     <p>
                         従来のシステムよりも極めて安い手数料により、送金や決済に適しています。
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div fxLayout="row wrap" class="item">
-                <div fxFlex="50" fxFlex.xs="100">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
                     <h2>LCNEM Wallet</h2>
                     <p style="margin-bottom: 40px;">
                         GoogleアカウントでログインできるNEMブロックチェーンのウォレットです。
@@ -92,7 +92,7 @@
             </div>
             <ng-template *ngIf="global.lang == 'ja'">
                 <div fxLayout="row-reverse wrap" class="item bg-white">
-                    <div fxFlex="50" fxFlex.xs="100">
+                    <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
                         <h2>Consulting</h2>
                         <p>
                             NEMブロックチェーンの技術コンサルティングを行っています。実績:PoliPoli

@@ -31,11 +31,16 @@ img {
 .item {
     margin: -16px;
     padding: 90px 16px;
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     &.top {
         text-align: center;
         font-weight: bold;
         position: relative;
-        height: 90vh;
+        height: 100vh;
         padding-top: 0;
         h1 {
             font-size: 300%;
@@ -47,8 +52,15 @@ img {
             margin-top: 40px;
             padding: 0 30px;
         }
-        img {
-            width: 120%;
+        .imgWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                width: 130% !important;
+                max-width: 130% !important;
+                margin-left: -15px;
+            }
         }
     }
     
