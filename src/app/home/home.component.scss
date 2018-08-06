@@ -57,8 +57,8 @@ img {
             flex-direction: column;
             justify-content: center;
             img {
-                width: 130% !important;
-                max-width: 130% !important;
+                width: 130%;
+                max-width: 130%;
                 margin-left: -15px;
             }
         }
@@ -130,19 +130,34 @@ img {
 }
 
 @media screen and (max-width: 599px) {
-    .top {
-        text-align: center;
-        h1 {
-            margin-top: 100px;
-            font-size: 300%;
-            padding: 0 16px;
-            line-height: 1.2;
-        }
-        p {
-            font-size: 16px;
-            color: #888888;
-            margin-top: 30px;
-            padding: 0 30px;
+    .item {
+        padding: 45px 16px;
+        &.top {
+            text-align: center;
+            h1 {
+                margin-top: 50px;
+                font-size: 300%;
+                padding: 0 16px;
+                line-height: 1.2;
+            }
+            p {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+            .imgWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p {
+                    margin: 0;
+                    padding: 0;
+                    img {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        margin: -30px 0;
+                    }
+                }
+            }
         }
     }
 }
