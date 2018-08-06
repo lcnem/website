@@ -8,7 +8,7 @@ h2 {
         content: "";
         width: 50px;
         margin: 0 auto;
-        background-color: #f7a800;
+        background-color: blue;
         height: 5px;
         margin-top: 15px;
     }
@@ -28,27 +28,42 @@ img {
     // }
 }
 
-.top {
-    text-align: center;
-    h1 {
-        margin-top: 150px;
-        font-size: 300%;
-        padding: 0 16px;
-    }
-    p {
-        font-size: 20px;
-        color: #888888;
-        margin-top: 60px;
-        padding: 0 30px;
-    }
-}
-
 .item {
     margin: -16px;
     padding: 90px 16px;
-    &.bg-white {
-        background-color: #fff;
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+    &.top {
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        height: 100vh;
+        padding-top: 0;
+        h1 {
+            font-size: 300%;
+            padding: 0 16px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 40px;
+            padding: 0 30px;
+        }
+        .imgWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                width: 130%;
+                max-width: 130%;
+                margin-left: -15px;
+            }
+        }
+    }
+    
 }
 
 .item > div {
@@ -59,7 +74,6 @@ img {
     h2 {
         margin-top: 0;
     }
-    background-color: #fff;
     .membersListWrapper {
         display: flex;
         flex-wrap: wrap;
@@ -91,12 +105,10 @@ img {
                 }
             }
             .position{
-                color: #888;
                 margin: 10px 0 0 0;
             }
             .name {
                 font-size: 18px;
-                color: #444;
                 margin-bottom: 0 0 10px 0;
             }
             .snsLinks {
@@ -118,19 +130,34 @@ img {
 }
 
 @media screen and (max-width: 599px) {
-    .top {
-        text-align: center;
-        h1 {
-            margin-top: 100px;
-            font-size: 300%;
-            padding: 0 16px;
-            line-height: 1.2;
-        }
-        p {
-            font-size: 16px;
-            color: #888888;
-            margin-top: 30px;
-            padding: 0 30px;
+    .item {
+        padding: 45px 16px;
+        &.top {
+            text-align: center;
+            h1 {
+                margin-top: 50px;
+                font-size: 300%;
+                padding: 0 16px;
+                line-height: 1.2;
+            }
+            p {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+            .imgWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p {
+                    margin: 0;
+                    padding: 0;
+                    img {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        margin: -30px 0;
+                    }
+                }
+            }
         }
     }
 }

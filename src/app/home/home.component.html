@@ -1,0 +1,195 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav class="mat-elevation-z16">
+        <mat-toolbar class="background-contain" [ngStyle]="{'background-image': 'url(favicon.svg)'}">
+        </mat-toolbar>
+        <div fxLayout="column">
+            <mat-form-field fxFlex="100">
+                <mat-select placeholder="{{translation.language[global.lang]}}" [(ngModel)]="global.lang">
+                    <mat-option value="en">English</mat-option>
+                    <mat-option value="ja">日本語</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-nav-list>
+                <a mat-list-item href="https://twitter.com/lcnem_{{global.lang}}" target="_blank">
+                    <mat-icon></mat-icon>
+                    Twitter
+                </a>
+                <mat-divider></mat-divider>
+                <a mat-list-item href="{{translation.contactsForm[global.lang]}}" target="_blank">
+                    <mat-icon>contacts</mat-icon>
+                    {{translation.contacts[global.lang]}}
+                </a>
+            </mat-nav-list>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="mat-elevation-z4">
+            <button mat-icon-button (click)="sidenav.toggle()" fxHide fxShow.xs fxShow.sm>
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <span>LCNEM</span>
+            <span class="fill-remaining-space"></span>
+        </mat-toolbar>
+        <div class="out-toolbar mat-typography">
+            <div fxLayout="row-reverse wrap" class="item top">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
+                    <h1>{{translation.beyondDigitalCurrencies[global.lang]}}</h1>
+                    <p>{{translation.underRegulations[global.lang]}}</p>
+                </div>
+                <div fxFlex="50" fxFlex.xs="100" class="imgWrapper">
+                    <p style="text-align: center;">
+                        <img src="favicon.svg" />
+                    </p>
+                </div>
+            </div>
+            <div fxLayout="row wrap" class="item">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
+                    <h2>What is LCNEM?</h2>
+                    <p>{{translation.whatIs[global.lang]}}</p>
+                </div>
+                <div fxFlex="50" fxFlex.xs="100">
+                    <p style="text-align: center;">
+                        <img class="main" src="assets/images/vector/lcnem-nem.svg" />
+                    </p>
+                </div>
+            </div>
+            <div fxLayout="row-reverse wrap" class="item">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
+                    <h2>Friendly economy</h2>
+                    <p>{{translation.friendlyEconomy[global.lang]}}</p>
+                </div>
+                <div fxFlex="50" fxFlex.xs="100">
+                    <p style="text-align: center;">
+                        <img class="main" src="assets/images/vector/lcnem-globe.svg" />
+                    </p>
+                </div>
+            </div>
+            <div fxLayout="row wrap" class="item">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
+                    <h2>LCNEM Wallet</h2>
+                    <p style="margin-bottom: 40px;">{{translation.lcnemWallet[global.lang]}}</p>
+                    <p style="text-align: center;">
+                        <a mat-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+                    </p>
+                </div>
+                <div fxFlex="50" fxFlex.xs="100">
+                    <p style="text-align: center;">
+                        <img src="assets/images/mockup.png" />
+                    </p>
+                </div>
+            </div>
+            <div fxLayout="row-reverse wrap" class="item bg-white" *ngIf="global.lang == 'ja'">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
+                    <h2>Consulting</h2>
+                    <p>
+                        NEMブロックチェーンの技術コンサルティングを行っています。実績:PoliPoli
+                    </p>
+                    <p style="text-align: center;">
+                        <a mat-button color="accent" href="{{translation.contactsForm[global.lang]}}" target="_blank">問い合わせ</a>
+                    </p>
+                </div>
+                <div fxFlex="50" fxFlex.xs="100">
+                    <p style="text-align: center;">
+                        <img src="assets/images/polipoli.png" />
+                    </p>
+                </div>
+            </div>
+            <div class="item members">
+                <h2>Members</h2>
+                <ul class="membersListWrapper">
+                    <li class="membersList">
+                        <div class="imgBox">
+                            <img src="assets/images/profile/yu.jpg" />
+                        </div>
+                        <p class="position">CEO</p>
+                        <p class="name">Yu Kimura</p>
+                        <div class="snsLinks">
+                            <a target="_blank" href="https://twitter.com/YuKimura45z">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/YuKimura45z">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/YuKimura45z" target="_blank">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="membersList">
+                        <div class="imgBox">
+                            <img src="assets/images/profile/takeru.jpg" />
+                        </div>
+                        <p class="position">Marketing,Translation</p>
+                        <p class="name">Takeru</p>
+                        <div class="snsLinks">
+                            <span>
+                                <i class="fab fa-twitter-square fa-2x disabled"></i>
+                            </span>
+                            <span>
+                                <i class="fab fa-facebook-square fa-2x disabled"></i>
+                            </span>
+                            <a target="_blank" href="https://github.com/Takeruakira">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="membersList">
+                        <div class="imgBox">
+                            <img src="assets/images/profile/kurata.jpg" />
+                        </div>
+                        <p class="position">Marketing,Development</p>
+                        <p class="name">Ryusei Kurata</p>
+                        <div class="snsLinks">
+                            <a target="_blank" href="https://twitter.com/amnosmusic13">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100018072949254">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/ryuseikurata">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="membersList">
+                        <div class="imgBox">
+                            <img src="assets/images/profile/ryotaro.jpg" />
+                        </div>
+                        <p class="position">Marketing,Development</p>
+                        <p class="name">Ryotaro Miyagawa</p>
+                        <div class="snsLinks">
+                            <a target="_blank" href="https://twitter.com/pareriva_d_taro?lang=ja">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100015198604331">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/Dragon-taro">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="membersList">
+                        <div class="imgBox">
+                            <img src="assets/images/profile/ryoma.jpg" />
+                        </div>
+                        <p class="position">Marketing</p>
+                        <p class="name">Ryoma Ogawa</p>
+                        <div class="snsLinks">
+                            <a target="_blank" href="https://twitter.com/dragonhorser?lang=ja">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=100018072949254">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/ryoma0110">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
