@@ -32,9 +32,16 @@
             <span class="fill-remaining-space"></span>
         </mat-toolbar>
         <div class="out-toolbar mat-typography">
-            <div class="top">
-                <h1>{{translation.beyondDigitalCurrencies[global.lang]}}</h1>
-                <p>{{translation.underRegulations[global.lang]}}</p>
+            <div fxLayout="row-reverse wrap" class="item top">
+                <div fxFlex="50" fxFlex.xs="100">
+                    <h1>{{translation.beyondDigitalCurrencies[global.lang]}}</h1>
+                    <p>{{translation.underRegulations[global.lang]}}</p>
+                </div>
+                <div fxFlex="50" fxFlex.xs="100">
+                    <p style="text-align: center;">
+                        <img src="favicon.svg" />
+                    </p>
+                </div>
             </div>
             <div fxLayout="row wrap" class="item">
                 <div fxFlex="50" fxFlex.xs="100">
