@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav>
+    <mat-sidenav #sidenav class="mat-elevation-z16">
         <mat-toolbar class="background-contain" [ngStyle]="{'background-image': 'url(favicon.svg)'}">
         </mat-toolbar>
         <div fxLayout="column">
@@ -23,8 +23,8 @@
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar color="mat-white" class="mat-elevation-z4">
-            <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-toolbar class="mat-elevation-z4">
+            <button mat-icon-button (click)="sidenav.toggle()" fxHide fxShow.xs>
                 <mat-icon>menu</mat-icon>
             </button>
 
@@ -45,13 +45,8 @@
             </div>
             <div fxLayout="row wrap" class="item">
                 <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
-                    <h2>LCNEMとは</h2>
-                    <p>
-                        ブロックチェーンに取引が記録される仮想通貨は、従来の送金システムよりも手数料が極めて安い一方、使用には相場変動リスクが伴います。
-                        <br /> LCNEMは、仮想通貨ではない法定通貨の電子マネーをブロックチェーン上に発行し、取引を記録します。
-                        <br /> 担保となる資産は日本国の法律により政府に供託するため、裏付けなき発行の心配がありません。
-                        <br /> ブロックチェーンにはNEMを使います。
-                    </p>
+                    <h2>What is LCNEM?</h2>
+                    <p>{{translation.whatIs[global.lang]}}</p>
                 </div>
                 <div fxFlex="50" fxFlex.xs="100">
                     <p style="text-align: center;">
@@ -61,11 +56,8 @@
             </div>
             <div fxLayout="row-reverse wrap" class="item">
                 <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
-                    <h2>優しい経済</h2>
-                    <p>
-                        従来のシステムよりも極めて安い手数料により、送金や決済に適しています。
-                        <br /> それだけではなく、プレゼントやチップ、サポートなどにも適しています。
-                    </p>
+                    <h2>Friendly economy</h2>
+                    <p>{{translation.friendlyEconomy[global.lang]}}</p>
                 </div>
                 <div fxFlex="50" fxFlex.xs="100">
                     <p style="text-align: center;">
@@ -76,12 +68,9 @@
             <div fxLayout="row wrap" class="item">
                 <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
                     <h2>LCNEM Wallet</h2>
-                    <p style="margin-bottom: 40px;">
-                        GoogleアカウントでログインできるNEMブロックチェーンのウォレットです。
-                        <br /> Googleアカウントと秘密鍵を結びつけるため、従来のウォレットに必須であった秘密鍵管理なしにNEMブロックチェーン上の取引が可能です。
-                    </p>
+                    <p style="margin-bottom: 40px;">{{translation.lcnemWallet[global.lang]}}</p>
                     <p style="text-align: center;">
-                        <a mat-button color="accent" href="https://wallet.lcnem.cc" target="_blank">いますぐつかう</a>
+                        <a mat-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
                     </p>
                 </div>
                 <div fxFlex="50" fxFlex.xs="100">
@@ -90,25 +79,22 @@
                     </p>
                 </div>
             </div>
-            <ng-template *ngIf="global.lang == 'ja'">
-                <div fxLayout="row-reverse wrap" class="item bg-white">
-                    <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
-                        <h2>Consulting</h2>
-                        <p>
-                            NEMブロックチェーンの技術コンサルティングを行っています。実績:PoliPoli
-                        </p>
-                        <p style="text-align: center;">
-                            <a mat-button color="accent" href="{{translation.contactsForm[global.lang]}}"
-                                target="_blank">問い合わせ</a>
-                        </p>
-                    </div>
-                    <div fxFlex="50" fxFlex.xs="100">
-                        <p style="text-align: center;">
-                            <img src="assets/images/polipoli.png" />
-                        </p>
-                    </div>
+            <div fxLayout="row-reverse wrap" class="item bg-white" *ngIf="global.lang == 'ja'">
+                <div fxFlex="50" fxFlex.xs="100" class="contentWrapper">
+                    <h2>Consulting</h2>
+                    <p>
+                        NEMブロックチェーンの技術コンサルティングを行っています。実績:PoliPoli
+                    </p>
+                    <p style="text-align: center;">
+                        <a mat-button color="accent" href="{{translation.contactsForm[global.lang]}}" target="_blank">問い合わせ</a>
+                    </p>
                 </div>
-            </ng-template>
+                <div fxFlex="50" fxFlex.xs="100">
+                    <p style="text-align: center;">
+                        <img src="assets/images/polipoli.png" />
+                    </p>
+                </div>
+            </div>
             <div class="item members">
                 <h2>Members</h2>
                 <ul class="membersListWrapper">
