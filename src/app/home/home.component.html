@@ -24,10 +24,11 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar class="mat-elevation-z4">
-            <button mat-icon-button (click)="sidenav.toggle()" fxHide fxShow.xs fxShow.sm>
+            <button mat-icon-button (click)="sidenav.toggle()">
                 <mat-icon>menu</mat-icon>
             </button>
 
+            <button mat-icon-button class="background-contain" [ngStyle]="{'background-image': 'url(favicon.svg)'}"></button>
             <span>LCNEM</span>
             <span class="fill-remaining-space"></span>
         </mat-toolbar>
