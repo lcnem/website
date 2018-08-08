@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { GlobalDataService } from '../services/global-data.service';
-import { MatSidenav } from '../../../node_modules/@angular/material';
-import { MediaChange, ObservableMedia } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-home',
@@ -10,35 +7,14 @@ import { Subscription } from 'rxjs';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    @ViewChild("sidenav")
-    public sidenav?: MatSidenav;
-
-    watcher?: Subscription;
 
     constructor(
-        public global: GlobalDataService,
-        private media: ObservableMedia
+        public global: GlobalDataService
     ) {
         
     }
 
     ngOnInit() {
-        this.watcher = this.media.subscribe((change: MediaChange) => {
-            if(!this.sidenav) {
-                return;
-            }
-            if (change.mqAlias == "xs" || change.mqAlias == "sm") {
-                this.sidenav.mode = "over";
-                this.sidenav.opened = false;
-            } else {
-                this.sidenav.mode = "side";
-                this.sidenav.opened = true;
-            }
-        });
-    }
-
-    ngOnDestroy() {
-        this.watcher!.unsubscribe();
     }
 
     public translation = {
