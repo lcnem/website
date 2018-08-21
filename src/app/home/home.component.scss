@@ -161,3 +161,52 @@ img {
         }
     }
 }
+
+.roadmap {
+    ul {
+        list-style: none;
+        li {
+            h3 {
+                position: relative;
+                font-size: 300%;
+                line-height: 2em;
+                padding-left: 2em;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0%;
+                    top: 50%;
+                    transform:translateY(-50%);
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 30px;
+                }
+
+                &.completed::before {
+                    background: #2e3192;
+                }
+
+                &.now::before {
+                    background: #0071bc;
+                    animation: 1s linear infinite blink_effect;
+                }
+
+                &.future::before {
+                    background: #29abe2;
+                }
+            }
+        }
+    }
+}
+@keyframes blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
