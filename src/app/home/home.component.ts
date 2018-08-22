@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from '../services/global-data.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     constructor(
         public global: GlobalDataService
     ) {
-        
+
     }
 
     ngOnInit() {
@@ -67,7 +67,7 @@ LCNEM Wallet connects the Google Account with the private key, so it is possible
         },
         issueAsPrepaid: {
             en: "",
-            ja: "自家型前払式支払手として発行開始"
+            ja: "自家型前払式支払手段として発行開始"
         },
         issueAsPrepaidTooltip: {
             en: "",
@@ -75,11 +75,11 @@ LCNEM Wallet connects the Google Account with the private key, so it is possible
         },
         registerAsPrepaidWithSettlement: {
             en: "",
-            ja: "第三者型前払式支払手段発行業者登録"
+            ja: "第三者型前払式支払手段発行業登録"
         },
         registerAsPrepaidWithSettlementTooltip: {
             en: "",
-            ja: `第三者型前払式支払手段発行業者登録をすることにより、契約を結んだ店舗への換金対応が可能になります。
+            ja: `第三者型前払式支払手段発行業登録をすることにより、契約を結んだ店舗への換金対応が可能になります。
 登録には、純資産1億円以上が必要であるとの政令が指定されているため、資金調達を行います。`
         },
         registerAsRemittance: {
@@ -88,8 +88,12 @@ LCNEM Wallet connects the Google Account with the private key, so it is possible
         },
         registerAsRemittanceTooltip: {
             en: "",
-            ja: `第三者型前払式支払手段発行業者登録により、実用的なシステムが完成しますが、さらなる利便性の追求のため、資金移動業登録を見据えています。
+            ja: `第三者型前払式支払手段発行業登録により実用的なシステムが完成しますが、さらなる利便性の追求のため資金移動業登録を見据えています。
 資金移動業登録により、払戻しが可能になります。`
+        },
+        roadmap: {
+            en: "Roadmap",
+            ja: "ロードマップ"
         }
-    } as {[key: string]: {[key: string]: string}};
+    } as { [key: string]: { [key: string]: string } };
 }

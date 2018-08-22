@@ -18,7 +18,9 @@ import {
     MatTooltipModule,
     MatIconModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatStepperModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 
@@ -42,7 +44,9 @@ import { FormsModule } from '../../node_modules/@angular/forms';
     MatSelectModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatMenuModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
