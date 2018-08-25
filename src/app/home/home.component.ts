@@ -1,8 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from '../services/global-data.service';
-import { MatSidenav } from '../../../node_modules/@angular/material';
-import { MediaChange, ObservableMedia } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-home',
@@ -10,35 +7,14 @@ import { Subscription } from 'rxjs';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    @ViewChild("sidenav")
-    public sidenav?: MatSidenav;
-
-    watcher?: Subscription;
 
     constructor(
-        public global: GlobalDataService,
-        private media: ObservableMedia
+        public global: GlobalDataService
     ) {
-        
+
     }
 
     ngOnInit() {
-        this.watcher = this.media.subscribe((change: MediaChange) => {
-            if(!this.sidenav) {
-                return;
-            }
-            if (change.mqAlias == "xs" || change.mqAlias == "sm") {
-                this.sidenav.mode = "over";
-                this.sidenav.opened = false;
-            } else {
-                this.sidenav.mode = "side";
-                this.sidenav.opened = true;
-            }
-        });
-    }
-
-    ngOnDestroy() {
-        this.watcher!.unsubscribe();
     }
 
     public translation = {
@@ -55,30 +31,23 @@ export class HomeComponent implements OnInit {
             ja: "デジタル通貨のその先へ。"
         },
         underRegulations: {
-            en: "Electronic money on blockchain under regulations",
-            ja: "法で守られたブロックチェーン上の電子マネー"
+            en: "Remittance of legal currencies on blockchain",
+            ja: "ブロックチェーンを使った法定通貨の送金"
         },
         whatIs: {
             en: `The  cryptocurrency in which the transaction is recorded on the block chain is much cheaper than the conventional remittance system, but the use causes risk of market fluctuations.
 LCNEM issues electronic money in a legal currency that is not a cryptocurrency on the block chain and records transactions.
 As assets to be secured are deposited to the government by the law of Japan, there is no worry about issuance without support.
 LCNEM uses NEM for the blockchain.`,
-            ja: `ブロックチェーンに取引が記録される仮想通貨は、従来の送金システムよりも手数料が極めて安い一方、使用には相場変動リスクが伴います。
-LCNEMは、仮想通貨ではない法定通貨の電子マネーをブロックチェーン上に発行し、取引を記録します。
+            ja: `法定通貨の裏付けがあるトークンをブロックチェーン上に発行し、取引を記録します。
 担保となる資産は日本国の法律により政府に供託するため、裏付けなき発行の心配がありません。
 ブロックチェーンにはNEMを使います。`
-        },
-        friendlyEconomy: {
-            en: `It is suitable for remittance and settlement with a cheaper commission than conventional systems.
-In addition, it is suitable for gifts, chips, support and so on.`,
-            ja: `従来のシステムよりも極めて安い手数料により、送金や決済に適しています。
-それに加え、プレゼントやチップ、サポートなどにも適しています。`
         },
         lcnemWallet: {
             en: `LCNEM wallet in the NEM blockchain, that you can log-in with your Google Account.
 LCNEM Wallet connects the Google Account with the private key, so it is possible to trade on the NEM block chain is without managing secret key which was essential for the conventional wallet.`,
             ja: `GoogleアカウントでログインできるNEMブロックチェーンのウォレットです。
-Googleアカウントと秘密鍵を結びつけるため、従来のウォレットに必須であった秘密鍵管理なしにNEMブロックチェーン上の取引が可能です。`
+資産の保管には秘密鍵をセルフサービスで管理するウォレットが適していますが、利便性の追求のため、Googleアカウントログインだけで使える仕様にしています。`
         },
         gettingStarted: {
             en: "Getting Started",
@@ -87,6 +56,46 @@ Googleアカウントと秘密鍵を結びつけるため、従来のウォレ�
         language: {
             en: "Language",
             ja: "言語"
+        },
+        developWallet: {
+            en: "Develop a wallet application",
+            ja: "ウォレットアプリの開発"
+        },
+        noActionLetter: {
+            en: "Preliminary confirmation procedure to the Financial Services Agency",
+            ja: "金融庁への法令適用事前確認手続き"
+        },
+        issueAsPrepaid: {
+            en: "Started issuing as a self-contained prepaid payment method",
+            ja: "自家型前払式支払手段として発行開始"
+        },
+        issueAsPrepaidTooltip: {
+            en: "We will start issuing as a self-contained prepaid payment method. In self-contained prepaid payment method, the cash is restricted by law and it has been only in exchange with Amazon gift certificates.",
+            ja: `自家型前払式支払手段として、発行を開始します。「自家型前払式支払手段」では、法律により換金が規制されており、アマゾンギフト券との交換にとどまっています。`
+        },
+        registerAsPrepaidWithSettlement: {
+            en: "Third party type prepaid payment method Issuing Business Registration",
+            ja: "第三者型前払式支払手段発行業登録"
+        },
+        registerAsPrepaidWithSettlementTooltip: {
+            en: `By registering the issuing as third party type prepaid payment method , it is possible to respond to cash to the store with the contract.
+            Because the government ordinance that the net asset of 100 million yen or more is required for registration is specified, we will need fund raising.`,
+            ja: `第三者型前払式支払手段発行業登録をすることにより、契約を結んだ店舗への換金対応が可能になります。
+登録には、純資産1億円以上が必要であるとの政令が指定されているため、資金調達を行います。`
+        },
+        registerAsRemittance: {
+            en: "Funds Transfer business Registration",
+            ja: "資金移動業登録"
+        },
+        registerAsRemittanceTooltip: {
+            en: `Third party type prepaid payment method Issuing business registration creates a practical system, but in order to pursue even more convenience, we are looking at registration of funds transfer business.
+            Refund will be possible by fund transfer business registration.`,
+            ja: `第三者型前払式支払手段発行業登録により実用的なシステムが完成しますが、さらなる利便性の追求のため資金移動業登録を見据えています。
+資金移動業登録により、払戻しが可能になります。`
+        },
+        roadmap: {
+            en: "Roadmap",
+            ja: "ロードマップ"
         }
-    } as {[key: string]: {[key: string]: string}};
+    } as { [key: string]: { [key: string]: string } };
 }
