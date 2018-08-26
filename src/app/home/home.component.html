@@ -90,15 +90,15 @@
                     </mat-step>
                     <mat-step completed>
                         <ng-template matStepLabel>{{translation.issueAsPrepaid[global.lang]}}</ng-template>
-                        {{translation.issueAsPrepaidTooltip[global.lang]}}
+                        <p matTooltip="{{translation.issueAsPrepaid[global.lang]}}">{{translation.issueAsPrepaidTooltip[global.lang]}}</p>
                     </mat-step>
                     <mat-step completed="false">
                         <ng-template matStepLabel>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</ng-template>
-                        {{translation.registerAsPrepaidWithSettlementTooltip[global.lang]}}
+                        <p matTooltip="{{translation.registerAsPrepaidWithSettlement[global.lang]}}">{{translation.registerAsPrepaidWithSettlementTooltip[global.lang]}}</p>
                     </mat-step>
                     <mat-step completed="false">
                         <ng-template matStepLabel>{{translation.registerAsRemittance[global.lang]}}</ng-template>
-                        {{translation.registerAsRemittanceTooltip[global.lang]}}
+                        <p matTooltip="{{translation.registerAsRemittance[global.lang]}}">{{translation.registerAsRemittanceTooltip[global.lang]}}</p>
                     </mat-step>
                 </mat-vertical-stepper>
             </div>
