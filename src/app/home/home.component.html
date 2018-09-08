@@ -4,12 +4,12 @@
         </mat-toolbar>
         <mat-nav-list>
             <a mat-list-item href="https://twitter.com/lcnem_{{global.lang}}" target="_blank">
-                <mat-icon></mat-icon>
+                <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/vector/twitter.svg)'}"></mat-icon>
                 Twitter
             </a>
             <mat-divider></mat-divider>
             <a mat-list-item href="{{translation.contactsForm[global.lang]}}" target="_blank">
-                <mat-icon>contacts</mat-icon>
+                <mat-icon mat-list-icon>contacts</mat-icon>
                 {{translation.contacts[global.lang]}}
             </a>
         </mat-nav-list>
@@ -90,15 +90,32 @@
                     </mat-step>
                     <mat-step completed>
                         <ng-template matStepLabel>{{translation.issueAsPrepaid[global.lang]}}</ng-template>
-                        {{translation.issueAsPrepaidTooltip[global.lang]}}
+                        <p matTooltip="{{translation.issueAsPrepaid[global.lang]}}">{{translation.issueAsPrepaidBody[global.lang]}}</p>
                     </mat-step>
                     <mat-step completed="false">
                         <ng-template matStepLabel>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</ng-template>
-                        {{translation.registerAsPrepaidWithSettlementTooltip[global.lang]}}
+                        <p matTooltip="{{translation.registerAsPrepaidWithSettlement[global.lang]}}">{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}</p>
                     </mat-step>
                     <mat-step completed="false">
                         <ng-template matStepLabel>{{translation.registerAsRemittance[global.lang]}}</ng-template>
-                        {{translation.registerAsRemittanceTooltip[global.lang]}}
+                        <p matTooltip="{{translation.registerAsRemittance[global.lang]}}">{{translation.registerAsRemittanceBody[global.lang]}}</p>
+                    </mat-step>
+                </mat-vertical-stepper>
+                <h2>{{translation.future[global.lang]}}</h2>
+                <mat-vertical-stepper>
+                    <ng-template matStepperIcon="number">
+                        <mat-icon>assignment</mat-icon>
+                    </ng-template>
+                    <ng-template matStepperIcon="edit">
+                        <mat-icon>assignment</mat-icon>
+                    </ng-template>
+                    <mat-step completed="false">
+                        <ng-template matStepLabel>{{translation.lcnemint[global.lang]}}</ng-template>
+                        <p matTooltip="{{translation.lcnemint[global.lang]}}">{{translation.lcnemintBody[global.lang]}}</p>
+                    </mat-step>
+                    <mat-step completed="false">
+                        <ng-template matStepLabel>{{translation.paymentRequestApi[global.lang]}}</ng-template>
+                        <p matTooltip="{{translation.paymentRequestApi[global.lang]}}">{{translation.paymentRequestApiBody[global.lang]}}</p>
                     </mat-step>
                 </mat-vertical-stepper>
             </div>
