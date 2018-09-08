@@ -57,6 +57,10 @@ LCNEM Wallet connects the Google Account with the private key, so it is possible
             en: "Language",
             ja: "言語"
         },
+        roadmap: {
+            en: "Roadmap",
+            ja: "ロードマップ"
+        },
         developWallet: {
             en: "Develop a wallet application",
             ja: "ウォレットアプリの開発"
@@ -69,7 +73,7 @@ LCNEM Wallet connects the Google Account with the private key, so it is possible
             en: "Started issuing as a self-contained prepaid payment method",
             ja: "自家型前払式支払手段として発行開始"
         },
-        issueAsPrepaidTooltip: {
+        issueAsPrepaidBody: {
             en: `We will start issuing as a self-contained prepaid payment method. In \"self-contained prepaid payment method\", the cash is restricted by law and it has been only in exchange with Amazon gift certificates.`,
             ja: `自家型前払式支払手段として、発行を開始します。「自家型前払式支払手段」では、法律により換金が規制されており、アマゾンギフト券との交換にとどまっています。`
         },
@@ -77,7 +81,7 @@ LCNEM Wallet connects the Google Account with the private key, so it is possible
             en: "Prepaid payment method with settlement system for third party stores Registration",
             ja: "第三者型前払式支払手段発行業登録"
         },
-        registerAsPrepaidWithSettlementTooltip: {
+        registerAsPrepaidWithSettlementBody: {
             en: `By registering the issuing as third party type prepaid payment method, it is possible to respond to cash to the store with the contract.
 Because the government ordinance that the net asset of 100 million yen or more is required for registration is specified, we will need fund raising.`,
             ja: `第三者型前払式支払手段発行業登録をすることにより、契約を結んだ店舗への換金対応が可能になります。
@@ -87,15 +91,31 @@ Because the government ordinance that the net asset of 100 million yen or more i
             en: "Funds Transfer business Registration",
             ja: "資金移動業登録"
         },
-        registerAsRemittanceTooltip: {
+        registerAsRemittanceBody: {
             en: `Prepaid payment method with settlement system for third party stores Registration creates a practical system, but in order to pursue even more convenience, we are looking at registration of funds transfer business.
 Refund will be possible by fund transfer business registration.`,
             ja: `第三者型前払式支払手段発行業登録により実用的なシステムが完成しますが、さらなる利便性の追求のため資金移動業登録を見据えています。
 資金移動業登録により、払戻しが可能になります。`
         },
-        roadmap: {
-            en: "Roadmap",
-            ja: "ロードマップ"
+        future: {
+            en: "Future",
+            ja: "今後"
+        },
+        lcnemint: {
+            en: "lcnemint",
+            ja: "lcnemint"
+        },
+        lcnemintBody: {
+            en: "For the purpose of providing LCNEM to various public blockchains, we suppose that we wil develop a Tendermint chain which have interoperability which use Cosmos.",
+            ja: "LCNEMを幅広いパブリックブロックチェーンに届けるため、Cosmosを利用したチェーン間相互運用性のあるTendermintチェーンを開発することを想定しています。"
+        },
+        paymentRequestApi: {
+            en: "PaymentRequestAPI",
+            ja: "PaymentRequestAPI"
+        },
+        paymentRequestApiBody: {
+            en: "We suppose that we will develop a payment method of LCNEM on Payment Request API which is used in payments on the browser.",
+            ja: "ブラウザでの支払いに利用されるPaymentRequestAPIにおけるLCNEMのペイメントメソッドを開発することを想定しています。"
         }
     } as { [key: string]: { [key: string]: string } };
 }
