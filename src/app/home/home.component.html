@@ -71,6 +71,22 @@
       <div fxLayout="row wrap" class="item" appZoomIn>
         <div fxFlex="50" fxFlex.xs="100" class="middle">
           <div>
+            <h2>LCNEM Wallet</h2>
+            <p>{{translation.lcnemWalletBody[global.lang]}}</p>
+            <p>
+              <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            </p>
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/mockup.png" />
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row-reverse wrap" class="item" appZoomIn>
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
             <h2>lcnemint</h2>
             <p>{{translation.lcnemintBody[global.lang]}}</p>
             <!--<p>
@@ -84,7 +100,7 @@
           </p>
         </div>
       </div>
-      <div fxLayout="row-reverse wrap" class="item" appZoomIn>
+      <div fxLayout="row wrap" class="item" appZoomIn>
         <div fxFlex="50" fxFlex.xs="100" class="middle">
           <div>
             <h2>Payment Request API</h2>
@@ -100,21 +116,68 @@
           </p>
         </div>
       </div>
-      <div fxLayout="row wrap" class="item" appZoomIn>
-        <div fxFlex="50" fxFlex.xs="100" class="middle">
-          <div>
-            <h2>LCNEM Wallet</h2>
-            <p>{{translation.lcnemWalletBody[global.lang]}}</p>
-            <p>
-              <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
-            </p>
-          </div>
-        </div>
-        <div fxFlex="50" fxFlex.xs="100">
-          <p>
-            <img src="assets/images/mockup.png" />
-          </p>
-        </div>
+      <div class="item" appZoomIn>
+        <h2>{{translation.roadmap[global.lang]}}</h2>
+        <mat-list>
+          <h3 mat-subheader>{{translation.compliance[global.lang]}}</h3>
+          <mat-list-item>
+            <span>{{translation.noActionLetter[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.issueAsPrepaid[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.registerAsRemittance[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+        </mat-list>
+        <mat-list>
+          <h3 mat-subheader>{{translation.development[global.lang]}}</h3>
+          <mat-list-item>
+            <span>{{translation.developWallet[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.developLcnemint[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.developPaymentRequestApi[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+        </mat-list>
       </div>
     </div>
   </mat-sidenav-content>

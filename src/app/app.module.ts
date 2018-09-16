@@ -23,7 +23,6 @@ import {
   MatCardModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
-import { RoadmapComponent } from './roadmap/roadmap.component';
 import { FaqComponent } from './faq/faq.component';
 import { LcnemintComponent } from './lcnemint/lcnemint.component';
 import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
@@ -34,7 +33,6 @@ import { ZoomInDirective } from './directives/zoom-in.directive';
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    RoadmapComponent,
     FaqComponent,
     LcnemintComponent,
     PaymentRequestApiComponent,

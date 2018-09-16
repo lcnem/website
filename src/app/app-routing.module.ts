@@ -5,14 +5,12 @@ import { PageNotFoundComponent } from './error/page-not-found/page-not-found.com
 import { LcnemintComponent } from './lcnemint/lcnemint.component';
 import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
 import { FaqComponent } from './faq/faq.component';
-import { RoadmapComponent } from './roadmap/roadmap.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "lcnemint", component: LcnemintComponent },
   { path: "payment-request-api", component: PaymentRequestApiComponent },
   { path: "faq", component: FaqComponent },
-  { path: "roadmap", component: RoadmapComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
 
