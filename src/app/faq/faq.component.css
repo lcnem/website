@@ -1,0 +1,7 @@
+mat-card {
+  margin: 1em auto;
+}
+mat-card p {
+  font-size: 150%;
+  line-height: 1.5em;
+}
