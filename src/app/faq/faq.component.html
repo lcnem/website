@@ -1,0 +1,58 @@
+<mat-toolbar class="mat-elevation-z4">
+  <button mat-icon-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span>FAQ</span>
+  <span class="fill-remaining-space"></span>
+  <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
+    <button mat-menu-item (click)="global.lang = 'en'">
+      English
+      <mat-icon *ngIf="global.lang == 'en'">check</mat-icon>
+    </button>
+    <button mat-menu-item (click)="global.lang = 'ja'">
+      日本語
+      <mat-icon *ngIf="global.lang == 'ja'">check</mat-icon>
+    </button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
+    {{global.lang}}
+  </button>
+</mat-toolbar>
+<div class="out-toolbar mat-typography">
+  <div fxLayout="row wrap">
+    <mat-card fxFlex="50" fxFlex.xs="100" appZoomIn>
+      <img mat-card-image src="assets/images/tendermint.png" />
+      <mat-card-content>
+        <p>
+          Q.{{translation.whatIsTendermint[global.lang]}}
+        </p>
+        <p>
+          A.{{translation.whatIsTendermintA[global.lang]}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex="50" fxFlex.xs="100" appZoomIn>
+      <img mat-card-image src="assets/images/cosmos.png" />
+      <mat-card-content>
+        <p>
+          Q.{{translation.whatIsCosmos[global.lang]}}
+        </p>
+        <p>
+          A.{{translation.whatIsCosmosA[global.lang]}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex="50" fxFlex.xs="100" appZoomIn>
+      <img mat-card-image src="assets/images/vector/lcnem-nem.svg" />
+      <mat-card-content>
+        <p>
+          Q.{{translation.whyNem[global.lang]}}
+        </p>
+        <p>
+          A.{{translation.whyNemA[global.lang]}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
