@@ -1,124 +1,184 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav class="mat-elevation-z16">
-        <mat-toolbar class="background-contain" [ngStyle]="{'background-image': 'url(favicon.svg)'}">
-        </mat-toolbar>
-        <mat-nav-list>
-            <a mat-list-item href="https://twitter.com/lcnem_{{global.lang}}" target="_blank">
-                <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/vector/twitter.svg)'}"></mat-icon>
-                Twitter
-            </a>
-            <mat-divider></mat-divider>
-            <a mat-list-item href="{{translation.contactsForm[global.lang]}}" target="_blank">
-                <mat-icon mat-list-icon>contacts</mat-icon>
-                {{translation.contacts[global.lang]}}
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <mat-toolbar class="mat-elevation-z4">
-            <button mat-icon-button (click)="sidenav.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
+  <mat-sidenav #sidenav class="mat-elevation-z16">
+    <mat-toolbar>
+      <button mat-icon-button class="background-contain" [ngStyle]="{'background-image': 'url(favicon.svg)'}"></button>
+      <span>LCNEM</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="https://twitter.com/lcnem_{{global.lang}}" target="_blank">
+        <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/vector/twitter.svg)'}"></mat-icon>
+        Twitter
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="{{translation.contactsForm[global.lang]}}" target="_blank">
+        <mat-icon mat-list-icon>contacts</mat-icon>
+        {{translation.contacts[global.lang]}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-elevation-z4">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
 
-            <button mat-icon-button class="background-contain" [ngStyle]="{'background-image': 'url(favicon.svg)'}"></button>
-            <span>LCNEM</span>
-            <span class="fill-remaining-space"></span>
-            <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
-                <button mat-menu-item (click)="global.lang = 'en'">
-                    English
-                    <mat-icon *ngIf="global.lang == 'en'">check</mat-icon>
-                </button>
-                <button mat-menu-item (click)="global.lang = 'ja'">
-                    日本語
-                    <mat-icon *ngIf="global.lang == 'ja'">check</mat-icon>
-                </button>
-            </mat-menu>
-            <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
-                {{global.lang}}
-            </button>
-        </mat-toolbar>
-        <div class="out-toolbar mat-typography">
-            <div fxLayout="row wrap" class="item top">
-                <div fxFlex="50" fxFlex.xs="100" class="middle">
-                    <div>
-                        <h1>{{translation.beyondDigitalCurrencies[global.lang]}}</h1>
-                        <p>{{translation.underRegulations[global.lang]}}</p>
-                    </div>
-                </div>
-                <div fxFlex="50" fxFlex.xs="100">
-                    <p style="text-align: center;">
-                        <img src="favicon.svg" />
-                    </p>
-                </div>
-            </div>
-            <div fxLayout="row-reverse wrap" class="item">
-                <div fxFlex="50" fxFlex.xs="100">
-                    <h2>What is LCNEM?</h2>
-                    <p>{{translation.whatIs[global.lang]}}</p>
-                </div>
-                <div fxFlex="50" fxFlex.xs="100">
-                    <p style="text-align: center;">
-                        <img src="assets/images/vector/lcnem-nem.svg" />
-                    </p>
-                </div>
-            </div>
-            <div fxLayout="row wrap" class="item">
-                <div fxFlex="50" fxFlex.xs="100">
-                    <h2>LCNEM Wallet</h2>
-                    <p>{{translation.lcnemWallet[global.lang]}}</p>
-                    <p style="text-align: center; margin: 40px auto;">
-                        <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
-                    </p>
-                </div>
-                <div fxFlex="50" fxFlex.xs="100">
-                    <p style="text-align: center;">
-                        <img src="assets/images/mockup.png" />
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <h2>{{translation.roadmap[global.lang]}}</h2>
-                <mat-vertical-stepper>
-                    <ng-template matStepperIcon="edit">
-                        <mat-icon>done</mat-icon>
-                    </ng-template>
-                    <mat-step completed>
-                        <ng-template matStepLabel>{{translation.developWallet[global.lang]}}</ng-template>
-                    </mat-step>
-                    <mat-step completed>
-                        <ng-template matStepLabel>{{translation.noActionLetter[global.lang]}}</ng-template>
-                    </mat-step>
-                    <mat-step completed>
-                        <ng-template matStepLabel>{{translation.issueAsPrepaid[global.lang]}}</ng-template>
-                        <p matTooltip="{{translation.issueAsPrepaid[global.lang]}}">{{translation.issueAsPrepaidBody[global.lang]}}</p>
-                    </mat-step>
-                    <mat-step completed="false">
-                        <ng-template matStepLabel>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</ng-template>
-                        <p matTooltip="{{translation.registerAsPrepaidWithSettlement[global.lang]}}">{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}</p>
-                    </mat-step>
-                    <mat-step completed="false">
-                        <ng-template matStepLabel>{{translation.registerAsRemittance[global.lang]}}</ng-template>
-                        <p matTooltip="{{translation.registerAsRemittance[global.lang]}}">{{translation.registerAsRemittanceBody[global.lang]}}</p>
-                    </mat-step>
-                </mat-vertical-stepper>
-                <h2>{{translation.future[global.lang]}}</h2>
-                <mat-vertical-stepper>
-                    <ng-template matStepperIcon="number">
-                        <mat-icon>assignment</mat-icon>
-                    </ng-template>
-                    <ng-template matStepperIcon="edit">
-                        <mat-icon>assignment</mat-icon>
-                    </ng-template>
-                    <mat-step completed="false">
-                        <ng-template matStepLabel>{{translation.lcnemint[global.lang]}}</ng-template>
-                        <p matTooltip="{{translation.lcnemint[global.lang]}}">{{translation.lcnemintBody[global.lang]}}</p>
-                    </mat-step>
-                    <mat-step completed="false">
-                        <ng-template matStepLabel>{{translation.paymentRequestApi[global.lang]}}</ng-template>
-                        <p matTooltip="{{translation.paymentRequestApi[global.lang]}}">{{translation.paymentRequestApiBody[global.lang]}}</p>
-                    </mat-step>
-                </mat-vertical-stepper>
-            </div>
+      <span>LCNEM</span>
+      <span class="fill-remaining-space"></span>
+      <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item (click)="global.lang = 'en'">
+          English
+          <mat-icon *ngIf="global.lang == 'en'">check</mat-icon>
+        </button>
+        <button mat-menu-item (click)="global.lang = 'ja'">
+          日本語
+          <mat-icon *ngIf="global.lang == 'ja'">check</mat-icon>
+        </button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
+        {{global.lang}}
+      </button>
+    </mat-toolbar>
+    <div class="out-toolbar mat-typography">
+      <div fxLayout="row wrap" class="item top" appZoomIn>
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h1>{{translation.risklessPeggedAssets[global.lang]}}</h1>
+            <p>{{translation.risklessPeggedAssetsBody[global.lang]}}</p>
+          </div>
         </div>
-    </mat-sidenav-content>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="favicon.svg" />
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row-reverse wrap" class="item" appZoomIn>
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>{{translation.whyRiskless[global.lang]}}</h2>
+            <p>{{translation.whyRisklessBody[global.lang]}}</p>
+            <p>
+              <button mat-raised-button color="accent" routerLink="/faq">{{translation.faq[global.lang]}}</button>
+            </p>
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/vector/pegged-assets.svg" />
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="item" appZoomIn>
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>LCNEM Wallet</h2>
+            <p>{{translation.lcnemWalletBody[global.lang]}}</p>
+            <p>
+              <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            </p>
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/mockup.png" />
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row-reverse wrap" class="item" appZoomIn>
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>lcnemint</h2>
+            <p>{{translation.lcnemintBody[global.lang]}}</p>
+            <!--<p>
+                <button mat-raised-button color="accent" routerLink="/lcnemint">{{translation.readMore[global.lang]}}</button>
+              </p>-->
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/vector/lcnemint.svg" />
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="item" appZoomIn>
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>Payment Request API</h2>
+            <p>{{translation.paymentRequestApiBody[global.lang]}}</p>
+            <!--<p>
+                <button mat-raised-button color="accent" routerLink="/payment-request-api">{{translation.readMore[global.lang]}}</button>
+              </p>-->
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/payment-request-api.png" />
+          </p>
+        </div>
+      </div>
+      <div class="item" appZoomIn>
+        <h2>{{translation.roadmap[global.lang]}}</h2>
+        <mat-list>
+          <h3 mat-subheader>{{translation.compliance[global.lang]}}</h3>
+          <mat-list-item>
+            <span>{{translation.noActionLetter[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.issueAsPrepaid[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.registerAsRemittance[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+        </mat-list>
+        <mat-list>
+          <h3 mat-subheader>{{translation.development[global.lang]}}</h3>
+          <mat-list-item>
+            <span>{{translation.developWallet[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.developLcnemint[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>
+            <span>{{translation.developPaymentRequestApi[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>

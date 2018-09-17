@@ -29,9 +29,28 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 動かし方by宮川
 ```
 # ディレクトリを保存したいところに移動してから
-git clone https://github.com/LCNEM/lcnem.git
+git clone https://github.com/lcnem/lcnem.git
 cd lcnem
 npm install # nodeのインストールがまだなら先にしてから
 ng serve
 ```
 これで、http://localhost:4200/にアクセスしたら表示されるはず。
+
+## デプロイ方法
+```
+ng build --prod
+```
+により、lcnem/dist/lcnem/に完成版ができる。
+```
+# ディレクトリを保存したいところに移動してから
+git clone https://github.com/lcnem/lcnem.github.io.git
+```
+をし、CNAMEというファイルを除いてlcnem.github.io/の中身をすべて削除。
+そしてlcnem/dist/lcnemの中身をすべてlcnem.github.io/にコピー。
+```
+# lcnem.github.ioにて
+git add *
+git commit -m [update]xxx
+git push origin master
+```
+以上。
