@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
       ja: "ちけっとピアツーピア"
     },
     ticketP2pBody: {
-      en: `Easy to `,
+      en: `It is the "ticket selling system" using blockchains with which you can take measures to resell. And you can make it embedded in the site with your favorite design.`,
       ja: `転売対策が容易かつ、好きなデザインでサイトに埋め込むことができるブロックチェーンを使ったチケット販売システムです。`
     },
     readMore: {
