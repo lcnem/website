@@ -24,7 +24,6 @@ import {
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
-import { LcnemintComponent } from './lcnemint/lcnemint.component';
 import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
 import { ZoomInDirective } from './directives/zoom-in.directive';
 
@@ -34,7 +33,6 @@ import { ZoomInDirective } from './directives/zoom-in.directive';
     HomeComponent,
     PageNotFoundComponent,
     FaqComponent,
-    LcnemintComponent,
     PaymentRequestApiComponent,
     ZoomInDirective
   ],

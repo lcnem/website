@@ -47,10 +47,6 @@ export class HomeComponent implements OnInit {
       en: "FAQ",
       ja: "FAQ"
     },
-    lcnemintBody: {
-      en: `\"lcnemint\" is very fast blockchains specialized in exchanging LCNEM pegged assets. It is also the starting point for LCNEM pegged assets distribution to the Cosmos network.`,
-      ja: `lcnemintは、LCNEMペグアセットのやり取りに特化した非常に高速なブロックチェーンです。LCNEMペグアセットがCosmosネットワークに流通する起点でもあります。`
-    },
     paymentRequestApiBody: {
       en: `\"PaymentRequestAPI\" is a new standard that will allow you to make payment on browser. LCNEM pegged assets can be sent with UI similar to credit card, which makes integration into website and application easier.`,
       ja: `PaymentRequestAPIは、ブラウザ上で支払い手続きを行うことができるようになる、新しい規格です。LCNEMペグアセットを、クレジットカードと同じようなUIで送信できるようになるため、ウェブサイトやアプリケーションへの統合が容易になります。`
@@ -59,7 +55,7 @@ export class HomeComponent implements OnInit {
       en: `Purchase of LCNEM pegged assets from here. It is an application that you can use from your browser using Google Account login.
       Currently it is compatible with NEM blockchains and will be compatible with lcnemint and Cosmos network in the future.`,
       ja: `LCNEMペグアセットの購入はこちらから。Googleアカウントログインを使い、ブラウザから使えるアプリです。
-現在はNEMブロックチェーンに対応しており、今後はlcnemint、そしてCosmosネットワークに対応予定です。`
+現在はNEMブロックチェーンに対応しており、今後はCosmosネットワークに対応予定です。`
     },
     ticketP2p: {
       en: "Ticket Peer to Peer",
@@ -116,22 +112,6 @@ Because the government ordinance that the net asset of 100 million yen or more i
 Refund will be possible by fund transfer business registration.`,
       ja: `第三者型前払式支払手段発行業登録により実用的なシステムが完成しますが、さらなる利便性の追求のため資金移動業登録を見据えています。
 資金移動業登録により、払戻しが可能になります。`
-    },
-    development: {
-      en: "Develop",
-      ja: "開発"
-    },
-    developWallet: {
-      en: "Develop wallet",
-      ja: "ウォレットの開発"
-    },
-    developLcnemint: {
-      en: "Develop lcnemint",
-      ja: "lcnemintの開発"
-    },
-    developPaymentRequestApi: {
-      en: "Develop Payment Request API",
-      ja: "Payment Request APIの開発"
     }
-  } as { [key: string]: { [key: string]: string } };
+  };
 }
