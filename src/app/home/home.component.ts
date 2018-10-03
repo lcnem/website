@@ -61,6 +61,14 @@ export class HomeComponent implements OnInit {
       ja: `LCNEMペグアセットの購入はこちらから。Googleアカウントログインを使い、ブラウザから使えるアプリです。
 現在はNEMブロックチェーンに対応しており、今後はlcnemint、そしてCosmosネットワークに対応予定です。`
     },
+    ticketP2p: {
+      en: "Ticket Peer to Peer",
+      ja: "ちけっとピアツーピア"
+    },
+    ticketP2pBody: {
+      en: `It is the "ticket selling system" using blockchains with which you can take measures to resell. And you can make it embedded in the site with your favorite design.`,
+      ja: `転売対策が容易かつ、好きなデザインでサイトに埋め込むことができるブロックチェーンを使ったチケット販売システムです。`
+    },
     readMore: {
       en: "Read more",
       ja: "詳しく"

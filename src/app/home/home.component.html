@@ -87,6 +87,22 @@
       <div fxLayout="row-reverse wrap" class="item" appZoomIn>
         <div fxFlex="50" fxFlex.xs="100" class="middle">
           <div>
+            <h2>{{translation.ticketP2p[global.lang]}}</h2>
+            <p>{{translation.ticketP2pBody[global.lang]}}</p>
+            <p>
+              <a mat-raised-button color="accent" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            </p>
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/vector/ticket-p2p.svg" />
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="item" appZoomIn>
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
             <h2>lcnemint</h2>
             <p>{{translation.lcnemintBody[global.lang]}}</p>
             <!--<p>
@@ -100,7 +116,7 @@
           </p>
         </div>
       </div>
-      <div fxLayout="row wrap" class="item" appZoomIn>
+      <div fxLayout="row-reverse wrap" class="item" appZoomIn>
         <div fxFlex="50" fxFlex.xs="100" class="middle">
           <div>
             <h2>Payment Request API</h2>
