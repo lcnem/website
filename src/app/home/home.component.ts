@@ -81,6 +81,10 @@ export class HomeComponent implements OnInit {
       en: "Compliance",
       ja: "コンプライアンス"
     },
+    recruiteInformation: {
+      en: "RecruiteInformation",
+      ja: "採用情報"
+    },
     noActionLetter: {
       en: "Preliminary confirmation procedure to the Financial Services Agency",
       ja: "金融庁への法令適用事前確認手続き"
@@ -112,6 +116,6 @@ Because the government ordinance that the net asset of 100 million yen or more i
 Refund will be possible by fund transfer business registration.`,
       ja: `第三者型前払式支払手段発行業登録により実用的なシステムが完成しますが、さらなる利便性の追求のため資金移動業登録を見据えています。
 資金移動業登録により、払戻しが可能になります。`
-    }
+    },
   };
 }
