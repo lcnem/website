@@ -19,7 +19,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.svg",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
@@ -82,7 +82,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.svg",
+              "src/favicon.png",
               "src/assets"
             ]
           }
