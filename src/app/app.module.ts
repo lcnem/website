@@ -25,7 +25,6 @@ import {
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
 import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
-import { ZoomInDirective } from './directives/zoom-in.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { ZoomInDirective } from './directives/zoom-in.directive';
     PageNotFoundComponent,
     FaqComponent,
     PaymentRequestApiComponent,
-    ZoomInDirective
   ],
   imports: [
     BrowserModule,
