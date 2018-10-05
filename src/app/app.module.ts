@@ -25,6 +25,7 @@ import {
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
 import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PaymentRequestApiComponent } from './payment-request-api/payment-reques
     PageNotFoundComponent,
     FaqComponent,
     PaymentRequestApiComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

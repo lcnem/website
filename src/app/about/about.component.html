@@ -1,0 +1,52 @@
+<mat-toolbar class="mat-elevation-z4">
+  <button mat-icon-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span>About</span>
+  <span class="fill-remaining-space"></span>
+  <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
+    <button mat-menu-item (click)="global.lang = 'en'">
+      English
+      <mat-icon *ngIf="global.lang == 'en'">check</mat-icon>
+    </button>
+    <button mat-menu-item (click)="global.lang = 'ja'">
+      日本語
+      <mat-icon *ngIf="global.lang == 'ja'">check</mat-icon>
+    </button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
+    {{global.lang}}
+  </button>
+</mat-toolbar>
+
+<div class="item">
+  <h2>{{translation.corporateInformation[global.lang]}}</h2>
+  <mat-list role="list">
+    <mat-list-item>
+      <span>{{translation.corporateName[global.lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>LCNEM,Inc</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span>{{translation.corporateAddress[global.lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>{{translation.address[global.lang]}}</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span>{{translation.corporateExecutiveOfficer[global.lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>{{translation.ceoName[global.lang]}}</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span>{{translation.establishmentDate[global.lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>2018/03</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span>{{translation.capitalStock[global.lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>{{translation.capitalAmount[global.lang]}}</span>
+    </mat-list-item>
+  </mat-list>
+</div>
