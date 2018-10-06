@@ -24,6 +24,10 @@ export class AboutComponent implements OnInit {
     corporateName: {
       en: "Corporate Name",
       ja: "会社名"
+    },
+    name: {
+      en: "LCNEM, Inc.",
+      ja: "株式会社LCNEM"
     } as any,
     corporateAddress: {
       en: "Address",
@@ -34,8 +38,8 @@ export class AboutComponent implements OnInit {
       ja: "代表取締役"
     } as any,
     capitalStock: {
-      en: "Capital Stock",
-      ja: "資本金"
+      en: "Capital",
+      ja: "資本金等"
     } as any,
     address: {
       en: "Kyoto-city Kamigyo-ku Aburanokoji Nakadachiuri Sagaru Kainokamicho 97 Nishijin sangyo souzou kaikan 2F",
