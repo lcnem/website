@@ -1,0 +1,14 @@
+dl {
+    width: 100%;    
+}
+    
+dt {
+    width: 20%;
+    clear: left;
+    float: left;
+}
+    
+dd {
+    width: 60%;
+    float: left;
+}
