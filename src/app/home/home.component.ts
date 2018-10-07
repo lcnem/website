@@ -85,6 +85,10 @@ export class HomeComponent implements OnInit {
       en: "RecruiteInformation",
       ja: "採用情報"
     } as any,
+    aboutCompany: {
+      en: "Corporate Information",
+      ja: "会社概要"
+    } as any,
     noActionLetter: {
       en: "Preliminary confirmation procedure to the Financial Services Agency",
       ja: "金融庁への法令適用事前確認手続き"

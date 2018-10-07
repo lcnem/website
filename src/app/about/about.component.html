@@ -1,4 +1,4 @@
-<mat-toolbar class="mat-elevation-z4">
+<mat-toolbar class="mat-elevation-z4 top-toolbar">
   <button mat-icon-button routerLink="/">
     <mat-icon>arrow_back</mat-icon>
   </button>
@@ -6,26 +6,25 @@
   <span>{{translation.corporateInformation[global.lang]}}</span>
   <span class="fill-remaining-space"></span>
 </mat-toolbar>
+<div class="mat-typography body-container">
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex=" 50" fxFlex.sm="80" fxFlex.xs="100">
+      <dl>
+        <dt>{{translation.corporateName[global.lang]}}</dt>
+        <dd>{{translation.name[global.lang]}}</dd>
 
-<div fxLayout="row" fxLayoutAlign="center">
-  <div fxFlex=" 50" fxFlex.sm="80" fxFlex.xs="100">
-    <dl>
-      <dt>{{translation.corporateName[global.lang]}}</dt>
-      <dd>{{translation.name[global.lang]}}</dd>
+        <dt>{{translation.corporateAddress[global.lang]}}</dt>
+        <dd>{{translation.address[global.lang]}}</dd>
 
-      <dt>{{translation.corporateAddress[global.lang]}}</dt>
-      <dd>{{translation.address[global.lang]}}</dd>
+        <dt>{{translation.corporateExecutiveOfficer[global.lang]}}</dt>
+        <dd>{{translation.ceoName[global.lang]}}</dd>
 
-      <dt>{{translation.corporateExecutiveOfficer[global.lang]}}</dt>
-      <dd>{{translation.ceoName[global.lang]}}</dd>
+        <dt>{{translation.establishmentDate[global.lang]}}</dt>
+        <dd>2018/03</dd>
 
-      <dt>{{translation.establishmentDate[global.lang]}}</dt>
-      <dd>2018/03</dd>
-
-      <dt>{{translation.capitalStock[global.lang]}}</dt>
-      <dd>{{translation.capitalAmount[global.lang]}}</dd>
-
-    </dl>
-
+        <dt>{{translation.capitalStock[global.lang]}}</dt>
+        <dd>{{translation.capitalAmount[global.lang]}}</dd>
+      </dl>
+    </div>
   </div>
 </div>
