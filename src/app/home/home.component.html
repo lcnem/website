@@ -1,25 +1,5 @@
-<mat-toolbar class="mat-elevation-z4 top-toolbar">
-  <button mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <span>LCNEM</span>
-  <span class="fill-remaining-space"></span>
-  <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
-    <button mat-menu-item (click)="global.lang = 'en'">
-      English
-    </button>
-    <button mat-menu-item (click)="global.lang = 'ja'">
-      日本語
-    </button>
-  </mat-menu>
-  <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
-    {{global.lang}}
-  </button>
-</mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav #sidenav class="mat-elevation-z16" [fixedInViewport]="true">
-    <mat-toolbar></mat-toolbar>
     <mat-toolbar>
       <button mat-icon-button class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/lcnem.svg)'}"></button>
     </mat-toolbar>
@@ -57,120 +37,141 @@
       </a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content class="mat-typography body-container">
-    <div fxLayout="row wrap" class="item top">
-      <div fxFlex="50" fxFlex.xs="100" class="middle">
-        <div>
-          <h1>{{translation.risklessPeggedAssets[global.lang]}}</h1>
-          <p>{{translation.risklessPeggedAssetsBody[global.lang]}}</p>
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-elevation-z4 top-toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span>LCNEM</span>
+      <span class="fill-remaining-space"></span>
+      <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item (click)="global.lang = 'en'">
+          English
+        </button>
+        <button mat-menu-item (click)="global.lang = 'ja'">
+          日本語
+        </button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
+        {{global.lang}}
+      </button>
+    </mat-toolbar>
+    <div class="mat-typography body-container">
+      <div fxLayout="row wrap" class="item top">
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h1>{{translation.risklessPeggedAssets[global.lang]}}</h1>
+            <p>{{translation.risklessPeggedAssetsBody[global.lang]}}</p>
+          </div>
         </div>
-      </div>
-      <div fxFlex="50" fxFlex.xs="100">
-        <p>
-          <img src="assets/images/lcnem.svg" />
-        </p>
-      </div>
-    </div>
-    <div fxLayout="row-reverse wrap" class="item">
-      <div fxFlex="50" fxFlex.xs="100" class="middle">
-        <div>
-          <h2>{{translation.whyRiskless[global.lang]}}</h2>
-          <p>{{translation.whyRisklessBody[global.lang]}}</p>
+        <div fxFlex="50" fxFlex.xs="100">
           <p>
-            <button mat-raised-button color="accent" routerLink="/faq">{{translation.faq[global.lang]}}</button>
+            <img src="assets/images/lcnem.svg" />
           </p>
         </div>
       </div>
-      <div fxFlex="50" fxFlex.xs="100">
-        <p>
-          <img src="assets/images/pegged-assets.svg" />
-        </p>
-      </div>
-    </div>
-    <div fxLayout="row wrap" class="item">
-      <div fxFlex="50" fxFlex.xs="100" class="middle">
-        <div>
-          <h2>LCNEM Wallet</h2>
-          <p>{{translation.lcnemWalletBody[global.lang]}}</p>
+      <div fxLayout="row-reverse wrap" class="item">
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>{{translation.whyRiskless[global.lang]}}</h2>
+            <p>{{translation.whyRisklessBody[global.lang]}}</p>
+            <p>
+              <button mat-raised-button color="accent" routerLink="/faq">{{translation.faq[global.lang]}}</button>
+            </p>
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
           <p>
-            <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            <img src="assets/images/pegged-assets.svg" />
           </p>
         </div>
       </div>
-      <div fxFlex="50" fxFlex.xs="100">
-        <p>
-          <img src="assets/images/mockup.png" />
-        </p>
-      </div>
-    </div>
-    <div fxLayout="row-reverse wrap" class="item">
-      <div fxFlex="50" fxFlex.xs="100" class="middle">
-        <div>
-          <h2>{{translation.ticketP2p[global.lang]}}</h2>
-          <p>{{translation.ticketP2pBody[global.lang]}}</p>
+      <div fxLayout="row wrap" class="item">
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>LCNEM Wallet</h2>
+            <p>{{translation.lcnemWalletBody[global.lang]}}</p>
+            <p>
+              <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            </p>
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
           <p>
-            <a mat-raised-button color="accent" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            <img src="assets/images/mockup.png" />
           </p>
         </div>
       </div>
-      <div fxFlex="50" fxFlex.xs="100">
-        <p>
-          <img src="assets/images/ticket-p2p.svg" />
-        </p>
-      </div>
-    </div>
-    <div fxLayout="row wrap" class="item">
-      <div fxFlex="50" fxFlex.xs="100" class="middle">
-        <div>
-          <h2>Payment Request API</h2>
-          <p>{{translation.paymentRequestApiBody[global.lang]}}</p>
-          <!--<p>
-                <button mat-raised-button color="accent" routerLink="/payment-request-api">{{translation.readMore[global.lang]}}</button>
-              </p>-->　
+      <div fxLayout="row-reverse wrap" class="item">
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>{{translation.ticketP2p[global.lang]}}</h2>
+            <p>{{translation.ticketP2pBody[global.lang]}}</p>
+            <p>
+              <a mat-raised-button color="accent" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            </p>
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/ticket-p2p.svg" />
+          </p>
         </div>
       </div>
-      <div fxFlex="50" fxFlex.xs="100">
-        <p>
-          <img src="assets/images/payment-request-api.png" />
-        </p>
+      <div fxLayout="row wrap" class="item">
+        <div fxFlex="50" fxFlex.xs="100" class="middle">
+          <div>
+            <h2>Payment Request API</h2>
+            <p>{{translation.paymentRequestApiBody[global.lang]}}</p>
+            <!--<p>
+              <button mat-raised-button color="accent" routerLink="/payment-request-api">{{translation.readMore[global.lang]}}</button>
+            </p>-->
+          </div>
+        </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <p>
+            <img src="assets/images/payment-request-api.png" />
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <h2>{{translation.roadmap[global.lang]}}</h2>
-      <mat-list>
-        <h3 mat-subheader>{{translation.compliance[global.lang]}}</h3>
-        <mat-list-item>
-          <span>{{translation.noActionLetter[global.lang]}}</span>
-          <span class="fill-remaining-space"></span>
-          <span>
-            <mat-icon>done</mat-icon>
-          </span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[global.lang]}}">
-          <span>{{translation.issueAsPrepaid[global.lang]}}</span>
-          <span class="fill-remaining-space"></span>
-          <span>
-            <mat-icon>done</mat-icon>
-          </span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}">
-          <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
-          <span class="fill-remaining-space"></span>
-          <span>
-            <mat-icon></mat-icon>
-          </span>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[global.lang]}}">
-          <span>{{translation.registerAsRemittance[global.lang]}}</span>
-          <span class="fill-remaining-space"></span>
-          <span>
-            <mat-icon></mat-icon>
-          </span>
-        </mat-list-item>
-      </mat-list>
+      <div class="item">
+        <h2>{{translation.roadmap[global.lang]}}</h2>
+        <mat-list>
+          <h3 mat-subheader>{{translation.compliance[global.lang]}}</h3>
+          <mat-list-item>
+            <span>{{translation.noActionLetter[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[global.lang]}}">
+            <span>{{translation.issueAsPrepaid[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}">
+            <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[global.lang]}}">
+            <span>{{translation.registerAsRemittance[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
