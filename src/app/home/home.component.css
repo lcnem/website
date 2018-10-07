@@ -30,3 +30,12 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+mat-sidenav mat-nav-list mat-icon {
+  color: gray;
+}
+.open-in-new {
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+}
