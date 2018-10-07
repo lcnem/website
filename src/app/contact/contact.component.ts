@@ -11,7 +11,16 @@ export class ContactComponent implements OnInit {
     public global: GlobalDataService
   ) { }
 
+  public name?: string;
+  public email?: string;
+  public contactContent?: string;
+  public body?: string;
+
   ngOnInit() {
+  }
+
+  public async send() {
+
   }
 
   public translation = {

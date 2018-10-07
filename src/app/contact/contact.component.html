@@ -20,7 +20,7 @@
   </button>
 </mat-toolbar>
 <div class="out-toolbar">
-  <form #form="ngForm" (ngSubmit)="deposit()">
+  <form #form="ngForm" (ngSubmit)="send()">
     <mat-form-field fxFill>
       <input matInput type="text" placeholder="{{translation.name[global.lang]}}" [(ngModel)]="name" name="name"
         required />
