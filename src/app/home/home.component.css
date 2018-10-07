@@ -34,6 +34,9 @@ img {
 mat-sidenav mat-nav-list mat-icon {
   color: gray;
 }
+.mat-list-icon {
+  margin-right: 1em;
+}
 .open-in-new {
   font-size: 12px;
   width: 12px;

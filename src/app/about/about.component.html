@@ -1,4 +1,4 @@
-<mat-toolbar class="mat-elevation-z4">
+<mat-toolbar class="mat-elevation-z4 top-toolbar">
   <button mat-icon-button routerLink="/">
     <mat-icon>arrow_back</mat-icon>
   </button>
@@ -6,35 +6,36 @@
   <span>{{translation.corporateInformation[global.lang]}}</span>
   <span class="fill-remaining-space"></span>
 </mat-toolbar>
-
-<div fxLayout="row" fxLayoutAlign="center">
-  <div fxFlex=" 50" fxFlex.sm="80" fxFlex.xs="100">
-    <mat-list>
-      <mat-list-item>
-        <span>{{translation.corporateName[global.lang]}}</span>
-        <span class="fill-remaining-space"></span>
-        <span>{{translation.name[global.lang]}}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span>{{translation.corporateAddress[global.lang]}}</span>
-        <span class="fill-remaining-space"></span>
-        <span>{{translation.address[global.lang]}}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span>{{translation.corporateExecutiveOfficer[global.lang]}}</span>
-        <span class="fill-remaining-space"></span>
-        <span>{{translation.ceoName[global.lang]}}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span>{{translation.establishmentDate[global.lang]}}</span>
-        <span class="fill-remaining-space"></span>
-        <span>2018/03</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span>{{translation.capitalStock[global.lang]}}</span>
-        <span class="fill-remaining-space"></span>
-        <span>{{translation.capitalAmount[global.lang]}}</span>
-      </mat-list-item>
-    </mat-list>
+<div class="mat-typography body-container">
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex=" 50" fxFlex.sm="80" fxFlex.xs="100">
+      <mat-list>
+        <mat-list-item>
+          <span>{{translation.corporateName[global.lang]}}</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{translation.name[global.lang]}}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span>{{translation.corporateAddress[global.lang]}}</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{translation.address[global.lang]}}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span>{{translation.corporateExecutiveOfficer[global.lang]}}</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{translation.ceoName[global.lang]}}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span>{{translation.establishmentDate[global.lang]}}</span>
+          <span class="fill-remaining-space"></span>
+          <span>2018/03</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span>{{translation.capitalStock[global.lang]}}</span>
+          <span class="fill-remaining-space"></span>
+          <span>{{translation.capitalAmount[global.lang]}}</span>
+        </mat-list-item>
+      </mat-list>
+    </div>
   </div>
 </div>
