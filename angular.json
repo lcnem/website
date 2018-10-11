@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lcnem": {
+    "lcnem-website": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,13 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lcnem",
+            "outputPath": "dist/lcnem-website",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.svg",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
@@ -53,18 +53,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lcnem:build"
+            "browserTarget": "lcnem-website:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lcnem:build:production"
+              "browserTarget": "lcnem-website:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lcnem:build"
+            "browserTarget": "lcnem-website:build"
           }
         },
         "test": {
@@ -82,7 +82,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.svg",
+              "src/favicon.png",
               "src/assets"
             ]
           }
@@ -101,7 +101,7 @@
         }
       }
     },
-    "lcnem-e2e": {
+    "lcnem-website-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -109,11 +109,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lcnem:serve"
+            "devServerTarget": "lcnem-website:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lcnem:serve:production"
+              "devServerTarget": "lcnem-website:serve:production"
             }
           }
         },
@@ -129,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "lcnem"
+  "defaultProject": "lcnem-website"
 }
