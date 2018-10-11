@@ -31,9 +31,6 @@ img {
   align-items: center;
 }
 
-mat-sidenav mat-toolbar .mat-icon-button {
-  cursor: default;
-}
 mat-sidenav mat-nav-list mat-icon {
   color: gray;
 }
