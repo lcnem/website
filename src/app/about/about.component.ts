@@ -24,7 +24,7 @@ export class AboutComponent implements OnInit {
     corporateName: {
       en: "Corporate Name",
       ja: "会社名"
-    },
+    } as any,
     name: {
       en: "LCNEM, Inc.",
       ja: "株式会社LCNEM"
