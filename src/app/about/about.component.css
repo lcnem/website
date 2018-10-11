@@ -1,0 +1,17 @@
+dl {
+	width: 100%;
+	margin: 0 16px;
+}
+    
+dt {
+	width: 30%;
+	padding: 16px 5px; 
+	clear: left;
+	float: left;
+}
+    
+dd {
+	width: 50%;
+	float: left;
+	padding: 16px 0; 
+}
