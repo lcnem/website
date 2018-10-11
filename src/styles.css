@@ -26,6 +26,8 @@ mat-sidenav {
 }
 
 .body-container {
+  margin: 0 auto;
+  max-width: 1000px;
   padding: 16px;
 }
 
@@ -46,6 +48,7 @@ mat-spinner {
 .mat-fab.floating-action-button {
   position: -webkit-sticky;
   position: sticky;
+  margin: 16px;
   left: 16px;
   bottom: 16px;
   z-index: 1;
