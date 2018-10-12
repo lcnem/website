@@ -27,6 +27,7 @@ import { FaqComponent } from './faq/faq.component';
 import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
 import { AboutComponent } from './about/about.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     PaymentRequestApiComponent,
     AboutComponent,
     PrivacyPolicyComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

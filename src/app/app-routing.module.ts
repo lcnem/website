@@ -6,6 +6,7 @@ import { PaymentRequestApiComponent } from './payment-request-api/payment-reques
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "faq", component: FaqComponent },
   { path: "about", component: AboutComponent },
   { path: "privacy-policy", component: PrivacyPolicyComponent },
+  { path: "contact", component: ContactComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
 
