@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from '../services/global-data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +9,8 @@ import { GlobalDataService } from '../services/global-data.service';
 })
 export class ContactComponent implements OnInit {
   constructor(
-    public global: GlobalDataService
+    public global: GlobalDataService,
+    private http: HttpClient
   ) { }
 
   public name?: string;
@@ -19,8 +21,20 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  public async send() {
-
+  public async sendMail() {
+    try {
+      await this.http.post(
+        "api/sendmail",
+        {
+          name: this.name,
+          subject: this.contactContent,
+          email: this.email,
+          text: this.body
+        }
+      ).toPromise();
+    } catch {
+      return;
+    }
   }
 
   public translation = {
