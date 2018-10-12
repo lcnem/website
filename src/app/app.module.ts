@@ -26,6 +26,7 @@ import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
 import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
 import { AboutComponent } from './about/about.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ContactComponent } from './contact/contact.component';
     FaqComponent,
     PaymentRequestApiComponent,
     AboutComponent,
-    ContactComponent,
+    PrivacyPolicyComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
