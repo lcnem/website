@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
   public async sendMail() {
     try {
       await this.http.post(
-        "api/sendmail",
+        "/api/v1/send-mail",
         {
           name: this.name,
           subject: this.contactContent,
