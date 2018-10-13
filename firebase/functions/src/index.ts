@@ -6,7 +6,7 @@ import * as nodemailer from 'nodemailer';
 // export const helloWorld = functions.https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // });
-export const sendMail = functions.https.onRequest((req, res) => {
+export const sendMailV1 = functions.https.onRequest((req, res) => {
 
   try {
     const email = req.body.email as string;
