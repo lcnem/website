@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  public async sendMail() {
+  public async sendMailV1() {
     try {
       await this.http.post(
         "/api/v1/send-mail",
