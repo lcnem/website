@@ -16,7 +16,7 @@ export const sendMailV1 = functions.https.onRequest((req, res) => {
 
 
     if (!email || !name || !subject || !text) {
-      throw Error();
+      throw Error("INVALID_PARAMETERS");
     }
 
     var transporter: nodemailer.Transporter = nodemailer.createTransport({
