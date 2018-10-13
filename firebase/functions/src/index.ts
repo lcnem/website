@@ -14,6 +14,11 @@ export const sendMailV1 = functions.https.onRequest((req, res) => {
     const subject = req.body.subject as string;
     const text = req.body.text as string;
 
+
+    if (!email || !name || !subject || !text) {
+      throw Error();
+    }
+
     var transporter: nodemailer.Transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
