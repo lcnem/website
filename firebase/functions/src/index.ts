@@ -8,22 +8,17 @@ import * as nodemailer from 'nodemailer';
 // });
 
 export const sendMailV1 = functions.https.onRequest((req, res) => {
-
   try {
     const email = req.body.email as string;
     const name = req.body.name as string;
     const subject = req.body.subject as string;
     const text = req.body.text as string;
 
-    console.log(email)
-    console.log(name)
-    console.log(subject)
-    console.log(text)
     if (!email || !name || !subject || !text) {
       throw Error("INVALID_PARAMETERS");
     }
 
-    var transporter: nodemailer.Transporter = nodemailer.createTransport({
+    const transporter: nodemailer.Transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
         user: functions.config().gmail.email,
@@ -31,11 +26,11 @@ export const sendMailV1 = functions.https.onRequest((req, res) => {
       }
     });
 
-    var mailOptions: nodemailer.SendMailOptions = {
+    const mailOptions: nodemailer.SendMailOptions = {
       from: functions.config().gmail.email, // sender address
       to: functions.config().gmail.email, // list of receivers
       subject: subject, // Subject line
-      text: `name: ${name}, email:${email}, text: ${text}`
+      text: `name: ${name}\n email:${email}\n text: ${text}`
     };
 
     transporter.sendMail(mailOptions)
