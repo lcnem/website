@@ -15,7 +15,10 @@ export const sendMailV1 = functions.https.onRequest((req, res) => {
     const subject = req.body.subject as string;
     const text = req.body.text as string;
 
-
+    console.log(email)
+    console.log(name)
+    console.log(subject)
+    console.log(text)
     if (!email || !name || !subject || !text) {
       throw Error("INVALID_PARAMETERS");
     }
