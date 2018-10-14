@@ -34,6 +34,42 @@
           </mat-card-content>
         </mat-card>
       </div>
+      <div class="item">
+        <h2>{{translation.roadmap[global.lang]}}</h2>
+        <mat-list>
+          <mat-list-item>
+            <span>{{translation.noActionLetter[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[global.lang]}}">
+            <span>{{translation.issueAsPrepaid[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}">
+            <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[global.lang]}}">
+            <span>{{translation.registerAsRemittance[global.lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

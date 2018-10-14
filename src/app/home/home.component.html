@@ -8,15 +8,14 @@
         <mat-icon mat-list-icon>location_city</mat-icon>
         {{translation.aboutCompany[global.lang]}}
       </a>
+      <a mat-list-item routerLink="/contact">
+        <mat-icon mat-list-icon>contacts</mat-icon>
+        {{translation.contacts[global.lang]}}
+      </a>
       <mat-divider></mat-divider>
       <a mat-list-item href="https://www.wantedly.com/companies/lcnem" target="_blank">
         <mat-icon mat-list-icon>person_add</mat-icon>
         {{translation.recruiteInformation[global.lang]}}
-        <mat-icon class="open-in-new">open_in_new</mat-icon>
-      </a>
-      <a mat-list-item href="{{translation.contactsForm[global.lang]}}" target="_blank">
-        <mat-icon mat-list-icon>contacts</mat-icon>
-        {{translation.contacts[global.lang]}}
         <mat-icon class="open-in-new">open_in_new</mat-icon>
       </a>
       <a mat-list-item href="https://twitter.com/lcnem_{{global.lang}}" target="_blank">
@@ -55,120 +54,76 @@
       </button>
     </mat-toolbar>
     <div class="mat-typography body-container">
-      <div fxLayout="row wrap" class="item top">
-        <div fxFlex="50" fxFlex.xs="100" class="middle">
-          <div>
-            <h1>{{translation.risklessPeggedAssets[global.lang]}}</h1>
-            <p>{{translation.risklessPeggedAssetsBody[global.lang]}}</p>
+      <section>
+        <div fxLayout="row wrap" class="top">
+          <div fxFlex="70" fxFlex.xs="100">
+            <div>
+              <h1>{{translation.top[global.lang]}}</h1>
+              <p>{{translation.topBody[global.lang]}}</p>
+            </div>
+          </div>
+          <div fxFlex="30" fxFlex.xs="100">
+            <p>
+              <img src="assets/images/lcnem.svg" />
+            </p>
           </div>
         </div>
-        <div fxFlex="50" fxFlex.xs="100">
-          <p>
-            <img src="assets/images/lcnem.svg" />
-          </p>
-        </div>
-      </div>
-      <div fxLayout="row-reverse wrap" class="item">
-        <div fxFlex="50" fxFlex.xs="100" class="middle">
-          <div>
-            <h2>{{translation.whyRiskless[global.lang]}}</h2>
-            <p>{{translation.whyRisklessBody[global.lang]}}</p>
-            <p>
+      </section>
+      <h2>{{translation.business[global.lang]}}</h2>
+      <section>
+        <h3>{{translation.lcnem[global.lang]}}</h3>
+        <div fxLayout="row-reverse wrap">
+          <div fxFlex="70" fxFlex.xs="100" class="middle">
+            <div>
+              <h4>{{translation.lcnemTop[global.lang]}}</h4>
+              <p>{{translation.lcnemBody[global.lang]}}</p>
               <button mat-raised-button color="accent" routerLink="/faq">{{translation.faq[global.lang]}}</button>
+            </div>
+          </div>
+          <div fxFlex="30" fxFlex.xs="100">
+            <p>
+              <img src="assets/images/pegged-assets.svg" />
             </p>
           </div>
         </div>
-        <div fxFlex="50" fxFlex.xs="100">
-          <p>
-            <img src="assets/images/pegged-assets.svg" />
-          </p>
-        </div>
-      </div>
-      <div fxLayout="row wrap" class="item">
-        <div fxFlex="50" fxFlex.xs="100" class="middle">
-          <div>
-            <h2>LCNEM Wallet</h2>
-            <p>{{translation.lcnemWalletBody[global.lang]}}</p>
-            <p>
+        <h3>{{translation.lcnemWallet[global.lang]}}</h3>
+        <div fxLayout="row wrap">
+          <div fxFlex="70" fxFlex.xs="100" class="middle">
+            <div>
+              <h4>{{translation.lcnemTop[global.lang]}}</h4>
+              <p>{{translation.lcnemWalletBody[global.lang]}}</p>
               <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
-            </p>
+            </div>
           </div>
-        </div>
-        <div fxFlex="50" fxFlex.xs="100">
-          <p>
-            <img src="assets/images/mockup.png" />
-          </p>
-        </div>
-      </div>
-      <div fxLayout="row-reverse wrap" class="item">
-        <div fxFlex="50" fxFlex.xs="100" class="middle">
-          <div>
-            <h2>{{translation.ticketP2p[global.lang]}}</h2>
-            <p>{{translation.ticketP2pBody[global.lang]}}</p>
+          <div fxFlex="30" fxFlex.xs="100">
             <p>
-              <a mat-raised-button color="accent" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+              <img src="assets/images/mockup.png" />
             </p>
           </div>
         </div>
-        <div fxFlex="50" fxFlex.xs="100">
-          <p>
-            <img src="assets/images/ticket-p2p.svg" />
-          </p>
-        </div>
-      </div>
-      <div fxLayout="row wrap" class="item">
-        <div fxFlex="50" fxFlex.xs="100" class="middle">
-          <div>
-            <h2>Payment Request API</h2>
-            <p>{{translation.paymentRequestApiBody[global.lang]}}</p>
-            <!--<p>
-              <button mat-raised-button color="accent" routerLink="/payment-request-api">{{translation.readMore[global.lang]}}</button>
-            </p>-->
+        <h3>{{translation.ticketP2p[global.lang]}}</h3>
+        <div fxLayout="row-reverse wrap">
+          <div fxFlex="70" fxFlex.xs="100" class="middle">
+            <div>
+              <h4>{{translation.ticketP2pTop[global.lang]}}</h4>
+              <p>{{translation.ticketP2pBody[global.lang]}}</p>
+              <a mat-raised-button color="accent" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
+            </div>
+          </div>
+          <div fxFlex="30" fxFlex.xs="100">
+            <p>
+              <img src="assets/images/ticket-p2p.svg" />
+            </p>
           </div>
         </div>
-        <div fxFlex="50" fxFlex.xs="100">
-          <p>
-            <img src="assets/images/payment-request-api.png" />
-          </p>
+      </section>
+      <mat-divider></mat-divider>
+      <footer>
+        <div fxLayout="row" fxLayoutAlign="center">
+          <a routerLink="/about">{{translation.aboutCompany[global.lang]}}</a>
         </div>
-      </div>
-      <div class="item">
-        <h2>{{translation.roadmap[global.lang]}}</h2>
-        <mat-list>
-          <h3 mat-subheader>{{translation.compliance[global.lang]}}</h3>
-          <mat-list-item>
-            <span>{{translation.noActionLetter[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[global.lang]}}">
-            <span>{{translation.issueAsPrepaid[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}">
-            <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon></mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[global.lang]}}">
-            <span>{{translation.registerAsRemittance[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon></mat-icon>
-            </span>
-          </mat-list-item>
-        </mat-list>
-      </div>
+        <p>&copy; {{translation.lcnemInc[global.lang]}}</p>
+      </footer>
     </div>
     <button mat-fab color="accent" class="floating-action-button" (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
