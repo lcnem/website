@@ -1,5 +1,5 @@
 import * as functions from 'firebase-functions';
-import * as nodemailer from 'nodemailer';
+import * as request from 'request';
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
@@ -13,27 +13,36 @@ export const sendMailV1 = functions.https.onRequest((req, res) => {
     const name = req.body.name as string;
     const subject = req.body.subject as string;
     const text = req.body.text as string;
+    const lang = req.body.lang as string;
 
-    if (!email || !name || !subject || !text) {
-      throw Error("INVALID_PARAMETERS");
+    if (!email) {
+      throw Error("EMAIL_INVALID_PARAMETERS");
+    }
+    if (!name) {
+      throw Error("NAME_INVALID_PARAMETERS");
+    }
+    if (!subject) {
+      throw Error("SUBJECT_INVALID_PARAMETERS");
+    }
+    if (!text) {
+      throw Error("TEXT_INVALID_PARAMETERS");
+    }
+    if (!lang) {
+      throw Error("LANG_INVALID_PARAMETERS");
     }
 
-    const transporter: nodemailer.Transporter = nodemailer.createTransport({
-      service: 'Gmail',
-      auth: {
-        user: functions.config().gmail.email,
-        pass: functions.config().gmail.password
+    request.post(
+      functions.config().gas.send_email,
+      {
+        form: {
+          email: email,
+          name: name,
+          subject: subject,
+          text: text,
+          lang: lang
+        }
       }
-    });
-
-    const mailOptions: nodemailer.SendMailOptions = {
-      from: functions.config().gmail.email, // sender address
-      to: functions.config().gmail.email, // list of receivers
-      subject: subject, // Subject line
-      text: `name: ${name}\n email:${email}\n text: ${text}`
-    };
-
-    transporter.sendMail(mailOptions)
+    )
     res.status(200).send();
   } catch (e) {
     res.status(400).send(e.message);
