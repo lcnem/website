@@ -15,24 +15,32 @@ export class ContactComponent implements OnInit {
 
   public name?: string;
   public email?: string;
-  public contactContent?: string;
+  public subject?: string;
   public body?: string;
 
   ngOnInit() {
   }
 
-  public async sendMailV1() {
+  public async sendMail() {
     try {
       await this.http.post(
         "/api/v1/send-mail",
         {
           name: this.name,
-          subject: this.contactContent,
+          subject: this.subject,
           email: this.email,
-          text: this.body
+          text: this.body,
+          lang: this.global.lang
+        },
+        {
+
         }
       ).toPromise();
     } catch {
+      console.log(`${this.name}`)
+      console.log(`'${this.subject}'`)
+      console.log(`'${this.email}'`)
+      console.log(`'${this.body}'`)
       return;
     }
   }
