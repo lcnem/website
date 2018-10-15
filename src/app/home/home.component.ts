@@ -34,10 +34,6 @@ export class HomeComponent implements OnInit {
   }
 
   public translation = {
-    lcnemInc: {
-      en: "LCNEM, Inc.",
-      ja: "株式会社LCNEM"
-    } as any,
     contacts: {
       en: "Contacts",
       ja: "問い合わせ"
@@ -45,7 +41,7 @@ export class HomeComponent implements OnInit {
     top: {
       en: "ブロックチェーンで世の中のコストを最適化",
       ja: "ブロックチェーンで世の中のコストを最適化"
-    },
+    } as any,
     topBody: {
       en: `アナログ、レガシーなシステムは淘汰されつつあり、世の中ではデジタル化が進行していますが、デジタル化に伴う集中的なコストも同時に世の中に大量発生しています。
 例えば、銀行はセキュリティのために多額の出費をしています。
@@ -58,7 +54,7 @@ export class HomeComponent implements OnInit {
 これらコストをなくす力がブロックチェーンにはあります。
 世の中の非効率なコストをブロックチェーンで最適化するため、LCNEMは様々なプロダクトを提供します。`
     } as any,
-    lcnem: {
+    lcnemDevelopment: {
       en: "Development of LCNEM",
       ja: "LCNEMの開発"
     } as any,
@@ -76,7 +72,7 @@ You will be able to transfer the value of legal currency without credit inquiry,
       en: "FAQ",
       ja: "FAQ"
     } as any,
-    lcnemWallet: {
+    lcnemWalletDevelopment: {
       en: "Development of LCNEM Wallet",
       ja: "LCNEM Walletの開発"
     } as any,
@@ -90,7 +86,7 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
       ja: `LCNEMペグアセットの購入はこちらから。ブラウザから使えるアプリです。
 現在はNEMブロックチェーンに対応しており、今後はCosmosネットワークに対応予定です。`
     } as any,
-    ticketP2p: {
+    ticketP2pDevelopment: {
       en: "Development of Ticket Peer to Peer",
       ja: "ちけっとピアツーピアの開発"
     } as any,
@@ -113,6 +109,14 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
     business: {
       en: "Business",
       ja: "事業内容"
+    } as any,
+    lcnemWallet: {
+      en: "LCNEM Wallet",
+      ja: "LCNEM Wallet"
+    } as any,
+    ticketP2p: {
+      en: "Ticket Peer to Peer",
+      ja: "ちけっとピアツーピア"
     } as any,
     recruiteInformation: {
       en: "RecruiteInformation",

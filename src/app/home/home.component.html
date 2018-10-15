@@ -71,7 +71,7 @@
       </section>
       <h2>{{translation.business[global.lang]}}</h2>
       <section>
-        <h3>{{translation.lcnem[global.lang]}}</h3>
+        <h3>{{translation.lcnemDevelopment[global.lang]}}</h3>
         <div fxLayout="row-reverse wrap">
           <div fxFlex="60" fxFlex.xs="100" class="middle">
             <div>
@@ -84,7 +84,7 @@
             <img src="assets/images/pegged-assets.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
           </div>
         </div>
-        <h3>{{translation.lcnemWallet[global.lang]}}</h3>
+        <h3>{{translation.lcnemWalletDevelopment[global.lang]}}</h3>
         <div fxLayout="row wrap">
           <div fxFlex="60" fxFlex.xs="100" class="middle">
             <div>
@@ -97,7 +97,7 @@
             <img src="assets/images/wallet.png" class="mat-elevation-z1" />
           </div>
         </div>
-        <h3>{{translation.ticketP2p[global.lang]}}</h3>
+        <h3>{{translation.ticketP2pDevelopment[global.lang]}}</h3>
         <div fxLayout="row-reverse wrap">
           <div fxFlex="60" fxFlex.xs="100" class="middle">
             <div>
@@ -118,13 +118,7 @@
           </div>
         </div>
       </section>
-      <mat-divider></mat-divider>
-      <footer>
-        <div fxLayout="row" fxLayoutAlign="center">
-          <a routerLink="/about">{{translation.aboutCompany[global.lang]}}</a>
-        </div>
-        <p>&copy; {{translation.lcnemInc[global.lang]}}</p>
-      </footer>
+      <app-footer></app-footer>
     </div>
     <button mat-fab color="accent" class="floating-action-button" (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
