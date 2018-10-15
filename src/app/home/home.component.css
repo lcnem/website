@@ -2,30 +2,54 @@ img {
     max-width: 100%;
 }
 
-.top h1 {
+h1 {
   display: block;
   text-align: center;
   font-size: 200%;
   line-height: 1.2em;
 }
 
-.item {
+h2 {
+  text-align: center;
+  font-size: 3em;
+  margin: 1em;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h3:before,
+h3:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+h3:before {
+  margin-right: 1em;
+}
+h3::after {
+  margin-left: 1em;
+}
+
+section > div {
   margin: -16px;
   padding: 16px;
 }
-.item h2 {
-  text-align: center;
+section h4 {
   font-size: 1.5em;
 }
-.item p {
+section > div p {
   line-height: 1.5em;
-  text-align: center;
   margin-bottom: 1em;
 }
-.item > div {
+section > div > div {
   padding: 16px;
 }
-.item .middle {
+section .middle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,4 +65,19 @@ mat-sidenav mat-nav-list mat-icon {
   font-size: 12px;
   width: 12px;
   height: 12px;
+}
+
+.media {
+  overflow: auto;
+}
+
+.media img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.media p {
+  text-align: center;
+  font-size: 150%;
 }

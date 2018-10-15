@@ -20,12 +20,20 @@ import {
   MatDividerModule,
   MatButtonModule,
   MatMenuModule,
-  MatCardModule
+  MatCardModule,
+  MatDialogModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
-import { PaymentRequestApiComponent } from './payment-request-api/payment-request-api.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +41,13 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     PageNotFoundComponent,
     FaqComponent,
-    PaymentRequestApiComponent,
     AboutComponent,
+    FooterComponent,
+    PrivacyPolicyComponent,
+    ContactComponent,
+    AlertDialogComponent,
+    ConfirmDialogComponent,
+    LoadingDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -44,15 +57,23 @@ import { AboutComponent } from './about/about.component';
     FlexLayoutModule,
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     MatDividerModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
     MatSelectModule,
     MatSidenavModule,
+    MatProgressSpinnerModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+  ],
+  entryComponents: [
+    AlertDialogComponent,
+    ConfirmDialogComponent,
+    LoadingDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

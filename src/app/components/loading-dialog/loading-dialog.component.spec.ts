@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaymentRequestApiComponent } from './payment-request-api.component';
+import { LoadingDialogComponent } from './loading-dialog.component';
 
-describe('PaymentRequestApiComponent', () => {
-  let component: PaymentRequestApiComponent;
-  let fixture: ComponentFixture<PaymentRequestApiComponent>;
+describe('LoadingDialogComponent', () => {
+  let component: LoadingDialogComponent;
+  let fixture: ComponentFixture<LoadingDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaymentRequestApiComponent ]
+      declarations: [ LoadingDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PaymentRequestApiComponent);
+    fixture = TestBed.createComponent(LoadingDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

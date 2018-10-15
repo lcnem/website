@@ -5,12 +5,9 @@
       <button mat-icon-button (click)="global.back()">
         <mat-icon>arrow_back</mat-icon>
       </button>
-
-      <span>Payment Request API</span>
+      <span>{{translation.privacyPolicy[global.lang]}}</span>
       <span class="fill-remaining-space"></span>
     </mat-toolbar>
-    <div class="mat-typography body-container">
-
-    </div>
+    <iframe [src]="safeSite" fxFill></iframe>
   </mat-sidenav-content>
 </mat-sidenav-container>
