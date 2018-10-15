@@ -26,6 +26,8 @@ import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FaqComponent,
     AboutComponent,
     FooterComponent,
+    PrivacyPolicyComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
