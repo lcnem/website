@@ -20,7 +20,7 @@
   </button>
 </mat-toolbar>
 <div class="out-toolbar">
-  <form #form="ngForm" (ngSubmit)="send()">
+  <form #form="ngForm" (ngSubmit)="sendMail()">
     <mat-form-field fxFill>
       <input matInput type="text" placeholder="{{translation.name[global.lang]}}" [(ngModel)]="name" name="name"
         required />
@@ -30,8 +30,7 @@
         required />
     </mat-form-field>
     <mat-form-field fxFill>
-      <mat-select placeholder="{{translation.subject[global.lang]}}" [(ngModel)]="contactContent" name="contactContent"
-        required>
+      <mat-select placeholder="{{translation.subject[global.lang]}}" [(ngModel)]="subject" name="subject" required>
         <mat-option value="option">{{translation.question[global.lang]}}</mat-option>
         <mat-option value="option">{{translation.opinion[global.lang]}}</mat-option>
         <mat-option value="option">{{translation.others[global.lang]}}</mat-option>
