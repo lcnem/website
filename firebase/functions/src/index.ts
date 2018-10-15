@@ -15,35 +15,28 @@ export const sendMailV1 = functions.https.onRequest((req, res) => {
     const text = req.body.text as string;
     const lang = req.body.lang as string;
 
-    if (!email) {
-      throw Error("EMAIL_INVALID_PARAMETERS");
+    if (!email || !name || !subject || !text || !lang) {
+      throw Error("INVALID_PARAMETERS");
     }
-    if (!name) {
-      throw Error("NAME_INVALID_PARAMETERS");
-    }
-    if (!subject) {
-      throw Error("SUBJECT_INVALID_PARAMETERS");
-    }
-    if (!text) {
-      throw Error("TEXT_INVALID_PARAMETERS");
-    }
-    if (!lang) {
-      throw Error("LANG_INVALID_PARAMETERS");
-    }
+
+    const body = `Email:${email}
+Name:${name}
+
+${text}`
 
     request.post(
       functions.config().gas.send_email,
       {
         form: {
-          email: email,
-          name: name,
+          lang: lang,
           subject: subject,
-          text: text,
-          lang: lang
+          body: body
         }
+      },
+      () => {
+        res.status(200).send();
       }
     )
-    res.status(200).send();
   } catch (e) {
     res.status(400).send(e.message);
   }
