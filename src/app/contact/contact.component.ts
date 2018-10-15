@@ -22,7 +22,13 @@ export class ContactComponent implements OnInit {
   }
 
   public async sendMail() {
+    console.log(`${this.name}`)
+    console.log(`'${this.subject}'`)
+    console.log(`'${this.email}'`)
+    console.log(`'${this.body}'`)
+    console.log(`${this.global.lang}`)
     try {
+
       await this.http.post(
         "/api/v1/send-mail",
         {
@@ -31,16 +37,9 @@ export class ContactComponent implements OnInit {
           email: this.email,
           text: this.body,
           lang: this.global.lang
-        },
-        {
-
         }
       ).toPromise();
     } catch {
-      console.log(`${this.name}`)
-      console.log(`'${this.subject}'`)
-      console.log(`'${this.email}'`)
-      console.log(`'${this.body}'`)
       return;
     }
   }
