@@ -20,7 +20,9 @@ import {
   MatDividerModule,
   MatButtonModule,
   MatMenuModule,
-  MatCardModule
+  MatCardModule,
+  MatDialogModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
@@ -28,6 +30,10 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,10 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     FooterComponent,
     PrivacyPolicyComponent,
-    ContactComponent
+    ContactComponent,
+    AlertDialogComponent,
+    ConfirmDialogComponent,
+    LoadingDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,15 +57,23 @@ import { ContactComponent } from './contact/contact.component';
     FlexLayoutModule,
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     MatDividerModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
     MatSelectModule,
     MatSidenavModule,
+    MatProgressSpinnerModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+  ],
+  entryComponents: [
+    AlertDialogComponent,
+    ConfirmDialogComponent,
+    LoadingDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
