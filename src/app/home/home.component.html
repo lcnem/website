@@ -55,17 +55,17 @@
     </mat-toolbar>
     <div class="mat-typography body-container">
       <section>
-        <div fxLayout="row wrap" class="top">
-          <div fxFlex="70" fxFlex.xs="100">
+        <div fxLayout="row" fxLayoutAlign="center">
+          <div fxFlex="60" fxFlex.xs="80">
+            <img src="assets/images/lcnem.svg" />
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="center">
+          <div fxFlex="80" fxFlex.xs="100">
             <div>
               <h1>{{translation.top[global.lang]}}</h1>
               <p>{{translation.topBody[global.lang]}}</p>
             </div>
-          </div>
-          <div fxFlex="30" fxFlex.xs="100">
-            <p>
-              <img src="assets/images/lcnem.svg" />
-            </p>
           </div>
         </div>
       </section>
@@ -73,47 +73,41 @@
       <section>
         <h3>{{translation.lcnem[global.lang]}}</h3>
         <div fxLayout="row-reverse wrap">
-          <div fxFlex="70" fxFlex.xs="100" class="middle">
+          <div fxFlex="60" fxFlex.xs="100" class="middle">
             <div>
               <h4>{{translation.lcnemTop[global.lang]}}</h4>
               <p>{{translation.lcnemBody[global.lang]}}</p>
               <button mat-raised-button color="accent" routerLink="/faq">{{translation.faq[global.lang]}}</button>
             </div>
           </div>
-          <div fxFlex="30" fxFlex.xs="100">
-            <p>
-              <img src="assets/images/pegged-assets.svg" />
-            </p>
+          <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center">
+            <img src="assets/images/pegged-assets.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
           </div>
         </div>
         <h3>{{translation.lcnemWallet[global.lang]}}</h3>
         <div fxLayout="row wrap">
-          <div fxFlex="70" fxFlex.xs="100" class="middle">
+          <div fxFlex="60" fxFlex.xs="100" class="middle">
             <div>
-              <h4>{{translation.lcnemTop[global.lang]}}</h4>
+              <h4>{{translation.lcnemWalletTop[global.lang]}}</h4>
               <p>{{translation.lcnemWalletBody[global.lang]}}</p>
               <a mat-raised-button color="accent" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
             </div>
           </div>
-          <div fxFlex="30" fxFlex.xs="100">
-            <p>
-              <img src="assets/images/mockup.png" />
-            </p>
+          <div fxFlex="40" fxFlex.xs="100">
+            <img src="assets/images/wallet.png" class="mat-elevation-z1" />
           </div>
         </div>
         <h3>{{translation.ticketP2p[global.lang]}}</h3>
         <div fxLayout="row-reverse wrap">
-          <div fxFlex="70" fxFlex.xs="100" class="middle">
+          <div fxFlex="60" fxFlex.xs="100" class="middle">
             <div>
               <h4>{{translation.ticketP2pTop[global.lang]}}</h4>
               <p>{{translation.ticketP2pBody[global.lang]}}</p>
               <a mat-raised-button color="accent" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}</a>
             </div>
           </div>
-          <div fxFlex="30" fxFlex.xs="100">
-            <p>
-              <img src="assets/images/ticket-p2p.svg" />
-            </p>
+          <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center">
+            <img src="assets/images/ticket-p2p.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
           </div>
         </div>
       </section>

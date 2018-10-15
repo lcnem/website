@@ -2,7 +2,7 @@ img {
     max-width: 100%;
 }
 
-.top h1 {
+h1 {
   display: block;
   text-align: center;
   font-size: 200%;
@@ -48,6 +48,11 @@ section > div p {
 }
 section > div > div {
   padding: 16px;
+}
+section .middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 mat-sidenav mat-nav-list mat-icon {
