@@ -7,6 +7,23 @@ import { GlobalDataService } from '../services/global-data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public media = [
+    {
+      name: "TechCrunch",
+      url: "https://jp.techcrunch.com/2018/09/20/lcnem-ticketp2p/",
+      image: "assets/media/tech-crunch.svg"
+    },
+    {
+      name: "CoinTelegraph",
+      url: "https://jp.cointelegraph.com/news/lcnem-sells-nem-based-stable-coins",
+      image: "assets/media/cointelegraph.svg"
+    }
+  ] as {
+    name: string,
+    url: string,
+    image: string
+  }[];
+
   constructor(
     public global: GlobalDataService
   ) {

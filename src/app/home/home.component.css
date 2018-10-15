@@ -66,3 +66,18 @@ mat-sidenav mat-nav-list mat-icon {
   width: 12px;
   height: 12px;
 }
+
+.media {
+  overflow: auto;
+}
+
+.media img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.media p {
+  text-align: center;
+  font-size: 150%;
+}

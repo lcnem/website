@@ -110,6 +110,13 @@
             <img src="assets/images/ticket-p2p.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
           </div>
         </div>
+        <h3>メディア掲載実績</h3>
+        <div fxLayout="row-up" class="media">
+          <div *ngFor="let m of media">
+            <a href="{{m.url}}"><img mat-card-image src="{{m.image}}" /></a>
+            <p>{{m.name}}</p>
+          </div>
+        </div>
       </section>
       <app-footer></app-footer>
     </div>
