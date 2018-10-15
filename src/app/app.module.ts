@@ -25,6 +25,7 @@ import {
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AboutComponent } from './about/about.component';
     PageNotFoundComponent,
     FaqComponent,
     AboutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
