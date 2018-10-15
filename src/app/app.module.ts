@@ -27,7 +27,6 @@ import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ContactComponent } from './contact/contact.component';
-import { AssetListsComponent } from './components/asset-lists/asset-lists.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { AssetListsComponent } from './components/asset-lists/asset-lists.compon
     FaqComponent,
     AboutComponent,
     PrivacyPolicyComponent,
-    ContactComponent,
-    AssetListsComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
