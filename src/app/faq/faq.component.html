@@ -10,29 +10,18 @@
       <span class="fill-remaining-space"></span>
     </mat-toolbar>
     <div class="mat-typography body-container">
-      <div fxLayout="row wrap">
-        <mat-card fxFlex="50" fxFlex.xs="100">
-          <img mat-card-image src="assets/images/cosmos.png" />
+      <div>
+        <div *ngFor="let f of faqContent">
+          <img mat-card-image src="{{f.imgURL}}" />
           <mat-card-content>
             <p>
-              Q.{{translation.whatIsCosmos[global.lang]}}
+              Q.{{f.question[global.lang]}}
             </p>
             <p>
-              A.{{translation.whatIsCosmosA[global.lang]}}
+              A.{{f.answer[global.lang]}}
             </p>
           </mat-card-content>
-        </mat-card>
-        <mat-card fxFlex="50" fxFlex.xs="100">
-          <img mat-card-image src="assets/images/lcnem-nem.svg" />
-          <mat-card-content>
-            <p>
-              Q.{{translation.whyNem[global.lang]}}
-            </p>
-            <p>
-              A.{{translation.whyNemA[global.lang]}}
-            </p>
-          </mat-card-content>
-        </mat-card>
+        </div>
       </div>
       <div class="item">
         <h2>{{translation.roadmap[global.lang]}}</h2>
