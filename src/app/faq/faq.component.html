@@ -11,16 +11,20 @@
     </mat-toolbar>
     <div class="mat-typography body-container">
       <div>
-        <div *ngFor="let f of faqContent">
-          <img mat-card-image src="{{f.imgURL}}" />
-          <mat-card-content>
-            <p>
+        <div class="faq-content" *ngFor="let f of faqContent">
+          <div fxFlex="70" fxLayout="column" fxLayoutAlign="center">
+            <h2>
               Q.{{f.question[global.lang]}}
-            </p>
+            </h2>
             <p>
               A.{{f.answer[global.lang]}}
             </p>
-          </mat-card-content>
+          </div>
+          <div fxFlex="5">
+          </div>
+          <div fxFlex="25">
+            <img src="{{f.imgURL}}" />
+          </div>
         </div>
       </div>
       <div class="item">
