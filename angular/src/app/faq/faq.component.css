@@ -1,0 +1,23 @@
+mat-card {
+  margin: 1em auto;
+}
+mat-card p {
+  font-size: 150%;
+  line-height: 1.5em;
+}
+
+.faq-content {
+  margin: 30px 0;
+}
+
+.faq-content h2 {
+  color: #666;
+}
+
+.faq-content p {
+  color: #888;
+}
+
+.faq-content img {
+  max-width: 100%;
+}
