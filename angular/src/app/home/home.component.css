@@ -36,16 +36,25 @@ h2::after {
   background-color: #f6f6f6;
 }
 
+.content.bg-blue {
+  background-color: #174381;
+}
+
+.content.bg-blue h2 {
+  color: #fff;
+}
+
 .img-box.small {
   padding: 0 60px;
 }
 
 section h4 {
-  font-size: 1.5em;
+  font-size: 1.65em;
+  margin-bottom: 30px;
 }
 section > div p {
-  line-height: 1.5em;
-  margin-bottom: 1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 section > div > div {
   padding: 16px;
