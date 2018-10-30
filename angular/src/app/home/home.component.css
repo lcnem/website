@@ -190,6 +190,8 @@ mat-sidenav mat-nav-list mat-icon {
 .card {
   background-color: #fff;
   transition-duration: 0.2s;
+  min-width: 300px;
+  margin: 2%;
 }
 
 .card:hover {
@@ -199,6 +201,10 @@ mat-sidenav mat-nav-list mat-icon {
 .card a {
   text-decoration: none;
   color: #333;
+}
+.dummy {
+  min-width: 300px;
+  margin: 2%;
 }
 .img-wrapper {
   height: 200px;

@@ -155,7 +155,7 @@
       <section class="content bg-blue">
         <div class="inner-wrapper">
           <h2>メディア掲載実績</h2>
-          <div fxLayout="row" fxLayoutAlign="space-between" class="media">
+          <div fxLayout="row" fxLayoutAlign="center" class="media">
             <div *ngFor="let m of media" class="card" fxFlex="30">
               <a href="{{m.url}}">
                 <div class="img-wrapper">
@@ -171,8 +171,8 @@
                 </div>
               </a>
             </div>
-            <div fxFlex="30"></div>
-            <div fxFlex="30"></div>
+            <div fxFlex="30" class="dummy"></div>
+            <div fxFlex="30" class="dummy"></div>
           </div>
         </div>
       </section>
