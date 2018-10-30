@@ -53,8 +53,8 @@
         {{global.lang}}
       </button>
     </mat-toolbar>
-    <div class="mat-typography body-container">
-      <section>
+    <div class="mat-typography">
+      <section class="content">
         <div fxLayout="row" fxLayoutAlign="center">
           <div fxFlex="60" fxFlex.xs="80">
             <img src="assets/images/lcnem.svg" />
@@ -69,51 +69,69 @@
           </div>
         </div>
       </section>
-      <section>
-        <h3>{{translation.lcnemDevelopment[global.lang]}}</h3>
-        <div fxLayout="row-reverse wrap">
-          <div fxFlex="60" fxFlex.xs="100" class="middle">
-            <div>
-              <h4>{{translation.lcnemTop[global.lang]}}</h4>
-              <p>{{translation.lcnemBody[global.lang]}}</p>
-              <a class="link" routerLink="/faq">{{translation.faq[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+
+      <section class="content bg-gray">
+        <div class="inner-wrapper">
+          <h2>{{translation.lcnemDevelopment[global.lang]}}</h2>
+          <div fxLayout="row-reverse wrap">
+            <div fxFlex="60" fxFlex.xs="100" class="middle">
+              <div>
+                <h4>{{translation.lcnemTop[global.lang]}}</h4>
+                <p>{{translation.lcnemBody[global.lang]}}</p>
+                <a class="link" routerLink="/faq">{{translation.faq[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+              </div>
+            </div>
+            <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center">
+              <img src="assets/images/pegged-assets.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
             </div>
           </div>
-          <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center">
-            <img src="assets/images/pegged-assets.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
-          </div>
         </div>
-        <h3>{{translation.lcnemWalletDevelopment[global.lang]}}</h3>
-        <div fxLayout="row wrap">
-          <div fxFlex="60" fxFlex.xs="100" class="middle">
-            <div>
-              <h4>{{translation.lcnemWalletTop[global.lang]}}</h4>
-              <p>{{translation.lcnemWalletBody[global.lang]}}</p>
-              <a class="link" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+      </section>
+
+      <section class="content">
+        <div class="inner-wrapper">
+          <h2>{{translation.lcnemWalletDevelopment[global.lang]}}</h2>
+          <div fxLayout="row wrap">
+            <div fxFlex="60" fxFlex.xs="100" class="middle">
+              <div>
+                <h4>{{translation.lcnemWalletTop[global.lang]}}</h4>
+                <p>{{translation.lcnemWalletBody[global.lang]}}</p>
+                <a class="link" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+              </div>
+            </div>
+            <div fxFlex="40" fxFlex.xs="100" class="img-box small">
+              <img src="assets/images/wallet.png" class="mat-elevation-z1" />
             </div>
           </div>
-          <div fxFlex="40" fxFlex.xs="100">
-            <img src="assets/images/wallet.png" class="mat-elevation-z1" />
-          </div>
         </div>
-        <h3>{{translation.ticketP2pDevelopment[global.lang]}}</h3>
-        <div fxLayout="row-reverse wrap">
-          <div fxFlex="60" fxFlex.xs="100" class="middle">
-            <div>
-              <h4>{{translation.ticketP2pTop[global.lang]}}</h4>
-              <p>{{translation.ticketP2pBody[global.lang]}}</p>
-              <a class="link" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+      </section>
+
+      <section class="content bg-gray">
+        <div class="inner-wrapper">
+          <h2>{{translation.ticketP2pDevelopment[global.lang]}}</h2>
+          <div fxLayout="row-reverse wrap">
+            <div fxFlex="60" fxFlex.xs="100" class="middle">
+              <div>
+                <h4>{{translation.ticketP2pTop[global.lang]}}</h4>
+                <p>{{translation.ticketP2pBody[global.lang]}}</p>
+                <a class="link" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+              </div>
+            </div>
+            <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center">
+              <img src="assets/images/ticket-p2p.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
             </div>
           </div>
-          <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center">
-            <img src="assets/images/ticket-p2p.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
-          </div>
         </div>
-        <h3>メディア掲載実績</h3>
-        <div fxLayout="row-up" class="media">
-          <div *ngFor="let m of media">
-            <a href="{{m.url}}"><img mat-card-image src="{{m.image}}" /></a>
-            <p>{{m.name}}</p>
+      </section>
+
+      <section class="content">
+        <div class="inner-wrapper">
+          <h2>メディア掲載実績</h2>
+          <div fxLayout="row-up" class="media">
+            <div *ngFor="let m of media">
+              <a href="{{m.url}}"><img mat-card-image src="{{m.image}}" /></a>
+              <p>{{m.name}}</p>
+            </div>
           </div>
         </div>
       </section>

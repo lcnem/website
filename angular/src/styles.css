@@ -27,10 +27,9 @@ mat-sidenav {
   z-index: 4;
 }
 
-.body-container {
+.inner-wrapper {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 16px;
 }
 
 mat-spinner {
