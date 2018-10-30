@@ -82,14 +82,7 @@ mat-sidenav mat-nav-list mat-icon {
 }
 
 .media img {
-  width: 200px;
-  height: 100px;
   object-fit: contain;
-}
-
-.media p {
-  text-align: center;
-  font-size: 150%;
 }
 
 .link {
@@ -115,4 +108,50 @@ mat-sidenav mat-nav-list mat-icon {
   font-size: 14px;
   vertical-align: middle;
   margin-left: 3px;
+}
+
+.card {
+  background-color: #fff;
+  transition-duration: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card a {
+  text-decoration: none;
+  color: #333;
+}
+.img-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  padding: 16px;
+}
+
+.content-wrapper .icon-img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.img-wrapper img {
+  width: 110%;
+  max-width: 120%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -47%);
+}
+
+.card p {
+  margin-bottom: 0 !important;
+  color: #888;
+}
+
+.card span {
+  margin-left: 10px;
+  display: inline-block;
 }

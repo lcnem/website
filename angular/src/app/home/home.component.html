@@ -127,11 +127,24 @@
       <section class="content bg-blue">
         <div class="inner-wrapper">
           <h2>メディア掲載実績</h2>
-          <div fxLayout="row-up" class="media">
-            <div *ngFor="let m of media">
-              <a href="{{m.url}}"><img mat-card-image src="{{m.image}}" /></a>
-              <p>{{m.name}}</p>
+          <div fxLayout="row wrap" fxLayoutAlign="space-between" class="media">
+            <div *ngFor="let m of media" class="card" fxFlex="30">
+              <a href="{{m.url}}">
+                <div class="img-wrapper">
+                  <img src="{{m.image}}" />                
+                </div>
+                <div class="content-wrapper">
+                  <h3>{{m.title}}</h3>
+                  <p>
+                    <img src="{{m.icon}}" class="icon-img" />
+                    <span>{{m.name}}</span>
+                    <span>{{m.date}}</span>
+                  </p>
+                </div>
+              </a>
             </div>
+            <div fxFlex="30"></div>
+            <div fxFlex="30"></div>
           </div>
         </div>
       </section>

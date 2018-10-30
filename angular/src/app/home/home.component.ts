@@ -11,18 +11,27 @@ export class HomeComponent implements OnInit {
     {
       name: "TechCrunch",
       url: "https://jp.techcrunch.com/2018/09/20/lcnem-ticketp2p/",
-      image: "assets/media/tech-crunch.svg"
+      icon: "assets/media/tech-crunch.svg",
+      image: "assets/images/lcnem.svg",
+      title: "ブロックチェーンでチケット転売防止、京大発スタートアップLCNEM...",
+      date: "2018.9.20"
     },
     {
       name: "CoinTelegraph",
       url:
         "https://jp.cointelegraph.com/news/lcnem-sells-nem-based-stable-coins",
-      image: "assets/media/cointelegraph.svg"
+      icon: "assets/media/cointelegraph.svg",
+      image: "assets/media/coinbase.png",
+      title: "ネムウォレットのLCNEM、モザイクで発行した前払式支払手段を販売",
+      date: "2018.6.25"
     }
   ] as {
     name: string;
     url: string;
+    icon: string;
     image: string;
+    title: string;
+    date: string;
   }[];
 
   constructor(public global: GlobalDataService) {}
