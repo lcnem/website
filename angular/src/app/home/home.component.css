@@ -4,6 +4,9 @@ img {
 
 header {
   position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  z-index: 5;
 }
 
 h1 {
@@ -69,6 +72,29 @@ h2::after {
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002771', endColorstr='#000c24',GradientType=0 ); /* IE6-9 */
 }
+.header {
+  top: 0;
+  width: 100%;
+}
+
+.header.absorute {
+  position: absolute;
+}
+
+.header .logo {
+  margin-left: -5px;
+  width: 50px;
+  height: 50px;
+}
+
+.header .logo.white {
+  fill: #fff;
+}
+
+.main {
+  position: relative;
+  z-index: 10;
+}
 
 .main p {
   font-size: 110%;
@@ -109,9 +135,7 @@ section > div p {
   line-height: 1.6;
   margin-bottom: 30px;
 }
-section > div > div {
-  padding: 16px;
-}
+
 section .middle {
   display: flex;
   justify-content: center;
@@ -131,7 +155,6 @@ mat-sidenav mat-nav-list mat-icon {
 }
 
 .media {
-  overflow: auto;
   flex-wrap: wrap;
 }
 
