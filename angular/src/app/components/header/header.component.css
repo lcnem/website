@@ -1,0 +1,38 @@
+.header {
+  z-index: 5;
+  top: 0;
+  width: 100%;
+  font-size: 18px;
+}
+
+.header.fixed {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.header.absolute {
+  position: absolute;
+}
+
+.logo {
+  margin-left: -5px;
+  width: 50px;
+  height: 50px;
+}
+
+.logo.white {
+  fill: #fff;
+}
+
+.logo.normal .cls-1{
+  fill:#0071bc;
+}
+
+.logo.normal .cls-2{
+  fill:#2e3192;
+}
+
+.logo.normal .cls-3{
+  fill:#29abe2;
+} 

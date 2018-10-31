@@ -34,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { LoadingDialogComponent } from './components/loading-dialog/loading-dial
     ContactComponent,
     AlertDialogComponent,
     ConfirmDialogComponent,
-    LoadingDialogComponent
+    LoadingDialogComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
