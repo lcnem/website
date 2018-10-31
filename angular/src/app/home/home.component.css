@@ -10,25 +10,6 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
-  display: flex;
-  align-items: center;
-  font-size: 2em;
-  margin-bottom: 60px;
-}
-h2:before,
-h2:after {
-  border-top: 1px solid;
-  content: "";
-  flex-grow: 1;
-}
-h2:before {
-  margin-right: 1em;
-}
-h2::after {
-  margin-left: 1em;
-}
-
 .bg-img {
   fill: #0a93eb;
   opacity: 0.26;

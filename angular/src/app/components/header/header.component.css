@@ -4,6 +4,10 @@
   top: 0;
 }
 
+.inner-wrapper {
+  padding: 10px 0;
+}
+
 .header.fixed, .header.normal {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
