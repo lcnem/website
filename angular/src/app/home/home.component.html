@@ -8,6 +8,10 @@
         <mat-icon mat-list-icon>location_city</mat-icon>
         {{translation.aboutCompany[global.lang]}}
       </a>
+      <a mat-list-item routerLink="/faq">
+        <mat-icon mat-list-icon>help</mat-icon>
+        FAQ
+      </a>
       <a mat-list-item routerLink="/contact">
         <mat-icon mat-list-icon>contacts</mat-icon>
         {{translation.contacts[global.lang]}}
@@ -37,30 +41,30 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <header class="header">
-      <div class="inner-wrapper" fxLayout="row" fxLayoutAlign="space-between">
-        <div fxLayout="row" fxLayoutAlign="left center">
-          <div class="logo">
-            <img src="assets/images/lcnem.svg"/>
-          </div>
-          <div>LCNEM</div>
-        </div>
-        <div class="fill-remaining-space"></div>
-        <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
-          <button mat-menu-item (click)="global.lang = 'en'">
-            English
-          </button>
-          <button mat-menu-item (click)="global.lang = 'ja'">
-            日本語
-          </button>
-        </mat-menu>
-        <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
-          {{global.lang}}
-        </button>
-      </div>
-    </header>
-
     <div class="mat-typography">
+      <header class="header">
+        <div class="inner-wrapper" fxLayout="row" fxLayoutAlign="space-between">
+          <div fxLayout="row" fxLayoutAlign="left center">
+            <div class="logo">
+              <img src="assets/images/lcnem.svg"/>
+            </div>
+            <div>LCNEM</div>
+          </div>
+          <div class="fill-remaining-space"></div>
+          <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item (click)="global.lang = 'en'">
+              English
+            </button>
+            <button mat-menu-item (click)="global.lang = 'ja'">
+              日本語
+            </button>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
+            {{global.lang}}
+          </button>
+        </div>
+      </header>
+
       <section class="main" fxLayout="column" fxLayoutAlign="center" >
         <div class="header absorute">
           <div class="inner-wrapper" fxLayout="row" fxLayoutAlign="space-between">
