@@ -1,18 +1,26 @@
 .header {
-  z-index: 5;
-  top: 0;
   width: 100%;
   font-size: 18px;
+  top: 0;
 }
 
-.header.fixed {
-  position: fixed;
+.header.fixed, .header.normal {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
+.header.fixed {
+  z-index: 5;
+  position: fixed;
+}
+
 .header.absolute {
   position: absolute;
+}
+
+.logo-zone {
+  cursor: pointer;
+  outline: none;
 }
 
 .logo {

@@ -1,3 +1,7 @@
+.body-container {
+  margin: 90px 0;
+}
+
 mat-card {
   margin: 1em auto;
 }
@@ -20,4 +24,8 @@ mat-card p {
 
 .faq-content img {
   max-width: 100%;
+}
+
+.item {
+  margin-top: 90px;
 }

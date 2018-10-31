@@ -1,16 +1,9 @@
 <mat-sidenav-container>
   <mat-sidenav></mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="mat-elevation-z4 top-toolbar">
-      <button mat-icon-button (click)="global.back()">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
-
-      <span>FAQ</span>
-      <span class="fill-remaining-space"></span>
-    </mat-toolbar>
+    <app-header position="normal" color="normal"></app-header>
     <div class="inner-wrapper">
-      <div class="mat-typography body-container">
+      <div class="body-container">
         <div>
           <div class="faq-content" *ngFor="let f of faqContent">
             <div fxFlex="70" fxLayout="column" fxLayoutAlign="center">
@@ -66,5 +59,6 @@
         </div>
       </div>
     </div>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
