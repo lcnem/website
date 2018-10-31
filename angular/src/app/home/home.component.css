@@ -143,11 +143,15 @@ mat-sidenav mat-nav-list mat-icon {
   margin-left: 3px;
 }
 
+.media {
+  margin-bottom: -30px;
+}
+
 .card {
   background-color: #fff;
   transition-duration: 0.2s;
   min-width: 300px;
-  margin: 2%;
+  margin:  30px 1%;
 }
 
 .card:hover {
@@ -160,7 +164,7 @@ mat-sidenav mat-nav-list mat-icon {
 }
 .dummy {
   min-width: 300px;
-  margin: 2%;
+  margin: 1%;
 }
 .img-wrapper {
   height: 200px;

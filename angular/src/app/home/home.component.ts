@@ -24,6 +24,15 @@ export class HomeComponent implements OnInit {
       image: "assets/media/coinbase.png",
       title: "ネムウォレットのLCNEM、モザイクで発行した前払式支払手段を販売",
       date: "2018.6.25"
+    },
+    {
+      name: "仮想通貨Watch",
+      url:
+        "https://crypto.watch.impress.co.jp/img/ctw/docs/1138/641/html/image01_o.jpg.html",
+      icon: "assets/media/crypto-watch.png",
+      image: "assets/media/crypto-watch.jpg",
+      title: "金融庁がLCNEMのステーブルコインは資金決済法上の「仮想通貨」で...",
+      date: "2018.8.20"
     }
   ] as {
     name: string;
@@ -130,6 +139,10 @@ export class HomeComponent implements OnInit {
     aboutCompany: {
       en: "Corporate Information",
       ja: "会社概要"
+    } as any,
+    media: {
+      en: "List of Past Media Coverage",
+      ja: "メディア掲載実績"
     } as any
   };
 }
