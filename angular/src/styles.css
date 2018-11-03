@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
+html, body {
+  height: 100%;
   margin: 0;
 }
 
 mat-sidenav-container {
-  background-color: #fff !important;
+  height: 100%;
 }
 
 mat-sidenav {
@@ -14,7 +14,7 @@ mat-sidenav {
   overflow: auto;
 }
 
-.fill-remaining-space {
+.fill-remaining-space{
   flex: 1 1 auto;
 }
 
@@ -25,14 +25,14 @@ mat-sidenav {
   z-index: 4;
 }
 
-.inner-wrapper {
+.body-container {
   margin: 0 auto;
   max-width: 1000px;
-  width: 95%;
+  padding: 16px;
 }
 
 mat-spinner {
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .icon {
@@ -45,11 +45,29 @@ mat-spinner {
   border-radius: 50%;
 }
 
-.mat-fab.floating-action-button {
+.floating-action-button.mat-fab {
   position: fixed;
-  left: 16px;
   bottom: 16px;
+  right: 16px;
   z-index: 1;
+}
+
+.table-container {
+  overflow: auto;
+  white-space: nowrap;
+}
+.table-container table {
+  width: 100%;
+}
+.table-container th, td {
+  padding: 0 0.5em !important;
+}
+
+/*これより上は他サービス共通　以下本プロジェクト専用*/
+.inner-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 95%;
 }
 
 h2.with-line {
