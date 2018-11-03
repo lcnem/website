@@ -7,7 +7,7 @@ import * as request from 'request';
 //  response.send("Hello from Firebase!");
 // });
 
-export const sendMailV1 = functions.https.onRequest((req, res) => {
+export const sendMail = functions.https.onRequest((req, res) => {
   try {
     const email = req.body.email as string;
     const name = req.body.name as string;
@@ -19,8 +19,8 @@ export const sendMailV1 = functions.https.onRequest((req, res) => {
       throw Error("INVALID_PARAMETERS");
     }
 
-    const body = `Email:${email}
-Name:${name}
+    const body = `Email: ${email}
+Name: ${name}
 
 ${text}`
 

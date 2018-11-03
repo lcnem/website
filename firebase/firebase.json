@@ -8,8 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "/api/v1/send-mail",
-        "function": "sendMailV1"
+        "source": "/api/send-mail",
+        "function": "sendMail"
       },
       {
         "source": "**",

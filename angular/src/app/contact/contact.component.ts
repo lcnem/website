@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit {
 
     try {
       await this.http.post(
-        "/api/v1/send-mail",
+        "/api/send-mail",
         {
           email: this.forms.email,
           name: this.forms.name,
