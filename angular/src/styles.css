@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
-  height: 100%;
+html,
+body {
   margin: 0;
 }
 
 mat-sidenav-container {
-  height: 100%;
+  background-color: #fff !important;
 }
 
 mat-sidenav {
@@ -14,7 +14,7 @@ mat-sidenav {
   overflow: auto;
 }
 
-.fill-remaining-space{
+.fill-remaining-space {
   flex: 1 1 auto;
 }
 
@@ -25,10 +25,10 @@ mat-sidenav {
   z-index: 4;
 }
 
-.body-container {
+.inner-wrapper {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 16px;
+  width: 95%;
 }
 
 mat-spinner {
@@ -50,4 +50,32 @@ mat-spinner {
   left: 16px;
   bottom: 16px;
   z-index: 1;
+}
+
+h2.with-line {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  margin-bottom: 60px;
+  font-weight: normal;
+}
+h2.with-line:before,
+h2.with-line:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+h2.with-line:before {
+  margin-right: 1em;
+}
+h2.with-line::after {
+  margin-left: 1em;
+}
+
+h2.without-line {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 60px;
+  font-weight: normal;
+  margin-top: 0;
 }

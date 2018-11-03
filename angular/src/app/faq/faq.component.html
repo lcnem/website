@@ -1,68 +1,65 @@
 <mat-sidenav-container>
   <mat-sidenav></mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="mat-elevation-z4 top-toolbar">
-      <button mat-icon-button (click)="global.back()">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
-
-      <span>FAQ</span>
-      <span class="fill-remaining-space"></span>
-    </mat-toolbar>
-    <div class="mat-typography body-container">
-      <div>
-        <div class="faq-content" *ngFor="let f of faqContent">
-          <div fxFlex="70" fxLayout="column" fxLayoutAlign="center">
-            <h2>
-              Q.{{f.question[global.lang]}}
-            </h2>
-            <p>
-              A.{{f.answer[global.lang]}}
-            </p>
-          </div>
-          <div fxFlex="5">
-          </div>
-          <div fxFlex="25">
-            <img src="{{f.imgURL}}" />
+    <app-header position="normal" color="normal"></app-header>
+    <div class="inner-wrapper">
+      <div class="body-container">
+        <h2 class="without-line">FAQ</h2>
+        <div>
+          <div class="faq-content" *ngFor="let f of faqContent">
+            <div fxFlex="70" fxLayout="column" fxLayoutAlign="center">
+              <h2>
+                Q.{{f.question[global.lang]}}
+              </h2>
+              <p>
+                A.{{f.answer[global.lang]}}
+              </p>
+            </div>
+            <div fxFlex="5">
+            </div>
+            <div fxFlex="25">
+              <img src="{{f.imgURL}}" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <h2>{{translation.roadmap[global.lang]}}</h2>
-        <mat-list>
-          <mat-list-item>
-            <span>{{translation.noActionLetter[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[global.lang]}}">
-            <span>{{translation.issueAsPrepaid[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}">
-            <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon></mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[global.lang]}}">
-            <span>{{translation.registerAsRemittance[global.lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon></mat-icon>
-            </span>
-          </mat-list-item>
-        </mat-list>
+        <div class="item">
+          <h2>{{translation.roadmap[global.lang]}}</h2>
+          <mat-list>
+            <mat-list-item>
+              <span>{{translation.noActionLetter[global.lang]}}</span>
+              <span class="fill-remaining-space"></span>
+              <span>
+                <mat-icon>done</mat-icon>
+              </span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[global.lang]}}">
+              <span>{{translation.issueAsPrepaid[global.lang]}}</span>
+              <span class="fill-remaining-space"></span>
+              <span>
+                <mat-icon>done</mat-icon>
+              </span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}">
+              <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
+              <span class="fill-remaining-space"></span>
+              <span>
+                <mat-icon></mat-icon>
+              </span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[global.lang]}}">
+              <span>{{translation.registerAsRemittance[global.lang]}}</span>
+              <span class="fill-remaining-space"></span>
+              <span>
+                <mat-icon></mat-icon>
+              </span>
+            </mat-list-item>
+          </mat-list>
+        </div>
       </div>
     </div>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
