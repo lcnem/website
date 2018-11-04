@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav class="mat-elevation-z16" [fixedInViewport]="true">
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header color="normal" position="{{headerPosition}}">
+      <button mat-icon-button (click)="sidenav.toggle()" yPosition="below">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </app-header>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

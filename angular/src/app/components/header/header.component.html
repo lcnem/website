@@ -7,16 +7,6 @@
       <div>LCNEM</div>
     </div>
     <div class="fill-remaining-space"></div>
-    <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
-      <button mat-menu-item (click)="global.lang = 'en'">
-        English
-      </button>
-      <button mat-menu-item (click)="global.lang = 'ja'">
-        日本語
-      </button>
-    </mat-menu>
-    <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
-      {{global.lang}}
-    </button>
+    <ng-content></ng-content>
   </div>
 </div>

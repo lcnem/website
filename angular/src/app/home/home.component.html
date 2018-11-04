@@ -1,9 +1,4 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav class="mat-elevation-z16" [fixedInViewport]="true">
-    <app-side-nav></app-side-nav>
-  </mat-sidenav>
-  <mat-sidenav-content>
-  <app-header position="fixed" color="normal"></app-header>
+<app-body-container headerPosition="fixed">
     <div class="mat-typography">
       <section class="main" fxLayout="column" fxLayoutAlign="center" >
         <app-header position="absolute" color="white"></app-header>
@@ -100,8 +95,4 @@
       </section>
       <app-footer></app-footer>
     </div>
-    <button mat-fab color="accent" class="floating-action-button" (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+</app-body-container>

@@ -36,6 +36,7 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
 import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { BodyContainerComponent } from './containers/body-container/body-container.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     ConfirmDialogComponent,
     LoadingDialogComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    BodyContainerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,37 +1,31 @@
-<mat-sidenav-container>
-  <mat-sidenav>
-    <app-side-nav></app-side-nav>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <app-header position="normal" color="normal"></app-header>
-    <div class="conteiner">
-      <div class="inner-wrapper">
-        <h2 class="without-line">{{translation.contact[global.lang]}}</h2>
-        <form #form="ngForm" (ngSubmit)="sendMail()">
-          <mat-form-field fxFill>
-            <input matInput placeholder="{{translation.name[global.lang]}}" [(ngModel)]="forms.name" name="name" required />
-          </mat-form-field>
-          <mat-form-field fxFill>
-            <input matInput type="email" placeholder="{{translation.email[global.lang]}}" [(ngModel)]="forms.email" name="email"
-              required />
-          </mat-form-field>
-          <mat-form-field fxFill>
-            <mat-select placeholder="{{translation.subject[global.lang]}}" [(ngModel)]="forms.subject" name="subject"
-              required>
-              <ng-container *ngFor="let subject of translation.subjects; let i = index">
-                <mat-option value="{{i}}">{{subject[global.lang]}}</mat-option>
-              </ng-container>
-            </mat-select>
-          </mat-form-field>
-          <mat-form-field fxFill>
-            <textarea matInput placeholder="{{translation.body[global.lang]}}" [(ngModel)]="forms.body" name="body"
-              required></textarea>
-          </mat-form-field>
+<app-body-container headerPosition="normal">
+  <div class="conteiner">
+    <div class="inner-wrapper">
+      <h2 class="without-line">{{translation.contact[global.lang]}}</h2>
+      <form #form="ngForm" (ngSubmit)="sendMail()">
+        <mat-form-field fxFill>
+          <input matInput placeholder="{{translation.name[global.lang]}}" [(ngModel)]="forms.name" name="name" required />
+        </mat-form-field>
+        <mat-form-field fxFill>
+          <input matInput type="email" placeholder="{{translation.email[global.lang]}}" [(ngModel)]="forms.email" name="email"
+            required />
+        </mat-form-field>
+        <mat-form-field fxFill>
+          <mat-select placeholder="{{translation.subject[global.lang]}}" [(ngModel)]="forms.subject" name="subject"
+            required>
+            <ng-container *ngFor="let subject of translation.subjects; let i = index">
+              <mat-option value="{{i}}">{{subject[global.lang]}}</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field fxFill>
+          <textarea matInput placeholder="{{translation.body[global.lang]}}" [(ngModel)]="forms.body" name="body"
+            required></textarea>
+        </mat-form-field>
 
-          <button mat-raised-button color="accent" fxFill [disabled]="form.invalid">{{translation.send[global.lang]}}</button>
-        </form>
-      </div>
+        <button mat-raised-button color="accent" fxFill [disabled]="form.invalid">{{translation.send[global.lang]}}</button>
+      </form>
     </div>
-    <app-footer></app-footer>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+  <app-footer></app-footer>
+</app-body-container>
