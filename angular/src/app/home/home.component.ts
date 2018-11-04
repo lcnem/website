@@ -74,7 +74,7 @@ export class HomeComponent implements OnInit {
     } as any,
     lcnemTop: {
       en: "Legal currency pegged assets on blockchains with transparency.",
-      ja: "ブロックチェーン上の法定通貨移転システム。"
+      ja: "ブロックチェーン上の法定通貨移転システム"
     } as any,
     lcnemBody: {
       en: `LCNEM(Legal Currency New Economy Movement) issues legal currency pegged assets on the public blockchains and serves as a \"Stable coin\".
@@ -106,7 +106,7 @@ export class HomeComponent implements OnInit {
     } as any,
     ticketP2pTop: {
       en: "",
-      ja: "ブロックチェーンでチケット転売防止。"
+      ja: "ブロックチェーンでチケット転売防止"
     } as any,
     ticketP2pBody: {
       en: `It is the "ticket selling system" using blockchains with which you can take measures to resell. And you can make it embedded in the site with your favorite design.`,
