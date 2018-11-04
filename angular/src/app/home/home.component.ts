@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
     } as any,
     faq: {
       en: "FAQ",
-      ja: "FAQ"
+      ja: "よくある質問はこちら"
     } as any,
     lcnemWalletDevelopment: {
       en: "Development of LCNEM Wallet",
