@@ -35,6 +35,7 @@ import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.com
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { HeaderComponent } from './components/header/header.component';
     AlertDialogComponent,
     ConfirmDialogComponent,
     LoadingDialogComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
