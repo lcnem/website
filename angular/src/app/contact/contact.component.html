@@ -22,6 +22,12 @@
           <textarea matInput placeholder="{{translation.body[global.lang]}}" [(ngModel)]="forms.body" name="body"
             required></textarea>
         </mat-form-field>
+        <div class="checkbox">
+          <mat-checkbox fxFill [(ngModel)]="forms.agree" name="agree" required>
+            <span *ngIf="global.lang == 'ja'"><a routerLink="/privacy-policy">プライバシーポリシ</a>に同意する</span>
+            <span *ngIf="global.lang == 'en'">I agree to <a routerLink="/privacy-policy">privacy policy</a></span>
+          </mat-checkbox>
+        </div>
 
         <button mat-raised-button color="accent" fxFill [disabled]="form.invalid">{{translation.send[global.lang]}}</button>
       </form>

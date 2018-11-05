@@ -22,7 +22,8 @@ export class ContactComponent implements OnInit {
     name: string,
     email: string,
     subject: number,
-    body: string
+    body: string,
+    agree: boolean
   };
 
   ngOnInit() {

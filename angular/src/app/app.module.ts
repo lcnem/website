@@ -22,7 +22,8 @@ import {
   MatMenuModule,
   MatCardModule,
   MatDialogModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatCheckboxModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
@@ -75,6 +76,7 @@ import { BodyContainerComponent } from './containers/body-container/body-contain
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
+    MatCheckboxModule
   ],
   entryComponents: [
     AlertDialogComponent,

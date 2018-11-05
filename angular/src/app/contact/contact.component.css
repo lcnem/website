@@ -5,3 +5,12 @@
 textarea {
     height: 100px;
 }
+
+.checkbox {
+    margin: 32px 0;
+}
+
+mat-checkbox {
+    display: block;
+    text-align: center;
+}
