@@ -4,3 +4,9 @@
     color: #888;
     margin-left: 3px;
 }
+
+.lang {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
