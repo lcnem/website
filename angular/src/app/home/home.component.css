@@ -14,9 +14,9 @@ h1 {
   fill: #0a93eb;
   opacity: 0.26;
   position: absolute;
-  width: 83%;
+  width: 120%;
   bottom: 50%;
-  right: -300px;
+  right: -250px;
   max-width: 1200px;
   transform: translate(0, 53%);
   min-width: 800px;
