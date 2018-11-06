@@ -6,8 +6,8 @@ h1 {
   display: block;
   font-size: 230%;
   line-height: 1.2em;
-  margin-bottom: 60px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .bg-img {
@@ -131,8 +131,9 @@ mat-sidenav mat-nav-list mat-icon {
   margin-bottom: -30px;
 }
 
-.content img {
+.img-box {
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .link:hover {
