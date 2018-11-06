@@ -3,8 +3,8 @@
     <div class="body-container">
       <h2 class="without-line">FAQ</h2>
       <div>
-        <div class="faq-content" *ngFor="let f of faqContent">
-          <div fxFlex="70" fxLayout="column" fxLayoutAlign="center">
+        <div class="faq-content" *ngFor="let f of faqContent" fxLayout="row wrap" fxLayoutAlign="center">
+          <div fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
             <h2>
               Q.{{f.question[global.lang]}}
             </h2>
@@ -12,9 +12,9 @@
               A.{{f.answer[global.lang]}}
             </p>
           </div>
-          <div fxFlex="5">
+          <div fxFlex="5" fxFlex.xs="0">
           </div>
-          <div fxFlex="25">
+          <div fxFlex="25" fxFlex.xs="60" fxLayout="column" fxLayoutAlign="center" class="img-box">
             <img src="{{f.imgURL}}" />
           </div>
         </div>
