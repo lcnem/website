@@ -22,7 +22,8 @@ import {
   MatMenuModule,
   MatCardModule,
   MatDialogModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatCheckboxModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './faq/faq.component';
@@ -34,6 +35,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { BodyContainerComponent } from './containers/body-container/body-container.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,10 @@ import { LoadingDialogComponent } from './components/loading-dialog/loading-dial
     ContactComponent,
     AlertDialogComponent,
     ConfirmDialogComponent,
-    LoadingDialogComponent
+    LoadingDialogComponent,
+    HeaderComponent,
+    SideNavComponent,
+    BodyContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +76,7 @@ import { LoadingDialogComponent } from './components/loading-dialog/loading-dial
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
+    MatCheckboxModule
   ],
   entryComponents: [
     AlertDialogComponent,

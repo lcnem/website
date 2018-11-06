@@ -20,13 +20,9 @@ export class FooterComponent implements OnInit {
       en: "LCNEM, Inc.",
       ja: "株式会社LCNEM"
     } as any,
-    recruiteInformation: {
-      en: "RecruiteInformation",
-      ja: "採用情報"
-    } as any,
-    aboutCompany: {
-      en: "Corporate Information",
-      ja: "会社概要"
+    privacyPolicy: {
+      ja: "プライバシーポリシー",
+      en: "Privacy Policy"
     } as any
   };
 }

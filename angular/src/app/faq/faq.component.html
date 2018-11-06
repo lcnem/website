@@ -1,18 +1,10 @@
-<mat-sidenav-container>
-  <mat-sidenav></mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar class="mat-elevation-z4 top-toolbar">
-      <button mat-icon-button (click)="global.back()">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
-
-      <span>FAQ</span>
-      <span class="fill-remaining-space"></span>
-    </mat-toolbar>
-    <div class="mat-typography body-container">
+<app-body-container headerPosition="normal">
+  <div class="inner-wrapper">
+    <div class="body-container">
+      <h2 class="without-line">FAQ</h2>
       <div>
-        <div class="faq-content" *ngFor="let f of faqContent">
-          <div fxFlex="70" fxLayout="column" fxLayoutAlign="center">
+        <div class="faq-content" *ngFor="let f of faqContent" fxLayout="row wrap" fxLayoutAlign="center">
+          <div fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
             <h2>
               Q.{{f.question[global.lang]}}
             </h2>
@@ -20,9 +12,9 @@
               A.{{f.answer[global.lang]}}
             </p>
           </div>
-          <div fxFlex="5">
+          <div fxFlex="5" fxFlex.xs="0">
           </div>
-          <div fxFlex="25">
+          <div fxFlex="25" fxFlex.xs="60" fxLayout="column" fxLayoutAlign="center" class="img-box">
             <img src="{{f.imgURL}}" />
           </div>
         </div>
@@ -64,5 +56,5 @@
         </mat-list>
       </div>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+</app-body-container>

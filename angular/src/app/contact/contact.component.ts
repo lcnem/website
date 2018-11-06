@@ -22,7 +22,8 @@ export class ContactComponent implements OnInit {
     name: string,
     email: string,
     subject: number,
-    body: string
+    body: string,
+    agree: boolean
   };
 
   ngOnInit() {
@@ -39,7 +40,7 @@ export class ContactComponent implements OnInit {
 
     try {
       await this.http.post(
-        "/api/v1/send-mail",
+        "/api/send-mail",
         {
           email: this.forms.email,
           name: this.forms.name,

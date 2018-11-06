@@ -1,14 +1,7 @@
-<mat-sidenav-container>
-  <mat-sidenav></mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar class="mat-elevation-z4 top-toolbar">
-      <button mat-icon-button (click)="global.back()">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
-      <span>{{translation.contact[global.lang]}}</span>
-      <span class="fill-remaining-space"></span>
-    </mat-toolbar>
-    <div class="mat-typography body-container">
+<app-body-container headerPosition="normal">
+  <div class="conteiner">
+    <div class="inner-wrapper">
+      <h2 class="without-line">{{translation.contact[global.lang]}}</h2>
       <form #form="ngForm" (ngSubmit)="sendMail()">
         <mat-form-field fxFill>
           <input matInput placeholder="{{translation.name[global.lang]}}" [(ngModel)]="forms.name" name="name" required />
@@ -29,10 +22,15 @@
           <textarea matInput placeholder="{{translation.body[global.lang]}}" [(ngModel)]="forms.body" name="body"
             required></textarea>
         </mat-form-field>
+        <div class="checkbox">
+          <mat-checkbox fxFill [(ngModel)]="forms.agree" name="agree" required>
+            <span *ngIf="global.lang == 'ja'"><a routerLink="/privacy-policy">プライバシーポリシ</a>に同意する</span>
+            <span *ngIf="global.lang == 'en'">I agree to <a routerLink="/privacy-policy">privacy policy</a></span>
+          </mat-checkbox>
+        </div>
 
         <button mat-raised-button color="accent" fxFill [disabled]="form.invalid">{{translation.send[global.lang]}}</button>
       </form>
-      <app-footer></app-footer>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+</app-body-container>
