@@ -88,7 +88,7 @@ export class HomeComponent implements OnInit {
     } as any,
     lcnemWalletDevelopment: {
       en: "Development of LCNEM Wallet",
-      ja: "LCNEM Walletの開発"
+      ja: "LCNEM Wallet"
     } as any,
     lcnemWalletTop: {
       en: "LCNEMに対応したウォレットアプリ",
@@ -102,7 +102,7 @@ export class HomeComponent implements OnInit {
     } as any,
     ticketP2pDevelopment: {
       en: "Development of Ticket Peer to Peer",
-      ja: "ちけっとピアツーピアの開発"
+      ja: "ちけっとピアツーピア"
     } as any,
     ticketP2pTop: {
       en: "",

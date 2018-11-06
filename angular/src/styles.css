@@ -62,7 +62,7 @@ mat-spinner {
 .inner-wrapper {
   margin: 0 auto;
   max-width: 1000px;
-  width: 95%;
+  width: 90%;
 }
 
 h2.with-line {
@@ -71,7 +71,10 @@ h2.with-line {
   font-size: 2em;
   margin-bottom: 60px;
   font-weight: normal;
+  text-align: center;
+  line-height: 1.6;
 }
+
 h2.with-line:before,
 h2.with-line:after {
   border-top: 1px solid;
@@ -91,5 +94,11 @@ h2.without-line {
   margin-bottom: 60px;
   font-weight: normal;
   margin-top: 0;
+}
+
+@media screen and(max-width: 600px) {
+  h2.with-line {
+    font-size: 1.6em;
+  }
 }
 /*  */
