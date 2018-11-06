@@ -136,6 +136,10 @@ mat-sidenav mat-nav-list mat-icon {
   overflow: hidden;
 }
 
+.img-box img {
+  max-height: 300px;
+}
+
 .link:hover {
   opacity: 0.8;
 }
