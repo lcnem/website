@@ -10,3 +10,7 @@
     display: inline-block;
     margin-right: 10px;
 }
+
+.logo.icon {
+    vertical-align: middle;
+}

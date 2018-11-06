@@ -1,5 +1,7 @@
 <mat-toolbar>
-  <img class="icon" src="assets/images/lcnem.svg" />
+  <a routerLink="/">
+    <img class="icon logo" src="assets/images/lcnem.svg"/>
+  </a>
   <span class="fill-remaining-space"></span>
   <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
     <button mat-menu-item (click)="global.lang = 'en'">
