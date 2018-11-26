@@ -7,12 +7,14 @@ import {
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
 
-export interface State {
+import * as LanguageReducer from './language/language.reducer';
 
+export interface State {
+  language: LanguageReducer.State
 }
 
-export const reducers: ActionReducerMap<State> = {
-
+export const reducers: ActionReducerMap<State, any> = {
+  language: LanguageReducer.reducer
 };
 
 

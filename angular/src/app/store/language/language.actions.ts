@@ -1,11 +1,17 @@
 import { Action } from '@ngrx/store';
 
 export enum LanguageActionTypes {
-  LoadLanguages = '[Language] Load Languages'
+  SetLanguage = '[Language] Set Language'
 }
 
-export class LoadLanguages implements Action {
-  readonly type = LanguageActionTypes.LoadLanguages;
+export class SetLanguage implements Action {
+  readonly type = LanguageActionTypes.SetLanguage;
+
+  constructor(
+    public payload: {
+      twoLetter: string;
+    }
+  ) {}
 }
 
-export type LanguageActions = LoadLanguages;
+export type LanguageActions = SetLanguage;
