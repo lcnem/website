@@ -43,6 +43,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { SubsidyComponent } from './subsidy/subsidy.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { environment } from '../environments/environment';
     HeaderComponent,
     SideNavComponent,
     BodyContainerComponent,
-    EmergencyCosignComponent
+    EmergencyCosignComponent,
+    SubsidyComponent
   ],
   imports: [
     BrowserModule,
