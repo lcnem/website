@@ -11,6 +11,7 @@ export class BodyContainerComponent implements OnInit {
 
   constructor(public global: GlobalDataService) {}
   @Input() headerPosition!: string;
+  @Input() color: string = "normal";
 
   ngOnInit() {
   }
