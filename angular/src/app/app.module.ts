@@ -38,6 +38,7 @@ import { LoadingDialogComponent } from './components/loading-dialog/loading-dial
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './containers/body-container/body-container.component';
+import { EmergencyCosignComponent } from './others/emergency-cosign/emergency-cosign.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { BodyContainerComponent } from './containers/body-container/body-contain
     LoadingDialogComponent,
     HeaderComponent,
     SideNavComponent,
-    BodyContainerComponent
+    BodyContainerComponent,
+    EmergencyCosignComponent
   ],
   imports: [
     BrowserModule,

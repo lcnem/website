@@ -94,6 +94,10 @@ export class ContactComponent implements OnInit {
         ja: "業務提携や投資について"
       } as any,
       {
+        en: "Application for \"Emergency cosign service\"",
+        ja: "「緊急時連署名サービス」申し込み"
+      } as any,
+      {
         en: "Consulting",
         ja: "コンサルティングの依頼"
       } as any,
