@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "lcnem-website"
+  "defaultProject": "lcnem-website",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

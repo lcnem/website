@@ -40,6 +40,11 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './containers/body-container/body-container.component';
 import { EmergencyCosignComponent } from './others/emergency-cosign/emergency-cosign.component';
 
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,7 +83,9 @@ import { EmergencyCosignComponent } from './others/emergency-cosign/emergency-co
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   entryComponents: [
     AlertDialogComponent,
