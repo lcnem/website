@@ -1,0 +1,83 @@
+.content.bg-blue.top {
+  background-color: #011741;
+  padding: 40px;
+}
+.content.content.bg-blue.top h1 {
+  font-size: 20px;
+}
+.content.bg-blue h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.content.bg-white h4 {
+  font-weight: bolder;
+}
+.content.bg-white h5 {
+  color: #3E66C0;
+  font-weight: bolder;
+}
+
+img {
+    max-width: 100%;
+  }
+
+.content {
+  padding: 90px 0;
+}
+
+.content.bg-skyblue {
+  background-color: #EFF7FD;
+}
+.content.bg-skyblue h4 {
+  font-weight: bolder;
+}
+table {
+  height: 150px;
+}
+tr:nth-child(2n) {
+  background-color: #EFF7FD;
+}
+tr:nth-child(1) {
+  font-weight: bold
+}
+tr:nth-child(1) td:nth-of-type(2) {
+  color: #3E66C0;
+}
+tr:nth-child(1) td:nth-of-type(3) {
+  color: #3E66C0;
+}
+td:first-child {
+  text-align: left;
+  width: 165px;
+}
+td {
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.flexbox-container-vertical-center {
+  margin: auto;
+}
+
+.walletMain {
+  background-color: #3862BF
+}
+
+img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.red-icon {
+  color: red;
+}
+
+@media screen and (max-width: 599px) {
+  section h4 {text-align: center}
+  section h2 {text-align: center}
+  section h5 {text-align: center}
+}

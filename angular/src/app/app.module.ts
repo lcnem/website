@@ -38,6 +38,7 @@ import { LoadingDialogComponent } from './components/loading-dialog/loading-dial
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './containers/body-container/body-container.component';
+import { LcnemWalletComponent } from './lcnem-wallet/lcnem-wallet.component';
 import { EmergencyCosignComponent } from './others/emergency-cosign/emergency-cosign.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
@@ -61,6 +62,7 @@ import { SubsidyComponent } from './subsidy/subsidy.component';
     HeaderComponent,
     SideNavComponent,
     BodyContainerComponent,
+    LcnemWalletComponent,
     EmergencyCosignComponent,
     SubsidyComponent,
     EmergencyCosignComponent

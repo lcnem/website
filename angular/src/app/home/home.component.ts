@@ -43,9 +43,9 @@ export class HomeComponent implements OnInit {
     date: string;
   }[];
 
-  constructor(public global: GlobalDataService) {}
+  constructor(public global: GlobalDataService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   public translation = {
     contacts: {
@@ -119,6 +119,10 @@ export class HomeComponent implements OnInit {
     gettingStarted: {
       en: "Getting Started",
       ja: "いますぐつかう"
+    } as any,
+    getDetails: {
+      en: "more details",
+      ja: "詳細"
     } as any,
     business: {
       en: "Business",
