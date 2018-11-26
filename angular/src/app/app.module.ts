@@ -39,11 +39,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './containers/body-container/body-container.component';
 import { EmergencyCosignComponent } from './others/emergency-cosign/emergency-cosign.component';
-
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { SubsidyComponent } from './subsidy/subsidy.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +61,8 @@ import { environment } from '../environments/environment';
     HeaderComponent,
     SideNavComponent,
     BodyContainerComponent,
+    EmergencyCosignComponent,
+    SubsidyComponent,
     EmergencyCosignComponent
   ],
   imports: [
