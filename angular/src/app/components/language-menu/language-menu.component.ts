@@ -13,13 +13,14 @@ export class LanguageMenuComponent implements OnInit {
   public get lang() { return this.language.twoLetter; }
 
   constructor(
-   private store: Store<State>,
-   private language: LanguageService
- ) { }
+    private store: Store<State>,
+    private language: LanguageService
+  ) { }
+
   ngOnInit() {
- }
+  }
   public setLanguage(twoLetter: string) {
-   this.store.dispatch(new SetLanguage({ twoLetter: twoLetter })) 
- }
+    this.store.dispatch(new SetLanguage({ twoLetter: twoLetter })) 
+  }
 
 }
