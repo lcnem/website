@@ -45,6 +45,7 @@ import { environment } from '../environments/environment';
 import { SubsidyComponent } from './subsidy/subsidy.component';
 import { LcnemWalletComponent } from './lcnem-wallet/lcnem-wallet.component';
 import { reducers, metaReducers } from './store';
+import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { reducers, metaReducers } from './store';
     LcnemWalletComponent,
     EmergencyCosignComponent,
     SubsidyComponent,
-    EmergencyCosignComponent
+    EmergencyCosignComponent,
+    LanguageMenuComponent
   ],
   imports: [
     BrowserModule,
