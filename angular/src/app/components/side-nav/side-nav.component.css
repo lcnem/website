@@ -14,3 +14,8 @@
 .logo.icon {
     vertical-align: middle;
 }
+
+mat-icon {
+    border-radius: 0% !important;
+    margin-right: 5px;
+}

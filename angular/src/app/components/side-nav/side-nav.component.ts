@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalDataService } from '../../services/global-data.service';
+import { Store } from '@ngrx/store';
+import { LanguageService } from '../../services/language.service';
+import { State } from '../../store/index';
 
 @Component({
   selector: 'app-side-nav',
@@ -8,7 +10,11 @@ import { GlobalDataService } from '../../services/global-data.service';
 })
 export class SideNavComponent implements OnInit {
 
-  constructor(public global: GlobalDataService) {}
+  public get lang() { return this.language.twoLetter; }
+
+  constructor(
+    private language: LanguageService
+  ) { }
 
   ngOnInit() {
   }

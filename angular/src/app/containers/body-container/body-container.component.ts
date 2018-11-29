@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalDataService } from 'src/app/services/global-data.service';
 import { Input } from '@angular/core';
 
 @Component({
@@ -9,7 +8,7 @@ import { Input } from '@angular/core';
 })
 export class BodyContainerComponent implements OnInit {
 
-  constructor(public global: GlobalDataService) {}
+  constructor() {}
   @Input() headerPosition!: string;
   @Input() color: string = "normal";
 

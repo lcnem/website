@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalDataService } from '../services/global-data.service';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-about',
@@ -8,8 +8,10 @@ import { GlobalDataService } from '../services/global-data.service';
 })
 export class AboutComponent implements OnInit {
 
+  public get lang() { return this.language.twoLetter; }
+
   constructor(
-    public global: GlobalDataService
+    private language: LanguageService
   ) { }
 
   ngOnInit() {

@@ -13,6 +13,35 @@ export class LcnemWalletComponent implements OnInit {
   ngOnInit() { }
 
   public translation = {
+    byLcnemWallet: {
+      en: "",
+      ja: "LCNEM Walletで"
+    } as any,
+    managingWallet: {
+      en: "",
+      ja: "ウォレット管理を"
+    } as any,
+    withEaseMore: {
+      en: "",
+      ja: "もっと簡単に"
+    } as any,
+    withConvenienceMore: {
+      en: "",
+      ja: "もっと便利に"
+    } as any,
+
+    googleLogin: {
+      en: "",
+      ja: "Google ログイン"
+    } as any,
+    cloudManageSecretKey: {
+      en: "",
+      ja: "クラウドでの秘密鍵管理"
+    } as any,
+    useStableCoin: {
+      en: "",
+      ja: "ステーブルコインでの利用"
+    } as any,
     secretKey: {
       en: "",
       ja: "クラウドでの秘密鍵管理"

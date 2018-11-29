@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalDataService } from 'src/app/services/global-data.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,8 +8,10 @@ import { GlobalDataService } from 'src/app/services/global-data.service';
 })
 export class FooterComponent implements OnInit {
 
+  public get lang() { return this.language.twoLetter; }
+
   constructor(
-    public global: GlobalDataService
+    private language: LanguageService
   ) { }
 
   ngOnInit() {

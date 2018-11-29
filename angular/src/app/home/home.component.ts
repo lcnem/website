@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GlobalDataService } from "../services/global-data.service";
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: "app-home",
@@ -7,6 +7,15 @@ import { GlobalDataService } from "../services/global-data.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
+  public get lang() { return this.language.twoLetter; }
+
+  constructor(
+    private language: LanguageService
+  ) { }
+  
+
+  ngOnInit() { }
+
   public media = [
     {
       name: "TechCrunch",
@@ -43,9 +52,6 @@ export class HomeComponent implements OnInit {
     date: string;
   }[];
 
-  constructor(public global: GlobalDataService) { }
-
-  ngOnInit() { }
 
   public translation = {
     contacts: {

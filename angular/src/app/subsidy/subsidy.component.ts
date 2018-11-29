@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-subsidy',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subsidy.component.css']
 })
 export class SubsidyComponent implements OnInit {
+  public get lang() { return this.language.twoLetter; }
 
-  constructor() { }
+  constructor(
+    private language: LanguageService
+  ) { }
 
   ngOnInit() {
   }
