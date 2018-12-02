@@ -1,0 +1,15 @@
+<ng-container *ngIf="!isBlank">
+  <a routerLink="{{link}}" [ngStyle]="style">
+    <ng-container *ngTemplateOutlet="child"></ng-container>
+  </a>
+</ng-container>
+
+<ng-container *ngIf="isBlank">
+  <a href="{{link}}" target="_blank" [ngStyle]="style">
+    <ng-container *ngTemplateOutlet="child"></ng-container>
+  </a>
+</ng-container>
+
+<ng-template #child>
+  <ng-content></ng-content>
+</ng-template>
