@@ -1,3 +1,13 @@
-<p>
-  404 Page Not Found
-</p>
+<app-body-container headerPosition="normal">
+  <div>
+    <div class="inner-wrapper">
+      <div class="body-container">
+        <h2 class="without-line">404 page not found</h2>
+        <p>{{translation.content[lang]}}</p>
+        <div class="button-container">
+          <app-rounded-button color="#fff" backgroundColor="#0242BE">{{translation.topPage[lang]}}</app-rounded-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-body-container>
