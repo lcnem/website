@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalDataService } from '../services/global-data.service';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import { LoadingDialogComponent } from '../components/loading-dialog/loading-dialog.component';
 import { AlertDialogComponent } from '../components/alert-dialog/alert-dialog.component';
 import { ConfirmDialogComponent } from '../components/confirm-dialog/confirm-dialog.component';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,8 +12,10 @@ import { ConfirmDialogComponent } from '../components/confirm-dialog/confirm-dia
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  public get lang() { return this.language.twoLetter; }
+
   constructor(
-    public global: GlobalDataService,
+    private language: LanguageService,
     private http: HttpClient,
     private dialog: MatDialog
   ) { }
@@ -32,7 +34,7 @@ export class ContactComponent implements OnInit {
   public async sendMail() {
     let result = await this.dialog.open(ConfirmDialogComponent, {
       data: {
-        title: this.translation.confirm[this.global.lang]
+        title: this.translation.confirm[this.lang]
       }
     }).afterClosed().toPromise();
 
@@ -44,15 +46,15 @@ export class ContactComponent implements OnInit {
         {
           email: this.forms.email,
           name: this.forms.name,
-          subject: this.translation.subjects[this.forms.subject][this.global.lang],
+          subject: this.translation.subjects[this.forms.subject][this.lang],
           text: this.forms.body,
-          lang: this.global.lang
+          lang: this.lang
         }
       ).toPromise();
     } catch {
       this.dialog.open(AlertDialogComponent, {
         data: {
-          title: this.translation.error[this.global.lang]
+          title: this.translation.error[this.lang]
         }
       });
       return;
@@ -62,7 +64,7 @@ export class ContactComponent implements OnInit {
 
     this.dialog.open(AlertDialogComponent, {
       data: {
-        title: this.translation.completed[this.global.lang]
+        title: this.translation.completed[this.lang]
       }
     });
   }
@@ -92,6 +94,10 @@ export class ContactComponent implements OnInit {
       {
         en: "Partnerships",
         ja: "業務提携や投資について"
+      } as any,
+      {
+        en: "Application for \"Emergency cosign service\"",
+        ja: "「緊急時連署名サービス」申し込み"
       } as any,
       {
         en: "Consulting",

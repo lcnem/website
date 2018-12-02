@@ -38,6 +38,15 @@ import { LoadingDialogComponent } from './components/loading-dialog/loading-dial
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './containers/body-container/body-container.component';
+import { EmergencyCosignComponent } from './others/emergency-cosign/emergency-cosign.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { SubsidyComponent } from './subsidy/subsidy.component';
+import { LcnemWalletComponent } from './lcnem-wallet/lcnem-wallet.component';
+import { reducers, metaReducers } from './store';
+import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
+import { RoundedButtonComponent } from './components/parts/rounded-button/rounded-button.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +63,13 @@ import { BodyContainerComponent } from './containers/body-container/body-contain
     LoadingDialogComponent,
     HeaderComponent,
     SideNavComponent,
-    BodyContainerComponent
+    BodyContainerComponent,
+    LcnemWalletComponent,
+    EmergencyCosignComponent,
+    SubsidyComponent,
+    EmergencyCosignComponent,
+    LanguageMenuComponent,
+    RoundedButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +91,9 @@ import { BodyContainerComponent } from './containers/body-container/body-contain
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   entryComponents: [
     AlertDialogComponent,

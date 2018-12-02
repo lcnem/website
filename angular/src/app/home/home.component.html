@@ -4,8 +4,8 @@
     <div>
       <div class="inner-wrapper">
         <div class="content-box">
-          <h1>{{translation.top[global.lang]}}</h1>
-          <p>{{translation.topBody[global.lang]}}</p>
+          <h1>{{translation.top[lang]}}</h1>
+          <p>{{translation.topBody[lang]}}</p>
         </div>
         <div class="bg-img">
           <svg viewBox="0 0 600 600">
@@ -31,13 +31,13 @@
 
   <section class="content bg-gray">
     <div class="inner-wrapper">
-      <h2 class="with-line">{{translation.lcnemDevelopment[global.lang]}}</h2>
+      <h2 class="with-line">{{translation.lcnemDevelopment[lang]}}</h2>
       <div fxLayout="row-reverse wrap" fxLayoutAlign="center">
         <div fxFlex="60" fxFlex.xs="100" class="middle">
           <div>
-            <h4>{{translation.lcnemTop[global.lang]}}</h4>
-            <p>{{translation.lcnemBody[global.lang]}}</p>
-            <a class="link" routerLink="/faq">{{translation.faq[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+            <h4>{{translation.lcnemTop[lang]}}</h4>
+            <p>{{translation.lcnemBody[lang]}}</p>
+            <a class="link" routerLink="/faq">{{translation.faq[lang]}}<mat-icon>arrow_forward</mat-icon></a>
           </div>
         </div>
         <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center" class="img-box">
@@ -49,17 +49,17 @@
 
   <section class="content">
     <div class="inner-wrapper">
-      <h2 class="with-line">{{translation.lcnemWalletDevelopment[global.lang]}}</h2>
+      <h2 class="with-line">{{translation.lcnemWalletDevelopment[lang]}}</h2>
       <div fxLayout="row wrap">
         <div fxFlex="60" fxFlex.xs="100" class="middle">
           <div>
-            <h4>{{translation.lcnemWalletTop[global.lang]}}</h4>
-            <p>{{translation.lcnemWalletBody[global.lang]}}</p>
-            <a class="link" href="https://wallet.lcnem.cc" target="_blank">{{translation.gettingStarted[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+            <h4>{{translation.lcnemWalletTop[lang]}}</h4>
+            <p>{{translation.lcnemWalletBody[lang]}}</p>
+            <a class="link" routerLink="/wallet">{{translation.readMore[lang]}}<mat-icon>arrow_forward</mat-icon></a><br>
           </div>
         </div>
         <div fxFlex="40" fxFlex.xs="100" class="img-box small">
-          <img src="assets/images/wallet.png" class="mat-elevation-z1" />
+          <img src="assets/images/billboard.png" />
         </div>
       </div>
     </div>
@@ -67,13 +67,13 @@
 
   <section class="content bg-gray">
     <div class="inner-wrapper">
-      <h2 class="with-line">{{translation.ticketP2pDevelopment[global.lang]}}</h2>
+      <h2 class="with-line">{{translation.ticketP2pDevelopment[lang]}}</h2>
       <div fxLayout="row-reverse wrap" fxLayoutAlign="center">
         <div fxFlex="60" fxFlex.xs="100" class="middle">
           <div>
-            <h4>{{translation.ticketP2pTop[global.lang]}}</h4>
-            <p>{{translation.ticketP2pBody[global.lang]}}</p>
-            <a class="link" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[global.lang]}}<mat-icon>arrow_forward</mat-icon></a>
+            <h4>{{translation.ticketP2pTop[lang]}}</h4>
+            <p>{{translation.ticketP2pBody[lang]}}</p>
+            <a class="link" href="https://ticket-p2p.net" target="_blank">{{translation.gettingStarted[lang]}}<mat-icon>arrow_forward</mat-icon></a>
           </div>
         </div>
         <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center" class="img-box">
@@ -85,7 +85,7 @@
 
   <section class="content bg-blue">
     <div class="inner-wrapper">
-      <h2 class="with-line">{{translation.media[global.lang]}}</h2>
+      <h2 class="with-line">{{translation.media[lang]}}</h2>
       <div fxLayout="row" fxLayoutAlign="center" class="media">
         <div *ngFor="let m of media" class="card" fxFlex="30">
           <a href="{{m.url}}" target="_blank">

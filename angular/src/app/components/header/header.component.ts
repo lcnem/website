@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { GlobalDataService } from "src/app/services/global-data.service";
 
 @Component({
   selector: "app-header",
@@ -7,7 +6,7 @@ import { GlobalDataService } from "src/app/services/global-data.service";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
-  constructor(public global: GlobalDataService) {}
+  constructor() {}
 
   @Input() position!: string;
   @Input() color!: string;

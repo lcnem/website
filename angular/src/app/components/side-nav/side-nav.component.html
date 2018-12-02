@@ -3,22 +3,12 @@
     <img class="icon logo" src="assets/images/lcnem.svg"/>
   </a>
   <span class="fill-remaining-space"></span>
-  <mat-menu #langMenu="matMenu" [overlapTrigger]="false">
-    <button mat-menu-item (click)="global.lang = 'en'">
-      English
-    </button>
-    <button mat-menu-item (click)="global.lang = 'ja'">
-      日本語
-    </button>
-  </mat-menu> 
-  <button mat-icon-button [matMenuTriggerFor]="langMenu" yPosition="below">
-    {{global.lang}}
-  </button>
+  <app-language-menu></app-language-menu>
 </mat-toolbar>
 <mat-nav-list>
   <a mat-list-item routerLink="/about">
     <mat-icon mat-list-icon>location_city</mat-icon>
-    {{translation.aboutCompany[global.lang]}}
+    {{translation.aboutCompany[lang]}}
   </a>
   <a mat-list-item routerLink="/faq">
     <mat-icon mat-list-icon>help</mat-icon>
@@ -26,28 +16,27 @@
   </a>
   <a mat-list-item routerLink="/contact">
     <mat-icon mat-list-icon>contacts</mat-icon>
-    {{translation.contacts[global.lang]}}
+    {{translation.contacts[lang]}}
   </a>
   <mat-divider></mat-divider>
   <a mat-list-item href="https://www.wantedly.com/companies/lcnem" target="_blank">
     <mat-icon mat-list-icon>person_add</mat-icon>
-    {{translation.recruiteInformation[global.lang]}}
+    {{translation.recruiteInformation[lang]}}
     <mat-icon class="open-in-new">open_in_new</mat-icon>
   </a>
-  <a mat-list-item href="https://twitter.com/lcnem_{{global.lang}}" target="_blank">
+  <a mat-list-item href="https://twitter.com/lcnem_{{lang}}" target="_blank">
     <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/twitter.svg)'}"></mat-icon>
     Twitter
     <mat-icon class="open-in-new">open_in_new</mat-icon>
   </a>
   <mat-divider></mat-divider>
-  <a mat-list-item href="https://wallet.lcnem.cc" target="_blank">
+  <a mat-list-item routerLink="/wallet">
     <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/lcnem.svg)'}"></mat-icon>
     LCNEM Wallet
-    <mat-icon class="open-in-new">open_in_new</mat-icon>
   </a>
   <a mat-list-item href="https://ticket-p2p.net" target="_blank">
     <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/ticket-p2p.svg)'}"></mat-icon>
-    {{translation.ticketP2p[global.lang]}}
+    {{translation.ticketP2p[lang]}}
     <mat-icon class="open-in-new">open_in_new</mat-icon>
   </a>
 </mat-nav-list>

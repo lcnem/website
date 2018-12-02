@@ -26,7 +26,7 @@
               {
                 "input": "src/theme/light-theme.scss"
               },
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "lcnem-website"
+  "defaultProject": "lcnem-website",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

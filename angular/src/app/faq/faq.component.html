@@ -6,10 +6,10 @@
         <div class="faq-content" *ngFor="let f of faqContent" fxLayout="row wrap" fxLayoutAlign="center">
           <div fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
             <h2>
-              Q.{{f.question[global.lang]}}
+              Q.{{f.question[lang]}}
             </h2>
             <p>
-              A.{{f.answer[global.lang]}}
+              A.{{f.answer[lang]}}
             </p>
           </div>
           <div fxFlex="5" fxFlex.xs="0">
@@ -20,34 +20,34 @@
         </div>
       </div>
       <div class="item">
-        <h2>{{translation.roadmap[global.lang]}}</h2>
+        <h2>{{translation.roadmap[lang]}}</h2>
         <mat-list>
           <mat-list-item>
-            <span>{{translation.noActionLetter[global.lang]}}</span>
+            <span>{{translation.noActionLetter[lang]}}</span>
             <span class="fill-remaining-space"></span>
             <span>
               <mat-icon>done</mat-icon>
             </span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[global.lang]}}">
-            <span>{{translation.issueAsPrepaid[global.lang]}}</span>
+          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[lang]}}">
+            <span>{{translation.issueAsPrepaid[lang]}}</span>
             <span class="fill-remaining-space"></span>
             <span>
               <mat-icon>done</mat-icon>
             </span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[global.lang]}}">
-            <span>{{translation.registerAsPrepaidWithSettlement[global.lang]}}</span>
+          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[lang]}}">
+            <span>{{translation.registerAsPrepaidWithSettlement[lang]}}</span>
             <span class="fill-remaining-space"></span>
             <span>
               <mat-icon></mat-icon>
             </span>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[global.lang]}}">
-            <span>{{translation.registerAsRemittance[global.lang]}}</span>
+          <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[lang]}}">
+            <span>{{translation.registerAsRemittance[lang]}}</span>
             <span class="fill-remaining-space"></span>
             <span>
               <mat-icon></mat-icon>

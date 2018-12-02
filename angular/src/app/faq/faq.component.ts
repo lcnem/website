@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GlobalDataService } from "../services/global-data.service";
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: "app-faq",
@@ -7,7 +7,11 @@ import { GlobalDataService } from "../services/global-data.service";
   styleUrls: ["./faq.component.css"]
 })
 export class FaqComponent implements OnInit {
-  constructor(public global: GlobalDataService) {}
+  public get lang() { return this.language.twoLetter; }
+
+  constructor(
+    private language: LanguageService
+  ) { }
 
   ngOnInit() {}
 
