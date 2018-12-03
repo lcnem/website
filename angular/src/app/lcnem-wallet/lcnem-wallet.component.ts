@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalDataService } from "../services/global-data.service";
 import { LanguageService } from '../services/language.service';
 
 @Component({
