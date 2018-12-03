@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LcnemWalletComponent } from './lcnem-wallet.component';
+import { WalletComponent } from './wallet.component';
 
 describe('LcnemWalletComponent', () => {
-  let component: LcnemWalletComponent;
-  let fixture: ComponentFixture<LcnemWalletComponent>;
+  let component: WalletComponent;
+  let fixture: ComponentFixture<WalletComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LcnemWalletComponent ]
+      declarations: [ WalletComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LcnemWalletComponent);
+    fixture = TestBed.createComponent(WalletComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
