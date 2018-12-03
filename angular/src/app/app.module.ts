@@ -6,8 +6,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 import {
   MatInputModule,
@@ -26,25 +26,24 @@ import {
   MatCheckboxModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
-import { FaqComponent } from './faq/faq.component';
-import { AboutComponent } from './about/about.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { ContactComponent } from './contact/contact.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
-import { BodyContainerComponent } from './containers/body-container/body-container.component';
-import { EmergencyCosignComponent } from './others/emergency-cosign/emergency-cosign.component';
+import { BodyContainerComponent } from './components/body-container/body-container.component';
+import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emergency-cosign.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { SubsidyComponent } from './subsidy/subsidy.component';
-import { LcnemWalletComponent } from './lcnem-wallet/lcnem-wallet.component';
-import { reducers, metaReducers } from './store';
+import { SubsidyComponent } from './pages/subsidy/subsidy.component';
+import { WalletComponent } from './pages/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 
 @NgModule({
@@ -63,7 +62,7 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
     HeaderComponent,
     SideNavComponent,
     BodyContainerComponent,
-    LcnemWalletComponent,
+    WalletComponent,
     EmergencyCosignComponent,
     SubsidyComponent,
     EmergencyCosignComponent,
@@ -90,7 +89,6 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
     MatMenuModule,
     HttpClientModule,
     MatCheckboxModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   entryComponents: [

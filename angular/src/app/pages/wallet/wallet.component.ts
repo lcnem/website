@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../services/language.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
-  selector: 'app-lcnem-wallet',
-  templateUrl: './lcnem-wallet.component.html',
-  styleUrls: ['./lcnem-wallet.component.css']
+  selector: 'app-wallet',
+  templateUrl: './wallet.component.html',
+  styleUrls: ['./wallet.component.css']
 })
-export class LcnemWalletComponent implements OnInit {
+export class WalletComponent implements OnInit {
 
   public get lang() { return this.language.twoLetter; }
 

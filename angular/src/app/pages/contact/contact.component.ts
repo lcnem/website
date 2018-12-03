@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
-import { LoadingDialogComponent } from '../components/loading-dialog/loading-dialog.component';
-import { AlertDialogComponent } from '../components/alert-dialog/alert-dialog.component';
-import { ConfirmDialogComponent } from '../components/confirm-dialog/confirm-dialog.component';
-import { LanguageService } from '../services/language.service';
+import { LoadingDialogComponent } from '../../components/loading-dialog/loading-dialog.component';
+import { AlertDialogComponent } from '../../components/alert-dialog/alert-dialog.component';
+import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-contact',
