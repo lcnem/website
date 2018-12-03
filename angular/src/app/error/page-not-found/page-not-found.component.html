@@ -5,7 +5,13 @@
         <h2 class="without-line">404 page not found</h2>
         <p>{{translation.content[lang]}}</p>
         <div class="button-container">
-          <app-rounded-button color="#fff" backgroundColor="#0242BE">{{translation.topPage[lang]}}</app-rounded-button>
+          <a
+            class="button rounded"
+            routerLink="/"
+            target="_blank"
+            [ngStyle]="{'color': '#fff', 'background-color': '#0242BE'}">
+            {{translation.topPage[lang]}}
+          </a>
         </div>
       </div>
     </div>

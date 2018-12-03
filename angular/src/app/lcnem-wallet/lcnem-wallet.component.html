@@ -8,34 +8,40 @@
           <div fxFlex="35" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
             <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="30px">
               <div>
-                <div class="font-small">{{translation.byLcnemWallet[global.lang]}}</div>
+                <div class="font-small">{{translation.byLcnemWallet[lang]}}</div>
                 <div class="copy-write">
-                  {{translation.managingWallet[global.lang]}}
+                  {{translation.managingWallet[lang]}}
                 </div>
                 <div class="copy-write">
-                  {{translation.withEaseMore[global.lang]}}
+                  {{translation.withEaseMore[lang]}}
                 </div>
                 <div class="copy-write">
-                  {{translation.withConvenienceMore[global.lang]}}
+                  {{translation.withConvenienceMore[lang]}}
                 </div>
               </div>
               <ul fxLayout="column" fxLayoutGap="10px">
                 <li class="feature-list">
                   <mat-icon>done</mat-icon>
-                  {{translation.googleLogin[global.lang]}}
+                  {{translation.googleLogin[lang]}}
                 </li>
                 <li class="feature-list">
                   <mat-icon>done</mat-icon>
-                  {{translation.cloudManageSecretKey[global.lang]}}
+                  {{translation.cloudManageSecretKey[lang]}}
                 </li>
                 <li class="feature-list">
                   <mat-icon>done</mat-icon>
-                  {{translation.useStableCoin[global.lang]}}
+                  {{translation.useStableCoin[lang]}}
                 </li>
               </ul>
-              <app-rounded-button [isBlank]="true" color="#0242BE" backgroundColor="#fff" link="https://wallet.lcnem.cc">
-                今すぐ使う
-              </app-rounded-button>
+              <div>
+                <a
+                  class="button rounded"
+                  href="https://wallet.lcnem.cc"
+                  target="_blank"
+                  [ngStyle]="{'color': '#0242BE', 'background-color': '#fff'}">
+                  {{translation.useNow[lang]}}
+                </a>
+              </div>
             </div>
           </div>
           <div fxFlex="55" fxFlex.xs="100" fxLayoutAlign="center">
@@ -46,7 +52,7 @@
 
       <section class="content title-zone">
         <div class="inner-wrapper">
-          <h1>{{translation.lcnemWalletFeatureItem[global.lang]}}</h1>
+          <h1>{{translation.lcnemWalletFeatureItem[lang]}}</h1>
         </div>
       </section>
 
@@ -56,8 +62,8 @@
             <div fxFlex="70" fxFlex.xs="30">
               <div fxLayout="row-reverse" fxLayoutGap.xs="25px" fxLayout.xs="column">
                 <div fxFlex="60" class="flexbox-container-vertical-center stable-coin-introduction">
-                  <h2>{{translation.buyStableCoin[global.lang]}}</h2>
-                  <p>{{translation.buyStableCoinBody[global.lang]}}</p>
+                  <h2>{{translation.buyStableCoin[lang]}}</h2>
+                  <p>{{translation.buyStableCoinBody[lang]}}</p>
                 </div>
                 <div fxFlex="40" fxLayoutAlign="center">
                   <img src="assets/images/lcnem.svg" class="introduction-img" />
@@ -67,10 +73,10 @@
             <div fxFlex="30" fxFlex.xs="70">
               <div fxLayout="column" fxLayoutAlign="center">
                 <div fxFlex="30" fxFlec.xs="30">
-                  <h5>{{translation.aboutStableCoin[global.lang]}}</h5>
+                  <h5>{{translation.aboutStableCoin[lang]}}</h5>
                 </div>
                 <div fxFlex="70" fxFlec.xs="70">
-                  <p>{{translation.aboutStableCoinBody[global.lang]}}</p>
+                  <p>{{translation.aboutStableCoinBody[lang]}}</p>
                 </div>
               </div>
             </div>
@@ -82,8 +88,8 @@
         <div class="inner-wrapper">
           <div fxLayout="row-reverse wrap" fxLayout.xs="column" fxLayoutGap.xs="25px" fxLayoutAlign="center">
             <div fxFlex="60" fxFlex.xs="60" class="flexbox-container-vertical-center">
-              <h4>{{translation.useMultiWallet[global.lang]}}</h4>
-              <p>{{translation.useMultiWalletBody[global.lang]}}</p>
+              <h4>{{translation.useMultiWallet[lang]}}</h4>
+              <p>{{translation.useMultiWalletBody[lang]}}</p>
             </div>
             <div fxFlex="40" fxFlex.xs="40" fxLayoutAlign="center" class="flexbox-container-vertical-center">
               <img src="assets/images/multi.png" class="introduction-img" />
