@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from "../services/global-data.service";
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-lcnem-wallet',
@@ -8,7 +9,11 @@ import { GlobalDataService } from "../services/global-data.service";
 })
 export class LcnemWalletComponent implements OnInit {
 
-  constructor(public global: GlobalDataService) { }
+  public get lang() { return this.language.twoLetter; }
+
+  constructor(
+    private language: LanguageService
+  ) { }
 
   ngOnInit() { }
 
@@ -29,7 +34,6 @@ export class LcnemWalletComponent implements OnInit {
       en: "",
       ja: "もっと便利に"
     } as any,
-
     googleLogin: {
       en: "",
       ja: "Google ログイン"
@@ -40,11 +44,15 @@ export class LcnemWalletComponent implements OnInit {
     } as any,
     useStableCoin: {
       en: "",
-      ja: "ステーブルコインでの利用"
+      ja: "ステーブルコインの利用"
     } as any,
     secretKey: {
       en: "",
       ja: "クラウドでの秘密鍵管理"
+    } as any,
+    useNow: {
+      en: "Use Now",
+      ja: "今すぐ使う"
     } as any,
     secretKeyBody: {
       en: "",

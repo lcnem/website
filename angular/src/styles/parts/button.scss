@@ -1,16 +1,18 @@
-a {
-  display: inline-block;
+.button {
   text-decoration: none;
   line-height: 1.6;
   font-size: 17px;
   display: inline-block;
   padding: 10px 20px;
-  border-radius: 28px;
   font-weight: bold;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   cursor: pointer;
-}
 
-a:hover {
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.rounded {
+    border-radius: 28px;
+  }
 }

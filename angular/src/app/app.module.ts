@@ -46,7 +46,6 @@ import { SubsidyComponent } from './subsidy/subsidy.component';
 import { LcnemWalletComponent } from './lcnem-wallet/lcnem-wallet.component';
 import { reducers, metaReducers } from './store';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
-import { RoundedButtonComponent } from './components/parts/rounded-button/rounded-button.component';
 
 @NgModule({
   declarations: [
@@ -68,8 +67,7 @@ import { RoundedButtonComponent } from './components/parts/rounded-button/rounde
     EmergencyCosignComponent,
     SubsidyComponent,
     EmergencyCosignComponent,
-    LanguageMenuComponent,
-    RoundedButtonComponent
+    LanguageMenuComponent
   ],
   imports: [
     BrowserModule,
