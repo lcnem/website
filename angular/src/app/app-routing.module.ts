@@ -8,6 +8,7 @@ import { WalletComponent } from './pages/wallet/wallet.component'
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emergency-cosign.component';
+import { SubsidyComponent } from './pages/subsidy/subsidy.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -16,12 +17,13 @@ const routes: Routes = [
   { path: "wallet", component: WalletComponent },
   { path: "privacy-policy", component: PrivacyPolicyComponent },
   { path: "contact", component: ContactComponent },
+  { path: "subsidy", component: SubsidyComponent },
   { path: "others/emergency-cosign", component: EmergencyCosignComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }

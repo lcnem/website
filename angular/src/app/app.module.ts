@@ -42,7 +42,7 @@ import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emerge
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { SubsidyComponent } from './subsidy/subsidy.component';
+import { SubsidyComponent } from './pages/subsidy/subsidy.component';
 import { WalletComponent } from './pages/wallet/wallet.component';
 import { reducers, metaReducers } from './store';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
