@@ -44,7 +44,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { SubsidyComponent } from './pages/subsidy/subsidy.component';
 import { WalletComponent } from './pages/wallet/wallet.component';
-import { reducers, metaReducers } from './store';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 
 @NgModule({
@@ -90,7 +89,6 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
     MatMenuModule,
     HttpClientModule,
     MatCheckboxModule,
-    StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   entryComponents: [

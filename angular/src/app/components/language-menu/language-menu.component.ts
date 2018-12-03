@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { LanguageService } from '../../services/language.service';
-import { State } from '../../store/index'
-import { SetLanguage } from '../../store/language/language.actions';
 
 @Component({
   selector: 'app-language-menu',
@@ -13,7 +10,6 @@ export class LanguageMenuComponent implements OnInit {
   public get lang() { return this.language.twoLetter; }
 
   constructor(
-    private store: Store<State>,
     private language: LanguageService
   ) { }
 
@@ -22,7 +18,7 @@ export class LanguageMenuComponent implements OnInit {
   }
   
   public setLanguage(twoLetter: string) {
-    this.store.dispatch(new SetLanguage({ twoLetter: twoLetter })) 
+    this.language.setLanguage(twoLetter)
   }
 
 }
