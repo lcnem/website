@@ -1,16 +1,16 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav class="mat-elevation-z16" [fixedInViewport]="true" position="end">
+<mat-drawer-container>
+  <mat-drawer #drawer class="mat-elevation-z16" position="end">
     <app-side-nav></app-side-nav>
-  </mat-sidenav>
-  <mat-sidenav-content>
+  </mat-drawer>
+  <mat-drawer-content>
     <div class="mat-typography {{color}}">
       <app-header color="{{color}}" position="{{headerPosition}}">
-        <button mat-icon-button (click)="sidenav.toggle()" yPosition="below">
+        <button mat-icon-button (click)="drawer.toggle()" yPosition="below">
           <mat-icon class="hamburger">menu</mat-icon>
         </button>
       </app-header>
       <ng-content></ng-content>
       <app-footer></app-footer>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-drawer-content>
+</mat-drawer-container>

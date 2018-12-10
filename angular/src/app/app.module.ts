@@ -39,9 +39,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './components/body-container/body-container.component';
 import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emergency-cosign.component';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
 import { SubsidyComponent } from './pages/subsidy/subsidy.component';
 import { WalletComponent } from './pages/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
@@ -88,8 +85,7 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
-    MatCheckboxModule,
-    !environment.production ? StoreDevtoolsModule.instrument() : []
+    MatCheckboxModule
   ],
   entryComponents: [
     AlertDialogComponent,
