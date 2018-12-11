@@ -26,11 +26,11 @@ import {
   MatCheckboxModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
-import { FaqComponent } from './pages/faq/faq.component';
-import { AboutComponent } from './pages/about/about.component';
+import { FaqComponent } from './pages/digital-legal-currency/faq/faq.component';
+import { AboutComponent } from './pages/company/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { PrivacyPolicyComponent } from './pages/terms/privacy-policy/privacy-policy.component';
+import { ContactComponent } from './pages/company/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
@@ -42,6 +42,7 @@ import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emerge
 import { SubsidyComponent } from './pages/subsidy/subsidy.component';
 import { WalletComponent } from './pages/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
+import { RecruitComponent } from './pages/company/recruit/recruit.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
     EmergencyCosignComponent,
     SubsidyComponent,
     EmergencyCosignComponent,
-    LanguageMenuComponent
+    LanguageMenuComponent,
+    RecruitComponent
   ],
   imports: [
     BrowserModule,

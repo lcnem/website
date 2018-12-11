@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-privacy-policy',
