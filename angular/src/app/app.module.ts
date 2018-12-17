@@ -39,7 +39,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './components/body-container/body-container.component';
 import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emergency-cosign.component';
-import { SubsidyComponent } from './pages/subsidy/subsidy.component';
+import { SubsidyComponent } from './pages/digital-legal-currency/subsidy/subsidy.component';
 import { WalletComponent } from './pages/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';

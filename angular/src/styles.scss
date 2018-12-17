@@ -1,5 +1,12 @@
 @import './styles/parts/button';
-
+@import './styles/parts/table';
+@import './styles/parts/content.scss';
+@import './styles/parts/header.scss';
+@import './styles/parts/image.scss';
+@import './styles/parts/top.scss';
+@import './styles/parts/font.scss';
+@import './styles/parts/feature-list.scss';
+@import './styles/parts/icon.scss';
 /* You can add global styles to this file, and also import other style files */
 
 html, body {
@@ -11,15 +18,18 @@ mat-sidenav {
   overflow: auto;
 }
 
-.fill-remaining-space{
-  flex: 1 1 auto;
+.flexbox-container-vertical-center {
+  margin: auto;
+  padding: 0% 0 10px 0;
 }
 
-.top-toolbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 4;
+mat-icon {
+  vertical-align: middle;
+}
+
+
+.fill-remaining-space{
+  flex: 1 1 auto;
 }
 
 .body-container {
@@ -32,32 +42,11 @@ mat-spinner {
   margin: 1em auto;
 }
 
-.icon {
-  padding: 0;
-  min-width: 0;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  line-height: 40px;
-  border-radius: 50%;
-}
-
 .floating-action-button.mat-fab {
   position: fixed;
   bottom: 16px;
   right: 16px;
   z-index: 1;
-}
-
-.table-container {
-  overflow: auto;
-  white-space: nowrap;
-}
-.table-container table {
-  width: 100%;
-}
-.table-container th, td {
-  padding: 0 0.5em !important;
 }
 
 /*これより上は他サービス共通　以下本プロジェクト専用*/
@@ -66,41 +55,13 @@ mat-spinner {
   max-width: 1000px;
   width: 92%;
 }
+/*  */
 
-h2.with-line {
-  display: flex;
-  align-items: center;
-  font-size: 2em;
-  margin-bottom: 60px;
-  font-weight: normal;
-  text-align: center;
-  line-height: 1.6;
-}
-
-h2.with-line:before,
-h2.with-line:after {
-  border-top: 1px solid;
-  content: "";
-  flex-grow: 1;
-}
-h2.with-line:before {
-  margin-right: 1em;
-}
-h2.with-line::after {
-  margin-left: 1em;
-}
-
-h2.without-line {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 60px;
-  font-weight: normal;
-  margin-top: 0;
-}
-
-@media screen and(max-width: 600px) {
-  h2.with-line {
-    font-size: 1.6em;
+@media screen and (max-width: 599px) {
+  section h4 {text-align: center}
+  section h2 {text-align: center}
+  section h5 {text-align: center}
+  .flexbox-container-vertical-center {
+    margin: 5px;
   }
 }
-/*  */

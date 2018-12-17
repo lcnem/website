@@ -1,0 +1,40 @@
+.header {
+    .title {
+        color: #fff;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 170%;
+        padding: 50px 0px;
+    }
+    &.bg-blue {
+        background-color: #011741;
+    }
+    &.with-line {
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        font-weight: normal;
+        text-align: center;
+
+        &:before, 
+        &:after {
+            border-top: 1px solid;
+            content: "";
+            flex-grow: 1;
+        }
+        &:before {
+            margin-right: 1em;
+        }
+        &:after {
+            margin-left: 1em;
+        }
+    }
+
+    &.without-line {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 60px;
+        font-weight: normal;
+        margin-top: 0;
+    }
+}

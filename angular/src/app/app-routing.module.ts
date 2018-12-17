@@ -8,7 +8,7 @@ import { WalletComponent } from './pages/wallet/wallet.component'
 import { PrivacyPolicyComponent } from './pages/terms/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/company/contact/contact.component';
 import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emergency-cosign.component';
-import { SubsidyComponent } from './pages/subsidy/subsidy.component';
+import { SubsidyComponent } from './pages/digital-legal-currency/subsidy/subsidy.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
 
 const routes: Routes = [
@@ -26,6 +26,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
