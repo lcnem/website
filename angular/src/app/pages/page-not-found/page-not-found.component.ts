@@ -26,7 +26,7 @@ export class PageNotFoundComponent implements OnInit {
     topPage: {
       ja: "トップページへ",
       en: "Top Page"
-    }
+    } as any
   }
 
 }
