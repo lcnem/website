@@ -18,7 +18,6 @@ const routes: Routes = [
   { path: "company/contact", component: ContactComponent },
   { path: "company/recruit", component: RecruitComponent },
   { path: "digital-legal-currency", component: DigitalLegalCurrencyComponent },
-  { path: "digital-legal-currency/faq", component: FaqComponent },
   { path: "digital-legal-currency/subsidy", component: SubsidyComponent },
   { path: "wallet", component: WalletComponent },
   { path: "terms/privacy-policy", component: PrivacyPolicyComponent },
