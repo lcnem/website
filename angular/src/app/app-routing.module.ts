@@ -10,12 +10,14 @@ import { ContactComponent } from './pages/company/contact/contact.component';
 import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emergency-cosign.component';
 import { SubsidyComponent } from './pages/digital-legal-currency/subsidy/subsidy.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
+import { DigitalLegalCurrencyComponent } from './pages/digital-legal-currency/digital-legal-currency.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "company/about", component: AboutComponent },
   { path: "company/contact", component: ContactComponent },
   { path: "company/recruit", component: RecruitComponent },
+  { path: "digital-legal-currency", component: DigitalLegalCurrencyComponent },
   { path: "digital-legal-currency/faq", component: FaqComponent },
   { path: "digital-legal-currency/subsidy", component: SubsidyComponent },
   { path: "wallet", component: WalletComponent },
