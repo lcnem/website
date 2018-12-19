@@ -43,6 +43,7 @@ import { SubsidyComponent } from './pages/digital-legal-currency/subsidy/subsidy
 import { WalletComponent } from './pages/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
+import { DigitalLegalCurrencyComponent } from './pages/digital-legal-currency/digital-legal-currency.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { RecruitComponent } from './pages/company/recruit/recruit.component';
     SubsidyComponent,
     EmergencyCosignComponent,
     LanguageMenuComponent,
-    RecruitComponent
+    RecruitComponent,
+    DigitalLegalCurrencyComponent
   ],
   imports: [
     BrowserModule,
