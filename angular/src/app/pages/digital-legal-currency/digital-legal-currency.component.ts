@@ -18,12 +18,12 @@ export class DigitalLegalCurrencyComponent implements OnInit {
 
   public translation = {
     questionSubsidy: {
-      en: "",
-      ja: "「アプリへの組み込みはどうやるのですか？」"
+      en: "How to implement for you app",
+      ja: "アプリへの組み込みはどうやるのですか？"
     } as any,
     answerSubsidy: {
-      en: "",
-      ja: "「NEMブロックチェーン使うことで簡単にできます」"
+      en: "You implement easily by using NEM blockchain.",
+      ja: "NEMブロックチェーン使うことで簡単にできます。"
     } as any,
     abountSubsidy: {
       en: "",
@@ -31,7 +31,7 @@ export class DigitalLegalCurrencyComponent implements OnInit {
     } as any,
     show: {
       en: "",
-      ja: "のページをご覧ください"
+      ja: "のページをご覧ください。"
     } as any
   }
 
