@@ -1,60 +1,53 @@
-<app-body-container headerPosition="normal">
-  <div class="inner-wrapper">
-    <div class="body-container">
-      <h2 class="header without-line">FAQ</h2>
-      <div>
-        <div class="faq-content" *ngFor="let f of faqContent" fxLayout="row wrap" fxLayoutAlign="center">
-          <div fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
-            <h2>
-              Q.{{f.question[lang]}}
-            </h2>
-            <p>
-              A.{{f.answer[lang]}}
-            </p>
-          </div>
-          <div fxFlex="5" fxFlex.xs="0">
-          </div>
-          <div fxFlex="25" fxFlex.xs="60" fxLayout="column" fxLayoutAlign="center" class="img-box">
-            <img src="{{f.imgURL}}" />
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <h2>{{translation.roadmap[lang]}}</h2>
-        <mat-list>
-          <mat-list-item>
-            <span>{{translation.noActionLetter[lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[lang]}}">
-            <span>{{translation.issueAsPrepaid[lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[lang]}}">
-            <span>{{translation.registerAsPrepaidWithSettlement[lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon></mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[lang]}}">
-            <span>{{translation.registerAsRemittance[lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon></mat-icon>
-            </span>
-          </mat-list-item>
-        </mat-list>
-      </div>
+<div>
+  <div class="faq-content" *ngFor="let f of faqContent" fxLayout="row wrap" fxLayoutAlign="center">
+    <div fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
+      <h2>
+        Q.{{f.question[lang]}}
+      </h2>
+      <p>
+        A.{{f.answer[lang]}}
+      </p>
+    </div>
+    <div fxFlex="5" fxFlex.xs="0">
+    </div>
+    <div fxFlex="25" fxFlex.xs="60" fxLayout="column" fxLayoutAlign="center" class="img-box">
+      <img src="{{f.imgURL}}" />
     </div>
   </div>
-</app-body-container>
+</div>
+<div class="item">
+  <h2>{{translation.roadmap[lang]}}</h2>
+  <mat-list>
+    <mat-list-item>
+      <span>{{translation.noActionLetter[lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>
+        <mat-icon>done</mat-icon>
+      </span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[lang]}}">
+      <span>{{translation.issueAsPrepaid[lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>
+        <mat-icon>done</mat-icon>
+      </span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[lang]}}">
+      <span>{{translation.registerAsPrepaidWithSettlement[lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>
+        <mat-icon></mat-icon>
+      </span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item matTooltip="{{translation.registerAsRemittanceBody[lang]}}">
+      <span>{{translation.registerAsRemittance[lang]}}</span>
+      <span class="fill-remaining-space"></span>
+      <span>
+        <mat-icon></mat-icon>
+      </span>
+    </mat-list-item>
+  </mat-list>
+</div>
