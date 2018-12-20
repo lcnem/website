@@ -116,7 +116,7 @@ export class WalletComponent implements OnInit {
     buyStableCoinBody: {
       en: "",
       ja: "LCNEM Walletでは、LCNEMで開発し提供している法定通貨に価値が固定されたStable Coinを購入できます。1000円から購入でき、実際に決済に使うことのできる店舗もあります。決済方法はクレジットカードのみです。また、Stable CoinはいつでもWallet内からAmazonギフト券に交換できます。"
-    },
+    } as any,
     aboutStableCoin: {
       en: "",
       ja: "ステーブルコインとは・・・"

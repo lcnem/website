@@ -1,21 +1,20 @@
 <app-body-container color="white" headerPosition="absolute">
   <section class="main" fxLayout="column" fxLayoutAlign="center">
     <section>
-
-      <section class="content bg-blue top">
+      <section class="content bg-cyan-blue">
         <div fxLayout="row wrap" class="inner-wrapper">
           <div fxFlex="10" fxFlex.xs="0"></div>
           <div fxFlex="35" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
             <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="30px">
               <div>
-                <div class="font-small">{{translation.byLcnemWallet[lang]}}</div>
-                <div class="copy-write">
+                <div class="font small">{{translation.byLcnemWallet[lang]}}</div>
+                <div class="font copy-write">
                   {{translation.managingWallet[lang]}}
                 </div>
-                <div class="copy-write">
+                <div class="font copy-write">
                   {{translation.withEaseMore[lang]}}
                 </div>
-                <div class="copy-write">
+                <div class="font copy-write">
                   {{translation.withConvenienceMore[lang]}}
                 </div>
               </div>
@@ -34,46 +33,42 @@
                 </li>
               </ul>
               <div>
-                <a
-                  class="button rounded"
-                  href="https://wallet.lcnem.cc"
-                  target="_blank"
-                  [ngStyle]="{'color': '#0242BE', 'background-color': '#fff'}">
+                <a class="button rounded" href="https://wallet.lcnem.cc" target="_blank" [ngStyle]="{'color': '#0242BE', 'background-color': '#fff'}">
                   {{translation.useNow[lang]}}
                 </a>
               </div>
             </div>
           </div>
           <div fxFlex="55" fxFlex.xs="100" fxLayoutAlign="center">
-            <img src="assets/images/billboard.png" class="banner-img" />
+            <img src="assets/images/billboard.png" class="image banner" />
           </div>
         </div>
       </section>
-
-      <section class="content title-zone">
+      <section class="header bg-blue">
         <div class="inner-wrapper">
-          <h1>{{translation.lcnemWalletFeatureItem[lang]}}</h1>
+          <div class="title">
+            {{translation.lcnemWalletFeatureItem[lang]}}
+          </div>
         </div>
       </section>
-
       <section class="content bg-white">
         <div class="inner-wrapper">
           <div fxLayout="column" fxLayoutGap="20px" fxLayoutGap.xs="30px" fxLayoutAlign="center">
             <div fxFlex="70" fxFlex.xs="30">
               <div fxLayout="row-reverse" fxLayoutGap.xs="25px" fxLayout.xs="column">
-                <div fxFlex="60" class="flexbox-container-vertical-center stable-coin-introduction">
+                <div fxFlex="60" class="flexbox-container-vertical-center">
                   <h2>{{translation.buyStableCoin[lang]}}</h2>
                   <p>{{translation.buyStableCoinBody[lang]}}</p>
                 </div>
-                <div fxFlex="40" fxLayoutAlign="center">
-                  <img src="assets/images/lcnem.svg" class="introduction-img" />
+                <div fxFlex="40" fxLayoutAlign="center" class="flexbox-container-vertical-center">
+                  <img src="assets/images/lcnem.svg" class="image svg" />
                 </div>
               </div>
             </div>
             <div fxFlex="30" fxFlex.xs="70">
               <div fxLayout="column" fxLayoutAlign="center">
                 <div fxFlex="30" fxFlec.xs="30">
-                  <h5>{{translation.aboutStableCoin[lang]}}</h5>
+                  <div class="font sub-title">{{translation.aboutStableCoin[lang]}}</div>
                 </div>
                 <div fxFlex="70" fxFlec.xs="70">
                   <p>{{translation.aboutStableCoinBody[lang]}}</p>
@@ -83,33 +78,27 @@
           </div>
         </div>
       </section>
-
       <section class="content bg-skyblue">
         <div class="inner-wrapper">
           <div fxLayout="row-reverse wrap" fxLayout.xs="column" fxLayoutGap.xs="25px" fxLayoutAlign="center">
             <div fxFlex="60" fxFlex.xs="60" class="flexbox-container-vertical-center">
-              <h4>{{translation.useMultiWallet[lang]}}</h4>
-              <p>{{translation.useMultiWalletBody[lang]}}</p>
+              <div class="lead">{{translation.useMultiWallet[lang]}}</div>
+              <div class="lead-body">{{translation.useMultiWalletBody[lang]}}</div>
             </div>
             <div fxFlex="40" fxFlex.xs="40" fxLayoutAlign="center" class="flexbox-container-vertical-center">
-              <img src="assets/images/multi.png" class="introduction-img" />
+              <img src="assets/images/multi.png" class="image svg" />
             </div>
           </div>
         </div>
       </section>
-
       <section class="content bg-white">
         <div class="inner-wrapper">
           <div fxLayout="row-reverse wrap" fxLayout.xs="column" fxLayoutGap="30px" fxLayoutGap.xs="30px" fxLayoutAlign="center">
             <div fxFlex="60" fxFlex.xs="60" class="flexbox-container-vertical-center">
               <div fxLayout="row" fxLayout="column" fxLayoutAlign="center" fxLayoutGap.xs="20px" fxLayoutWrap>
-                <div>
-                  <h4>{{translation.secretKey[lang]}}</h4>
-                </div>
-                <div>
-                  <p>{{translation.secretKeyBody[lang]}}</p>
-                </div>
-                <div>
+                <div class="lead">{{translation.secretKey[lang]}}</div>
+                <div class="lead-body">{{translation.secretKeyBody[lang]}}</div>
+                <div class="table header-top">
                   <table>
                     <tbody>
                       <tr>
@@ -133,7 +122,7 @@
                           <mat-icon>clear</mat-icon>
                         </td>
                         <td>
-                          <mat-icon class="red-icon">panorama_fish_eye</mat-icon>
+                          <mat-icon class="icon red">panorama_fish_eye</mat-icon>
                         </td>
                       </tr>
                     </tbody>
@@ -142,28 +131,24 @@
               </div>
             </div>
             <div fxFlex="35" fxFlex.xs="35" fxLayoutAlign="center" class="flexbox-container-vertical-center">
-              <img src="assets/images/cloud.png" class="introduction-img" />
+              <img src="assets/images/cloud.png" class="image svg" />
             </div>
           </div>
         </div>
       </section>
-
       <section class="content bg-skyblue">
         <div class="inner-wrapper">
           <div fxLayout="row-reverse wrap" fxLayout.xs="column" fxLayoutGap.xs="25px" fxLayoutAlign="center">
             <div fxFlex="60" fxFlex.xs="60" class="flexbox-container-vertical-center">
-              <div>
-                <h4>{{translation.useAddress[lang]}}</h4>
-                <p>{{translation.useAddressBody[lang]}}</p>
-              </div>
+              <div class="lead">{{translation.useAddress[lang]}}</div>
+              <p>{{translation.useAddressBody[lang]}}</p>
             </div>
             <div fxFlex="40" fxFlex.xs="40" fxLayoutAlign="center" class="flexbox-container-vertical-center">
-              <img src="assets/images/address.png" class="introduction-img" />
+              <img src="assets/images/address.png" class="image svg" />
             </div>
           </div>
         </div>
       </section>
-
     </section>
   </section>
 </app-body-container>

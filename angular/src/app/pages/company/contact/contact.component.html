@@ -1,0 +1,34 @@
+<app-body-container headerPosition="normal">
+  <div class="conteiner">
+    <div class="inner-wrapper">
+      <h2 class="header without-line">{{translation.contact[lang]}}</h2>
+      <form #form="ngForm" (ngSubmit)="sendMail()">
+        <mat-form-field fxFill>
+          <input matInput placeholder="{{translation.name[lang]}}" [(ngModel)]="forms.name" name="name" required />
+        </mat-form-field>
+        <mat-form-field fxFill>
+          <input matInput type="email" placeholder="{{translation.email[lang]}}" [(ngModel)]="forms.email" name="email"
+            required />
+        </mat-form-field>
+        <mat-form-field fxFill>
+          <mat-select placeholder="{{translation.subject[lang]}}" [(ngModel)]="forms.subject" name="subject" required>
+            <ng-container *ngFor="let subject of translation.subjects; let i = index">
+              <mat-option value="{{i}}">{{subject[lang]}}</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field fxFill>
+          <textarea matInput placeholder="{{translation.body[lang]}}" [(ngModel)]="forms.body" name="body" required></textarea>
+        </mat-form-field>
+        <div class="checkbox">
+          <mat-checkbox fxFill [(ngModel)]="forms.agree" name="agree" required>
+            <span *ngIf="lang == 'ja'"><a routerLink="/privacy-policy">プライバシーポリシ</a>に同意する</span>
+            <span *ngIf="lang == 'en'">I agree to <a routerLink="/privacy-policy">privacy policy</a></span>
+          </mat-checkbox>
+        </div>
+
+        <button mat-raised-button color="accent" fxFill [disabled]="form.invalid">{{translation.send[lang]}}</button>
+      </form>
+    </div>
+  </div>
+</app-body-container>

@@ -1,0 +1,17 @@
+<app-body-container headerPosition="normal">
+  <div class="inner-wrapper">
+    <div class="body-container">
+      <div class="faq-content">
+        <h2>
+          Q.{{translation.questionSubsidy[lang]}}
+        </h2>
+        <p>A.{{translation.answerSubsidy[lang]}}</p>
+        <p>
+          <a routerLink="/digital-legal-currency/subsidy">{{translation.abountSubsidy[lang]}}</a>
+          {{translation.show[lang]}}
+        </p>
+      </div>
+      <app-faq></app-faq>
+    </div>
+  </div>
+</app-body-container>

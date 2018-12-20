@@ -26,11 +26,11 @@ import {
   MatCheckboxModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
-import { FaqComponent } from './pages/faq/faq.component';
-import { AboutComponent } from './pages/about/about.component';
+import { FaqComponent } from './pages/digital-legal-currency/faq/faq.component';
+import { AboutComponent } from './pages/company/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { PrivacyPolicyComponent } from './pages/terms/privacy-policy/privacy-policy.component';
+import { ContactComponent } from './pages/company/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertDialogComponent } from './components/alert-dialog/alert-dialog.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
@@ -39,12 +39,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './components/body-container/body-container.component';
 import { EmergencyCosignComponent } from './pages/others/emergency-cosign/emergency-cosign.component';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
-import { SubsidyComponent } from './pages/subsidy/subsidy.component';
+import { SubsidyComponent } from './pages/digital-legal-currency/subsidy/subsidy.component';
 import { WalletComponent } from './pages/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
+import { RecruitComponent } from './pages/company/recruit/recruit.component';
+import { DigitalLegalCurrencyComponent } from './pages/digital-legal-currency/digital-legal-currency.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +65,9 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
     EmergencyCosignComponent,
     SubsidyComponent,
     EmergencyCosignComponent,
-    LanguageMenuComponent
+    LanguageMenuComponent,
+    RecruitComponent,
+    DigitalLegalCurrencyComponent
   ],
   imports: [
     BrowserModule,
@@ -88,8 +89,7 @@ import { LanguageMenuComponent } from './components/language-menu/language-menu.
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
-    MatCheckboxModule,
-    !environment.production ? StoreDevtoolsModule.instrument() : []
+    MatCheckboxModule
   ],
   entryComponents: [
     AlertDialogComponent,

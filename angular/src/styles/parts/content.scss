@@ -1,0 +1,33 @@
+.content {
+    padding: 60px;
+
+    .lead {
+        font-weight: bolder;
+        font-size: 130%;
+    }
+    &.without-padding-bottom {
+        padding-bottom: 0px;
+    }
+    &.bg-white {
+        background-color: #fafafa;
+    }
+    &.bg-skyblue {
+        background-color: #EFF7FD;
+    }
+
+    &.bg-gray {
+        background-color: #f6f6f6;
+    }
+
+    &.bg-blue {
+        background-color: #011741;
+    }
+
+    &.bg-cyan-blue{
+        background-color: #0142be;
+    }
+
+    .table {
+        margin-top: 30px;
+    }
+}

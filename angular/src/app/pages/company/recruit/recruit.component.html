@@ -1,0 +1,157 @@
+<app-body-container headerPosition="normal">
+  <section class="content without-padding-bottom">
+    <div class="inner-wrapper">
+      <div class="header with-line">{{translation.recruit[lang]}}</div>
+    </div>
+  </section>
+  <section class="content bg-white">
+    <div class="inner-wrapper">
+      <div class="table header-left">
+        <h4 class="tag">募集職種と使用スキル</h4>
+        <table>
+          <tbody>
+            <tr>
+              <th>役員</th>
+              <td>
+                <ol>
+                  <li>ミクロ経済学</li>
+                  <li>マクロ経済学</li>
+                  <li>計量経済学</li>
+                  <li>統計学</li>
+                  <li>コーポレートファイナンス</li>
+                  <li>プロジェクトマネジメント</li>
+                  <li>英語</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th>Webアプリケーションエンジニア</th>
+              <td>
+                <ol>
+                  <li>Git</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Node.JS</li>
+                  <li>TypeScript</li>
+                  <li>Angular</li>
+                  <li>Firebase</li>
+                  <li>NEM</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th>ブロックチェーンエンジニア</th>
+              <td>
+                <ol>
+                  <li>Git</li>
+                  <li>GoogleCloudPlatform</li>
+                  <li>TypeScript</li>
+                  <li>Node.JS</li>
+                  <li>NEM</li>
+                  <li>Go</li>
+                  <li>Cosmos SDK</li>
+                  <li>ミクロ経済学</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th>マーケター</th>
+              <td>
+                <ol>
+                  <li>統計学</li>
+                  <li>GoogleAnalytics</li>
+                  <li>英語</li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table header-left">
+        <table>
+          <tbody>
+            <tr>
+              <th>勤務地</th>
+              <td>
+                <ol>
+                  <li>リモート</li>
+                  <li>京都（京都大学）</li>
+                  <li>東京（明大前）</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th>福利厚生</th>
+              <td>
+                <ol>
+                  <li>本</li>
+                  <li>明大前宿泊</li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table header-left">
+        <h4 class="tag">就労形態</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>就労形態</th>
+              <td>報酬</td>
+              <td>要件</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>役員</th>
+              <td>
+                <ol>
+                  <li>役員報酬</li>
+                  <li>ストックオプション</li>
+                </ol>
+              </td>
+              <td>経験必須</td>
+            </tr>
+            <tr>
+              <th>役員候補業務委託契約</th>
+              <td>
+                <ol>
+                  <li>月俸</li>
+                  <li>ストックオプション</li>
+                </ol>
+              </td>
+              <td>スキルの大部分が必要（足りないところは学習可）</td>
+            </tr>
+            <tr>
+              <th>業務委託契約</th>
+              <td>
+                <ol>
+                  <li>時給</li>
+                </ol>
+              </td>
+              <td>スキルの大部分が必要（足りないところは学習可）</td>
+            </tr>
+            <tr>
+              <th>インターン</th>
+              <td>
+                <ol>
+                  <li>時給</li>
+                </ol>
+              </td>
+              <td>スキルは学習して習得する。役員候補になる意思が必要</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="button-container">
+      <a class="button rounded" routerLink="/company/contact" [ngStyle]="{'color': '#fff', 'background-color': '#174056'}">
+        応募はこちら
+      </a>
+    </div>
+  </section>
+</app-body-container>
