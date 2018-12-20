@@ -23,9 +23,9 @@ export class FaqComponent implements OnInit {
       } as any,
       answer: {
         en: `IBCと呼ばれるブロックチェーン間で相互に接続するための規格を使って、ブロックチェーン間で相互運用性をもったネットワークがCosmosです。
-            EthermintをはじめとするCosmosネットワーク上の全てのブロックチェーンでLCNEM法定通貨ペグアセットが利用できることを意味します。`,
+            Cosmosネットワーク上の全てのブロックチェーンでLCNEMのいわゆるステーブルコインが利用できることを意味します。`,
         ja: `IBCと呼ばれるブロックチェーン間で相互に接続するための規格を使って、ブロックチェーン間で相互運用性をもったネットワークがCosmosです。
-            EthermintをはじめとするCosmosネットワーク上の全てのブロックチェーンでLCNEM法定通貨ペグアセットが利用できることを意味します。`
+            Cosmosネットワーク上の全てのブロックチェーンでLCNEMのいわゆるステーブルコインが利用できることを意味します。`
       } as any,
       imgURL: "assets/images/cosmos.png"
     },
@@ -57,7 +57,7 @@ export class FaqComponent implements OnInit {
     } as any,
     roadmap: {
       en: "Roadmap of Pegged Asset",
-      ja: "ペグアセットのロードマップ"
+      ja: "ブロックチェーン電子マネー（ステーブルコイン）のロードマップ"
     } as any,
     noActionLetter: {
       en: "Preliminary confirmation procedure to the Financial Services Agency",
@@ -81,16 +81,6 @@ export class FaqComponent implements OnInit {
 Because the government ordinance that the net asset of 100 million yen or more is required for registration is specified, we will need fund raising.`,
       ja: `第三者型前払式支払手段発行業登録をすることにより、契約を結んだ店舗への換金対応が可能になります。
 登録には、純資産1億円以上が必要であるとの政令が指定されているため、資金調達を行います。`
-    } as any,
-    registerAsRemittance: {
-      en: "Funds Transfer business Registration",
-      ja: "資金移動業登録"
-    } as any,
-    registerAsRemittanceBody: {
-      en: `Prepaid payment method with settlement system for third party stores Registration creates a practical system, but in order to pursue even more convenience, we are looking at registration of funds transfer business.
-Refund will be possible by fund transfer business registration.`,
-      ja: `第三者型前払式支払手段発行業登録により実用的なシステムが完成しますが、さらなる利便性の追求のため資金移動業登録を見据えています。
-資金移動業登録により、払戻しが可能になります。`
     } as any
   };
 }
