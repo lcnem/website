@@ -103,6 +103,10 @@ export class ContactComponent implements OnInit {
         en: "Consulting",
         ja: "コンサルティングの依頼"
       } as any,
+      {
+        en: "Work",
+        ja: "就労の応募について"
+      } as any,
     ],
     body: {
       en: "How can we help ?",
