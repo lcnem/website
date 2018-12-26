@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
-import { LoadingDialogComponent } from '../../../components/loading-dialog/loading-dialog.component';
+import { filter, mergeMap, map } from 'rxjs/operators';
 import { AlertDialogComponent } from '../../../components/alert-dialog/alert-dialog.component';
 import { ConfirmDialogComponent } from '../../../components/confirm-dialog/confirm-dialog.component';
 import { LanguageService } from '../../../services/language.service';
+import { LoadingDialogComponent } from '../../../components/loading-dialog/loading-dialog.component';
 
 @Component({
   selector: 'app-contact',
@@ -26,47 +27,59 @@ export class ContactComponent implements OnInit {
     subject: number,
     body: string,
     agree: boolean
-  };
+  }
 
   ngOnInit() {
   }
 
-  public async sendMail() {
-    let result = await this.dialog.open(ConfirmDialogComponent, {
+  public sendMail() {
+    this.dialog.open(ConfirmDialogComponent, {
       data: {
         title: this.translation.confirm[this.lang]
       }
-    }).afterClosed().toPromise();
+    }).afterClosed().pipe(
+      filter(result => result)
+    ).subscribe(
+      () => {
+        const loadingDialog = this.dialog.open(LoadingDialogComponent, { disableClose: true })
 
-    let dialogRef = this.dialog.open(LoadingDialogComponent, { disableClose: true });
-
-    try {
-      await this.http.post(
-        "/api/send-mail",
-        {
-          email: this.forms.email,
-          name: this.forms.name,
-          subject: this.translation.subjects[this.forms.subject][this.lang],
-          text: this.forms.body,
-          lang: this.lang
-        }
-      ).toPromise();
-    } catch {
-      this.dialog.open(AlertDialogComponent, {
-        data: {
-          title: this.translation.error[this.lang]
-        }
-      });
-      return;
-    } finally {
-      dialogRef.close();
-    }
-
-    this.dialog.open(AlertDialogComponent, {
-      data: {
-        title: this.translation.completed[this.lang]
+        this.http.post(
+          "/api/send-mail",
+          {
+            email: this.forms.email,
+            name: this.forms.name,
+            subject: this.translation.subjects[this.forms.subject][this.lang],
+            text: this.forms.body,
+            lang: this.lang
+          }
+        ).subscribe(
+          () => {
+            this.dialog.open(
+              AlertDialogComponent,
+              {
+                data: {
+                  title: this.translation.completed[this.lang]
+                }
+              }
+            )
+            this.forms = {} as any
+          },
+          (e) => {
+            this.dialog.open(
+              AlertDialogComponent,
+              {
+                data: {
+                  title: this.translation.error[this.lang]
+                }
+              }
+            )
+          },
+          () => {
+            loadingDialog.close()
+          }
+        )
       }
-    });
+    )
   }
 
   public translation = {
