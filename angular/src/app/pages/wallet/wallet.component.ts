@@ -50,7 +50,7 @@ export class WalletComponent implements OnInit {
       ja: "クラウドでの秘密鍵管理"
     } as any,
     useNow: {
-      en: "Use Now",
+      en: "Getting started",
       ja: "今すぐ使う"
     } as any,
     secretKeyBody: {
@@ -103,7 +103,7 @@ export class WalletComponent implements OnInit {
     } as any,
     useMultiWalletBody: {
       en: "",
-      ja: "一つのGoogleアカウントで複数のWalletを管理することができるようになります。用途によって使いわけることもできます。現在はXEMのみの対応ですが、今後は他のブロックチェーンも対応予定です。"
+      ja: "一つのGoogleアカウントで複数のWalletを管理することができるようになります。用途によって使いわけることもできます。現在はNEMのみの対応ですが、今後は他のブロックチェーンも対応予定です。"
     } as any,
     lcnemWalletFeatureItem: {
       en: "",
@@ -111,20 +111,20 @@ export class WalletComponent implements OnInit {
     } as any,
     buyStableCoin: {
       en: "",
-      ja: "LCNEMのStable Coin(ステーブルコイン）の購入"
+      ja: "LCNEMのブロックチェーン電子マネー（ステーブルコイン）の購入"
     } as any,
     buyStableCoinBody: {
       en: "",
-      ja: "LCNEM Walletでは、LCNEMで開発し提供している法定通貨に価値が固定されたStable Coinを購入できます。1000円から購入でき、実際に決済に使うことのできる店舗もあります。決済方法はクレジットカードのみです。また、Stable CoinはいつでもWallet内からAmazonギフト券に交換できます。"
+      ja: "LCNEM Walletでは、LCNEMのブロックチェーン電子マネー（ステーブルコイン）を購入できます。"
     } as any,
     aboutStableCoin: {
       en: "",
-      ja: "ステーブルコインとは・・・"
+      ja: "ステーブルコインとは"
     } as any,
     aboutStableCoinBody: {
       en: "",
-      ja: `ブロックチェーン上に流通するアセットの中で、一般的な仮想通貨とは異なり法定通貨と価格が同じになるように設計されたアセットです。LCNEMは、電子マネーと同じ仕組みで担保することによってステーブルコインを発行します。つまり、法定通貨とブロックチェーンの両方のメリットを活かした価値移転が可能となります。さらに、LCNEMの
-      ステーブルコインはシステムへの組み込みが容易なNEMブロックチェーン上で動くので、簡単に独自のサービスに組み込むことも可能です。自由に、かつ簡単に導入可能な点もブロックチェーンのメリットです`
-    } as any,
+      ja: `ブロックチェーン上に流通するアセットの中で、一般的な仮想通貨とは異なり法定通貨と価格が同じになるように設計されたアセットです。LCNEMは、電子マネーと同じ仕組みで担保することによってステーブルコインを発行します。これにより、法定通貨とブロックチェーンの両方のメリットを活かした価値移転が可能となります。さらに、LCNEMの
+ステーブルコインはシステムへの組み込みが容易なNEMブロックチェーン上で動くので、簡単に独自のサービスに組み込むことも可能です。自由に、かつ簡単に導入可能な点もブロックチェーンのメリットです。`
+    } as any
   };
 }
