@@ -32,52 +32,52 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  public sendMail() {
-    this.dialog.open(ConfirmDialogComponent, {
-      data: {
-        title: this.translation.confirm[this.lang]
+  public async sendMail() {
+    await this.dialog.open(
+      ConfirmDialogComponent, {
+        data: {
+          title: this.translation.confirm[this.lang]
+        }
       }
-    }).afterClosed().pipe(
+    ).afterClosed().pipe(
       filter(result => result)
+    ).toPromise()
+
+    const loadingDialog = this.dialog.open(LoadingDialogComponent, { disableClose: true })
+
+    this.http.post(
+      "/api/send-mail",
+      {
+        email: this.forms.email,
+        name: this.forms.name,
+        subject: this.translation.subjects[this.forms.subject][this.lang],
+        text: this.forms.body,
+        lang: this.lang
+      }
     ).subscribe(
       () => {
-        const loadingDialog = this.dialog.open(LoadingDialogComponent, { disableClose: true })
-
-        this.http.post(
-          "/api/send-mail",
+        this.dialog.open(
+          AlertDialogComponent,
           {
-            email: this.forms.email,
-            name: this.forms.name,
-            subject: this.translation.subjects[this.forms.subject][this.lang],
-            text: this.forms.body,
-            lang: this.lang
-          }
-        ).subscribe(
-          () => {
-            this.dialog.open(
-              AlertDialogComponent,
-              {
-                data: {
-                  title: this.translation.completed[this.lang]
-                }
-              }
-            )
-            this.forms = {} as any
-          },
-          (e) => {
-            this.dialog.open(
-              AlertDialogComponent,
-              {
-                data: {
-                  title: this.translation.error[this.lang]
-                }
-              }
-            )
-          },
-          () => {
-            loadingDialog.close()
+            data: {
+              title: this.translation.completed[this.lang]
+            }
           }
         )
+        this.forms = {} as any
+      },
+      (e) => {
+        this.dialog.open(
+          AlertDialogComponent,
+          {
+            data: {
+              title: this.translation.error[this.lang]
+            }
+          }
+        )
+      },
+      () => {
+        loadingDialog.close()
       }
     )
   }
@@ -120,6 +120,10 @@ export class ContactComponent implements OnInit {
         en: "Work",
         ja: "就労の応募について"
       } as any,
+      {
+        en: "Request for services",
+        ja: "サービスへの要望"
+      } as any
     ],
     body: {
       en: "How can we help ?",
