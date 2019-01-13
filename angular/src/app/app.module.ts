@@ -44,6 +44,9 @@ import { WalletComponent } from './pages/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
 import { DigitalLegalCurrencyComponent } from './pages/digital-legal-currency/digital-legal-currency.component';
+import { CreditComponent } from './pages/credit/credit.component';
+import { TicketP2pComponent } from './pages/ticket-p2p/ticket-p2p.component';
+import { PointDeputizeComponent } from './pages/services/point-deputize/point-deputize.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,10 @@ import { DigitalLegalCurrencyComponent } from './pages/digital-legal-currency/di
     EmergencyCosignComponent,
     LanguageMenuComponent,
     RecruitComponent,
-    DigitalLegalCurrencyComponent
+    DigitalLegalCurrencyComponent,
+    CreditComponent,
+    TicketP2pComponent,
+    PointDeputizeComponent
   ],
   imports: [
     BrowserModule,
