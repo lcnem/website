@@ -68,7 +68,7 @@ export class ContactComponent implements OnInit {
         )
         this.forms = {} as any
       },
-      (e) => {
+      (error) => {
         this.dialog.open(
           AlertDialogComponent,
           {
