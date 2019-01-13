@@ -33,15 +33,17 @@ export class ContactComponent implements OnInit {
   }
 
   public async sendMail() {
-    await this.dialog.open(
+    const result = await this.dialog.open(
       ConfirmDialogComponent, {
         data: {
           title: this.translation.confirm[this.lang]
         }
       }
-    ).afterClosed().pipe(
-      filter(result => result)
-    ).toPromise()
+    ).afterClosed().toPromise()
+
+    if (!result) {
+      return
+    }
 
     const loadingDialog = this.dialog.open(LoadingDialogComponent, { disableClose: true })
 
