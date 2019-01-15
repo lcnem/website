@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MatDialog } from '@angular/material';
-import { filter, mergeMap, map } from 'rxjs/operators';
-import { AlertDialogComponent } from '../../../components/alert-dialog/alert-dialog.component';
-import { ConfirmDialogComponent } from '../../../components/confirm-dialog/confirm-dialog.component';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { LanguageService } from '../../../services/language.service';
 import { LoadingDialogComponent } from '../../../components/loading-dialog/loading-dialog.component';
 
@@ -16,9 +13,10 @@ export class ContactComponent implements OnInit {
   public get lang() { return this.language.twoLetter; }
 
   constructor(
-    private language: LanguageService,
     private http: HttpClient,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar,
+    private language: LanguageService,
   ) { }
 
   public forms = {} as {
@@ -33,18 +31,6 @@ export class ContactComponent implements OnInit {
   }
 
   public async sendMail() {
-    const result = await this.dialog.open(
-      ConfirmDialogComponent, {
-        data: {
-          title: this.translation.confirm[this.lang]
-        }
-      }
-    ).afterClosed().toPromise()
-
-    if (!result) {
-      return
-    }
-
     const loadingDialog = this.dialog.open(LoadingDialogComponent, { disableClose: true })
 
     this.http.post(
@@ -58,25 +44,11 @@ export class ContactComponent implements OnInit {
       }
     ).subscribe(
       () => {
-        this.dialog.open(
-          AlertDialogComponent,
-          {
-            data: {
-              title: this.translation.completed[this.lang]
-            }
-          }
-        )
+        this.snackBar.open(this.translation.completed[this.lang], undefined, { duration: 6000 })
         this.forms = {} as any
       },
       (error) => {
-        this.dialog.open(
-          AlertDialogComponent,
-          {
-            data: {
-              title: this.translation.error[this.lang]
-            }
-          }
-        )
+        this.snackBar.open(this.translation.error[this.lang], undefined, { duration: 6000 })
       },
       () => {
         loadingDialog.close()
