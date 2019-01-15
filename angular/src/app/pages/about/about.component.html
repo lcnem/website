@@ -1,0 +1,27 @@
+<app-body-container headerPosition="normal">
+  <div class="inner-wrapper">
+    <div class="body-container">
+      <h2 class="without-line">{{translation.corporateInformation[lang]}}</h2>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <div fxFlex=" 50" fxFlex.sm="80" fxFlex.xs="100">
+          <dl>
+            <dt>{{translation.corporateName[lang]}}</dt>
+            <dd>{{translation.name[lang]}}</dd>
+
+            <dt>{{translation.corporateAddress[lang]}}</dt>
+            <dd>{{translation.address[lang]}}</dd>
+
+            <dt>{{translation.corporateExecutiveOfficer[lang]}}</dt>
+            <dd>{{translation.ceoName[lang]}}</dd>
+
+            <dt>{{translation.establishmentDate[lang]}}</dt>
+            <dd>2018/03</dd>
+
+            <dt>{{translation.capitalStock[lang]}}</dt>
+            <dd>{{translation.capitalAmount[lang]}}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-body-container>

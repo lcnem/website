@@ -28,3 +28,7 @@ export class LanguageService extends RxStateStore<State> {
 interface State {
   twoLetter: string
 }
+
+interface State {
+  twoLetter: string
+}

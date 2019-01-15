@@ -1,79 +1,8 @@
 <app-body-container headerPosition="normal">
-  <section class="top fix-padding bg-whiteblue ">
-    <div fxLayout="row wrap" class="inner-wrapper">
-      <div fxFlex="10" fxFlex.xs="0"></div>
-      <div fxFlex="40" fxFlex.xs="100" class="flexbox-container-vertical-center">
-        <div fxLayout="column">
-          <div class="font small" fxLayoutAlign.xs="center">{{translation.caseLostMultisig[lang]}}</div>
-          <div class="font copy-write" fxLayoutAlign.xs="center">{{translation.multisig[lang]}}</div>
-          <div class="font copy-write" fxLayoutAlign.xs="center">{{translation.emergencyCosign[lang]}}</div>
-          <div class="font copy-write" fxLayoutAlign.xs="center">{{translation.service[lang]}}</div>
-        </div>
-      </div>
-      <div fxFlex="50" fxFlex.xs="100" fxLayoutAlign="left" fxLayoutAlign.xs="center" class="flexbox-container-vertical-center">
-        <img src="assets/images/emergency-cosign-main.svg" class="image svg" />
+  <div class="inner-wrapper">
+    <div class="body-container">
+      <div class="item">
       </div>
     </div>
-  </section>
-  <section class="header bg-blue">
-    <div class="inner-wrapper">
-      <div class="title">
-        {{translation.actingEmergencyCosignMultisig[lang]}}
-      </div>
-    </div>
-  </section>
-  <section class="content">
-    <div class="inner-wrapper">
-      {{translation.actingEmergencyCosignMultisigBody[lang]}}
-    </div>
-  </section>
-  <section class="content bg-skyblue">
-    <div fxLayout="row wrap" class="inner-wrapper">
-      <div fxFlex="40" fxFlex.xs="100" class="flexbox-container-vertical-center" fxLayoutAlign.xs="center">
-        <img src="assets/images/emergency-cosign-support.svg" class="image svg" />
-      </div>
-      <div fxFlex="60" fxFlex.xs="100" fxLayoutAlign="center">
-        <div class="flexbox-container-vertical-center">
-          <p class="lead">{{translation.saftySupport[lang]}}</p>
-          <p>{{translation.saftySupportBody[lang]}}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="content bg-white">
-    <div fxLayout="row wrap" class="inner-wrapper">
-      <div fxFlex="40" fxFlex.xs="100" class="flexbox-container-vertical-center" fxLayoutAlign.xs="center">
-        <img src="assets/images/emergency-cosign-price.svg" class="image svg" />
-      </div>
-      <div fxFlex="60" fxFlex.xs="100" fxLayoutAlign="center" fxLayout="column">
-        <div>
-          <p class="lead">{{translation.reasonablePrice[lang]}}</p>
-          <p>{{translation.reasonablePriceBody[lang]}}</p>
-        </div>
-        <div class="table header-top">
-          <table>
-            <tbody>
-              <tr>
-                <td>{{translation.pricePlanIndex[lang]}}</td>
-                <td>{{translation.monthlyPriceIndex[lang]}}</td>
-                <td>{{translation.yearlyPriceIndex[lang]}}</td>
-              </tr>
-              <tr>
-                <td>{{translation.price[lang]}}</td>
-                <td>{{translation.monthlyPrice[lang]}}</td>
-                <td>{{translation.yearlyPrice[lang]}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="button-container">
-      <a class="button rounded" routerLink="/" target="_blank" [ngStyle]="{'color': '#fff', 'background-color': '#174056'}">
-        {{translation.apply[lang]}}
-      </a>
-    </div>
-  </section>
+  </div>
 </app-body-container>
