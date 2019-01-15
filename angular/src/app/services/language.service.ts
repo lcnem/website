@@ -16,13 +16,13 @@ export class LanguageService extends RxStateStore<State> {
   public setLanguage(twoLetter: string) {
     this.streamState(
       {
-        ...this._state,
+        ...this.state,
         twoLetter: twoLetter
       }
     )
   }
   
-  public get twoLetter() { return this._state.twoLetter; }
+  public get twoLetter() { return this.state.twoLetter; }
 }
 
 interface State {
