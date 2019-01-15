@@ -23,7 +23,8 @@ import {
   MatCardModule,
   MatDialogModule,
   MatProgressSpinnerModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSnackBarModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './pages/services/digital-legal-currency/faq/faq.component';
@@ -91,7 +92,8 @@ import { PointDeputizeComponent } from './pages/services/point-deputize/point-de
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule
   ],
   entryComponents: [
     LoadingDialogComponent
