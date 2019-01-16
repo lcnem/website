@@ -75,25 +75,26 @@ export class HomeComponent implements OnInit {
 世の中の非効率なコストをブロックチェーンで最適化するため、LCNEMは様々なプロダクトを提供します。`
     } as any,
     lcnemDevelopment: {
-      en: "Development of LCNEM",
-      ja: "LCNEMの開発"
+      en: "LCNEM Cheque",
+      ja: "LCNEM Cheque"
     } as any,
     lcnemTop: {
       en: "Legal currency pegged assets on blockchains with transparency.",
-      ja: "ブロックチェーン上の法定通貨移転システム"
+      ja: "ブロックチェーン上の電子マネー"
     } as any,
     lcnemBody: {
       en: `LCNEM(Legal Currency New Economy Movement) issues legal currency pegged assets on the public blockchains and serves as a \"Stable coin\".
 You will be able to transfer the value of legal currency without credit inquiry, large investment in security, high fee, etc, which were previously indispensable.`,
-      ja: `LCNEMは(Legal Currency New Economy Movement)、パブリックブロックチェーン上に法定通貨ペグアセットを発行し、いわゆるステーブルコインとしての役目を果たします。
-信用審査、セキュリティへの多くの投資、高い手数料といった従来必須であったものなしに、簡単に法定通貨の価値移転を利用することができるようになります。`
+      ja: `LCNEMはパブリックブロックチェーン上に電子マネーを発行します。ブロックチェーン上のいわゆるステーブルコインとして機能します。
+安価な手数料ながらセキュアで、そしてパーミッションレスで開かれた電子マネーシステムを目指しています。
+現在はNEMブロックチェーンに対応しており、今後はCosmosネットワークに対応予定です。`
     } as any,
     faq: {
       en: "FAQ",
       ja: "よくある質問はこちら"
     } as any,
     lcnemWalletDevelopment: {
-      en: "Development of LCNEM Wallet",
+      en: "LCNEM Wallet",
       ja: "LCNEM Wallet"
     } as any,
     lcnemWalletTop: {
@@ -107,7 +108,7 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
 現在はNEMブロックチェーンに対応しており、今後はCosmosネットワークに対応予定です。クラウド上での秘密鍵の保管にも対応している簡単で便利なブロックチェーンウォレットです。`
     } as any,
     ticketP2pDevelopment: {
-      en: "Development of Ticket Peer to Peer",
+      en: "Ticket Peer to Peer",
       ja: "ちけっとピアツーピア"
     } as any,
     ticketP2pTop: {
