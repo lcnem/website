@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
 @Component({
-  selector: 'app-digital-legal-currency',
-  templateUrl: './digital-legal-currency.component.html',
-  styleUrls: ['./digital-legal-currency.component.css']
+  selector: 'app-cheque',
+  templateUrl: './cheque.component.html',
+  styleUrls: ['./cheque.component.css']
 })
-export class DigitalLegalCurrencyComponent implements OnInit {
+export class ChequeComponent implements OnInit {
 
   public get lang() { return this.language.twoLetter; }
 

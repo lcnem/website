@@ -6,8 +6,8 @@ import { AboutComponent } from './pages/company/about/about.component';
 import { PrivacyPolicyComponent } from './pages/terms/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/company/contact/contact.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
-import { DigitalLegalCurrencyComponent } from './pages/services/digital-legal-currency/digital-legal-currency.component';
-import { SubsidyComponent } from './pages/services/digital-legal-currency/subsidy/subsidy.component';
+import { ChequeComponent } from './pages/services/cheque/cheque.component';
+import { SubsidyComponent } from './pages/services/cheque/subsidy/subsidy.component';
 import { WalletComponent } from './pages/services/wallet/wallet.component'
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
 import { CreditComponent } from './pages/services/credit/credit.component';
@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: "company/about", component: AboutComponent },
   { path: "company/contact", component: ContactComponent },
   { path: "company/recruit", component: RecruitComponent },
-  { path: "services/digital-legal-currency", component: DigitalLegalCurrencyComponent },
-  { path: "services/digital-legal-currency/subsidy", component: SubsidyComponent },
+  { path: "services/cheque", component: ChequeComponent },
+  { path: "services/cheque/subsidy", component: SubsidyComponent },
   { path: "services/wallet", component: WalletComponent },
   { path: "services/credit", component: CreditComponent},
   { path: "services/ticket-p2p", component: TicketP2pComponent},
