@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private language: LanguageService
   ) { }
-  
+
 
   ngOnInit() { }
 
@@ -59,15 +59,16 @@ export class HomeComponent implements OnInit {
       ja: "問い合わせ"
     } as any,
     top: {
-      en: "ブロックチェーンで世の中のコストを最適化",
+      en: "Using blockchains to optimize the cost of the world",
       ja: "ブロックチェーンで世の中のコストを最適化"
     } as any,
     topBody: {
-      en: `アナログ、レガシーなシステムは淘汰されつつあり、世の中ではデジタル化が進行していますが、デジタル化に伴う集中的なコストも同時に世の中に大量発生しています。
-例えば、銀行はセキュリティのために多額の出費をしています。
-また、転売を防ぎたいライブなどのイベントにおいては、身分証明書や顔写真を確認するなど、コストのかかる手法をとっています。
-これらコストをなくす力がブロックチェーンにはあります。
-世の中の非効率なコストをブロックチェーンで最適化するため、LCNEMは様々なプロダクトを提供します。`,
+      en: `Analog and legacy systems are being culled out, and digitization is proceeding in the world.
+However intensive costs accompanying digitalization are also occurring in the world at the same time.
+For example, banks spend a lot of money for security.
+Also, at events such as live where we want to prevent resale, we take a costly method, such as checking for identification and face photographs.
+The blockchains have the power to eliminate these costs.
+In order to optimize the world's inefficient costs with the blockchains, LCNEM offers various products.`,
       ja: `アナログ、レガシーなシステムは淘汰されつつあり、世の中ではデジタル化が進行していますが、デジタル化に伴う集中的なコストも同時に世の中に大量発生しています。
 例えば、銀行はセキュリティのために多額の出費をしています。
 また、転売を防ぎたいライブなどのイベントにおいては、身分証明書や顔写真を確認するなど、コストのかかる手法をとっています。
@@ -98,7 +99,7 @@ You will be able to transfer the value of legal currency without credit inquiry,
       ja: "LCNEM Wallet"
     } as any,
     lcnemWalletTop: {
-      en: "LCNEMに対応したウォレットアプリ",
+      en: "Wallet app compatible with LCNEM",
       ja: "LCNEMに対応したウォレットアプリ"
     } as any,
     lcnemWalletBody: {
@@ -112,11 +113,11 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
       ja: "ちけっとピアツーピア"
     } as any,
     ticketP2pTop: {
-      en: "ブロックチェーンでチケット転売防止",
+      en: "Prevent illegal resale using blockchains",
       ja: "ブロックチェーンでチケット転売防止"
     } as any,
     ticketP2pBody: {
-      en: `ブロックチェーンをつかったチケット転売防止/課金ゲームアカウント転売防止システムです。`,
+      en: `It is the system of preventing resale of tickets/game accounts using blockchains`,
       ja: `ブロックチェーンをつかったチケット転売防止/課金ゲームアカウント転売防止システムです。`
     } as any,
     readMore: {
