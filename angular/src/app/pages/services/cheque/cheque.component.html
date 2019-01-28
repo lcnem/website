@@ -1,17 +1,36 @@
 <app-body-container headerPosition="normal">
   <div class="inner-wrapper">
     <div class="body-container">
-      <div class="faq-content">
-        <h2>
-          Q.{{translation.questionSubsidy[lang]}}
-        </h2>
-        <p>A.{{translation.answerSubsidy[lang]}}</p>
-        <p>
-          <a routerLink="/services/cheque/subsidy">{{translation.abountSubsidy[lang]}}</a>
-          {{translation.show[lang]}}
-        </p>
-      </div>
+      <app-subsidy></app-subsidy>
       <app-faq></app-faq>
+      <div class="item">
+        <h2>{{translation.roadmap[lang]}}</h2>
+        <mat-list>
+          <mat-list-item>
+            <span>{{translation.noActionLetter[lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[lang]}}">
+            <span>{{translation.issueAsPrepaid[lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon>done</mat-icon>
+            </span>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[lang]}}">
+            <span>{{translation.registerAsPrepaidWithSettlement[lang]}}</span>
+            <span class="fill-remaining-space"></span>
+            <span>
+              <mat-icon></mat-icon>
+            </span>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </div>
   </div>
 </app-body-container>

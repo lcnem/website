@@ -105,8 +105,8 @@ You will be able to transfer the value of legal currency without credit inquiry,
     lcnemWalletBody: {
       en: `Purchase of LCNEM pegged assets from here. It is an application that you can use from your browser using Google Account login.
 Currently it is compatible with NEM blockchains and will be compatible with lcnemint and Cosmos network in the future.`,
-      ja: `LCNEMペグアセットの購入はこちらから。ブラウザから使えるアプリです。
-現在はNEMブロックチェーンに対応しており、今後はCosmosネットワークに対応予定です。クラウド上での秘密鍵の保管にも対応している簡単で便利なブロックチェーンウォレットです。`
+      ja: `LCNEM Chequeの購入はこちらから。ブラウザから使えるアプリです。
+現在はNEMブロックチェーンに対応しています。クラウド上での秘密鍵の保管にも対応している簡単で便利なブロックチェーンウォレットです。`
     } as any,
     ticketP2pDevelopment: {
       en: "Ticket Peer to Peer",
