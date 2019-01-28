@@ -17,6 +17,14 @@ export class ChequeComponent implements OnInit {
   }
 
   public translation = {
+    abountSubsidy: {
+      en: "",
+      ja: "助成金について"
+    } as any,
+    show: {
+      en: "",
+      ja: "のページをご覧ください。"
+    } as any,
     roadmap: {
       en: "Roadmap of LCNEM Cheque",
       ja: "LCNEM Chequeのロードマップ"
