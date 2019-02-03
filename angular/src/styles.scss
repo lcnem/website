@@ -13,6 +13,15 @@ html, body {
   margin: 0;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
+
 mat-sidenav {
   width: 300px;
   overflow: auto;
