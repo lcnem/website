@@ -1,15 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-import { MatStepper } from '@angular/material';
 @Component({
   selector: 'app-cheque',
   templateUrl: './cheque.component.html',
   styleUrls: ['./cheque.component.css']
 })
 export class ChequeComponent implements OnInit {
-
-  
-
   public get lang() { return this.language.twoLetter; }
 
   constructor(
@@ -56,5 +52,4 @@ Because the government ordinance that the net asset of 100 million yen or more i
 登録には、純資産1億円以上が必要であるとの政令が指定されているため、資金調達を行います。`
     } as any
   }
-
 }
