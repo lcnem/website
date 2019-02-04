@@ -3,34 +3,21 @@
     <div class="body-container">
       <app-subsidy></app-subsidy>
       <app-faq></app-faq>
-      <div class="item">
-        <h2>{{translation.roadmap[lang]}}</h2>
-        <mat-list>
-          <mat-list-item>
-            <span>{{translation.noActionLetter[lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.issueAsPrepaidBody[lang]}}">
-            <span>{{translation.issueAsPrepaid[lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon>done</mat-icon>
-            </span>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item matTooltip="{{translation.registerAsPrepaidWithSettlementBody[lang]}}">
-            <span>{{translation.registerAsPrepaidWithSettlement[lang]}}</span>
-            <span class="fill-remaining-space"></span>
-            <span>
-              <mat-icon></mat-icon>
-            </span>
-          </mat-list-item>
-        </mat-list>
-      </div>
+      <h2>{{translation.roadmap[lang]}}</h2>
+      <mat-vertical-stepper [selectedIndex]=2>         
+        <mat-step [completed]="true" [editable]="false">
+          <ng-template matStepLabel>{{translation.noActionLetter[lang]}}</ng-template>
+        </mat-step>
+        <mat-step [completed]="true" [editable]="false">
+          <ng-template matStepLabel>{{translation.noActionLetter[lang]}}</ng-template>
+        </mat-step>
+        <mat-step [completed]="false" [editable]="false">
+          <ng-template matStepLabel>{{translation.registerAsPrepaidWithSettlement[lang]}}</ng-template>
+        </mat-step>
+        <ng-template matStepperIcon="number">
+          <mat-icon>create</mat-icon>
+        </ng-template>
+      </mat-vertical-stepper>
     </div>
   </div>
 </app-body-container>

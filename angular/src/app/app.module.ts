@@ -24,7 +24,8 @@ import {
   MatDialogModule,
   MatProgressSpinnerModule,
   MatCheckboxModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatStepperModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { FaqComponent } from './pages/services/cheque/faq/faq.component';
@@ -93,7 +94,8 @@ import { PointDeputizeComponent } from './pages/services/point-deputize/point-de
     MatMenuModule,
     HttpClientModule,
     MatCheckboxModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatStepperModule
   ],
   entryComponents: [
     LoadingDialogComponent

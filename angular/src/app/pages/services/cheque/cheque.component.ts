@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
+import { MatStepper } from '@angular/material';
 @Component({
   selector: 'app-cheque',
   templateUrl: './cheque.component.html',
   styleUrls: ['./cheque.component.css']
 })
 export class ChequeComponent implements OnInit {
+
+  
 
   public get lang() { return this.language.twoLetter; }
 
