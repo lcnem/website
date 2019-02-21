@@ -24,31 +24,30 @@
     "@angular/platform-browser-dynamic": "^7.2.0",
     "@angular/router": "^7.2.0",
     "core-js": "^2.6.2",
-    "rx-state-store-js": "^0.1.6",
     "rxjs": "^6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "^0.8.27"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.12.1",
-    "@angular/cli": "^7.2.1",
+    "@angular-devkit/build-angular": "^0.13.2",
+    "@angular/cli": "^7.3.2",
     "@angular/compiler-cli": "^7.2.0",
     "@angular/language-service": "^7.2.0",
     "@ngrx/schematics": "^7.0.0",
     "@types/jasmine": "^3.3.5",
     "@types/jasminewd2": "^2.0.6",
-    "@types/node": "^10.12.18",
+    "@types/node": "^11.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^3.1.4",
+    "karma": "^4.0.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.4",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "^5.4.2",
-    "ts-node": "~7.0.1",
+    "ts-node": "~8.0.2",
     "tslint": "~5.12.1",
-    "typescript": "~3.2.2"
+    "typescript": "^3.2.2"
   }
 }

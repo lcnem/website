@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../services/language/language.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -8,36 +8,36 @@ import { LanguageService } from '../../services/language.service';
 })
 export class SideNavComponent implements OnInit {
 
-  public get lang() { return this.language.twoLetter; }
+  public get lang() { return this.language.code; }
 
   constructor(
     private language: LanguageService
   ) { }
 
-  ngOnInit() {
-  }
-
   public translation = {
     contacts: {
-      en: "Contacts",
-      ja: "問い合わせ"
+      en: 'Contacts',
+      ja: '問い合わせ'
     } as any,
     lcnemWallet: {
-      en: "LCNEM Wallet",
-      ja: "LCNEM Wallet"
+      en: 'LCNEM Wallet',
+      ja: 'LCNEM Wallet'
     } as any,
     ticketP2p: {
-      en: "Ticket Peer to Peer",
-      ja: "ちけっとピアツーピア"
+      en: 'Ticket Peer to Peer',
+      ja: 'ちけっとピアツーピア'
     } as any,
     recruiteInformation: {
-      en: "RecruiteInformation",
-      ja: "採用情報"
+      en: 'RecruiteInformation',
+      ja: '採用情報'
     } as any,
     aboutCompany: {
-      en: "Corporate Information",
-      ja: "会社概要"
+      en: 'Corporate Information',
+      ja: '会社概要'
     } as any,
   };
+
+  ngOnInit() {
+  }
 
 }
