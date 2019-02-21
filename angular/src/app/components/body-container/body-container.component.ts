@@ -10,7 +10,7 @@ export class BodyContainerComponent implements OnInit {
 
   constructor() {}
   @Input() headerPosition!: string;
-  @Input() color: string = "normal";
+  @Input() color = 'normal';
 
   ngOnInit() {
   }

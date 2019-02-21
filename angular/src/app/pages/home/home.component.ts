@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language/language.service';
 
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"]
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   public get lang() { return this.language.code; }
@@ -13,35 +13,32 @@ export class HomeComponent implements OnInit {
     private language: LanguageService
   ) { }
 
-
-  ngOnInit() { }
-
   public media = [
     {
-      name: "TechCrunch",
-      url: "https://jp.techcrunch.com/2018/09/20/lcnem-ticketp2p/",
-      icon: "assets/media/tech-crunch.svg",
-      image: "assets/images/lcnem.svg",
-      title: "ブロックチェーンでチケット転売防止、京大発スタートアップLCNEM...",
-      date: "2018.9.20"
+      name: 'TechCrunch',
+      url: 'https://jp.techcrunch.com/2018/09/20/lcnem-ticketp2p/',
+      icon: 'assets/media/tech-crunch.svg',
+      image: 'assets/images/lcnem.svg',
+      title: 'ブロックチェーンでチケット転売防止、京大発スタートアップLCNEM...',
+      date: '2018.9.20'
     },
     {
-      name: "CoinTelegraph",
+      name: 'CoinTelegraph',
       url:
-        "https://jp.cointelegraph.com/news/lcnem-sells-nem-based-stable-coins",
-      icon: "assets/media/cointelegraph.svg",
-      image: "assets/media/coinbase.png",
-      title: "ネムウォレットのLCNEM、モザイクで発行した前払式支払手段を販売",
-      date: "2018.6.25"
+        'https://jp.cointelegraph.com/news/lcnem-sells-nem-based-stable-coins',
+      icon: 'assets/media/cointelegraph.svg',
+      image: 'assets/media/coinbase.png',
+      title: 'ネムウォレットのLCNEM、モザイクで発行した前払式支払手段を販売',
+      date: '2018.6.25'
     },
     {
-      name: "仮想通貨Watch",
+      name: '仮想通貨Watch',
       url:
-        "https://crypto.watch.impress.co.jp/img/ctw/docs/1138/641/html/image01_o.jpg.html",
-      icon: "assets/media/crypto-watch.png",
-      image: "assets/media/crypto-watch.jpg",
-      title: "金融庁がLCNEMのステーブルコインは資金決済法上の「仮想通貨」で...",
-      date: "2018.8.20"
+        'https://crypto.watch.impress.co.jp/img/ctw/docs/1138/641/html/image01_o.jpg.html',
+      icon: 'assets/media/crypto-watch.png',
+      image: 'assets/media/crypto-watch.jpg',
+      title: '金融庁がLCNEMのステーブルコインは資金決済法上の「仮想通貨」で...',
+      date: '2018.8.20'
     }
   ] as {
     name: string;
@@ -55,12 +52,12 @@ export class HomeComponent implements OnInit {
 
   public translation = {
     contacts: {
-      en: "Contacts",
-      ja: "問い合わせ"
+      en: 'Contacts',
+      ja: '問い合わせ'
     } as any,
     top: {
-      en: "Using blockchains to optimize the cost of the world",
-      ja: "ブロックチェーンで世の中のコストを最適化"
+      en: 'Using blockchains to optimize the cost of the world',
+      ja: 'ブロックチェーンで世の中のコストを最適化'
     } as any,
     topBody: {
       en: `Analog and legacy systems are being culled out, and digitization is proceeding in the world.
@@ -76,12 +73,12 @@ In order to optimize the world's inefficient costs with the blockchains, LCNEM o
 世の中の非効率なコストをブロックチェーンで最適化するため、LCNEMは様々なプロダクトを提供します。`
     } as any,
     lcnemDevelopment: {
-      en: "LCNEM Cheque",
-      ja: "LCNEM Cheque"
+      en: 'LCNEM Cheque',
+      ja: 'LCNEM Cheque'
     } as any,
     lcnemTop: {
-      en: "Legal currency pegged assets on blockchains with transparency.",
-      ja: "ブロックチェーン上の電子マネー"
+      en: 'Legal currency pegged assets on blockchains with transparency.',
+      ja: 'ブロックチェーン上の電子マネー'
     } as any,
     lcnemBody: {
       en: `LCNEM(Legal Currency New Economy Movement) issues legal currency pegged assets on the public blockchains and serves as a \"Stable coin\".
@@ -91,16 +88,16 @@ You will be able to transfer the value of legal currency without credit inquiry,
 現在はNEMブロックチェーンに対応しており、今後はCosmosネットワークに対応予定です。`
     } as any,
     faq: {
-      en: "FAQ",
-      ja: "よくある質問はこちら"
+      en: 'FAQ',
+      ja: 'よくある質問はこちら'
     } as any,
     lcnemWalletDevelopment: {
-      en: "LCNEM Wallet",
-      ja: "LCNEM Wallet"
+      en: 'LCNEM Wallet',
+      ja: 'LCNEM Wallet'
     } as any,
     lcnemWalletTop: {
-      en: "Wallet app compatible with LCNEM",
-      ja: "LCNEMに対応したウォレットアプリ"
+      en: 'Wallet app compatible with LCNEM',
+      ja: 'LCNEMに対応したウォレットアプリ'
     } as any,
     lcnemWalletBody: {
       en: `Purchase of LCNEM pegged assets from here. It is an application that you can use from your browser using Google Account login.
@@ -109,52 +106,55 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
 現在はNEMブロックチェーンに対応しています。クラウド上での秘密鍵の保管にも対応している簡単で便利なブロックチェーンウォレットです。`
     } as any,
     ticketP2pDevelopment: {
-      en: "Ticket Peer to Peer",
-      ja: "ちけっとピアツーピア"
+      en: 'Ticket Peer to Peer',
+      ja: 'ちけっとピアツーピア'
     } as any,
     ticketP2pTop: {
-      en: "Prevent illegal resale using blockchains",
-      ja: "ブロックチェーンでチケット転売防止"
+      en: 'Prevent illegal resale using blockchains',
+      ja: 'ブロックチェーンでチケット転売防止'
     } as any,
     ticketP2pBody: {
       en: `It is the system of preventing resale of tickets/game accounts using blockchains`,
       ja: `ブロックチェーンをつかったチケット転売防止/課金ゲームアカウント転売防止システムです。`
     } as any,
     readMore: {
-      en: "Read more",
-      ja: "詳しく見る"
+      en: 'Read more',
+      ja: '詳しく見る'
     } as any,
     gettingStarted: {
-      en: "Getting Started",
-      ja: "いますぐつかう"
+      en: 'Getting Started',
+      ja: 'いますぐつかう'
     } as any,
     getDetails: {
-      en: "more details",
-      ja: "詳細"
+      en: 'more details',
+      ja: '詳細'
     } as any,
     business: {
-      en: "Business",
-      ja: "事業内容"
+      en: 'Business',
+      ja: '事業内容'
     } as any,
     lcnemWallet: {
-      en: "LCNEM Wallet",
-      ja: "LCNEM Wallet"
+      en: 'LCNEM Wallet',
+      ja: 'LCNEM Wallet'
     } as any,
     ticketP2p: {
-      en: "Ticket Peer to Peer",
-      ja: "ちけっとピアツーピア"
+      en: 'Ticket Peer to Peer',
+      ja: 'ちけっとピアツーピア'
     } as any,
     recruiteInformation: {
-      en: "RecruiteInformation",
-      ja: "採用情報"
+      en: 'RecruiteInformation',
+      ja: '採用情報'
     } as any,
     aboutCompany: {
-      en: "Corporate Information",
-      ja: "会社概要"
+      en: 'Corporate Information',
+      ja: '会社概要'
     } as any,
     media: {
-      en: "List of Past Media Coverage",
-      ja: "メディア掲載実績"
+      en: 'List of Past Media Coverage',
+      ja: 'メディア掲載実績'
     } as any
   };
+
+
+  ngOnInit() { }
 }

@@ -9,8 +9,6 @@ import { LanguageService } from '../../../services/language/language.service';
 })
 export class PrivacyPolicyComponent implements OnInit {
   public get lang() { return this.language.code; }
-
-  public safeSite: SafeResourceUrl;
   constructor(
     private language: LanguageService,
     sanitizer: DomSanitizer
@@ -18,14 +16,16 @@ export class PrivacyPolicyComponent implements OnInit {
     this.safeSite = sanitizer.bypassSecurityTrustResourceUrl(`assets/terms/ja.txt`);
   }
 
-  ngOnInit() {
-  }
+  public safeSite: SafeResourceUrl;
 
   public translation = {
     privacyPolicy: {
-      ja: "プライバシーポリシー",
-      en: "Privacy Policy"
+      ja: 'プライバシーポリシー',
+      en: 'Privacy Policy'
     } as any
+  };
+
+  ngOnInit() {
   }
 
 }

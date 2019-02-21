@@ -14,17 +14,17 @@ export class FooterComponent implements OnInit {
     private language: LanguageService
   ) { }
 
-  ngOnInit() {
-  }
-
   public translation = {
     lcnemInc: {
-      en: "LCNEM, Inc.",
-      ja: "株式会社LCNEM"
+      en: 'LCNEM, Inc.',
+      ja: '株式会社LCNEM'
     } as any,
     privacyPolicy: {
-      ja: "プライバシーポリシー",
-      en: "Privacy Policy"
+      ja: 'プライバシーポリシー',
+      en: 'Privacy Policy'
     } as any
   };
+
+  ngOnInit() {
+  }
 }

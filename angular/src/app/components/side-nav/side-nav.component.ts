@@ -14,30 +14,30 @@ export class SideNavComponent implements OnInit {
     private language: LanguageService
   ) { }
 
-  ngOnInit() {
-  }
-
   public translation = {
     contacts: {
-      en: "Contacts",
-      ja: "問い合わせ"
+      en: 'Contacts',
+      ja: '問い合わせ'
     } as any,
     lcnemWallet: {
-      en: "LCNEM Wallet",
-      ja: "LCNEM Wallet"
+      en: 'LCNEM Wallet',
+      ja: 'LCNEM Wallet'
     } as any,
     ticketP2p: {
-      en: "Ticket Peer to Peer",
-      ja: "ちけっとピアツーピア"
+      en: 'Ticket Peer to Peer',
+      ja: 'ちけっとピアツーピア'
     } as any,
     recruiteInformation: {
-      en: "RecruiteInformation",
-      ja: "採用情報"
+      en: 'RecruiteInformation',
+      ja: '採用情報'
     } as any,
     aboutCompany: {
-      en: "Corporate Information",
-      ja: "会社概要"
+      en: 'Corporate Information',
+      ja: '会社概要'
     } as any,
   };
+
+  ngOnInit() {
+  }
 
 }

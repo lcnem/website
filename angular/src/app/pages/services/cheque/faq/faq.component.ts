@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../../../services/language/language.service';
 
 @Component({
-  selector: "app-faq",
-  templateUrl: "./faq.component.html",
-  styleUrls: ["./faq.component.css"]
+  selector: 'app-faq',
+  templateUrl: './faq.component.html',
+  styleUrls: ['./faq.component.css']
 })
 export class FaqComponent implements OnInit {
   public get lang() { return this.language.code; }
@@ -13,13 +13,11 @@ export class FaqComponent implements OnInit {
     private language: LanguageService
   ) { }
 
-  ngOnInit() { }
-
   public faqContent = [
     {
       question: {
-        en: "Why use nem?",
-        ja: "なぜnemを使うのですか？"
+        en: 'Why use nem?',
+        ja: 'なぜnemを使うのですか？'
       } as any,
       answer: {
         en: `We adopted nem because it is easy to operate multisig and be secure.
@@ -28,27 +26,29 @@ It seems that this ease can not be replaced simply by supporting the Cosmos netw
         ja: `nemはマルチシグの運用が簡単であり、セキュアであることからまずnemを採用しました。
 また、nemはAPIベースのブロックチェーンであり、アプリケーションの開発が容易です。この容易さはCosmosネットワークに対応するだけではカバーできないと考えられます。`
       } as any,
-      imgURL: "assets/images/lcnem-nem.svg"
+      imgURL: 'assets/images/lcnem-nem.svg'
     },
     {
       question: {
-        en: "What is Cosmos?",
-        ja: "Cosmosとはなんですか？"
+        en: 'What is Cosmos?',
+        ja: 'Cosmosとはなんですか？'
       } as any,
       answer: {
-        en: `Cosmos is a network that provides interoperability among blockchains using communication protocol for mutual connection among blockchains called IBC. 
+        en: `Cosmos is a network that provides interoperability among blockchains using communication protocol for mutual connection among blockchains called IBC.
 It means that LCNEM Cheque is available in all blockchains on the Cosmos network.`,
         ja: `IBCと呼ばれるブロックチェーン間で相互に接続するための通信規格を使って、ブロックチェーン間で相互運用性をもたせたネットワークがCosmosです。
 Cosmosネットワーク上の全てのブロックチェーンでLCNEMのいわゆるステーブルコインが利用できることを意味します。`
       } as any,
-      imgURL: "assets/images/cosmos.png"
+      imgURL: 'assets/images/cosmos.png'
     }
-  ]
+  ];
 
   public translation = {
     contacts: {
-      en: "Contacts",
-      ja: "問い合わせ"
+      en: 'Contacts',
+      ja: '問い合わせ'
     } as any
-  }
+  };
+
+  ngOnInit() { }
 }

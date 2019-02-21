@@ -13,13 +13,13 @@ export class RecruitComponent implements OnInit {
     private language: LanguageService
   ) { }
 
-  ngOnInit() {
-  }
-
   public translation = {
     recruit: {
-      en: "Recruit",
-      ja: "採用情報"
+      en: 'Recruit',
+      ja: '採用情報'
     } as any
+  };
+
+  ngOnInit() {
   }
 }
