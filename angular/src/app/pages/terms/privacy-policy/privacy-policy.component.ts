@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { LanguageService } from '../../../services/language.service';
+import { LanguageService } from '../../../services/language/language.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -8,7 +8,7 @@ import { LanguageService } from '../../../services/language.service';
   styleUrls: ['./privacy-policy.component.css']
 })
 export class PrivacyPolicyComponent implements OnInit {
-  public get lang() { return this.language.twoLetter; }
+  public get lang() { return this.language.code; }
 
   public safeSite: SafeResourceUrl;
   constructor(

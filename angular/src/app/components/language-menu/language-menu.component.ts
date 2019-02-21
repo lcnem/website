@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../services/language/language.service';
 
 @Component({
   selector: 'app-language-menu',
@@ -7,7 +7,7 @@ import { LanguageService } from '../../services/language.service';
   styleUrls: ['./language-menu.component.css']
 })
 export class LanguageMenuComponent implements OnInit {
-  public get lang() { return this.language.twoLetter; }
+  public get lang() { return this.language.code; }
 
   constructor(
     private language: LanguageService
@@ -18,7 +18,7 @@ export class LanguageMenuComponent implements OnInit {
   }
   
   public setLanguage(twoLetter: string) {
-    this.language.setLanguage(twoLetter)
+    this.language.code = twoLetter
   }
 
 }

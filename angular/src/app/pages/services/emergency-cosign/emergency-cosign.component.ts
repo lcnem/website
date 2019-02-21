@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../../../services/language.service';
+import { LanguageService } from '../../../services/language/language.service';
 
 @Component({
   selector: 'app-emergency-cosign',
@@ -7,7 +7,7 @@ import { LanguageService } from '../../../services/language.service';
   styleUrls: ['./emergency-cosign.component.css']
 })
 export class EmergencyCosignComponent implements OnInit {
-  public get lang() { return this.language.twoLetter; }
+  public get lang() { return this.language.code; }
 
   constructor(
     private language: LanguageService
