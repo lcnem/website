@@ -5,20 +5,20 @@ language: node_js
 node_js:
   - "8"
 
- addons:
+addons:
   apt:
     sources:
       - google-chrome
     packages:
       - google-chrome-stable
 
- cache:
+cache:
   directories:
     - ./node_modules
 
- install:
+install:
   - npm install
 
- script:
+script:
   - make test
   - make e2e
