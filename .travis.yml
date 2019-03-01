@@ -1,24 +1,30 @@
 dist: trusty
 sudo: false
 
- language: node_js
+language: node_js
 node_js:
   - "8"
 
- addons:
+addons:
   apt:
     sources:
       - google-chrome
     packages:
       - google-chrome-stable
 
- cache:
+cache:
   directories:
-    - ./node_modules
+    - ./angular/node_modules
 
- install:
-  - npm install
+install:
+  - make install
 
- script:
-  - make test
-  - make e2e
+script:
+  - make test/ci
+  - make e2e/ci
+
+deploy:
+  provider: script
+  script: if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo hello; fi
+  on:
+    branch: master

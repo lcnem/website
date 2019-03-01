@@ -1,7 +1,7 @@
 
 install:
 	@cd angular &&\
-	npm i
+	npm ci
 
 build:
 	@cd angular &&\
@@ -13,15 +13,27 @@ start:
 
 test:
 	@cd angular &&\
-	ng test --watch=false
+	npm run test --watch=false
+
+test/ci:
+	@cd angular &&\
+	npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
 
 e2e:
 	@cd angular &&\
-	ng e2e
+	npm run e2e
+
+e2e/ci:
+	@cd angular &&\
+	npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
 
 deploy/angular: build
 	@cd firebase &&\
 	firebase deploy --only hosting
+
+deploy/angular/ci: build
+	@cd firebase &&\
+	firebase deploy --only hosting --token $(FIREBASE_TOKEN)
 
 deploy/functions:
 	@cd firebase &&\
@@ -30,3 +42,8 @@ deploy/functions:
 deploy/rules:
 	@cd firebase &&\
 	firebase deploy --only rules
+
+deploy:
+	@make deploy/angular
+	@make deploy/functions
+	@make deploy/rules
