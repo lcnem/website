@@ -26,6 +26,6 @@ script:
 deploy:
   provider: script
   script:
-    - '[ "$TRAVIS_PULL_REQUEST" = "false" ] && echo hello'
+    - '[ "$TRAVIS_PULL_REQUEST" = "false" ] && make deploy/angular/ci'
   on:
-    branch: develop
+    branch: master
