@@ -22,3 +22,9 @@ install:
 script:
   - make test/ci
   - make e2e/ci
+
+deploy:
+  provider: script
+  script: if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo hello; fi
+  on:
+    branch: develop
