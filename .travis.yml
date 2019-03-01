@@ -25,6 +25,6 @@ script:
 
 deploy:
   provider: script
-  script: if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo hello; fi
+  script: if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo hello; fi
   on:
-    branch: develop
+    branch: master
