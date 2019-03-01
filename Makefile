@@ -30,8 +30,3 @@ deploy/functions:
 deploy/rules:
 	@cd firebase &&\
 	firebase deploy --only rules
-
-deploy:
-	@make deploy/angular
-	@make deploy/functions
-	@make deploy/rules
