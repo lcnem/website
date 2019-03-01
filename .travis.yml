@@ -25,9 +25,8 @@ script:
 
 deploy:
   provider: script
+  skip_cleanup: true
   script:
-    - '[ "$TRAVIS_PULL_REQUEST" = "false" ] && make install'
-    - '[ "$TRAVIS_PULL_REQUEST" = "false" ] && make build'
     - '[ "$TRAVIS_PULL_REQUEST" = "false" ] && make deploy/angular/ci'
   on:
     branch: master
