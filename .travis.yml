@@ -14,11 +14,11 @@ addons:
 
 cache:
   directories:
-    - ./node_modules
+    - ./angular/node_modules
 
 install:
-  - npm install
+  - make install
 
 script:
-  - make test
-  - make e2e
+  - make test/ci
+  - make e2e/ci
