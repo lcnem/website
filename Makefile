@@ -33,6 +33,7 @@ deploy/angular: build
 
 deploy/angular/ci: build
 	@cd firebase &&\
+	npm ci &&\
 	firebase deploy --only hosting --token $(FIREBASE_TOKEN)
 
 deploy/functions:
