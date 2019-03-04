@@ -11,8 +11,8 @@ import { WalletComponent } from './pages/services/wallet/wallet.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
 import { CreditComponent } from './pages/services/credit/credit.component';
 import { PointDeputizeComponent } from './pages/services/point-deputize/point-deputize.component';
-import { EmergencyCosignComponent } from './pages/services/emergency-cosign/emergency-cosign.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
+import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: 'services/wallet', component: WalletComponent },
   { path: 'services/credit', component: CreditComponent},
   { path: 'services/ticket-p2p', component: TicketP2pComponent},
+  { path: 'services/consulting', component: ConsultingComponent},
   { path: 'services/point-deputize', component: PointDeputizeComponent},
-  { path: 'services/emergency-cosign', component: EmergencyCosignComponent },
   { path: 'terms/privacy-policy', component: PrivacyPolicyComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

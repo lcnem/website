@@ -72,7 +72,7 @@ In order to optimize the world's inefficient costs with the blockchains, LCNEM o
 これらコストをなくす力がブロックチェーンにはあります。
 世の中の非効率なコストをブロックチェーンで最適化するため、LCNEMは様々なプロダクトを提供します。`
     } as any,
-    chequeDevelopment: {
+    cheque: {
       en: 'LCNEM Cheque',
       ja: 'LCNEM Cheque'
     } as any,
@@ -91,7 +91,7 @@ You will be able to transfer the value of legal currency without credit inquiry,
       en: 'FAQ',
       ja: 'よくある質問はこちら'
     } as any,
-    lcnemintDevelopment: {
+    lcnemint: {
       en: "lcnemint",
       ja: "lcnemint"
     } as any,
@@ -103,7 +103,7 @@ You will be able to transfer the value of legal currency without credit inquiry,
       en: "",
       ja: "lcnemintは、LCNEM ChequeをCosmosネットワークに流通させるための独自ブロックチェーンです。法定通貨にペグされたアセットをCosmosネットワーク内で使用することができます。"
     } as any,
-    lcnemWalletDevelopment: {
+    lcnemWallet: {
       en: 'LCNEM Wallet',
       ja: 'LCNEM Wallet'
     } as any,
@@ -117,7 +117,7 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
       ja: `LCNEM Chequeの購入はこちらから。ブラウザから使えるアプリです。
 現在はNEMブロックチェーンに対応しています。クラウド上での秘密鍵の保管にも対応している簡単で便利なブロックチェーンウォレットです。`
     } as any,
-    ticketP2pDevelopment: {
+    ticketP2p: {
       en: 'Ticket Peer to Peer',
       ja: 'ちけっとピアツーピア'
     } as any,
@@ -128,6 +128,18 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
     ticketP2pBody: {
       en: `It is the system of preventing resale of tickets/game accounts using blockchains`,
       ja: `ブロックチェーンをつかったチケット転売防止/課金ゲームアカウント転売防止システムです。`
+    } as any,
+    consulting: {
+      en: "Consulting",
+      ja: "コンサルティング"
+    } as any,
+    consultingTop: {
+      en: "",
+      ja: "nemやcosmos開発の知見"
+    } as any,
+    consultingBody: {
+      en: "",
+      ja: ""
     } as any,
     readMore: {
       en: 'Read more',
@@ -144,14 +156,6 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
     business: {
       en: 'Business',
       ja: '事業内容'
-    } as any,
-    lcnemWallet: {
-      en: 'LCNEM Wallet',
-      ja: 'LCNEM Wallet'
-    } as any,
-    ticketP2p: {
-      en: 'Ticket Peer to Peer',
-      ja: 'ちけっとピアツーピア'
     } as any,
     recruiteInformation: {
       en: 'RecruiteInformation',
