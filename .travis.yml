@@ -22,3 +22,11 @@ install:
 script:
   - make test/ci
   - make e2e/ci
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - '[ "$TRAVIS_PULL_REQUEST" = "false" ] && make deploy/angular/ci'
+  on:
+    branch: master

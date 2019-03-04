@@ -31,6 +31,11 @@ deploy/angular: build
 	@cd firebase &&\
 	firebase deploy --only hosting
 
+deploy/angular/ci: build
+	@which firebase || npm install -g firebase-tools
+	@cd firebase &&\
+	firebase deploy --only hosting --token $(FIREBASE_TOKEN)
+
 deploy/functions:
 	@cd firebase &&\
 	firebase deploy --only functions
