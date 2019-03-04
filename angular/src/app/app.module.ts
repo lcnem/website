@@ -47,6 +47,7 @@ import { ChequeComponent } from './pages/services/cheque/cheque.component';
 import { CreditComponent } from './pages/services/credit/credit.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
 import { PointDeputizeComponent } from './pages/services/point-deputize/point-deputize.component';
+import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { PointDeputizeComponent } from './pages/services/point-deputize/point-de
     ChequeComponent,
     CreditComponent,
     TicketP2pComponent,
-    PointDeputizeComponent
+    PointDeputizeComponent,
+    LcnemintComponent
   ],
   imports: [
     BrowserModule,

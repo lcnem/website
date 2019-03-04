@@ -72,15 +72,15 @@ In order to optimize the world's inefficient costs with the blockchains, LCNEM o
 これらコストをなくす力がブロックチェーンにはあります。
 世の中の非効率なコストをブロックチェーンで最適化するため、LCNEMは様々なプロダクトを提供します。`
     } as any,
-    lcnemDevelopment: {
+    chequeDevelopment: {
       en: 'LCNEM Cheque',
       ja: 'LCNEM Cheque'
     } as any,
-    lcnemTop: {
+    chequeTop: {
       en: 'Legal currency pegged assets on blockchains with transparency.',
       ja: 'ブロックチェーン上の電子マネー'
     } as any,
-    lcnemBody: {
+    chequeBody: {
       en: `LCNEM(Legal Currency New Economy Movement) issues legal currency pegged assets on the public blockchains and serves as a \"Stable coin\".
 You will be able to transfer the value of legal currency without credit inquiry, large investment in security, high fee, etc, which were previously indispensable.`,
       ja: `LCNEMはパブリックブロックチェーン上に電子マネーを発行します。ブロックチェーン上のいわゆるステーブルコインとして機能します。
@@ -90,6 +90,18 @@ You will be able to transfer the value of legal currency without credit inquiry,
     faq: {
       en: 'FAQ',
       ja: 'よくある質問はこちら'
+    } as any,
+    lcnemintDevelopment: {
+      en: "lcnemint",
+      ja: "lcnemint"
+    } as any,
+    lcnemintTop: {
+      en: "Original blockchain for making Cheque support Cosmos network",
+      ja: "ChequeのCosmosネットワーク流通のための独自ブロックチェーン"
+    } as any,
+    lcnemintBody: {
+      en: "",
+      ja: "lcnemintは、LCNEM ChequeをCosmosネットワークに流通させるための独自ブロックチェーンです。法定通貨にペグされたアセットをCosmosネットワーク内で使用することができます。"
     } as any,
     lcnemWalletDevelopment: {
       en: 'LCNEM Wallet',

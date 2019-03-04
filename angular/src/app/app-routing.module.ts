@@ -12,6 +12,7 @@ import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.compo
 import { CreditComponent } from './pages/services/credit/credit.component';
 import { PointDeputizeComponent } from './pages/services/point-deputize/point-deputize.component';
 import { EmergencyCosignComponent } from './pages/services/emergency-cosign/emergency-cosign.component';
+import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'company/contact', component: ContactComponent },
   { path: 'company/recruit', component: RecruitComponent },
   { path: 'services/cheque', component: ChequeComponent },
+  { path: 'services/lcnemint', component: LcnemintComponent },
   { path: 'services/wallet', component: WalletComponent },
   { path: 'services/credit', component: CreditComponent},
   { path: 'services/ticket-p2p', component: TicketP2pComponent},
