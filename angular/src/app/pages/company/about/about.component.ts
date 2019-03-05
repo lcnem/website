@@ -49,32 +49,58 @@ export class AboutComponent implements OnInit {
       ja: '9,050,000 円'
     } as any,
     yuPosition: {
-      en: "Representative director, Chief Executive Officer, Chief Technology Officer",
-      ja: "代表取締役 最高経営責任者 最高技術責任者"
+      en: [
+        "Representative director",
+        "Chief Executive Officer",
+        "Chief Technology Officer"
+      ],
+      ja: [
+        "代表取締役",
+        "最高経営責任者",
+        "最高技術責任者"
+      ]
     } as any,
     yu: {
       en: "Yu Kimura",
       ja: "木村 優"
     } as any,
     takeruPosition: {
-      en: "Director, Chief Operation Officer",
-      ja: "取締役 最高執行責任者"
+      en: [
+        "Director",
+        "Chief Operation Officer"
+      ],
+      ja: [
+        "取締役",
+        "最高執行責任者"
+      ]
     } as any,
     takeru: {
       en: "Takeru Shimojima",
       ja: "下島 健"
     } as any,
     takuyaPosition: {
-      en: "Execuive officer, Chief Marketing Officer",
-      ja: "執行役員 最高マーケティング責任者"
+      en: [
+        "Execuive Officer",
+        "Chief Marketing Officer"
+      ],
+      ja: [
+        "執行役員",
+        "最高マーケティング責任者"
+      ]
     } as any,
     takuya: {
       en: "Takuya Matsu",
       ja: "松 拓也"
     } as any,
-    xxxPositiion: {
-      en: "Executive Officer, Chief Development Officer",
-      ja: "執行役員 最高開発責任者"
+    xxxPosition: {
+      en: [
+        "Executive Officer",
+        "Chief Development Officer"
+      ],
+      ja: [
+        "執行役員",
+        "最高開発責任者"
+      ]
     } as any,
     xxx: {
       en: "Recruiting",

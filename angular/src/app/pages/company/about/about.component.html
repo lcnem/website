@@ -17,16 +17,36 @@
             <dt>{{translation.capitalStock[lang]}}</dt>
             <dd>{{translation.capitalAmount[lang]}}</dd>
 
-            <dt>{{translation.yuPosition[lang]}}</dt>
+            <dt>
+              <ng-container *ngFor="let p of translation.yuPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
             <dd>{{translation.yu[lang]}}</dd>
 
-            <dt>{{translation.takeruPosition[lang]}}</dt>
+            <dt>
+              <ng-container *ngFor="let p of translation.takeruPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
             <dd>{{translation.takeru[lang]}}</dd>
 
-            <dt>{{translation.takuyaPosition[lang]}}</dt>
+            <dt>
+              <ng-container *ngFor="let p of translation.takuyaPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
             <dd>{{translation.takuya[lang]}}</dd>
 
-            <dt>{{translation.xxxPositiion[lang]}}</dt>
+            <dt>
+              <ng-container *ngFor="let p of translation.xxxPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
             <dd>{{translation.xxx[lang]}}</dd>
           </dl>
         </div>
