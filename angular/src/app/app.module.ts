@@ -45,7 +45,6 @@ import { RecruitComponent } from './pages/company/recruit/recruit.component';
 import { ChequeComponent } from './pages/services/cheque/cheque.component';
 import { CreditComponent } from './pages/services/credit/credit.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
-import { PointDeputizeComponent } from './pages/services/point-deputize/point-deputize.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 
@@ -70,7 +69,6 @@ import { ConsultingComponent } from './pages/services/consulting/consulting.comp
     ChequeComponent,
     CreditComponent,
     TicketP2pComponent,
-    PointDeputizeComponent,
     LcnemintComponent,
     ConsultingComponent
   ],

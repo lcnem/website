@@ -10,7 +10,6 @@ import { ChequeComponent } from './pages/services/cheque/cheque.component';
 import { WalletComponent } from './pages/services/wallet/wallet.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
 import { CreditComponent } from './pages/services/credit/credit.component';
-import { PointDeputizeComponent } from './pages/services/point-deputize/point-deputize.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 
@@ -25,7 +24,6 @@ const routes: Routes = [
   { path: 'services/credit', component: CreditComponent},
   { path: 'services/ticket-p2p', component: TicketP2pComponent},
   { path: 'services/consulting', component: ConsultingComponent},
-  { path: 'services/point-deputize', component: PointDeputizeComponent},
   { path: 'terms/privacy-policy', component: PrivacyPolicyComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
