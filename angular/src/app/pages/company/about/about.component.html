@@ -11,14 +11,43 @@
             <dt>{{translation.corporateAddress[lang]}}</dt>
             <dd>{{translation.address[lang]}}</dd>
 
-            <dt>{{translation.corporateExecutiveOfficer[lang]}}</dt>
-            <dd>{{translation.ceoName[lang]}}</dd>
-
             <dt>{{translation.establishmentDate[lang]}}</dt>
             <dd>2018/03</dd>
 
             <dt>{{translation.capitalStock[lang]}}</dt>
             <dd>{{translation.capitalAmount[lang]}}</dd>
+
+            <dt>
+              <ng-container *ngFor="let p of translation.yuPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
+            <dd>{{translation.yu[lang]}}</dd>
+
+            <dt>
+              <ng-container *ngFor="let p of translation.takeruPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
+            <dd>{{translation.takeru[lang]}}</dd>
+
+            <dt>
+              <ng-container *ngFor="let p of translation.takuyaPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
+            <dd>{{translation.takuya[lang]}}</dd>
+
+            <dt>
+              <ng-container *ngFor="let p of translation.xxxPosition[lang]; let l = last">
+                {{p}}
+                <ng-container *ngIf="!l"><br /></ng-container>
+              </ng-container>
+            </dt>
+            <dd>{{translation.xxx[lang]}}</dd>
           </dl>
         </div>
       </div>

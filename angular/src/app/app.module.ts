@@ -38,7 +38,6 @@ import { LoadingDialogComponent } from './components/loading-dialog/loading-dial
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { BodyContainerComponent } from './components/body-container/body-container.component';
-import { EmergencyCosignComponent } from './pages/services/emergency-cosign/emergency-cosign.component';
 import { SubsidyComponent } from './pages/services/cheque/subsidy/subsidy.component';
 import { WalletComponent } from './pages/services/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
@@ -46,7 +45,8 @@ import { RecruitComponent } from './pages/company/recruit/recruit.component';
 import { ChequeComponent } from './pages/services/cheque/cheque.component';
 import { CreditComponent } from './pages/services/credit/credit.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
-import { PointDeputizeComponent } from './pages/services/point-deputize/point-deputize.component';
+import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
+import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 
 @NgModule({
   declarations: [
@@ -63,15 +63,14 @@ import { PointDeputizeComponent } from './pages/services/point-deputize/point-de
     SideNavComponent,
     BodyContainerComponent,
     WalletComponent,
-    EmergencyCosignComponent,
     SubsidyComponent,
-    EmergencyCosignComponent,
     LanguageMenuComponent,
     RecruitComponent,
     ChequeComponent,
     CreditComponent,
     TicketP2pComponent,
-    PointDeputizeComponent
+    LcnemintComponent,
+    ConsultingComponent
   ],
   imports: [
     BrowserModule,

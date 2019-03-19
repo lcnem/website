@@ -6,6 +6,12 @@
         <div class="content-box">
           <h1>{{translation.top[lang]}}</h1>
           <p>{{translation.topBody[lang]}}</p>
+          <ul>
+            <li>latest,legal</li>
+            <li>cryptographic,currency</li>
+            <li>narrow-bank</li>
+            <li>short-form of them</li>
+          </ul>
         </div>
         <div class="image bg-img">
           <svg viewBox="0 0 600 600">
@@ -31,13 +37,13 @@
 
   <section class="content bg-gray">
     <div class="inner-wrapper">
-      <h2 class="header with-line">{{translation.lcnemDevelopment[lang]}}</h2>
+      <h2 class="header with-line">{{translation.cheque[lang]}}</h2>
       <div fxLayout="row-reverse wrap" fxLayoutAlign="center">
         <div fxFlex="60" fxFlex.xs="100" class="middle">
           <div>
-            <h4>{{translation.lcnemTop[lang]}}</h4>
-            <p>{{translation.lcnemBody[lang]}}</p>
-            <a class="link" routerLink="/services/cheque">{{translation.faq[lang]}}<mat-icon>arrow_forward</mat-icon></a>
+            <h4>{{translation.chequeTop[lang]}}</h4>
+            <p>{{translation.chequeBody[lang]}}</p>
+            <a class="link" routerLink="/services/cheque">{{translation.readMore[lang]}}<mat-icon>arrow_forward</mat-icon></a>
           </div>
         </div>
         <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center" class="img-box">
@@ -47,9 +53,27 @@
     </div>
   </section>
 
+  <section class="content bg-gray">
+    <div class="inner-wrapper">
+      <h2 class="header with-line">{{translation.lcnemint[lang]}}</h2>
+      <div fxLayout="row-reverse wrap" fxLayoutAlign="center">
+        <div fxFlex="60" fxFlex.xs="100" class="middle">
+          <div>
+            <h4>{{translation.lcnemintTop[lang]}}</h4>
+            <p>{{translation.lcnemintBody[lang]}}</p>
+            <a class="link" routerLink="/services/lcnemint">{{translation.readMore[lang]}}<mat-icon>arrow_forward</mat-icon></a>
+          </div>
+        </div>
+        <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center" class="img-box">
+          <img src="assets/images/cosmos.png" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="content">
     <div class="inner-wrapper">
-      <h2 class="header with-line">{{translation.lcnemWalletDevelopment[lang]}}</h2>
+      <h2 class="header with-line">{{translation.lcnemWallet[lang]}}</h2>
       <div fxLayout="row wrap">
         <div fxFlex="60" fxFlex.xs="100" class="middle">
           <div>
@@ -67,7 +91,7 @@
 
   <section class="content bg-gray">
     <div class="inner-wrapper">
-      <h2 class="header with-line">{{translation.ticketP2pDevelopment[lang]}}</h2>
+      <h2 class="header with-line">{{translation.ticketP2p[lang]}}</h2>
       <div fxLayout="row-reverse wrap" fxLayoutAlign="center">
         <div fxFlex="60" fxFlex.xs="100" class="middle">
           <div>
@@ -77,6 +101,24 @@
         </div>
         <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center" class="img-box">
           <img src="assets/images/ticket-p2p.svg" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content bg-gray">
+    <div class="inner-wrapper">
+      <h2 class="header with-line">{{translation.consulting[lang]}}</h2>
+      <div fxLayout="row-reverse wrap" fxLayoutAlign="center">
+        <div fxFlex="60" fxFlex.xs="100" class="middle">
+          <div>
+            <h4>{{translation.consultingTop[lang]}}</h4>
+            <p>{{translation.consultingBody[lang]}}</p>
+            <a class="link" routerLink="/services/lcnemint">{{translation.readMore[lang]}}<mat-icon>arrow_forward</mat-icon></a>
+          </div>
+        </div>
+        <div fxFlex="40" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="center" class="img-box">
+          <img src="assets/images/cosmos.png" fxFlex="60" fxFlex.xs="100" style="margin: -16px auto;" />
         </div>
       </div>
     </div>
@@ -92,7 +134,7 @@
               <img src="{{m.image}}" />
             </div>
             <div class="content-wrapper">
-              <h3>{{m.title}}</h3>
+              <h3>{{m.title}}</h3>
               <p>
                 <img src="{{m.icon}}" class="icon-img" />
                 <span>{{m.name}}</span>
