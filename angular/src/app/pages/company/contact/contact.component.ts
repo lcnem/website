@@ -54,28 +54,20 @@ export class ContactComponent implements OnInit {
         ja: '業務提携や投資について'
       } as any,
       {
-        en: 'Application for "Emergency cosign service"',
-        ja: '「緊急時連署名サービス」申し込み'
-      } as any,
-      {
         en: 'Consulting',
         ja: 'コンサルティングの依頼'
       } as any,
       {
-        en: 'Work',
+        en: 'Job searching',
         ja: '就労の応募について'
-      } as any,
-      {
-        en: 'Request for services',
-        ja: 'サービスへの要望'
       } as any
     ],
     body: {
-      en: 'How can we help ?',
+      en: 'Content',
       ja: 'お問い合わせ内容'
     } as any,
     send: {
-      en: 'send request',
+      en: 'Send',
       ja: '送信'
     } as any,
     confirm: {

@@ -134,8 +134,8 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
       ja: "コンサルティング"
     } as any,
     consultingTop: {
-      en: "",
-      ja: "nemやcosmos開発の知見"
+      en: "Consulting blockchain technologies",
+      ja: "ブロックチェーン技術のコンサルティング"
     } as any,
     consultingBody: {
       en: "",

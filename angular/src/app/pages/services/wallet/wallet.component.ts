@@ -55,38 +55,6 @@ export class WalletComponent implements OnInit {
       en: 'It is also possible to manage your private key on the cloud connected to your Google Account. You can be released from annoying management of secret key and it becomes easy to use conveniently with mobile. (In the free plan, you can save only one secret key in the cloud.)',
       ja: 'Googleアカウントに紐づけてクラウド上で秘密鍵を管理することも可能です。煩わしい秘密鍵の管理から解放され簡単・便利にモバイルからで利用が可能になります。（無料プランではクラウドに保存できる秘密鍵は一つまでです。）'
     } as any,
-    pricePlanIndex: {
-      en: 'Payment Plan',
-      ja: '料金プラン一覧'
-    } as any,
-    priceColumn: {
-      en: 'Price',
-      ja: '料金'
-    } as any,
-    planFree: {
-      en: 'Free',
-      ja: '無料'
-    } as any,
-    priceStandard: {
-      en: '200yen / Month',
-      ja: '200円 / 月'
-    } as any,
-    secretKeyColumn: {
-      en: 'Secret key management in the Cloud',
-      ja: 'クラウド秘密鍵管理'
-    } as any,
-    availableOnlyOne: {
-      en: 'One',
-      ja: '一つのみ'
-    } as any,
-    availableMulti: {
-      en: 'More than One',
-      ja: '複数利用可'
-    } as any,
-    getCommissionColumn: {
-      en: 'Commission (XEM) acquisition',
-      ja: '手数料(XEM)取得'
-    } as any,
     useAddress: {
       en: 'Use of Address Book',
       ja: 'アドレス帳の利用'
