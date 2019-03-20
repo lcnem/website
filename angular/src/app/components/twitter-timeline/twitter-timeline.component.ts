@@ -1,0 +1,33 @@
+import { Component, OnInit, AfterViewInit, ElementRef, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-twitter-timeline',
+  templateUrl: './twitter-timeline.component.html',
+  styleUrls: ['./twitter-timeline.component.css']
+})
+export class TwitterTimelineComponent implements OnInit, AfterViewInit {
+  @Input() twitterId = ""
+
+  constructor(
+    private elementRef: ElementRef
+  ) { }
+
+  ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    const a = document.createElement('a');
+    a.classList.add('twitter-timeline');
+    a.setAttribute('data-height', '600');
+    a.setAttribute('href', `https://twitter.com/${this.twitterId}?ref_src=twsrc%5Etfw`);
+    a.innerHTML = `Tweets by ${this.twitterId}`;
+
+    const script = document.createElement('script');
+    script.setAttribute('async', 'true');
+    script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+    script.setAttribute('charset', 'utf-8');
+
+    this.elementRef.nativeElement.appendChild(a);
+    this.elementRef.nativeElement.appendChild(script);
+  }
+}

@@ -47,6 +47,7 @@ import { CreditComponent } from './pages/services/credit/credit.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
+import { TwitterTimelineComponent } from './components/twitter-timeline/twitter-timeline.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ConsultingComponent } from './pages/services/consulting/consulting.comp
     CreditComponent,
     TicketP2pComponent,
     LcnemintComponent,
-    ConsultingComponent
+    ConsultingComponent,
+    TwitterTimelineComponent
   ],
   imports: [
     BrowserModule,
