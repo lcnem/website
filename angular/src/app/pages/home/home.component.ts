@@ -72,15 +72,15 @@ In order to optimize the world's inefficient costs with the blockchains, LCNEM o
 これらコストをなくす力がブロックチェーンにはあります。
 世の中の非効率なコストをブロックチェーンで最適化するため、LCNEMは様々なプロダクトを提供します。`
     } as any,
-    lcnemDevelopment: {
+    cheque: {
       en: 'LCNEM Cheque',
       ja: 'LCNEM Cheque'
     } as any,
-    lcnemTop: {
+    chequeTop: {
       en: 'Legal currency pegged assets on blockchains with transparency.',
       ja: 'ブロックチェーン上の電子マネー'
     } as any,
-    lcnemBody: {
+    chequeBody: {
       en: `LCNEM(Legal Currency New Economy Movement) issues legal currency pegged assets on the public blockchains and serves as a \"Stable coin\".
 You will be able to transfer the value of legal currency without credit inquiry, large investment in security, high fee, etc, which were previously indispensable.`,
       ja: `LCNEMはパブリックブロックチェーン上に電子マネーを発行します。ブロックチェーン上のいわゆるステーブルコインとして機能します。
@@ -91,7 +91,19 @@ You will be able to transfer the value of legal currency without credit inquiry,
       en: 'FAQ',
       ja: 'よくある質問はこちら'
     } as any,
-    lcnemWalletDevelopment: {
+    lcnemint: {
+      en: "lcnemint",
+      ja: "lcnemint"
+    } as any,
+    lcnemintTop: {
+      en: "Original blockchain for making Cheque support Cosmos network",
+      ja: "ChequeのCosmosネットワーク流通のための独自ブロックチェーン"
+    } as any,
+    lcnemintBody: {
+      en: "",
+      ja: "lcnemintは、LCNEM ChequeをCosmosネットワークに流通させるための独自ブロックチェーンです。法定通貨にペグされたアセットをCosmosネットワーク内で使用することができます。"
+    } as any,
+    lcnemWallet: {
       en: 'LCNEM Wallet',
       ja: 'LCNEM Wallet'
     } as any,
@@ -105,7 +117,7 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
       ja: `LCNEM Chequeの購入はこちらから。ブラウザから使えるアプリです。
 現在はNEMブロックチェーンに対応しています。クラウド上での秘密鍵の保管にも対応している簡単で便利なブロックチェーンウォレットです。`
     } as any,
-    ticketP2pDevelopment: {
+    ticketP2p: {
       en: 'Ticket Peer to Peer',
       ja: 'ちけっとピアツーピア'
     } as any,
@@ -116,6 +128,18 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
     ticketP2pBody: {
       en: `It is the system of preventing resale of tickets/game accounts using blockchains`,
       ja: `ブロックチェーンをつかったチケット転売防止/課金ゲームアカウント転売防止システムです。`
+    } as any,
+    consulting: {
+      en: "Consulting",
+      ja: "コンサルティング"
+    } as any,
+    consultingTop: {
+      en: "Consulting blockchain technologies",
+      ja: "ブロックチェーン技術のコンサルティング"
+    } as any,
+    consultingBody: {
+      en: "",
+      ja: ""
     } as any,
     readMore: {
       en: 'Read more',
@@ -132,14 +156,6 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
     business: {
       en: 'Business',
       ja: '事業内容'
-    } as any,
-    lcnemWallet: {
-      en: 'LCNEM Wallet',
-      ja: 'LCNEM Wallet'
-    } as any,
-    ticketP2p: {
-      en: 'Ticket Peer to Peer',
-      ja: 'ちけっとピアツーピア'
     } as any,
     recruiteInformation: {
       en: 'RecruiteInformation',

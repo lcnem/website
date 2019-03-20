@@ -1,0 +1,36 @@
+<app-body-container headerPosition="normal">
+  <div class="inner-wrapper">
+    <div class="body-container">
+      <p>
+        lcnemintは、LCNEM Cheque用のCosmos networkに接続できる、LCNEM独自のブロックチェーンです。<br />
+        LCNEM Chequeのやりとりのための高速なブロックチェーンとして使うことはもちろん、LCNEM ChequeのトークンIBC通信により、Cosmosネットワーク内の他のブロックチェーンでも使用できるようになります。
+      </p>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <a class="button rounded" href="https://github.com/lcnem/lcnemint"
+          [ngStyle]="{'color': '#fff', 'background-color': '#174056'}">
+          GitHub
+        </a>
+      </div>
+
+      <h3>Cosmos Network</h3>
+      <p>
+        後述するIBC通信をCosmos Hubと行うことで、ブロックチェーン上の記録を別のブロックチェーンとやりとりすることができるネットワークです。
+        lcnemintがCosmos Networkに参加するということは、Cosmos Network上のすべてのブロックチェーンでLCNEM Cheque（ステーブルコイン）が利用可能になることを意味します。
+      </p>
+      <h3>IBC</h3>
+      <p>
+        Inter Blockchain Communication。ブロックチェーン同士で情報をやり取りする通信規格です。
+      </p>
+      <h3>バリデータについて</h3>
+      <p>
+        lcnemintのバリデータはコンソーシアム制（＝許可制）です。バリデータになっていただける法人を募集中です。問い合わせフォームよりお問い合わせください。
+      </p>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <a class="button rounded" routerLink="/company/contact"
+          [ngStyle]="{'color': '#fff', 'background-color': '#174056'}">
+          問い合わせはこちら
+        </a>
+      </div>
+    </div>
+  </div>
+</app-body-container>
