@@ -24,6 +24,11 @@
     Twitter
     <mat-icon class="open-in-new">open_in_new</mat-icon>
   </a>
+  <a mat-list-item href="https://medium.com/lcnem-{{lang}}" target="_blank">
+    <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/medium.svg)'}"></mat-icon>
+    Medium
+    <mat-icon class="open-in-new">open_in_new</mat-icon>
+  </a>
   <mat-divider></mat-divider>
   <a mat-list-item href="https://cheque.lcnem.cc" target="_blank">
     <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/lcnem.svg)'}"></mat-icon>
@@ -33,11 +38,6 @@
   <a mat-list-item href="https://wallet.lcnem.cc" target="_blank">
     <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/lcnem.svg)'}"></mat-icon>
     LCNEM Wallet
-    <mat-icon class="open-in-new">open_in_new</mat-icon>
-  </a>
-  <a mat-list-item href="https://github.com/lcnem/ticket-p2p/wiki/{{lang}}" target="_blank">
-    <mat-icon mat-list-icon class="background-contain" [ngStyle]="{'background-image': 'url(assets/images/ticket-p2p.svg)'}"></mat-icon>
-    {{translation.ticketP2p[lang]}}
     <mat-icon class="open-in-new">open_in_new</mat-icon>
   </a>
 </mat-nav-list>

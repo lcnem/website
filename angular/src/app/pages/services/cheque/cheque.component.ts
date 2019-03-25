@@ -13,6 +13,10 @@ export class ChequeComponent implements OnInit {
   ) { }
 
   public translation = {
+    gettingStarted: {
+      en: 'Getting started',
+      ja: '今すぐ使う'
+    } as any,
     abountSubsidy: {
       en: '',
       ja: '助成金について'

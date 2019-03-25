@@ -1,10 +1,17 @@
 <app-body-container headerPosition="normal">
   <div class="inner-wrapper">
     <div class="body-container">
+      <div fxLayout="column" fxLayoutAlign="center">
+        <a class="button rounded" href="https://wallet.lcnem.cc" target="_blank"
+          [ngStyle]="{'color': '#0242BE', 'background-color': '#fff'}">
+          {{translation.gettingStarted[lang]}}
+        </a>
+      </div>
+
       <app-subsidy></app-subsidy>
       <app-faq></app-faq>
       <h2>{{translation.roadmap[lang]}}</h2>
-      <mat-vertical-stepper [selectedIndex]=2>         
+      <mat-vertical-stepper [selectedIndex]=2>
         <mat-step [completed]="true" [editable]="false">
           <ng-template matStepLabel>{{translation.noActionLetter[lang]}}</ng-template>
         </mat-step>

@@ -40,6 +40,17 @@ It means that LCNEM Cheque is available in all blockchains on the Cosmos network
 Cosmosネットワーク上の全てのブロックチェーンでLCNEMのいわゆるステーブルコインが利用できることを意味します。`
       } as any,
       imgURL: 'assets/images/cosmos.png'
+    },
+    {
+      question: {
+        en: 'Are you supporting only NEM and Cosmos?',
+        ja: 'NEMとCosmosのみのサポートですか？'
+      } as any,
+      answer: {
+        en: `No, we are issueing this stable coin on Ethereum, EOS, and Liquid(Blockstream) supplementally.`,
+        ja: `補助的に、Ethereum, EOS, そしてLiquid(Blockstream)にもステーブルコインを発行しています。`
+      } as any,
+      imgURL: 'assets/images/cosmos.png'
     }
   ];
 
