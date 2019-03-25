@@ -92,16 +92,16 @@ You will be able to transfer the value of legal currency without credit inquiry,
       ja: 'よくある質問はこちら'
     } as any,
     lcnemint: {
-      en: "lcnemint",
-      ja: "lcnemint"
+      en: 'lcnemint',
+      ja: 'lcnemint'
     } as any,
     lcnemintTop: {
-      en: "Original blockchain for making Cheque support Cosmos network",
-      ja: "ChequeのCosmosネットワーク流通のための独自ブロックチェーン"
+      en: 'Original blockchain for making Cheque support Cosmos network',
+      ja: 'ChequeのCosmosネットワーク流通のための独自ブロックチェーン'
     } as any,
     lcnemintBody: {
-      en: "",
-      ja: "lcnemintは、LCNEM ChequeをCosmosネットワークに流通させるための独自ブロックチェーンです。法定通貨にペグされたアセットをCosmosネットワーク内で使用することができます。"
+      en: '',
+      ja: 'lcnemintは、LCNEM ChequeをCosmosネットワークに流通させるための独自ブロックチェーンです。法定通貨にペグされたアセットをCosmosネットワーク内で使用することができます。'
     } as any,
     lcnemWallet: {
       en: 'LCNEM Wallet',
@@ -130,16 +130,16 @@ Currently it is compatible with NEM blockchains and will be compatible with lcne
       ja: `ブロックチェーンをつかったチケット転売防止/課金ゲームアカウント転売防止システムです。`
     } as any,
     consulting: {
-      en: "Consulting",
-      ja: "コンサルティング"
+      en: 'Consulting',
+      ja: 'コンサルティング'
     } as any,
     consultingTop: {
-      en: "Consulting blockchain technologies",
-      ja: "ブロックチェーン技術のコンサルティング"
+      en: 'Consulting blockchain technologies',
+      ja: 'ブロックチェーン技術のコンサルティング'
     } as any,
     consultingBody: {
-      en: "",
-      ja: ""
+      en: '',
+      ja: ''
     } as any,
     readMore: {
       en: 'Read more',

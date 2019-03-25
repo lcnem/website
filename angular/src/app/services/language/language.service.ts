@@ -4,5 +4,5 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LanguageService {
-  public code = window.navigator.language.substr(0, 2) == 'ja' ? 'ja' : 'en';
+  public code = window.navigator.language.substr(0, 2) === 'ja' ? 'ja' : 'en';
 }
