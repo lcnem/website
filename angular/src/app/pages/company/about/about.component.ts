@@ -67,11 +67,13 @@ export class AboutComponent implements OnInit {
     takeruPosition: {
       en: [
         "Director",
-        "Chief Operation Officer"
+        "Chief Operation Officer",
+        "Chief Financial Officer"
       ],
       ja: [
         "取締役",
-        "最高執行責任者"
+        "最高執行責任者",
+        "最高財務責任者"
       ]
     } as any,
     takeru: {
