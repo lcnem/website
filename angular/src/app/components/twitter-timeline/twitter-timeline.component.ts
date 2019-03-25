@@ -6,7 +6,7 @@ import { Component, OnInit, AfterViewInit, ElementRef, Input } from '@angular/co
   styleUrls: ['./twitter-timeline.component.css']
 })
 export class TwitterTimelineComponent implements OnInit, AfterViewInit {
-  @Input() twitterId = ""
+  @Input() twitterId = '';
 
   constructor(
     private elementRef: ElementRef
