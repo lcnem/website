@@ -1,0 +1,25 @@
+<app-body-container headerPosition="normal">
+  <div class="inner-wrapper">
+    <div class="body-container">
+      <h2 class="header without-line">{{translation.mediaKit[lang]}}</h2>
+        <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px">
+          <div fxLayoutAlign="center">
+              <h2>{{translation.companyLogo[lang]}}</h2>
+          </div>
+          <div fxLayoutAlign="center" fxLayoutGap="15px">
+              <img src="assets/images/lcnem.svg">
+          </div>
+          <div fxLayoutAlign="center" fxLayoutGap="15px">
+            <div fxLayout="column" fxLayoutGap="5px">
+              <div>SVG</div>
+              <div><a href="assets/images/lcnem.svg" download><mat-icon>save_alt</mat-icon></a></div>
+            </div>
+            <div fxLayout="column" fxLayoutGap="5px">
+              <div>PNG</div>
+              <div><a href="favicon.png" download><mat-icon>save_alt</mat-icon></a>  </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</app-body-container>
