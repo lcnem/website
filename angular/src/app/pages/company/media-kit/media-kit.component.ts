@@ -18,12 +18,12 @@ export class MediaKitComponent implements OnInit {
 
   public translation = {
     mediaKit: {
-      en: 'Media Kit',
-      ja: 'メディア キット'
+      en: 'Media kit',
+      ja: 'メディアキット'
     } as any,
     companyLogo: {
-      en: "Company Logo",
-      ja: "会社のロゴ"
+      en: "Company logo",
+      ja: "ロゴ"
     } as any,
     download: {
       en: 'Download',
