@@ -1,0 +1,31 @@
+<app-body-container headerPosition="normal">
+  <div class="inner-wrapper">
+    <div class="body-container">
+      <h2 class="header without-line">{{translation.mediaKit[lang]}}</h2>
+      <div fxLayout="row wrap" fxLayoutAlign="center">
+        <mat-card class="card" fxFlex="50">
+          <h2>{{translation.companyLogo[lang]}}</h2>
+          <img mat-card-image src="assets/images/lcnem.svg">
+          <div fxLayoutAlign="center" fxLayoutGap="12px">
+            <div fxLayout="column" fxLayoutGap="6px">
+              <div>SVG</div>
+              <div>
+                <a href="assets/images/lcnem.svg" download>
+                  <mat-icon>save_alt</mat-icon>
+                </a>
+              </div>
+            </div>
+            <div fxLayout="column" fxLayoutGap="6px">
+              <div>PNG</div>
+              <div>
+                <a href="favicon.png" download>
+                  <mat-icon>save_alt</mat-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</app-body-container>

@@ -47,7 +47,7 @@ export class WalletComponent implements OnInit {
       en: 'Secret Key Management in the Cloud',
       ja: 'クラウドでの秘密鍵管理'
     } as any,
-    useNow: {
+    gettingStarted: {
       en: 'Getting started',
       ja: '今すぐ使う'
     } as any,

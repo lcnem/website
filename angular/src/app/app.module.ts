@@ -48,6 +48,7 @@ import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.compo
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 import { TwitterTimelineComponent } from './components/twitter-timeline/twitter-timeline.component';
+import { MediaKitComponent } from './pages/company/media-kit/media-kit.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { TwitterTimelineComponent } from './components/twitter-timeline/twitter-
     TicketP2pComponent,
     LcnemintComponent,
     ConsultingComponent,
-    TwitterTimelineComponent
+    TwitterTimelineComponent,
+    MediaKitComponent
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,10 @@ export class SideNavComponent implements OnInit {
       en: 'RecruiteInformation',
       ja: '採用情報'
     } as any,
+    mediaKit: {
+      en: 'Media Kit',
+      ja: 'メディア　キット'
+    } as any,
     aboutCompany: {
       en: 'Corporate Information',
       ja: '会社概要'

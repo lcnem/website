@@ -12,12 +12,14 @@ import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.compo
 import { CreditComponent } from './pages/services/credit/credit.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
+import { MediaKitComponent } from './pages/company/media-kit/media-kit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'company/about', component: AboutComponent },
   { path: 'company/contact', component: ContactComponent },
   { path: 'company/recruit', component: RecruitComponent },
+  { path: 'company/media-kit', component: MediaKitComponent },
   { path: 'services/cheque', component: ChequeComponent },
   { path: 'services/lcnemint', component: LcnemintComponent },
   { path: 'services/wallet', component: WalletComponent },
