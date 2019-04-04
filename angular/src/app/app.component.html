@@ -1,1 +1,66 @@
-<router-outlet></router-outlet>
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #drawer class="mat-elevation-z16" (click)="drawer.toggle()">
+    <mat-toolbar class="mat-elevation-z4 toolbar">
+      <img class="icon" src="assets/images/lcnem.svg" />
+      <h1>LCNEM</h1>
+      <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span>{{translation.home[lang]}}</span>
+      </a>
+      <a mat-list-item routerLink="/company/about">
+        <mat-icon mat-list-icon>location_city</mat-icon>
+        <span>{{translation.aboutCompany[lang]}}</span>
+      </a>
+      <a mat-list-item routerLink="/company/contact">
+        <mat-icon mat-list-icon>contacts</mat-icon>
+        <span>{{translation.contacts[lang]}}</span>
+      </a>
+      <a mat-list-item routerLink="/company/recruit">
+        <mat-icon mat-list-icon>person_add</mat-icon>
+        <span>{{translation.recruiteInformation[lang]}}</span>
+      </a>
+      <a mat-list-item routerLink="/company/media-kit">
+        <mat-icon mat-list-icon>perm_media</mat-icon>
+        <span>{{translation.mediaKit[lang]}}</span>
+      </a>
+      <a mat-list-item href="https://inside.lcnem.com" target="_blank">
+        <mat-icon mat-list-icon>live_tv</mat-icon>
+        <span>LCNEM Inside</span>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="https://twitter.com/lcnem_{{lang}}" target="_blank">
+        <img mat-list-icon class="icon" src="assets/images/twitter.svg" />
+        <span>Twitter</span>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="https://cheque.lcnem.com" target="_blank">
+        <img mat-list-icon class="icon" src="assets/images/lcnem.svg" />
+        <span>LCNEM Cheque</span>
+      </a>
+      <a mat-list-item href="https://wallet.lcnem.com" target="_blank">
+        <img mat-list-icon class="icon" src="assets/images/lcnem.svg" />
+        <span>LCNEM Wallet</span>
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="mat-typography">
+    <mat-toolbar class="mat-elevation-z4 toolbar">
+      <mat-toolbar-row class="container">
+        <img class="icon" src="assets/images/lcnem.svg" />
+        <h1>LCNEM</h1>
+        <span class="fill-remaining-space"></span>
+        <app-language-menu></app-language-menu>
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="container">
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

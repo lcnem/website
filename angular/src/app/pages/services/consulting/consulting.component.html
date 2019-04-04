@@ -1,16 +1,2 @@
-<app-body-container headerPosition="normal">
-  <div class="inner-wrapper">
-    <div class="body-container">
-      <p>
-        ブロックチェーン技術のコンサルティングを行います。
-        弊社には様々なプロダクトを開発してきたことにより、NEM、Cosmos、Bitcoin周辺に知見があります。
-      </p>
-      <div fxLayout="row" fxLayoutAlign="center">
-        <a class="button rounded" routerLink="/company/contact"
-          [ngStyle]="{'color': '#fff', 'background-color': '#174056'}">
-          問い合わせはこちら
-        </a>
-      </div>
-    </div>
-  </div>
-</app-body-container>
+<h2>{{translation.consulting[lang]}}</h2>
+<a mat-raised-button color="accent" routerLink="/company/contact" fxFill>{{translation.contact[lang]}}</a>

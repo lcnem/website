@@ -28,22 +28,16 @@ import {
   MatStepperModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
-import { FaqComponent } from './pages/services/cheque/faq/faq.component';
 import { AboutComponent } from './pages/company/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PrivacyPolicyComponent } from './pages/terms/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/company/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SideNavComponent } from './components/side-nav/side-nav.component';
-import { BodyContainerComponent } from './components/body-container/body-container.component';
-import { SubsidyComponent } from './pages/services/cheque/subsidy/subsidy.component';
 import { WalletComponent } from './pages/services/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
 import { ChequeComponent } from './pages/services/cheque/cheque.component';
-import { CreditComponent } from './pages/services/credit/credit.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
@@ -55,21 +49,15 @@ import { MediaKitComponent } from './pages/company/media-kit/media-kit.component
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    FaqComponent,
     AboutComponent,
     FooterComponent,
     PrivacyPolicyComponent,
     ContactComponent,
     LoadingDialogComponent,
-    HeaderComponent,
-    SideNavComponent,
-    BodyContainerComponent,
     WalletComponent,
-    SubsidyComponent,
     LanguageMenuComponent,
     RecruitComponent,
     ChequeComponent,
-    CreditComponent,
     TicketP2pComponent,
     LcnemintComponent,
     ConsultingComponent,

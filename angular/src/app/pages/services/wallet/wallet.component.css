@@ -124,3 +124,21 @@ td {
     object-fit: contain;
   }
 }
+
+.font.small {
+  font-size: 150%;
+  color: #fff;
+  line-height: 1.4;
+  padding: 5px;
+}
+.font.copy-write {
+  color: #fff;
+  text-align: left;
+  font-size: 250%;
+  line-height: 1.4;
+}
+.font.sub-title {
+  color: #3E66C0;
+  font-weight: bolder;
+  padding: 15px 0px;
+}

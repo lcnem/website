@@ -1,72 +1,18 @@
-img {
-  max-width: 100%;
-}
-h1 {
-  display: block;
-  font-size: 230%;
-  line-height: 1.2em;
-  font-weight: bold;
-  margin: 30px 0;
+header {
+  background-image: url('/assets/images/lcnem.svg');
 }
 
-.main {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  color: #fff;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002771+0,000c24+100 */
-  background: #002771; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #002771 0%,
-    #000c24 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #002771 0%,
-    #000c24 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #002771 0%,
-    #000c24 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002771', endColorstr='#000c24',GradientType=0 ); /* IE6-9 */
+section {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
-.header.with-line {
-  padding-bottom: 30px;
-}
-.main {
-  position: relative;
-  z-index: 10;
-}
-
-.main p {
-  font-size: 110%;
-  max-width: 707px;
-  margin-bottom: 0 !important;
-}
-
-.main .content-box {
-  position: relative;
-  z-index: 1;
-}
-
-.content.bg-blue h2 {
-  color: #fff;
-}
-
-.img-box.small {
-  padding: 0 70px;
-}
-
 section h4 {
-  font-size: 1.4em;
-  margin-bottom: 30px;
+  font-size: 1.5em;
+  margin-bottom: 16px;
 }
-section > div p {
-  line-height: 1.6;
-  margin-bottom: 30px;
+section p {
+  font-size: 1.2em;
+  line-height: 120%;
 }
 
 section .middle {
@@ -74,116 +20,24 @@ section .middle {
   justify-content: center;
   align-items: center;
 }
-
-mat-sidenav mat-nav-list mat-icon {
-  color: gray;
+/* service */
+.service mat-card {
+  display: block;
 }
-.mat-list-icon {
-  margin-right: 1em;
-}
-.open-in-new {
-  font-size: 12px;
-  width: 12px;
-  height: 12px;
-}
-
-.media {
-  flex-wrap: wrap;
-}
-
-.media img {
-  object-fit: contain;
-}
-
-.link {
-  color: #0142be;
-  text-decoration: none;
-  font-size: 16px;
-  transition-duration: 0.2s;
-  margin-bottom: 30px;
-  display: inline-block;
-}
-
-
-.img-box {
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.img-box img {
-  max-height: 300px;
-}
-
-.link:hover {
-  opacity: 0.8;
-}
-
-.link mat-icon {
-  display: inline-block;
-  background-color: #0142be;
-  border-radius: 50%;
-  color: #fff;
-  position: relative;
-  top: -0.1em;
-  width: 14px;
-  height: 14px;
-  font-size: 14px;
-  vertical-align: middle;
-  margin-left: 3px;
-}
-
-.media {
-  margin-bottom: -30px;
-}
-
-.card {
-  background-color: #fff;
-  transition-duration: 0.2s;
-  min-width: 300px;
-  margin:  30px 1%;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card a {
-  text-decoration: none;
-  color: #333;
-}
-.dummy {
-  min-width: 300px;
-  margin: 1%;
-}
-.img-wrapper {
+.service .mat-card-image {
+  object-fit: cover;
   height: 200px;
-  overflow: hidden;
+}
+.service h3 {
+ font-size: 2em;
+ line-height: 120%; 
 }
 
-.content-wrapper {
-  padding: 16px;
+/* media */
+.media mat-card {
+  display: block;
 }
-
-.content-wrapper .icon-img {
-  width: 30px;
-  vertical-align: middle;
-}
-
-.img-wrapper img {
-  width: 110%;
-  max-width: 120%;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -47%);
-}
-
-.card p {
-  margin-bottom: 0 !important;
-  color: #888;
-}
-
-.card span {
-  margin-left: 10px;
-  display: inline-block;
+.media .mat-card-image {
+  object-fit: cover;
+  height: 200px;
 }
