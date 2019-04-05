@@ -34,6 +34,10 @@ export class WalletComponent implements OnInit {
       en: '',
       ja: 'LCNEM Chequeに使えるウォレットアプリ'
     } as any,
+    supportingLedgers: {
+      en: 'Supporting ledgers',
+      ja: 'サポートする台帳'
+    } as any,
     gettingStarted: {
       en: 'Getting started',
       ja: '今すぐ使う'

@@ -19,7 +19,7 @@
   </ng-container>
   <section>
     <h3 class="heading">{{translation.supportingLedgers[lang]}}</h3>
-    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
       <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
         <mat-card>
           <img mat-card-image src="{{l.image}}" />
