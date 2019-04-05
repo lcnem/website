@@ -1,54 +1,12 @@
-<div class="inner-wrapper">
-  <div class="body-container">
-    <h2 class="header without-line">{{translation.corporateInformation[lang]}}</h2>
-    <div fxLayout="row" fxLayoutAlign="center">
-      <div fxFlex=" 50" fxFlex.sm="80" fxFlex.xs="100">
-        <dl>
-          <dt>{{translation.corporateName[lang]}}</dt>
-          <dd>{{translation.name[lang]}}</dd>
-
-          <dt>{{translation.corporateAddress[lang]}}</dt>
-          <dd>{{translation.address[lang]}}</dd>
-
-          <dt>{{translation.establishmentDate[lang]}}</dt>
-          <dd>2018/03</dd>
-
-          <dt>{{translation.capitalStock[lang]}}</dt>
-          <dd>{{translation.capitalAmount[lang]}}</dd>
-
-          <dt>
-            <ng-container *ngFor="let p of translation.yuPosition[lang]; let l = last">
-              {{p}}
-              <ng-container *ngIf="!l"><br /></ng-container>
-            </ng-container>
-          </dt>
-          <dd>{{translation.yu[lang]}}</dd>
-
-          <dt>
-            <ng-container *ngFor="let p of translation.takeruPosition[lang]; let l = last">
-              {{p}}
-              <ng-container *ngIf="!l"><br /></ng-container>
-            </ng-container>
-          </dt>
-          <dd>{{translation.takeru[lang]}}</dd>
-
-          <dt>
-            <ng-container *ngFor="let p of translation.takuyaPosition[lang]; let l = last">
-              {{p}}
-              <ng-container *ngIf="!l"><br /></ng-container>
-            </ng-container>
-          </dt>
-          <dd>{{translation.takuya[lang]}}</dd>
-
-          <dt>
-            <ng-container *ngFor="let p of translation.xxxPosition[lang]; let l = last">
-              {{p}}
-              <ng-container *ngIf="!l"><br /></ng-container>
-            </ng-container>
-          </dt>
-          <dd>{{translation.xxx[lang]}}</dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-</div>
+<h2>{{translation.corporateInformation[lang]}}</h2>
+<dl *ngFor="let d of defines">
+  <dt>{{d.term[lang]}}</dt>
+  <dd>{{d.description[lang]}}</dd>
+</dl>
+<section>
+  <h3 class="heading">{{translation.officers[lang]}}</h3>
+  <dl *ngFor="let o of officers">
+    <dt>{{o.name[lang]}}</dt>
+    <dd *ngFor="let p of o.post">{{p[lang]}}</dd>
+  </dl>
+</section>

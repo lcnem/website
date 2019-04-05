@@ -1,12 +1,25 @@
 <header fxLayout="column" fxLayoutAlign="center">
   <h2>{{translation.top[lang]}}</h2>
+</header>
+<section>
+  <ng-container *ngIf="lang === 'en'">
+    <h2>理念</h2>
+    <p>経済厚生を高めることがLCNEMのミッションです。</p>
+    <p>手段は、インセンティブによるメカニズムデザインの考え方を広めることして、分散型台帳技術を使ったナローバンクを実現することです。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <h2>理念</h2>
+    <p>経済厚生を高めることこそがLCNEMのミッションです。</p>
+    <p>手段は、インセンティブによるメカニズムデザインの考え方を広めること。そして、分散型台帳技術を使ったナローバンクを実現することです。</p>
+  </ng-container>
+
   <ul>
     <li>latest,legal</li>
     <li>cryptographic,currency</li>
     <li>narrow-bank</li>
     <li>short-form of them</li>
   </ul>
-</header>
+</section>
 <section>
   <h2>{{translation.services[lang]}}</h2>
   <div fxLayout="row wrap" fxLayoutGap="16px grid" class="service" fxFill>
@@ -18,7 +31,8 @@
           <p>{{s.copy[lang]}}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button color="primary" routerLink="{{s.link}}" fxFill>{{translation.readMore[lang]}}</button>
+          <button mat-button class="mat-radius-button" color="primary" routerLink="{{s.link}}"
+            fxFill>{{translation.readMore[lang]}}</button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -35,7 +49,7 @@
           <h3>{{m.title}}</h3>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-button color="primary" href="{{m.url}}" target="_blank" fxFill>
+          <a mat-button class="mat-radius-button" color="primary" href="{{m.url}}" target="_blank" fxFill>
             <img src="{{m.icon}}" class="icon" />
             <span>{{m.name}} - {{m.date}}</span>
           </a>

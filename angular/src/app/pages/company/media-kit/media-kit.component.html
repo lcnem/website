@@ -1,29 +1,22 @@
-<div class="inner-wrapper">
-  <div class="body-container">
-    <h2 class="header without-line">{{translation.mediaKit[lang]}}</h2>
-    <div fxLayout="row wrap" fxLayoutAlign="center">
-      <mat-card class="card" fxFlex="50">
-        <h2>{{translation.companyLogo[lang]}}</h2>
-        <img mat-card-image src="assets/images/lcnem.svg">
-        <div fxLayoutAlign="center" fxLayoutGap="12px">
-          <div fxLayout="column" fxLayoutGap="6px">
-            <div>SVG</div>
-            <div>
-              <a href="assets/images/lcnem.svg" download>
-                <mat-icon>save_alt</mat-icon>
-              </a>
-            </div>
-          </div>
-          <div fxLayout="column" fxLayoutGap="6px">
-            <div>PNG</div>
-            <div>
-              <a href="favicon.png" download>
-                <mat-icon>save_alt</mat-icon>
-              </a>
-            </div>
-          </div>
+<h2>{{translation.mediaKit[lang]}}</h2>
+<div fxLayout="row wrap" fxLayoutGap="16px">
+  <mat-card fxFlex="50">
+    <img mat-card-image src="assets/images/lcnem.svg">
+    <mat-card-actions>
+      <div fxLayout="row wrap">
+        <div fxFlex="50" fxFlex.xs="100">
+          <a mat-button class="mat-radius-button" color="accent" href="assets/images/lcnem.svg" download fxFill>
+            <mat-icon>save_alt</mat-icon>
+            <span>SVG</span>
+          </a>
         </div>
-      </mat-card>
-    </div>
-  </div>
+        <div fxFlex="50" fxFlex.xs="100">
+          <a mat-button class="mat-radius-button" color="accent" href="favicon.png" download fxFill>
+            <mat-icon>save_alt</mat-icon>
+            <span>PNG</span>
+          </a>
+        </div>
+      </div>
+    </mat-card-actions>
+  </mat-card>
 </div>

@@ -19,7 +19,7 @@ export class TicketP2pComponent implements OnInit {
   public translation = {
     top: {
       en: '',
-      ja: 'インセンティブ設計による低コスト転売防止システム。'
+      ja: '低コスト転売防止のメカニズムデザイン'
     } as any,
     contact: {
       en: "Contact us",

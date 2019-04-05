@@ -1,12 +1,77 @@
 <header fxLayout="column" fxLayoutAlign="center">
-  <h2>{{translation.top[lang]}}</h2>
+  <div>
+    <h2>{{translation.top[lang]}}</h2>
+    <a mat-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com"
+      target="_blank">{{translation.gettingStarted[lang]}}</a>
+  </div>
 </header>
-<h2>LCNEM Wallet</h2>
-<ng-container *ngIf="lang === 'en'">
+<section>
+  <h2 class="heading">LCNEM Wallet</h2>
+  <ng-container *ngIf="lang === 'en'">
+    <section>
+      <h3 class="heading">コンタクトリスト</h3>
+      <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
+    </section>
+    <section>
+      <h3 class="heading">Googleアカウントログイン</h3>
+      <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
+    </section>
+    <section>
+      <h3 class="heading">マルチアドレス</h3>
+      <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
+    </section>
+    <section>
+      <h3 class="heading">対応しているブロックチェーン</h3>
+      <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+        <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+          <mat-card>
+            <img mat-card-image src="{{l.image}}" />
+            <mat-card-content>
+              <h3>{{l.name}}</h3>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="heading">確認されている事象</h3>
+      <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
+      <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
+    </section>
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <section>
+      <h3 class="heading">コンタクトリスト</h3>
+      <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
+    </section>
+    <section>
+      <h3 class="heading">Googleアカウントログイン</h3>
+      <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
+    </section>
+    <section>
+      <h3 class="heading">マルチアドレス</h3>
+      <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
+    </section>
+    <section>
+      <h3 class="heading">対応しているブロックチェーン</h3>
+      <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+        <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+          <mat-card>
+            <img mat-card-image src="{{l.image}}" />
+            <mat-card-content>
+              <h3>{{l.name}}</h3>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="heading">確認されている事象</h3>
+      <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
+      <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
+    </section>
+  </ng-container>
 
-</ng-container>
-<ng-container *ngIf="lang === 'ja'">
-  <h3>確認されている事象</h3>
-  <p>※1.iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
-  <p>※2.iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
-</ng-container>
+  <a mat-raised-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com" target="_blank"
+    fxFill>{{translation.gettingStarted[lang]}}</a>
+</section>

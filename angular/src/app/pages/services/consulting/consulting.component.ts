@@ -16,6 +16,21 @@ export class ConsultingComponent implements OnInit {
   ngOnInit() {
   }
 
+  public ledger = [
+    {
+      image: 'assets/images/nem.svg',
+      name: 'NEM'
+    },
+    {
+      image: 'assets/images/tendermint.svg',
+      name: 'Tendermint'
+    },
+    {
+      image: 'assets/images/bitcoin.svg',
+      name: 'Bitcoin'
+    }
+  ];
+
   public translation = {
     consulting: {
       en: "Consulting",

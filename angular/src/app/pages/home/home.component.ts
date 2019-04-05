@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'LCNEM Cheque',
       link: '/services/cheque',
-      image: 'assets/images/pegged-assets.svg',
+      image: 'assets/images/lcnem.svg',
       copy: {
         en: 'Programmable e-money on blockchains',
         ja: 'ブロックチェーン上のプログラマブル電子マネー'
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'lcnemint',
       link: '/services/lcnemint',
-      image: 'assets/images/cosmos.png',
+      image: 'assets/images/cosmos.svg',
       copy: {
         en: 'The original blockchain in Cosmos Network for LCNEM Cheque',
         ja: 'LCNEM Cheque用のCosmosネットワーク独自ブロックチェーン'
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'LCNEM Wallet',
       link: '/services/wallet',
-      image: 'assets/images/lcnem.svg',
+      image: 'assets/images/billboard.png',
       copy: {
         en: 'The wallet application for using LCNEM Cheque easily',
         ja: 'LCNEM Chequeが簡単に使えるウォレットアプリ'
@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Consulting',
       link: '/services/consulting',
-      image: 'assets/images/lcnem.svg',
+      image: 'assets/images/whiteboard_memo.png',
       copy: {
         en: 'Consulting',
         ja: 'コンサルティング'

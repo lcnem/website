@@ -2,35 +2,13 @@ header {
   background-image: url('/assets/images/lcnem.svg');
 }
 
-section {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-section h4 {
-  font-size: 1.5em;
-  margin-bottom: 16px;
-}
-section p {
-  font-size: 1.2em;
-  line-height: 120%;
-}
-
-section .middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* service */
 .service mat-card {
   display: block;
 }
 .service .mat-card-image {
-  object-fit: cover;
+  object-fit: contain;
   height: 200px;
-}
-.service h3 {
- font-size: 2em;
- line-height: 120%; 
 }
 
 /* media */

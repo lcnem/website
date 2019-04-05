@@ -1,21 +1,36 @@
 <header fxLayout="column" fxLayoutAlign="center">
-  <h2>{{translation.top[lang]}}</h2>
+  <div>
+    <h2>{{translation.top[lang]}}</h2>
+    <a mat-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com"
+      target="_blank">{{translation.gettingStarted[lang]}}</a>
+  </div>
 </header>
-<h2>LCNEM Cheque</h2>
-<ng-container *ngIf="lang === 'en'">
+<section>
+  <h2>LCNEM Cheque</h2>
+  <ng-container *ngIf="lang === 'en'">
 
-</ng-container>
-<ng-container *ngIf="lang === 'ja'">
-  <h3>LCNEM Chequeとは</h3>
-  <p>LCNEM Chequeは、ブロックチェーン上の電子マネーです。ブロックチェーンにおけるいわゆる「ステーブルコイン」としての役割を果たします。</p>
-  <p>プログラマブル、つまり自由にプログラムできる電子マネーとして活用することができます。</p>
-  <h3>使用ブロックチェーン</h3>
-  <p>メインサポートとしてNEMとlcnemint(Cosmos)、サブサポートとしてEthereumとEOSそしてLiquid(Blockstream)にて、LCNEM Chequeを使うことができます。</p>
-  <h4>NEM</h4>
-  <p>NEMは、マルチシグ設定を軸に置いており、柔軟で簡単に扱うことのできるブロックチェーンです。</p>
-  <h4>lcnemint</h4>
-  <p>lcnemintに関しては、<a routerLink="/services/lcnemint">こちら</a>をご覧ください。</p>
-</ng-container>
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <section>
+      <h3 class="heading">LCNEM Chequeとは</h3>
+      <p>LCNEM Chequeは、ブロックチェーン上の電子マネーです。ブロックチェーンにおけるいわゆる「ステーブルコイン」としての役割を果たします。</p>
+      <p>プログラマブル、つまり自由にプログラムできる電子マネーとして活用することができます。</p>
+    </section>
+  </ng-container>
+  <section>
+    <h3 class="heading">{{translation.supportingLedgers[lang]}}</h3>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+      <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+        <mat-card>
+          <img mat-card-image src="{{l.image}}" />
+          <mat-card-content>
+            <h3>{{l.name}}</h3>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
 
-<a mat-raised-button color="accent" href="https://wallet.lcnem.com" target="_blank"
-  fxFill>{{translation.gettingStarted[lang]}}</a>
+  <a mat-raised-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com" target="_blank"
+    fxFill>{{translation.gettingStarted[lang]}}</a>
+</section>
