@@ -7,6 +7,7 @@ import { Component, OnInit, AfterViewInit, ElementRef, Input } from '@angular/co
 })
 export class TwitterTimelineComponent implements OnInit, AfterViewInit {
   @Input() twitterId = '';
+  @Input() height = 600;
 
   constructor(
     private elementRef: ElementRef
@@ -18,7 +19,7 @@ export class TwitterTimelineComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const a = document.createElement('a');
     a.classList.add('twitter-timeline');
-    a.setAttribute('data-height', '600');
+    a.setAttribute('data-height', `${this.height}`);
     a.setAttribute('href', `https://twitter.com/${this.twitterId}?ref_src=twsrc%5Etfw`);
     a.innerHTML = `Tweets by ${this.twitterId}`;
 

@@ -1,12 +1,9 @@
-.faq-content {
-    margin: 30px 0;
+header {
+  background-image: url('/assets/images/pegged-asset.svg');
 }
 
-.faq-content h2 {
-    color: #666;
+/* ledger */
+.ledger .mat-card-image {
+  object-fit: contain;
+  height: 200px;
 }
-
-.faq-content p {
-    color: #888;
-}
-

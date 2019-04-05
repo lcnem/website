@@ -1,17 +1,4 @@
-@import './styles/parts/button';
-@import './styles/parts/table';
-@import './styles/parts/content.scss';
-@import './styles/parts/header.scss';
-@import './styles/parts/image.scss';
-@import './styles/parts/top.scss';
-@import './styles/parts/font.scss';
-@import './styles/parts/feature-list.scss';
-@import './styles/parts/icon.scss';
 /* You can add global styles to this file, and also import other style files */
-
-html, body {
-  margin: 0;
-}
 
 html, body {
   height: 100%;
@@ -19,29 +6,27 @@ html, body {
 }
 
 mat-drawer-container {
-    height: 100%;
+  height: 100%;
 }
 
-mat-sidenav {
+mat-drawer {
   width: 300px;
   overflow: auto;
 }
 
-.flexbox-container-vertical-center {
-  margin: auto;
-  padding: 0% 0 10px 0;
+mat-toolbar.toolbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 4;
 }
-
-mat-icon {
-  vertical-align: middle;
-}
-
 
 .fill-remaining-space{
   flex: 1 1 auto;
 }
 
-.body-container {
+.container {
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 1000px;
   padding: 16px;
@@ -51,26 +36,47 @@ mat-spinner {
   margin: 1em auto;
 }
 
-.floating-action-button.mat-fab {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 1;
+.icon {
+  padding: 4px;
+  min-width: 0;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  line-height: 40px;
+  border-radius: 50%;
 }
 
 /*これより上は他サービス共通　以下本プロジェクト専用*/
-.inner-wrapper {
-  margin: 0 auto;
-  max-width: 1000px;
-  width: 92%;
+header {
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  font-size : 1.6em;
+  line-height: 120%;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
 }
-/*  */
-
-@media screen and (max-width: 599px) {
-  section h4 {text-align: center}
-  section h2 {text-align: center}
-  section h5 {text-align: center}
-  .flexbox-container-vertical-center {
-    margin: 5px;
-  }
+header h2 {
+  font-size: 1.6em !important;
+  line-height: 120% !important;
+}
+.mat-button.mat-radius-button, .mat-raised-button.mat-radius-button {
+  border-radius: 18px;
+}
+section {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+section p {
+  font-size: 1.2em;
+  line-height: 120%;
+}
+h3.heading {
+  font-size: 1.6em;
+  line-height: 120%;
+}
+h4.heading {
+  font-size: 1.4em;
+  line-height: 120%;
 }

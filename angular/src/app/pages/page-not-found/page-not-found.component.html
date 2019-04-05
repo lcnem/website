@@ -1,15 +1,3 @@
-<app-body-container headerPosition="normal">
-  <div>
-    <div class="inner-wrapper">
-      <div class="body-container">
-        <h2 class="header without-line">404 page not found</h2>
-        <p>{{translation.content[lang]}}</p>
-        <div class="button-container">
-          <a class="button rounded" routerLink="/" target="_blank" [ngStyle]="{'color': '#fff', 'background-color': '#0242BE'}">
-            {{translation.topPage[lang]}}
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</app-body-container>
+<h2 class="header without-line">404 page not found</h2>
+<p>{{translation.content[lang]}}</p>
+<button mat-raised-button color="accent" routerLink="/" fxFill>{{translation.topPage[lang]}}</button>

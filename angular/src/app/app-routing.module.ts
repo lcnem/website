@@ -9,7 +9,6 @@ import { RecruitComponent } from './pages/company/recruit/recruit.component';
 import { ChequeComponent } from './pages/services/cheque/cheque.component';
 import { WalletComponent } from './pages/services/wallet/wallet.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
-import { CreditComponent } from './pages/services/credit/credit.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 import { MediaKitComponent } from './pages/company/media-kit/media-kit.component';
@@ -23,15 +22,14 @@ const routes: Routes = [
   { path: 'services/cheque', component: ChequeComponent },
   { path: 'services/lcnemint', component: LcnemintComponent },
   { path: 'services/wallet', component: WalletComponent },
-  { path: 'services/credit', component: CreditComponent},
-  { path: 'services/ticket-p2p', component: TicketP2pComponent},
-  { path: 'services/consulting', component: ConsultingComponent},
+  { path: 'services/ticket-p2p', component: TicketP2pComponent },
+  { path: 'services/consulting', component: ConsultingComponent },
   { path: 'terms/privacy-policy', component: PrivacyPolicyComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,13 +1,12 @@
-footer {
-  background-color: #011741;
-  padding: 45px;
-  color: #fff;
+mat-divider {
+  margin-top: 16px;
 }
-footer a {
-  color: #ccc;
+
+footer {
+  margin-top: 16px;
 }
 
 footer p {
-  margin-top: 16px;
+  margin: 16px;
   text-align: center;
 }
