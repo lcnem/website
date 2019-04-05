@@ -2,7 +2,7 @@
 <ng-container *ngIf="lang === 'en'">
   <section>
     <h3 class="heading">分散型台帳技術</h3>
-    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
       <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
         <mat-card>
           <img mat-card-image src="{{l.image}}" />
@@ -25,7 +25,7 @@
 <ng-container *ngIf="lang === 'ja'">
   <section>
     <h3 class="heading">分散型台帳技術</h3>
-    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
       <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
         <mat-card>
           <img mat-card-image src="{{l.image}}" />

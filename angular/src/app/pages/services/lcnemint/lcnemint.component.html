@@ -27,7 +27,7 @@
 </ng-container>
 <section>
     <h3 class="heading">{{translation.words[lang]}}</h3>
-    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="words" fxFill>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="words">
       <div fxFlex="50" fxFlex.xs="100" *ngFor="let w of words">
         <mat-card>
           <img mat-card-image src="{{w.image}}" />
