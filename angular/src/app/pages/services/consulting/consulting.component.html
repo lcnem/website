@@ -1,16 +1,49 @@
-<app-body-container headerPosition="normal">
-  <div class="inner-wrapper">
-    <div class="body-container">
-      <p>
-        ブロックチェーン技術のコンサルティングを行います。
-        弊社には様々なプロダクトを開発してきたことにより、NEM、Cosmos、Bitcoin周辺に知見があります。
-      </p>
-      <div fxLayout="row" fxLayoutAlign="center">
-        <a class="button rounded" routerLink="/company/contact"
-          [ngStyle]="{'color': '#fff', 'background-color': '#174056'}">
-          問い合わせはこちら
-        </a>
+<h2>{{translation.consulting[lang]}}</h2>
+<ng-container *ngIf="lang === 'en'">
+  <section>
+    <h3 class="heading">分散型台帳技術</h3>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+      <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+        <mat-card>
+          <img mat-card-image src="{{l.image}}" />
+          <mat-card-content>
+            <h3>{{l.name}}</h3>
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
-  </div>
-</app-body-container>
+  </section>
+  <section>
+    <h3 class="heading">店舗ポイント発行</h3>
+    <p>店舗ポイントの電子化も、ブロックチェーンを使うことで低コストに導入できます。</p>
+  </section>
+  <section>
+    <h3 class="heading">秘密鍵管理</h3>
+    <p>秘密鍵管理に関してのソリューションを提案します。</p>
+  </section>
+</ng-container>
+<ng-container *ngIf="lang === 'ja'">
+  <section>
+    <h3 class="heading">分散型台帳技術</h3>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger" fxFill>
+      <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+        <mat-card>
+          <img mat-card-image src="{{l.image}}" />
+          <mat-card-content>
+            <h3>{{l.name}}</h3>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3 class="heading">店舗ポイント発行</h3>
+    <p>店舗ポイントの電子化も、ブロックチェーンを使うことで低コストに導入できます。</p>
+  </section>
+  <section>
+    <h3 class="heading">秘密鍵管理</h3>
+    <p>秘密鍵管理に関してのソリューションを提案します。</p>
+  </section>
+</ng-container>
+<a mat-raised-button class="mat-radius-button" color="accent" routerLink="/company/contact"
+  fxFill>{{translation.contact[lang]}}</a>

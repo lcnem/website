@@ -1,0 +1,5 @@
+/* ledger */
+.ledger .mat-card-image {
+  object-fit: contain;
+  height: 200px;
+}
