@@ -1,14 +1,18 @@
-<header fxLayout="row wrap" fxLayoutAlign="center">
-  <div fxFlex="50" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
+<header fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+  <div fxFlex="50" fxLayout="column" fxLayoutAlign="center">
     <h2>{{translation.top[lang]}}</h2>
     <a mat-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com"
       target="_blank">{{translation.gettingStarted[lang]}}</a>
   </div>
-  <img fxFlex="50" fxFlex.xs="100" src="assets/images/billboard.png" />
+  <img fxFlex="50" src="assets/images/billboard.png" />
 </header>
 <section>
   <h2>LCNEM Wallet</h2>
   <ng-container *ngIf="lang === 'en'">
+    <section>
+      <h3>XEMの無料取得</h3>
+      <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
+    </section>
     <section>
       <h3>コンタクトリスト</h3>
       <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
@@ -28,6 +32,10 @@
     </section>
   </ng-container>
   <ng-container *ngIf="lang === 'ja'">
+    <section>
+      <h3>XEMの無料取得</h3>
+      <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
+    </section>
     <section>
       <h3>コンタクトリスト</h3>
       <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
