@@ -47,36 +47,35 @@ mat-spinner {
 }
 
 /*これより上は他サービス共通　以下本プロジェクト専用*/
+.mat-button.mat-radius-button, .mat-raised-button.mat-radius-button {
+  border-radius: 18px;
+}
+
 header {
   width: 100%;
   height: calc(100vh - 80px);
   overflow: hidden;
-  font-size : 1.6em;
-  line-height: 120%;
-  background-position: right;
-  background-repeat: no-repeat;
   margin-bottom: 16px;
 }
-header h2 {
-  font-size: 1.6em !important;
-  line-height: 120% !important;
+header img {
+  object-fit: contain;
 }
-.mat-button.mat-radius-button, .mat-raised-button.mat-radius-button {
-  border-radius: 18px;
+header .mat-h2 {
+  font-size: 1.6em;
 }
 section {
-  margin-top: 16px;
   margin-bottom: 16px;
 }
-section p {
-  font-size: 1.2em;
+
+.mat-typography {
   line-height: 120%;
 }
-h3.heading {
+.mat-typography h3 {
   font-size: 1.6em;
-  line-height: 120%;
 }
-h4.heading {
+.mat-typography h4 {
   font-size: 1.4em;
-  line-height: 120%;
+}
+.mat-typography h5 {
+  font-size: 1.2em;
 }

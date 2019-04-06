@@ -1,7 +1,3 @@
-header {
-  background-image: url('/assets/images/pegged-asset.svg');
-}
-
 /* ledger */
 .ledger .mat-card-image {
   object-fit: contain;

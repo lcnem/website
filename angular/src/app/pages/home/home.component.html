@@ -1,5 +1,8 @@
-<header fxLayout="column" fxLayoutAlign="center">
-  <h2>{{translation.top[lang]}}</h2>
+<header fxLayout="row wrap" fxLayoutAlign="center">
+  <div fxFlex="50" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
+    <h2>{{translation.top[lang]}}</h2>
+  </div>
+  <img fxFlex="50" fxFlex.xs="100" src="assets/images/lcnem.svg" />
 </header>
 <section>
   <ng-container *ngIf="lang === 'en'">
@@ -38,10 +41,9 @@
     </div>
   </div>
 </section>
-<mat-divider></mat-divider>
 <section>
   <h2>{{translation.media[lang]}}</h2>
-  <div fxLayout="row wrap" fxLayoutGap="16px grid" class="media" fxFill>
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" class="media">
     <div fxFlex="50" fxFlex.xs="100" *ngFor="let m of media">
       <mat-card>
         <img mat-card-image src="{{m.image}}" />
@@ -51,7 +53,7 @@
         <mat-card-actions>
           <a mat-button class="mat-radius-button" color="primary" href="{{m.url}}" target="_blank" fxFill>
             <img src="{{m.icon}}" class="icon" />
-            <span>{{m.name}} - {{m.date}}</span>
+            <span>{{m.name}} <wbr/> {{m.date}}</span>
           </a>
         </mat-card-actions>
       </mat-card>

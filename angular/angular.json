@@ -23,7 +23,7 @@
               {
                 "input": "src/theme/light-theme.scss"
               },
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -75,7 +75,7 @@
               {
                 "input": "src/theme/light-theme.scss"
               },
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": ["src/favicon.png", "src/assets"]
