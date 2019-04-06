@@ -4,7 +4,7 @@
   <dd>{{d.description[lang]}}</dd>
 </dl>
 <section>
-  <h3 class="heading">{{translation.officers[lang]}}</h3>
+  <h3>{{translation.officers[lang]}}</h3>
   <dl *ngFor="let o of officers">
     <dt>{{o.name[lang]}}</dt>
     <dd *ngFor="let p of o.post">{{p[lang]}}</dd>

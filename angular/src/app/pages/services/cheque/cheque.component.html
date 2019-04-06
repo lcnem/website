@@ -1,9 +1,10 @@
-<header fxLayout="column" fxLayoutAlign="center">
-  <div>
+<header fxLayout="row wrap" fxLayoutAlign="center">
+  <div fxFlex="50" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="center">
     <h2>{{translation.top[lang]}}</h2>
     <a mat-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com"
       target="_blank">{{translation.gettingStarted[lang]}}</a>
   </div>
+  <img fxFlex="50" fxFlex.xs="100" src="assets/images/pegged-asset.svg" />
 </header>
 <section>
   <h2>LCNEM Cheque</h2>
@@ -12,13 +13,13 @@
   </ng-container>
   <ng-container *ngIf="lang === 'ja'">
     <section>
-      <h3 class="heading">LCNEM Chequeとは</h3>
+      <h3>LCNEM Chequeとは</h3>
       <p>LCNEM Chequeは、ブロックチェーン上の電子マネーです。ブロックチェーンにおけるいわゆる「ステーブルコイン」としての役割を果たします。</p>
       <p>プログラマブル、つまり自由にプログラムできる電子マネーとして活用することができます。</p>
     </section>
   </ng-container>
   <section>
-    <h3 class="heading">{{translation.supportingLedgers[lang]}}</h3>
+    <h3>{{translation.supportingLedgers[lang]}}</h3>
     <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
       <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
         <mat-card>

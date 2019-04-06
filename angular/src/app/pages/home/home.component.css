@@ -1,20 +1,10 @@
-header {
-  background-image: url('/assets/images/lcnem.svg');
-}
-
 /* service */
-.service mat-card {
-  display: block;
-}
 .service .mat-card-image {
   object-fit: contain;
   height: 200px;
 }
 
 /* media */
-.media mat-card {
-  display: block;
-}
 .media .mat-card-image {
   object-fit: cover;
   height: 200px;

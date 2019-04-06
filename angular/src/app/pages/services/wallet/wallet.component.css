@@ -1,7 +1,3 @@
-header {
-  background-image: url('/assets/images/billboard.png');
-}
-
 /* ledger */
 .ledger .mat-card-image {
   object-fit: contain;
