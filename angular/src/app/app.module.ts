@@ -43,6 +43,8 @@ import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component'
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 import { TwitterTimelineComponent } from './components/twitter-timeline/twitter-timeline.component';
 import { MediaKitComponent } from './pages/company/media-kit/media-kit.component';
+import { SectionComponent } from './components/section/section.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { MediaKitComponent } from './pages/company/media-kit/media-kit.component
     LcnemintComponent,
     ConsultingComponent,
     TwitterTimelineComponent,
-    MediaKitComponent
+    MediaKitComponent,
+    SectionComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

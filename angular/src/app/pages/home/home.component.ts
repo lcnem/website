@@ -104,8 +104,8 @@ export class HomeComponent implements OnInit {
       ja: '問い合わせ'
     } as any,
     top: {
-      en: 'Fintech for economic welfare.',
-      ja: '経済厚生のためのフィンテック。'
+      en: 'Fintech for economic welfare',
+      ja: '経済厚生のためのフィンテック'
     } as any,
     services: {
       en: 'Services',

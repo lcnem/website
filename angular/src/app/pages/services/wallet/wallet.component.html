@@ -1,72 +1,70 @@
-<header fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
-  <div fxFlex="50" fxLayout="column" fxLayoutAlign="center">
-    <h2>{{translation.top[lang]}}</h2>
-    <a mat-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com"
-      target="_blank">{{translation.gettingStarted[lang]}}</a>
-  </div>
-  <img fxFlex="50" src="assets/images/billboard.png" />
-</header>
-<section>
+<app-header heading="{{translation.top[lang]}}" image="assets/images/billboard.png">
+  <a mat-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com"
+    target="_blank">{{translation.gettingStarted[lang]}}</a>
+</app-header>
+<app-section>
   <h2>LCNEM Wallet</h2>
-  <ng-container *ngIf="lang === 'en'">
-    <section>
-      <h3>XEMの無料取得</h3>
-      <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
-    </section>
-    <section>
-      <h3>コンタクトリスト</h3>
-      <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
-    </section>
-    <section>
-      <h3>Googleアカウントログイン</h3>
-      <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
-    </section>
-    <section>
-      <h3>マルチアドレス</h3>
-      <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
-    </section>
-    <section>
-      <h3>確認されている事象</h3>
-      <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
-      <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
-    </section>
-  </ng-container>
-  <ng-container *ngIf="lang === 'ja'">
-    <section>
-      <h3>XEMの無料取得</h3>
-      <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
-    </section>
-    <section>
-      <h3>コンタクトリスト</h3>
-      <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
-    </section>
-    <section>
-      <h3>Googleアカウントログイン</h3>
-      <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
-    </section>
-    <section>
-      <h3>マルチアドレス</h3>
-      <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
-    </section>
-    <section>
-      <h3>確認されている事象</h3>
-      <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
-      <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
-    </section>
-  </ng-container>
-  <section>
-    <h3>{{translation.supportingLedgers[lang]}}</h3>
-    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
-      <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
-        <mat-card>
-          <img mat-card-image src="{{l.image}}" />
-          <mat-card-content>
-            <h3>{{l.name}}</h3>
-          </mat-card-content>
-        </mat-card>
-      </div>
+</app-section>
+<ng-container *ngIf="lang === 'en'">
+  <app-section color="mat-primary">
+    <h3>XEMの無料取得</h3>
+    <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
+  </app-section>
+  <app-section color="black">
+    <h3>コンタクトリスト</h3>
+    <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
+  </app-section>
+  <app-section color="mat-primary">
+    <h3>Googleアカウントログイン</h3>
+    <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
+  </app-section>
+  <app-section color="black">
+    <h3>マルチアドレス</h3>
+    <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
+  </app-section>
+  <app-section color="mat-primary">
+    <h3>確認されている事象</h3>
+    <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
+    <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
+  </app-section>
+</ng-container>
+<ng-container *ngIf="lang === 'ja'">
+  <app-section color="mat-primary">
+    <h3>XEMの無料取得</h3>
+    <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
+  </app-section>
+  <app-section color="black">
+    <h3>コンタクトリスト</h3>
+    <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
+  </app-section>
+  <app-section color="mat-primary">
+    <h3>Googleアカウントログイン</h3>
+    <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
+  </app-section>
+  <app-section color="black">
+    <h3>マルチアドレス</h3>
+    <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
+  </app-section>
+  <app-section color="mat-primary">
+    <h3>確認されている事象</h3>
+    <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
+    <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
+  </app-section>
+</ng-container>
+<app-section>
+  <h3>{{translation.supportingLedgers[lang]}}</h3>
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
+    <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+      <mat-card>
+        <img mat-card-image src="{{l.image}}" />
+        <mat-card-content>
+          <h3>{{l.name}}</h3>
+        </mat-card-content>
+      </mat-card>
     </div>
-  </section>
+  </div>
+</app-section>
+<app-section>
   <a mat-raised-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com" target="_blank"
     fxFill>{{translation.gettingStarted[lang]}}</a>
-</section>
+</app-section>

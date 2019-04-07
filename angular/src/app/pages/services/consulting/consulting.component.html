@@ -1,6 +1,8 @@
-<h2>{{translation.consulting[lang]}}</h2>
+<app-section>
+  <h2>{{translation.consulting[lang]}}</h2>
+</app-section>
 <ng-container *ngIf="lang === 'en'">
-  <section>
+  <app-section>
     <h3>分散型台帳技術</h3>
     <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
       <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
@@ -12,18 +14,18 @@
         </mat-card>
       </div>
     </div>
-  </section>
-  <section>
+  </app-section>
+  <app-section>
     <h3>店舗ポイント発行</h3>
     <p>店舗ポイントの電子化も、ブロックチェーンを使うことで低コストに導入できます。</p>
-  </section>
-  <section>
+  </app-section>
+  <app-section>
     <h3>秘密鍵管理</h3>
     <p>秘密鍵管理に関してのソリューションを提案します。</p>
-  </section>
+  </app-section>
 </ng-container>
 <ng-container *ngIf="lang === 'ja'">
-  <section>
+  <app-section>
     <h3>分散型台帳技術</h3>
     <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
       <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
@@ -35,15 +37,17 @@
         </mat-card>
       </div>
     </div>
-  </section>
-  <section>
+  </app-section>
+  <app-section>
     <h3>店舗ポイント発行</h3>
     <p>店舗ポイントの電子化も、ブロックチェーンを使うことで低コストに導入できます。</p>
-  </section>
-  <section>
+  </app-section>
+  <app-section>
     <h3>秘密鍵管理</h3>
     <p>秘密鍵管理に関してのソリューションを提案します。</p>
-  </section>
+  </app-section>
 </ng-container>
-<a mat-raised-button class="mat-radius-button" color="accent" routerLink="/company/contact"
-  fxFill>{{translation.contact[lang]}}</a>
+<app-section>
+  <a mat-raised-button class="mat-radius-button" color="accent" routerLink="/company/contact"
+    fxFill>{{translation.contact[lang]}}</a>
+</app-section>

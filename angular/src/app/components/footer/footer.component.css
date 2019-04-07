@@ -4,9 +4,16 @@ mat-divider {
 
 footer {
   margin-top: 16px;
+  color: white;
+  background: #333333;
+  line-height: 200%;
+}
+
+footer a {
+  color: white;
 }
 
 footer p {
-  margin: 16px;
+  margin: 0;
   text-align: center;
 }

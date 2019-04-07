@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+
+section {
+  padding-bottom: 16px;
+
+  &.black {
+    color: white;
+    background: #333333;
+  }
+
+  &.mat-primary {
+    color: white;
+    background: mat-color(mat-palette($mat-blue));
+  }
+
+  &.mat-accent {
+    color: white;
+    background: mat-color(mat-palette($mat-pink));
+  }
+}
