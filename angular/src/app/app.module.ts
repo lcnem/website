@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { environment } from '../environments/environment';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -47,6 +49,12 @@ import { SectionComponent } from './components/section/section.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavListComponent } from './components/nav-list/nav-list.component';
 
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './services/reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { effects } from './services/effect';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +84,9 @@ import { NavListComponent } from './components/nav-list/nav-list.component';
     BrowserAnimationsModule,
     FormsModule,
     FlexLayoutModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot(effects),
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
