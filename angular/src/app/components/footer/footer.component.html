@@ -1,7 +1,19 @@
 <mat-divider></mat-divider>
 <footer>
-  <div fxLayout="row" fxLayoutAlign="center">
-    <a routerLink="/terms/privacy-policy">{{translation.privacyPolicy[lang]}}</a>
+  <div class="container">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="50" fxFlex.xs="100">
+        <div class="app-nav-list-container">
+          <app-nav-list></app-nav-list>
+        </div>
+      </div>
+      <div fxFlex="50" fxFlex.xs="100">
+        <app-twitter-timeline twitterId="lcnem_{{lang}}" theme="dark"></app-twitter-timeline>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center">
+      <a routerLink="/terms/privacy-policy">{{translation.privacyPolicy[lang]}}</a>
+    </div>
+    <p class="copy-right">&copy; {{translation.lcnemInc[lang]}}</p>
   </div>
-  <p class="copy-right">&copy; {{translation.lcnemInc[lang]}}</p>
 </footer>

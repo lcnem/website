@@ -51,22 +51,6 @@ mat-spinner {
   border-radius: 18px;
 }
 
-header {
-  width: 100%;
-  height: calc(100vh - 80px);
-  overflow: hidden;
-  margin-bottom: 16px;
-}
-header img {
-  object-fit: contain;
-}
-header .mat-h2 {
-  font-size: 1.6em;
-}
-section {
-  margin-bottom: 16px;
-}
-
 .mat-typography {
   line-height: 120%;
 }

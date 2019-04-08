@@ -1,15 +1,11 @@
-<header fxLayout="column" fxLayoutAlign="center">
-  <div>
-    <h2>{{translation.recruit[lang]}}</h2>
-  </div>
-</header>
-<section>
+<app-header heading="{{translation.recruit[lang]}}" image="assets/images/lcnem.svg"></app-header>
+<app-section color="primary">
   <h3>募集職種</h3>
   <div fxLayout="row wrap" fxLayoutGap="16px grid" class="job">
     <div fxFlex="50" fxFlex.xs="100">
       <mat-card>
         <mat-card-content>
-          <h4 class="heading">フロントエンドエンジニア</h4>
+          <h4>フロントエンドエンジニア</h4>
           <p>経済厚生を高めるフィンテックサービスを一緒に作るフロントエンドエンジニアを募集しています！</p>
           <p>フロントエンドにはAngularを使っていますが、Angularを知らなくてもReactやVueなどのJavaScriptフレームワークに慣れ親しんでいる方なら、入ってからの習得でOKです！</p>
           <p>デザインはマテリアルデザインに準拠しています！</p>
@@ -19,7 +15,7 @@
     <div fxFlex="50" fxFlex.xs="100">
       <mat-card>
         <mat-card-content>
-          <h4 class="heading">インフラエンジニア</h4>
+          <h4>インフラエンジニア</h4>
           <p>インフラエンジニアを募集しています！</p>
           <p>Firebase、Google Cloud Platformを使っています。APIの開発保守やブロックチェーンのノード管理、GolangのCosmos
             SDKを使った独自ブロックチェーンの開発に携わることができます！</p>
@@ -27,17 +23,18 @@
       </mat-card>
     </div>
   </div>
-</section>
-<section>
+</app-section>
+<app-section>
   <h3>給与</h3>
   <p>能力に応じて相談させていただきます。</p>
   <h3>勤務体系</h3>
   <p>フルコミットできる方を募集しています。</p>
   <h3>勤務地</h3>
-  <p>京都ではありませんのご注意ください！東京・明大前と、リモートワークを中心に働いています。</p>
+  <p>東京・明大前と、リモートワークを中心に働いています(京都ではありませんのでご注意ください)。</p>
   <h3>最高開発責任者について</h3>
-  <p>執行役員・最高開発責任者(ストックオプションあり)となって長期的にコミットいただける方を募集しています！</p>
-</section>
-
-<a mat-raised-button class="mat-radius-button" color="accent" routerLink="/company/contact"
-  fxFill>{{translation.contact[lang]}}</a>
+  <p>執行役員・最高開発責任者(ストックオプションあり)となってコミットいただける方を募集しています！</p>
+</app-section>
+<app-section>
+  <a mat-raised-button class="mat-radius-button" color="accent" routerLink="/company/contact"
+    fxFill>{{translation.contact[lang]}}</a>
+</app-section>

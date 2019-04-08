@@ -16,7 +16,7 @@ export class WalletComponent implements OnInit {
 
   public ledger = [
     {
-      image: 'assets/images/nem.svg',
+      image: 'assets/images/dlt/nem.svg',
       name: 'NEM'
     },
     {
@@ -24,7 +24,7 @@ export class WalletComponent implements OnInit {
       name: 'lcnemint(予定)'
     },
     {
-      image: 'assets/images/bitcoin.svg',
+      image: 'assets/images/dlt/bitcoin.svg',
       name: 'Bitcoin(予定)'
     }
   ];

@@ -20,7 +20,7 @@ export class LcnemintComponent implements OnInit {
     {
       name: 'Cosmos Network',
       link: 'https://cosmos.network',
-      image: 'assets/images/cosmos.svg',
+      image: 'assets/images/dlt/cosmos.svg',
       description: {
         en: ``,
         ja: `
@@ -31,7 +31,7 @@ lcnemintがCosmos Networkに参加するということは、Cosmos Network上�
     {
       name: 'Tendermint',
       link: 'https://tendermint.com',
-      image: 'assets/images/tendermint.svg',
+      image: 'assets/images/dlt/tendermint.svg',
       description: {
         en: ``,
         ja: `

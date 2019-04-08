@@ -18,15 +18,15 @@ export class ConsultingComponent implements OnInit {
 
   public ledger = [
     {
-      image: 'assets/images/nem.svg',
+      image: 'assets/images/dlt/nem.svg',
       name: 'NEM'
     },
     {
-      image: 'assets/images/tendermint.svg',
+      image: 'assets/images/dlt/tendermint.svg',
       name: 'Tendermint'
     },
     {
-      image: 'assets/images/bitcoin.svg',
+      image: 'assets/images/dlt/bitcoin.svg',
       name: 'Bitcoin'
     }
   ];
