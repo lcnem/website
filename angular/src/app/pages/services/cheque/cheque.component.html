@@ -1,10 +1,8 @@
-<app-header heading="{{translation.top[lang]}}" image="assets/images/pegged-asset.svg">
+<app-header heading="LCNEM Cheque" image="assets/images/cheque/pegged-asset.svg">
+  <p>{{translation.top[lang]}}</p>
   <a mat-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com"
     target="_blank">{{translation.gettingStarted[lang]}}</a>
 </app-header>
-<app-section>
-  <h2>LCNEM Cheque</h2>
-</app-section>
 <ng-container *ngIf="lang === 'en'">
   <app-section color="mat-primary">
     <h3>LCNEM Chequeとは</h3>

@@ -1,10 +1,8 @@
-<app-header heading="{{translation.top[lang]}}" image="assets/images/billboard.png">
+<app-header heading="LCNEM Wallet" image="assets/images/wallet/billboard.png">
+  <p>{{translation.top[lang]}}</p>
   <a mat-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com"
     target="_blank">{{translation.gettingStarted[lang]}}</a>
 </app-header>
-<app-section>
-  <h2>LCNEM Wallet</h2>
-</app-section>
 <ng-container *ngIf="lang === 'en'">
   <app-section color="mat-primary">
     <h3>XEMの無料取得</h3>
@@ -65,6 +63,6 @@
   </div>
 </app-section>
 <app-section>
-  <a mat-raised-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com" target="_blank"
+  <a mat-raised-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com" target="_blank"
     fxFill>{{translation.gettingStarted[lang]}}</a>
 </app-section>

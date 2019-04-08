@@ -45,6 +45,7 @@ import { TwitterTimelineComponent } from './components/twitter-timeline/twitter-
 import { MediaKitComponent } from './pages/company/media-kit/media-kit.component';
 import { SectionComponent } from './components/section/section.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NavListComponent } from './components/nav-list/nav-list.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { HeaderComponent } from './components/header/header.component';
     TwitterTimelineComponent,
     MediaKitComponent,
     SectionComponent,
-    HeaderComponent
+    HeaderComponent,
+    NavListComponent
   ],
   imports: [
     BrowserModule,
