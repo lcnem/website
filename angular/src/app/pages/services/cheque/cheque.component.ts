@@ -17,7 +17,7 @@ export class ChequeComponent implements OnInit {
 
   public ledger = [
     {
-      image: 'assets/images/nem.svg',
+      image: 'assets/images/dlt/nem.svg',
       name: 'NEM'
     },
     {
@@ -25,15 +25,15 @@ export class ChequeComponent implements OnInit {
       name: 'lcnemint(予定)'
     },
     {
-      image: 'assets/images/ethereum.svg',
+      image: 'assets/images/dlt/ethereum.svg',
       name: 'Ethereum(予定)'
     },
     {
-      image: 'assets/images/eos.svg',
+      image: 'assets/images/dlt/eos.svg',
       name: 'EOS(予定)'
     },
     {
-      image: 'assets/images/liquid.svg',
+      image: 'assets/images/dlt/liquid.svg',
       name: 'Liquid by Blockstream(予定)'
     }
   ];

@@ -1,12 +1,14 @@
-<h2>{{translation.corporateInformation[lang]}}</h2>
-<dl *ngFor="let d of defines">
-  <dt>{{d.term[lang]}}</dt>
-  <dd>{{d.description[lang]}}</dd>
-</dl>
-<section>
-  <h3>{{translation.officers[lang]}}</h3>
-  <dl *ngFor="let o of officers">
-    <dt>{{o.name[lang]}}</dt>
-    <dd *ngFor="let p of o.post">{{p[lang]}}</dd>
+<app-section>
+  <h2>{{translation.corporateInformation[lang]}}</h2>
+  <dl *ngFor="let d of defines">
+    <dt>{{d.term[lang]}}</dt>
+    <dd>{{d.description[lang]}}</dd>
   </dl>
-</section>
+  <section>
+    <h3>{{translation.officers[lang]}}</h3>
+    <dl *ngFor="let o of officers">
+      <dt>{{o.name[lang]}}</dt>
+      <dd *ngFor="let p of o.post">{{p[lang]}}</dd>
+    </dl>
+  </section>
+</app-section>

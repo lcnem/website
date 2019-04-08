@@ -1,41 +1,36 @@
-<header fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
-  <div fxFlex="50" fxLayout="column" fxLayoutAlign="center">
-    <h2>{{translation.top[lang]}}</h2>
-    <a mat-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com"
-      target="_blank">{{translation.gettingStarted[lang]}}</a>
-  </div>
-  <img fxFlex="50" src="assets/images/pegged-asset.svg" />
-</header>
-<section>
-  <h2>LCNEM Cheque</h2>
-  <ng-container *ngIf="lang === 'en'">
-    <section>
-      <h3>LCNEM Chequeとは</h3>
-      <p>LCNEM Chequeは、ブロックチェーン上の電子マネーです。ブロックチェーンにおけるいわゆる「ステーブルコイン」としての役割を果たします。</p>
-      <p>プログラマブル、つまり自由にプログラムできる電子マネーとして活用することができます。</p>
-    </section>
-  </ng-container>
-  <ng-container *ngIf="lang === 'ja'">
-    <section>
-      <h3>LCNEM Chequeとは</h3>
-      <p>LCNEM Chequeは、ブロックチェーン上の電子マネーです。ブロックチェーンにおけるいわゆる「ステーブルコイン」としての役割を果たします。</p>
-      <p>プログラマブル、つまり自由にプログラムできる電子マネーとして活用することができます。</p>
-    </section>
-  </ng-container>
-  <section>
-    <h3>{{translation.supportingLedgers[lang]}}</h3>
-    <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
-      <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
-        <mat-card>
-          <img mat-card-image src="{{l.image}}" />
-          <mat-card-content>
-            <h3>{{l.name}}</h3>
-          </mat-card-content>
-        </mat-card>
-      </div>
+<app-header heading="LCNEM Cheque" image="assets/images/cheque/pegged-asset.svg">
+  <p>{{translation.top[lang]}}</p>
+  <a mat-button class="mat-radius-button" color="accent" href="https://cheque.lcnem.com"
+    target="_blank">{{translation.gettingStarted[lang]}}</a>
+</app-header>
+<ng-container *ngIf="lang === 'en'">
+  <app-section color="mat-primary">
+    <h3>LCNEM Chequeとは</h3>
+    <p>LCNEM Chequeは、ブロックチェーン上の電子マネーです。ブロックチェーンにおけるいわゆる「ステーブルコイン」としての役割を果たします。</p>
+    <p>プログラマブル、つまり自由にプログラムできる電子マネーとして活用することができます。</p>
+  </app-section>
+</ng-container>
+<ng-container *ngIf="lang === 'ja'">
+  <app-section color="mat-primary">
+    <h3>LCNEM Chequeとは</h3>
+    <p>LCNEM Chequeは、ブロックチェーン上の電子マネーです。ブロックチェーンにおけるいわゆる「ステーブルコイン」としての役割を果たします。</p>
+    <p>プログラマブル、つまり自由にプログラムできる電子マネーとして活用することができます。</p>
+  </app-section>
+</ng-container>
+<app-section>
+  <h3>{{translation.supportingLedgers[lang]}}</h3>
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
+    <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+      <mat-card>
+        <img mat-card-image src="{{l.image}}" />
+        <mat-card-content>
+          <h3>{{l.name}}</h3>
+        </mat-card-content>
+      </mat-card>
     </div>
-  </section>
-
+  </div>
+</app-section>
+<app-section>
   <a mat-raised-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com" target="_blank"
     fxFill>{{translation.gettingStarted[lang]}}</a>
-</section>
+</app-section>

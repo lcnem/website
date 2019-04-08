@@ -1,10 +1,7 @@
-<header fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
-  <div fxFlex="50" fxLayout="column" fxLayoutAlign="center">
-    <h2>{{translation.top[lang]}}</h2>
-  </div>
-  <img fxFlex="50" src="assets/images/lcnem.svg" />
-</header>
-<section>
+<app-header heading="{{translation.lcnem[lang]}}" image="assets/images/lcnem.svg">
+  <p>{{translation.top[lang]}}</p>
+</app-header>
+<app-section color="mat-primary">
   <ng-container *ngIf="lang === 'en'">
     <h2>理念</h2>
     <p>経済厚生を高めることがLCNEMのミッションです。</p>
@@ -22,8 +19,8 @@
     <li>narrow-bank</li>
     <li>short-form of them</li>
   </ul>
-</section>
-<section>
+</app-section>
+<app-section>
   <h2>{{translation.services[lang]}}</h2>
   <div fxLayout="row wrap" fxLayoutGap="16px grid" class="service">
     <div fxFlex="50" fxFlex.xs="100" *ngFor="let s of service">
@@ -40,8 +37,8 @@
       </mat-card>
     </div>
   </div>
-</section>
-<section>
+</app-section>
+<app-section>
   <h2>{{translation.media[lang]}}</h2>
   <div fxLayout="row wrap" fxLayoutGap="16px grid" class="media">
     <div fxFlex="50" fxFlex.xs="100" *ngFor="let m of media">
@@ -59,4 +56,4 @@
       </mat-card>
     </div>
   </div>
-</section>
+</app-section>

@@ -1,12 +1,18 @@
-mat-divider {
-  margin-top: 16px;
+footer {
+  color: white;
+  background: #222222;
+  line-height: 200%;
 }
 
-footer {
-  margin-top: 16px;
+footer a {
+  color: inherit;
 }
 
 footer p {
-  margin: 16px;
+  margin: 0;
   text-align: center;
+}
+
+.app-nav-list-container {
+  background-color: rgba(255, 255, 255, 0.2);
 }

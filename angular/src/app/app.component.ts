@@ -23,27 +23,4 @@ export class AppComponent implements OnInit {
       }
     });
   }
-
-  public translation = {
-    home: {
-      en: "Home",
-      ja: "ホーム"
-    } as any,
-    aboutCompany: {
-      en: 'About us',
-      ja: '会社概要'
-    } as any,
-    contacts: {
-      en: 'Contacts',
-      ja: '問い合わせ'
-    } as any,
-    recruiteInformation: {
-      en: 'Recruite',
-      ja: '採用情報'
-    } as any,
-    mediaKit: {
-      en: 'Media kit',
-      ja: 'メディアキット'
-    } as any
-  };
 }
