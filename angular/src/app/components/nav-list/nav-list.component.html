@@ -1,21 +1,21 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/">
+  <a mat-list-item [routerLink]="'/'">
     <mat-icon mat-list-icon>home</mat-icon>
     <span>{{translation.home[lang]}}</span>
   </a>
-  <a mat-list-item routerLink="/company/about">
+  <a mat-list-item [routerLink]="'/company/about'">
     <mat-icon mat-list-icon>location_city</mat-icon>
     <span>{{translation.aboutCompany[lang]}}</span>
   </a>
-  <a mat-list-item routerLink="/company/contact">
+  <a mat-list-item [routerLink]="'/company/contact'">
     <mat-icon mat-list-icon>contacts</mat-icon>
     <span>{{translation.contacts[lang]}}</span>
   </a>
-  <a mat-list-item routerLink="/company/recruit">
+  <a mat-list-item [routerLink]="'/company/recruit'">
     <mat-icon mat-list-icon>person_add</mat-icon>
     <span>{{translation.recruiteInformation[lang]}}</span>
   </a>
-  <a mat-list-item routerLink="/company/media-kit">
+  <a mat-list-item [routerLink]="'/company/media-kit'">
     <mat-icon mat-list-icon>perm_media</mat-icon>
     <span>{{translation.mediaKit[lang]}}</span>
   </a>

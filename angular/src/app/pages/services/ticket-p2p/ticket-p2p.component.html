@@ -1,27 +1,27 @@
-<app-header heading="Ticket Peer to Peer" image="assets/images/ticket-p2p/ticket-p2p.svg">
+<app-header [heading]="'Ticket Peer to Peer'" [image]="'assets/images/ticket-p2p/ticket-p2p.svg'">
   <p>{{translation.top[lang]}}</p>
-  <a mat-button class="mat-radius-button" color="accent" href="https://github.com/lcnem/ticket-p2p/wiki/{{lang}}"
-    target="_blank">GitHub</a>
+  <a mat-button class="mat-radius-button" href="https://github.com/lcnem/ticket-p2p/wiki/{{lang}}" target="_blank"
+    [color]="'accent'">GitHub</a>
 </app-header>
-<ng-container *ngIf="lang === 'en'">
-  <app-section color="black">
-    <h3>Ticket Peer to Peerとは</h3>
-    <p>
-      Ticket Peer to Peerは、本人確認情報の紐づけといった方法ではなく、転売通報の経済学的インセンティブ設計によって、低コストで転売を防止するシステムです。
-      チケットやゲームアカウントなどへの応用が見込まれています。
-    </p>
-  </app-section>
-</ng-container>
-<ng-container *ngIf="lang === 'ja'">
-  <app-section color="black">
+
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">info</mat-icon>
+  <ng-container *ngIf="lang === 'en'">
     <h3>Ticket Peer to Peerとは</h3>
     <p>
       Ticket Peer to Peerは、本人確認情報の紐づけといった方法ではなく、転売通報の経済学的インセンティブによるメカニズムデザインによって、低コストで転売を防止するシステムです。
       チケットやゲームアカウントなどへの応用が見込まれています。
     </p>
-  </app-section>
-</ng-container>
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>Ticket Peer to Peerとは</h3>
+    <p>
+      Ticket Peer to Peerは、本人確認情報の紐づけといった方法ではなく、転売通報の経済学的インセンティブによるメカニズムデザインによって、低コストで転売を防止するシステムです。
+      チケットやゲームアカウントなどへの応用が見込まれています。
+    </p>
+  </ng-container>
+</app-section>
 <app-section>
-  <a mat-raised-button class="mat-radius-button" color="accent" routerLink="/company/contact"
+  <a mat-raised-button class="mat-radius-button" [color]="'accent'" [routerLink]="'/company/contact'"
     fxFill>{{translation.contact[lang]}}</a>
 </app-section>

@@ -1,58 +1,69 @@
-<app-header heading="LCNEM Wallet" image="assets/images/wallet/billboard.png">
+<app-header [heading]="'LCNEM Wallet'" [image]="'assets/images/wallet/billboard.png'">
   <p>{{translation.top[lang]}}</p>
-  <a mat-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com"
-    target="_blank">{{translation.gettingStarted[lang]}}</a>
+  <a mat-button class="mat-radius-button" href="https://wallet.lcnem.com" target="_blank"
+    [color]="'accent'">{{translation.gettingStarted[lang]}}</a>
 </app-header>
-<ng-container *ngIf="lang === 'en'">
-  <app-section color="mat-primary">
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">card_giftcard</mat-icon>
+  <ng-container *ngIf="lang === 'en'">
     <h3>XEMの無料取得</h3>
     <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
-  </app-section>
-  <app-section color="black">
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>XEMの無料取得</h3>
+    <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
+  </ng-container>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">contacts</mat-icon>
+  <ng-container *ngIf="lang === 'en'">
     <h3>コンタクトリスト</h3>
     <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
-  </app-section>
-  <app-section color="mat-primary">
-    <h3>Googleアカウントログイン</h3>
-    <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
-  </app-section>
-  <app-section color="black">
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>コンタクトリスト</h3>
+    <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
+  </ng-container>
+</app-section>
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">account_box</mat-icon>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Googleログイン</h3>
+    <p>コンタクトリスト情報などはすべてGoogleアカウントに紐づけて保管されるため、全デバイスで共通して使うことができます。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>Googleログイン</h3>
+    <p>コンタクトリスト情報などはすべてGoogleアカウントに紐づけて保管されるため、全デバイスで共通して使うことができます。</p>
+  </ng-container>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">group</mat-icon>
+  <ng-container *ngIf="lang === 'en'">
     <h3>マルチアドレス</h3>
     <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
-  </app-section>
-  <app-section color="mat-primary">
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>マルチアドレス</h3>
+    <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
+  </ng-container>
+</app-section>
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">info</mat-icon>
+  <ng-container *ngIf="lang === 'en'">
     <h3>確認されている事象</h3>
     <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
     <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
-  </app-section>
-</ng-container>
-<ng-container *ngIf="lang === 'ja'">
-  <app-section color="mat-primary">
-    <h3>XEMの無料取得</h3>
-    <p>NEMブロックチェーンの手数料として使う暗号資産「XEM」の残高が1XEM未満の方は、24時間に1回、1XEMを無料で取得することができます！</p>
-  </app-section>
-  <app-section color="black">
-    <h3>コンタクトリスト</h3>
-    <p>送信先のアドレスを毎回入力しなくても、コンタクトリストに登録された名前を入力するだけで自動入力できます。</p>
-  </app-section>
-  <app-section color="mat-primary">
-    <h3>Googleアカウントログイン</h3>
-    <p>コンタクトリストなどはすべてGoogleアカウントに紐付いて保管されるので、どのデバイスからアクセスしてもコンタクトリストなどの情報を共有できます。</p>
-  </app-section>
-  <app-section color="black">
-    <h3>マルチアドレス</h3>
-    <p>1つのGoogleアカウントで、複数のブロックチェーンアドレスを保管することができます。</p>
-  </app-section>
-  <app-section color="mat-primary">
+  </ng-container>
+  <ng-container *ngIf="lang === 'ja'">
     <h3>確認されている事象</h3>
     <p>iOSでホーム画面から起動することで不具合が生じる場合があります。その場合はブラウザから起動してください。</p>
     <p>iOSではChromeでQRスキャン機能を使うことができません。Safariをお使いください。</p>
-  </app-section>
-</ng-container>
+  </ng-container>
+</app-section>
 <app-section>
   <h3>{{translation.supportingLedgers[lang]}}</h3>
-  <div fxLayout="row wrap" fxLayoutGap="16px grid" class="ledger">
-    <div fxFlex="50" fxFlex.xs="100" *ngFor="let l of ledger">
+  <div class="ledger" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div *ngFor="let l of ledger" [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
         <img mat-card-image src="{{l.image}}" />
         <mat-card-content>
@@ -63,6 +74,6 @@
   </div>
 </app-section>
 <app-section>
-  <a mat-raised-button class="mat-radius-button" color="accent" href="https://wallet.lcnem.com" target="_blank"
-    fxFill>{{translation.gettingStarted[lang]}}</a>
+  <a mat-raised-button fxFill class="mat-radius-button" href="https://wallet.lcnem.com" target="_blank"
+    [color]="'accent'">{{translation.gettingStarted[lang]}}</a>
 </app-section>

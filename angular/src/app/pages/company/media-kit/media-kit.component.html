@@ -1,18 +1,18 @@
 <app-section>
   <h2>{{translation.mediaKit[lang]}}</h2>
-  <div fxLayout="row wrap" fxLayoutGap="16px">
-    <mat-card fxFlex="50" fxFlex.xs="100">
+  <div [fxLayout]="'row wrap'" [fxLayoutGap]="'16px'">
+    <mat-card [fxFlex]="50" [fxFlex.xs]="100">
       <img mat-card-image src="assets/images/lcnem.svg">
       <mat-card-actions>
         <div fxLayout="row wrap" fxLayoutGap="16px grid">
           <div fxFlex="50" fxFlex.xs="100">
-            <a mat-button class="mat-radius-button" color="accent" href="assets/images/lcnem.svg" download fxFill>
+            <a mat-button fxFill class="mat-radius-button" href="assets/images/lcnem.svg" [color]="'accent'" [download]>
               <mat-icon>save_alt</mat-icon>
               <span>SVG</span>
             </a>
           </div>
           <div fxFlex="50" fxFlex.xs="100">
-            <a mat-button class="mat-radius-button" color="accent" href="favicon.png" download fxFill>
+            <a mat-button fxFill class="mat-radius-button" href="favicon.png" [color]="'accent'" [download]>
               <mat-icon>save_alt</mat-icon>
               <span>PNG</span>
             </a>

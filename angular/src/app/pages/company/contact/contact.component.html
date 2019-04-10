@@ -2,30 +2,30 @@
   <h2>{{translation.contact[lang]}}</h2>
   <form #form="ngForm" (ngSubmit)="sendMail()">
     <mat-form-field fxFill>
-      <input matInput placeholder="{{translation.name[lang]}}" [(ngModel)]="forms.name" name="name" required />
+      <input matInput name="name" placeholder="{{translation.name[lang]}}" required [(ngModel)]="forms.name" />
     </mat-form-field>
     <mat-form-field fxFill>
-      <input matInput type="email" placeholder="{{translation.email[lang]}}" [(ngModel)]="forms.email" name="email"
-        required />
+      <input matInput name="email" placeholder="{{translation.email[lang]}}" required type="email"
+        [(ngModel)]="forms.email" />
     </mat-form-field>
     <mat-form-field fxFill>
-      <mat-select placeholder="{{translation.subject[lang]}}" [(ngModel)]="forms.subject" name="subject" required>
+      <mat-select name="subject" placeholder="{{translation.subject[lang]}}" required [(ngModel)]="forms.subject">
         <ng-container *ngFor="let subject of translation.subjects; let i = index">
-          <mat-option value="{{i}}">{{subject[lang]}}</mat-option>
+          <mat-option [value]="i">{{subject[lang]}}</mat-option>
         </ng-container>
       </mat-select>
     </mat-form-field>
     <mat-form-field fxFill>
-      <textarea matInput placeholder="{{translation.body[lang]}}" [(ngModel)]="forms.body" name="body"
-        required></textarea>
+      <textarea matInput name="body" placeholder="{{translation.body[lang]}}" required
+        [(ngModel)]="forms.body"></textarea>
     </mat-form-field>
     <div class="checkbox">
-      <mat-checkbox fxFill [(ngModel)]="forms.agree" name="agree" required>
+      <mat-checkbox fxFill name="agree" required [(ngModel)]="forms.agree">
         <span *ngIf="lang == 'ja'"><a routerLink="/privacy-policy">プライバシーポリシ</a>に同意する</span>
         <span *ngIf="lang == 'en'">I agree to <a routerLink="/privacy-policy">privacy policy</a></span>
       </mat-checkbox>
     </div>
 
-    <button mat-raised-button color="accent" fxFill [disabled]="form.invalid">{{translation.send[lang]}}</button>
+    <button mat-raised-button fxFill [color]="'accent'" [disabled]="form.invalid">{{translation.send[lang]}}</button>
   </form>
 </app-section>
