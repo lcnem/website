@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       image: 'assets/images/lcnem.svg',
       copy: {
         en: 'Programmable e-money on blockchains',
-        ja: 'ブロックチェーン上のプログラマブル電子マネー'
+        ja: 'ブロックチェーン上の新型プログラマブル電子マネー（ステーブルコイン）'
       } as any
     },
     {
