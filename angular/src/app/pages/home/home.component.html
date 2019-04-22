@@ -39,19 +39,17 @@
   </div>
 </app-section>
 <app-section>
-  <h2>{{translation.media[lang]}}</h2>
-  <div class="media" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
-    <div *ngFor="let m of media" [fxFlex]="50" [fxFlex.xs]="100">
+  <h2>{{translation.partners[lang]}}</h2>
+  <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div *ngFor="let p of partners" [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
-        <img mat-card-image src="{{m.image}}" />
+        <img mat-card-image src="{{p.image}}" />
         <mat-card-content>
-          <h3>{{m.title}}</h3>
+          <p>{{p.description[lang]}}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-button fxFill class="mat-radius-button" href="{{m.url}}" target="_blank" [color]="'primary'">
-            <img class="icon" src="{{m.icon}}" />
-            <span>{{m.name}} <wbr/> {{m.date}}</span>
-          </a>
+          <a mat-button fxFill class="mat-radius-button" href="{{p.link}}" target="_blank"
+            [color]="'primary'">{{p.name}}<mat-icon>open_in_new</mat-icon></a>
         </mat-card-actions>
       </mat-card>
     </div>

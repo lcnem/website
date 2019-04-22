@@ -4,8 +4,8 @@
   height: 200px;
 }
 
-/* media */
-.media .mat-card-image {
+/* partner */
+.partner .mat-card-image {
   object-fit: cover;
   height: 200px;
 }

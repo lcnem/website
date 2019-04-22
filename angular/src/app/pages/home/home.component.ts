@@ -59,44 +59,28 @@ export class HomeComponent implements OnInit {
         ja: 'コンサルティング'
       } as any
     },
-  ]
+  ];
 
-  public media = [
+  public partners = [
     {
-      name: 'TechCrunch',
-      url: 'https://jp.techcrunch.com/2018/09/20/lcnem-ticketp2p/',
-      icon: 'assets/images/media/tech-crunch.svg',
-      image: 'assets/images/lcnem.svg',
-      title: 'ブロックチェーンでチケット転売防止、京大発スタートアップLCNEM...',
-      date: '2018.9.20'
+      name: 'Ether Security',
+      link: 'http://etherinc.co/',
+      image: 'assets/images/partners/etherinc_bnr.png',
+      description: {
+        en: 'Blockchain nodes management, validation of lcnemint',
+        ja: '各種ブロックチェーンノード運用、lcnemintのバリデーション'
+      } as any
     },
     {
-      name: 'CoinTelegraph',
-      url:
-        'https://jp.cointelegraph.com/news/lcnem-sells-nem-based-stable-coins',
-      icon: 'assets/images/media/cointelegraph.svg',
-      image: 'assets/images/media/coinbase.png',
-      title: 'ネムウォレットのLCNEM、モザイクで発行した前払式支払手段を販売',
-      date: '2018.6.25'
-    },
-    {
-      name: '仮想通貨Watch',
-      url:
-        'https://crypto.watch.impress.co.jp/img/ctw/docs/1138/641/html/image01_o.jpg.html',
-      icon: 'assets/images/media/crypto-watch.png',
-      image: 'assets/images/media/crypto-watch.jpg',
-      title: '金融庁がLCNEMのステーブルコインは資金決済法上の「仮想通貨」で...',
-      date: '2018.8.20'
+      name: 'United Bitcoiners',
+      link: 'http://www.unitedbitcoiners.com/',
+      image: 'assets/images/partners/ub.png',
+      description: {
+        en: 'Validation of lcnemint, Lightning Network technology',
+        ja: 'lcnemintのバリデーション、Lightning Network技術'
+      } as any
     }
-  ] as {
-    name: string;
-    url: string;
-    icon: string;
-    image: string;
-    title: string;
-    date: string;
-  }[];
-
+  ]
 
   public translation = {
     lcnem: {
@@ -115,13 +99,9 @@ export class HomeComponent implements OnInit {
       en: 'Read more',
       ja: '詳しく見る'
     } as any,
-    business: {
-      en: 'Business',
-      ja: '事業内容'
-    } as any,
-    media: {
-      en: 'List of Past Media Coverage',
-      ja: 'メディア掲載実績'
+    partners: {
+      en: 'Partners',
+      ja: 'パートナー'
     } as any
   };
 

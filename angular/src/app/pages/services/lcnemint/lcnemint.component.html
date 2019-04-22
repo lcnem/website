@@ -30,12 +30,12 @@
       <mat-card>
         <img mat-card-image src="{{w.image}}" />
         <mat-card-content>
-          <h3>{{w.name}}</h3>
           <p>{{w.description[lang]}}</p>
         </mat-card-content>
         <mat-card-actions>
           <a mat-button fxFill class="mat-radius-button" href="{{w.link}}" target="_blank" [color]="'primary'">
             {{w.name}}
+            <mat-icon>open_in_new</mat-icon>
           </a>
         </mat-card-actions>
       </mat-card>
