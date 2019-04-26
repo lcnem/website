@@ -5,7 +5,7 @@ install:
 
 build:
 	@cd angular &&\
-	ng build --prod
+	npm run build
 
 start:
 	@cd angular &&\
