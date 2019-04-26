@@ -1,7 +1,7 @@
 
 install:
 	@cd angular &&\
-	npm ci
+	npm i
 
 build:
 	@cd angular &&\
@@ -31,7 +31,7 @@ deploy/angular: build
 	@cd firebase &&\
 	firebase deploy --only hosting
 
-deploy/angular/ci: build
+deploy/angular/ci:
 	@which firebase || npm install -g firebase-tools
 	@cd firebase &&\
 	firebase deploy --only hosting --token $(FIREBASE_TOKEN)
