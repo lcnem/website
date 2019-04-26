@@ -1,0 +1,58 @@
+version: 2
+jobs:
+  test:
+    working_directory: ~/lcnem-website
+    docker:
+      - image: circleci/node:8-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+      - run:
+          name: npm install
+          command: make install
+      - save_cache:
+          key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+          paths:
+            - "angular/node_modules"
+      - run:
+          name: unit test
+          command: make test/ci
+      - run:
+          name: e2e test
+          command: make e2e/ci
+
+  deploy_angular:
+    working_directory: ~/lcnem-website
+    docker:
+      - image: circleci/node:8-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+      - run:
+          name: npm install
+          command: make install
+      - save_cache:
+          key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+          paths:
+            - "angular/node_modules"
+      - run:
+          name: build
+          command: make build
+      - run:
+          name: deploy
+          command: make deploy/angular/ci
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - test
+      - deploy_angular:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
