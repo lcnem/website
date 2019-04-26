@@ -32,7 +32,7 @@ deploy/angular: build
 	firebase deploy --only hosting
 
 deploy/angular/ci:
-	@which firebase || npm install -g firebase-tools
+	@which firebase || sudo npm install -g firebase-tools
 	@cd firebase &&\
 	firebase deploy --only hosting --token $(FIREBASE_TOKEN)
 
