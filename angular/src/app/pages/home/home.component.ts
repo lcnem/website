@@ -51,12 +51,12 @@ export class HomeComponent implements OnInit {
       } as any
     },
     {
-      name: 'Consulting',
+      name: 'OEM/Consulting',
       link: '/services/consulting',
       image: 'assets/images/consulting/whiteboard_memo.png',
       copy: {
-        en: 'Consulting',
-        ja: 'コンサルティング'
+        en: 'OEM/Consulting',
+        ja: '受託開発/コンサルティング'
       } as any
     },
   ];

@@ -33,8 +33,8 @@ export class ConsultingComponent implements OnInit {
 
   public translation = {
     consulting: {
-      en: "Consulting",
-      ja: "コンサルティング"
+      en: "OEM/Consulting",
+      ja: "受託開発/コンサルティング"
     } as any,
     contact: {
       en: "Contact us",
