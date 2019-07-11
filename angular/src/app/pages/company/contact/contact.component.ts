@@ -54,8 +54,12 @@ export class ContactComponent implements OnInit {
         ja: '業務提携や投資について'
       } as any,
       {
-        en: 'OEM/Consulting',
-        ja: '受託開発/コンサルティングの依頼'
+        en: 'Consulting',
+        ja: 'コンサルティングの依頼'
+      } as any,
+      {
+        en: 'Contract development',
+        ja: '受託開発の依頼'
       } as any,
     ],
     body: {

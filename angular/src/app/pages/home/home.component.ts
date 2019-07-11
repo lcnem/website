@@ -23,6 +23,15 @@ export class HomeComponent implements OnInit {
         ja: 'ブロックチェーン上の新型プログラマブル電子マネー（ステーブルコイン）'
       } as any
     },
+    /*{
+      name: 'Yourcoin',
+      link: '/services/yourcoin',
+      image: 'assets/images/lcnem.svg',
+      copy: {
+        en: '',
+        ja: 'ブロックチェーンに自社用電子マネーを発行・管理できるサービス'
+      } as any
+    },*/
     {
       name: 'lcnemint',
       link: '/services/lcnemint',
@@ -51,14 +60,23 @@ export class HomeComponent implements OnInit {
       } as any
     },
     {
-      name: 'OEM/Consulting',
+      name: 'Consulting',
       link: '/services/consulting',
       image: 'assets/images/consulting/whiteboard_memo.png',
       copy: {
-        en: 'OEM/Consulting',
-        ja: '受託開発/コンサルティング'
+        en: 'Consulting',
+        ja: 'コンサルティング'
       } as any
     },
+    /*{
+      name: 'Contract development',
+      link: '/services/contract-development',
+      image: 'assets/images/consulting/whiteboard_memo.png',
+      copy: {
+        en: 'Contract development',
+        ja: '受託開発'
+      } as any
+    }*/
   ];
 
   public partners = [
