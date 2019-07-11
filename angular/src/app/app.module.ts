@@ -40,9 +40,11 @@ import { WalletComponent } from './pages/services/wallet/wallet.component';
 import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
 import { ChequeComponent } from './pages/services/cheque/cheque.component';
+import { YourcoinComponent } from './pages/services/yourcoin/yourcoin.component';
 import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.component';
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
+import { ContractDevelopmentComponent } from './pages/services/contract-development/contract-development.component';
 import { TwitterTimelineComponent } from './components/twitter-timeline/twitter-timeline.component';
 import { MediaKitComponent } from './pages/company/media-kit/media-kit.component';
 import { SectionComponent } from './components/section/section.component';
@@ -69,14 +71,16 @@ import { effects } from './services/effect';
     LanguageMenuComponent,
     RecruitComponent,
     ChequeComponent,
+    YourcoinComponent,
     TicketP2pComponent,
     LcnemintComponent,
     ConsultingComponent,
+    ContractDevelopmentComponent,
     TwitterTimelineComponent,
     MediaKitComponent,
     SectionComponent,
     HeaderComponent,
-    NavListComponent
+    NavListComponent,
   ],
   imports: [
     BrowserModule,

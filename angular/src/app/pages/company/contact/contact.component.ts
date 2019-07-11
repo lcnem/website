@@ -58,9 +58,9 @@ export class ContactComponent implements OnInit {
         ja: 'コンサルティングの依頼'
       } as any,
       {
-        en: 'Job searching',
-        ja: '就労の応募について'
-      } as any
+        en: 'Contract development',
+        ja: '受託開発の依頼'
+      } as any,
     ],
     body: {
       en: 'Content',

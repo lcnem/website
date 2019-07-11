@@ -23,12 +23,8 @@ export class ConsultingComponent implements OnInit {
     },
     {
       image: 'assets/images/dlt/tendermint.svg',
-      name: 'Tendermint'
+      name: 'Tendermint(Cosmos SDK)'
     },
-    {
-      image: 'assets/images/dlt/bitcoin.svg',
-      name: 'Bitcoin'
-    }
   ];
 
   public translation = {
