@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { LanguageService } from '../../../services/language/language.service';
-import { LoadingDialogComponent } from '../../../components/loading-dialog/loading-dialog.component';
+import { LoadingDialogComponent } from '../../../shared/loading-dialog/loading-dialog.component';
 
 @Component({
   selector: 'app-contact',

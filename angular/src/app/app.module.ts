@@ -31,13 +31,13 @@ import {
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { AboutComponent } from './pages/company/about/about.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { PrivacyPolicyComponent } from './pages/terms/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './pages/company/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoadingDialogComponent } from './components/loading-dialog/loading-dialog.component';
+import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
 import { WalletComponent } from './pages/services/wallet/wallet.component';
-import { LanguageMenuComponent } from './components/language-menu/language-menu.component';
+import { LanguageMenuComponent } from './shared/language-menu/language-menu.component';
 import { RecruitComponent } from './pages/company/recruit/recruit.component';
 import { ChequeComponent } from './pages/services/cheque/cheque.component';
 import { YourcoinComponent } from './pages/services/yourcoin/yourcoin.component';
@@ -45,11 +45,11 @@ import { TicketP2pComponent } from './pages/services/ticket-p2p/ticket-p2p.compo
 import { LcnemintComponent } from './pages/services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './pages/services/consulting/consulting.component';
 import { ContractDevelopmentComponent } from './pages/services/contract-development/contract-development.component';
-import { TwitterTimelineComponent } from './components/twitter-timeline/twitter-timeline.component';
+import { TwitterTimelineComponent } from './shared/twitter-timeline/twitter-timeline.component';
 import { MediaKitComponent } from './pages/company/media-kit/media-kit.component';
-import { SectionComponent } from './components/section/section.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NavListComponent } from './components/nav-list/nav-list.component';
+import { SectionComponent } from './shared/section/section.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { NavListComponent } from './shared/nav-list/nav-list.component';
 
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './services/reducer';
