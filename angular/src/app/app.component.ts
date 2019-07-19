@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { LanguageService } from './services/language/language.service';
+import { LanguageService } from './shared/language.service';
 
 @Component({
   selector: 'app-root',
