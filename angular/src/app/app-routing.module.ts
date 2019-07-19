@@ -6,9 +6,9 @@ import { AboutComponent } from './company/about/about.component';
 import { PrivacyPolicyComponent } from './company/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './company/contact/contact.component';
 import { RecruitComponent } from './company/recruit/recruit.component';
-import { ChequeComponent } from './pages/services/cheque/cheque.component';
+import { ChequeComponent } from './services/cheque/cheque.component';
 import { LcnemintComponent } from './services/lcnemint/lcnemint.component';
-import { ConsultingComponent } from './pages/services/consulting/consulting.component';
+import { ConsultingComponent } from './services/consulting/consulting.component';
 import { ContractDevelopmentComponent } from './services/contract-development/contract-development.component';
 import { MediaKitComponent } from './company/media-kit/media-kit.component';
 

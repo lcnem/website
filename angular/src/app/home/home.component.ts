@@ -28,8 +28,8 @@ export class HomeComponent implements OnInit {
       url: 'https://wallet.lcnem.com',
       image: 'assets/images/services/wallet.png',
       copy: {
-        en: 'The wallet application for using LCNEM Cheque easily',
-        ja: 'LCNEM Chequeが簡単に使えるウォレットアプリ'
+        en: 'The wallet application for blockchains',
+        ja: 'ブロックチェーンを使えるウォレットアプリ'
       } as any
     },
     {
@@ -48,6 +48,15 @@ export class HomeComponent implements OnInit {
       copy: {
         en: 'Contract development',
         ja: '受託開発'
+      } as any
+    },
+    {
+      name: 'LCNEM Inside',
+      url: 'https://inside.lcnem.com',
+      image: 'assets/images/lcnem.svg',
+      copy: {
+        en: 'The media of technologies and corporate information of LCNEM',
+        ja: 'LCNEMの技術・社内情報メディア'
       } as any
     },
     {

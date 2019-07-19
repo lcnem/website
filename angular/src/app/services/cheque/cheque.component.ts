@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../../../shared/language.service';
+import { LanguageService } from '../../shared/language.service';
 @Component({
   selector: 'app-cheque',
   templateUrl: './cheque.component.html',

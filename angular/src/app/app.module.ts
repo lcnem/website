@@ -31,50 +31,36 @@ import {
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { AboutComponent } from './company/about/about.component';
-import { FooterComponent } from './shared/footer/footer.component';
 import { PrivacyPolicyComponent } from './company/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './company/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
-import { LanguageMenuComponent } from './shared/language-menu/language-menu.component';
 import { RecruitComponent } from './company/recruit/recruit.component';
-import { ChequeComponent } from './pages/services/cheque/cheque.component';
+import { ChequeComponent } from './services/cheque/cheque.component';
 import { LcnemintComponent } from './services/lcnemint/lcnemint.component';
-import { ConsultingComponent } from './pages/services/consulting/consulting.component';
+import { ConsultingComponent } from './services/consulting/consulting.component';
 import { ContractDevelopmentComponent } from './services/contract-development/contract-development.component';
-import { TwitterTimelineComponent } from './shared/twitter-timeline/twitter-timeline.component';
 import { MediaKitComponent } from './company/media-kit/media-kit.component';
-import { SectionComponent } from './shared/section/section.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { NavListComponent } from './shared/nav-list/nav-list.component';
 
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './effect';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent,
     AboutComponent,
-    FooterComponent,
     PrivacyPolicyComponent,
     ContactComponent,
-    LoadingDialogComponent,
-    LanguageMenuComponent,
     RecruitComponent,
     ChequeComponent,
     LcnemintComponent,
     ConsultingComponent,
     ContractDevelopmentComponent,
-    TwitterTimelineComponent,
     MediaKitComponent,
-    SectionComponent,
-    HeaderComponent,
-    NavListComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,6 +71,7 @@ import { effects } from './effect';
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot(effects),
+    SharedModule,
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
@@ -104,7 +91,6 @@ import { effects } from './effect';
     MatStepperModule
   ],
   entryComponents: [
-    LoadingDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
