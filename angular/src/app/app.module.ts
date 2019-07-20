@@ -93,6 +93,7 @@ import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.c
     MatCheckboxModule,
   ],
   entryComponents: [
+    LoadingDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
