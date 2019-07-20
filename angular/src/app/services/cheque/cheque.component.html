@@ -13,10 +13,22 @@
   </ng-container>
 </app-section>
 <app-section>
-  <a mat-raised-button fxFill class="mat-radius-button" href="https://wallet.lcnem.com" target="_blank"
-    [color]="'accent'">{{translation.gettingStarted[lang]}}</a>
+  <div [fxLayout]="'row'" fxFill>
+    <h3>{{translation.gettingStarted[lang]}}</h3>
+    <span class="fill-remaining-space"></span>
+    <div>
+      <a mat-flat-button class="mat-radius-button" href="https://wallet.lcnem.com" target="_blank"
+        [color]="'accent'">{{translation.gettingStarted[lang]}}</a>
+    </div>
+  </div>
 </app-section>
 <app-section>
-  <a mat-raised-button fxFill class="mat-radius-button" [color]="'accent'"
-    [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
+  <div [fxLayout]="'row'" fxFill>
+    <h3>{{translation.contact[lang]}}</h3>
+    <span class="fill-remaining-space"></span>
+    <div>
+      <a mat-flat-button class="mat-radius-button" [color]="'accent'"
+        [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
+    </div>
+  </div>
 </app-section>

@@ -33,12 +33,12 @@ export class HomeComponent implements OnInit {
       } as any
     },
     {
-      name: 'Consulting',
+      name: 'Consulting/Lecture',
       link: '/services/consulting',
       image: 'assets/images/services/consulting.png',
       copy: {
-        en: 'Consulting',
-        ja: 'コンサルティング'
+        en: 'Consulting/Lecture',
+        ja: 'コンサルティング/講師'
       } as any
     },
     {

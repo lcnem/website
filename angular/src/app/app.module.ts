@@ -27,7 +27,8 @@ import {
   MatProgressSpinnerModule,
   MatCheckboxModule,
   MatSnackBarModule,
-  MatStepperModule
+  MatStepperModule,
+  MatChipsModule
 } from '@angular/material';
 import { FormsModule } from '../../node_modules/@angular/forms';
 import { AboutComponent } from './company/about/about.component';
@@ -74,6 +75,7 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     MatButtonModule,
     MatCardModule,
+    MatChipsModule,
     MatDialogModule,
     MatDividerModule,
     MatIconModule,
@@ -81,14 +83,14 @@ import { SharedModule } from './shared/shared.module';
     MatListModule,
     MatSelectModule,
     MatSidenavModule,
+    MatSnackBarModule,
+    MatStepperModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
     MatTooltipModule,
     MatMenuModule,
     HttpClientModule,
     MatCheckboxModule,
-    MatSnackBarModule,
-    MatStepperModule
   ],
   entryComponents: [
   ],

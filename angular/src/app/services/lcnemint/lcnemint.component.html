@@ -1,18 +1,19 @@
-<app-section>
-  <h2>lcnemint</h2>
-</app-section>
 <app-section [color]="'mat-primary'">
   <mat-icon style="font-size: 48px;" [inline]="true">info</mat-icon>
   <ng-container *ngIf="lang === 'en'">
     <h3>What is lcnemint?</h3>
     <p>
-      lcnemint is an original blockchain of LCNEM, Inc, which adopts to Cosmos network.<br />
+      lcnemint is an original blockchain of LCNEM, Inc. It is made with Cosmos SDK and adopts to <a
+        href="https://cosmos.network" target="_blank">Cosmos network.</a><br />
+      We will issue LCNEM Cheque (stable coin) on lcnemint.
     </p>
   </ng-container>
   <ng-container *ngIf="lang === 'ja'">
     <h3>lcnemintとは</h3>
     <p>
-      lcnemintは、LCNEM独自のブロックチェーンであり、Cosmos networkに対応します。<br />
+      lcnemintは、LCNEM独自のブロックチェーンです。Cosmos SDKで作られており、<a href="https://cosmos.network" target="_blank">Cosmos
+        network</a>に対応します。<br />
+      lcnemintに、LCNEM Cheque(ステーブルコイン)を発行します。
     </p>
   </ng-container>
 </app-section>
@@ -22,25 +23,12 @@
   <p>lcnemintのバリデータはコンソーシアム制（＝許可制）です。バリデータになっていただける法人を募集中です。問い合わせフォームよりお問い合わせください。</p>
 </app-section>
 <app-section>
-  <h3>{{translation.words[lang]}}</h3>
-  <div class="words" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
-    <div *ngFor="let w of words" [fxFlex]="50" [fxFlex.xs]="100">
-      <mat-card>
-        <img mat-card-image src="{{w.image}}" />
-        <mat-card-content>
-          <p>{{w.description[lang]}}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a mat-button fxFill class="mat-radius-button" href="{{w.link}}" target="_blank" [color]="'primary'">
-            {{w.name}}
-            <mat-icon>open_in_new</mat-icon>
-          </a>
-        </mat-card-actions>
-      </mat-card>
+  <div [fxLayout]="'row'" fxFill>
+    <h3>{{translation.contact[lang]}}</h3>
+    <span class="fill-remaining-space"></span>
+    <div>
+      <a mat-flat-button class="mat-radius-button" [color]="'accent'"
+        [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
     </div>
   </div>
-</app-section>
-<app-section>
-  <a mat-raised-button fxFill class="mat-radius-button" [color]="'accent'"
-    [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
 </app-section>

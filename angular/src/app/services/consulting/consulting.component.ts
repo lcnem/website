@@ -29,8 +29,8 @@ export class ConsultingComponent implements OnInit {
 
   public translation = {
     consulting: {
-      en: "Consulting",
-      ja: "コンサルティング"
+      en: "Consulting/Lecture",
+      ja: "コンサルティング/講師"
     } as any,
     contact: {
       en: "Contact us",
