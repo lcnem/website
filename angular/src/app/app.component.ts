@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { LanguageService } from './services/language/language.service';
+import { LanguageService } from './shared/language.service';
 
 @Component({
   selector: 'app-root',
@@ -23,4 +23,15 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  public translation = {
+    contacts: {
+      en: 'Contacts',
+      ja: '問い合わせ'
+    } as any,
+    recruiteInformation: {
+      en: 'Recruite',
+      ja: '採用情報'
+    } as any
+  };
 }

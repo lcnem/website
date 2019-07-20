@@ -1,0 +1,27 @@
+<app-header [heading]="translation.contractDevelopment[lang]"
+  [image]="'assets/images/services/contract-development.png'"></app-header>
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <h3>Webアプリ形式の業務用システム開発</h3>
+  <p>Webアプリ形式の業務用システムの開発を請け負います。Angularを使用します。</p>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <h3>Webアプリ形式の一般提供用システム開発</h3>
+  <p>Webアプリ形式の一般提供用システムの開発を請け負います。Angularを使用します。</p>
+</app-section>
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <h3>独自のブロックチェーン開発</h3>
+  <p>独自のブロックチェーンの開発を請け負います。設計に関してコンサルティングを行うことも可能です。Cosmos SDKを使用します。</p>
+</app-section>
+<app-section>
+  <div [fxLayout]="'row'" fxFill>
+    <h3>{{translation.contact[lang]}}</h3>
+    <span class="fill-remaining-space"></span>
+    <div>
+      <a mat-flat-button class="mat-radius-button" [color]="'accent'"
+        [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
+    </div>
+  </div>
+</app-section>

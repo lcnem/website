@@ -1,20 +1,20 @@
 <mat-drawer-container>
   <mat-drawer #drawer class="mat-elevation-z16" (click)="drawer.toggle()">
-    <mat-toolbar class="mat-elevation-z4 toolbar">
-      <img class="icon" src="assets/images/lcnem.svg" />
-      <h1>LCNEM</h1>
-      <span class="fill-remaining-space"></span>
-    </mat-toolbar>
-    <app-nav-list></app-nav-list>
   </mat-drawer>
   <mat-drawer-content class="mat-typography" id="mat-drawer-content">
     <mat-toolbar class="mat-elevation-z4 toolbar">
       <mat-toolbar-row class="container">
-        <button mat-icon-button (click)="drawer.toggle()">
-          <mat-icon>menu</mat-icon>
+        <button mat-icon-button [routerLink]="'/'">
+          <img class="icon" src="assets/images/lcnem.svg" />
         </button>
-        <h1>LCNEM</h1>
+        <h1 [fxHide.xs]="true">LCNEM</h1>
         <span class="fill-remaining-space"></span>
+        <a mat-button [routerLink]="'/company/contact'">
+          <span>{{translation.contacts[lang]}}</span>
+        </a>
+        <a mat-button [routerLink]="'/company/recruit'">
+          <span>{{translation.recruiteInformation[lang]}}</span>
+        </a>
         <app-language-menu></app-language-menu>
       </mat-toolbar-row>
     </mat-toolbar>
