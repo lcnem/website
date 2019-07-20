@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 import {
   MatInputModule,
@@ -48,6 +47,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './effect';
 import { SharedModule } from './shared/shared.module';
+import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +93,7 @@ import { SharedModule } from './shared/shared.module';
     MatCheckboxModule,
   ],
   entryComponents: [
+    LoadingDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
