@@ -1,0 +1,123 @@
+<app-header [heading]="translation.recruit[lang]" [image]="'assets/images/lcnem.svg'"></app-header>
+<app-section color="mat-primary">
+  <h3>給与</h3>
+  <p>給与は能力に応じて相談させていただきます。コミット度合いに応じてストックオプションがあります。</p>
+</app-section>
+<app-section>
+  <h3>勤務体系</h3>
+  <p>基本的には、月火水木金のフルタイムです。ただし、一定程度の生産性を持つと判断した方には、水曜休みで月火木金の勤務とします。</p>
+  <mat-horizontal-stepper>
+    <mat-step>
+      <ng-template matStepLabel>月</ng-template>
+      フルタイムです。
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>火</ng-template>
+      フルタイムです。
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>水</ng-template>
+      フルタイムです。ただし一定程度の生産性を持つと判断した方は休みとなります。
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>木</ng-template>
+      フルタイムです。
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>金</ng-template>
+      フルタイムです。
+    </mat-step>
+  </mat-horizontal-stepper>
+</app-section>
+<app-section color="mat-primary">
+  <h3>勤務地</h3>
+  <p>リモートワークが基本です。通勤はありません。</p>
+</app-section>
+<app-section>
+  <h3>エンジニアリングサイド募集</h3>
+  <p>サービスを一緒に作るエンジニアを募集しています！2つのコースに分けて募集をしていますが、入社後は興味に応じてどちらもやっていただきます。</p>
+  <div class="job" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>build</mat-icon>
+          <mat-card-title>Webアプリエンジニア</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h4>応募必要条件</h4>
+          <ul>
+            <li>Git,GitHubを使えること</li>
+            <li>HTML,CSS,JavaScriptを使えること</li>
+            <li>TypeScriptを使えること</li>
+            <li>Angular,Vue.js,Reactのうち1つ以上を使えること</li>
+          </ul>
+          <h4>なかで使える/習得できるスキル</h4>
+          <mat-chip-list>
+            <mat-chip>経済学</mat-chip>
+            <mat-chip>情報学</mat-chip>
+            <mat-chip>TypeScript</mat-chip>
+            <mat-chip>Angular</mat-chip>
+            <mat-chip>Firebase</mat-chip>
+            <mat-chip>Google Cloud Platform</mat-chip>
+            <mat-chip>Go</mat-chip>
+            <mat-chip>ブロックチェーン</mat-chip>
+            <mat-chip>Cosmos SDK</mat-chip>
+          </mat-chip-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>build</mat-icon>
+          <mat-card-title>データエンジニア</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h4>応募必要条件</h4>
+          <ul>
+            <li>Git,GitHubを使えること</li>
+            <li>Goを使えること</li>
+            <li>機械学習を使えること</li>
+          </ul>
+          <h4>なかで使える/習得できるスキル</h4>
+          <mat-chip-list>
+            <mat-chip>統計学</mat-chip>
+            <mat-chip>経済学</mat-chip>
+            <mat-chip>情報学</mat-chip>
+            <mat-chip>機械学習</mat-chip>
+            <mat-chip>Google Cloud Platform</mat-chip>
+            <mat-chip>Go</mat-chip>
+            <mat-chip>ブロックチェーン</mat-chip>
+            <mat-chip>Cosmos SDK</mat-chip>
+          </mat-chip-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</app-section>
+<app-section>
+  <h3>ビジネスサイド募集</h3>
+  <p>興味に応じてエンジニアリング習得も可能です。</p>
+  <div class="job" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>business</mat-icon>
+          <mat-card-title>マーケター</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h4>応募必要条件</h4>
+          <ul>
+            <li>実務経験2年以上</li>
+            <li>英語で基本的な意思疎通ができること</li>
+            <li>HTML,CSSを使えること</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</app-section>
+<app-section>
+  <a mat-raised-button fxFill class="mat-radius-button" [color]="'accent'"
+    [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
+</app-section>

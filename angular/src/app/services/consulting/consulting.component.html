@@ -1,0 +1,34 @@
+<app-header [heading]="translation.consulting[lang]" [image]="'assets/images/services/consulting.png'"></app-header>
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <h3>コンサルティング</h3>
+  <p>弊社の知見を活かした分散型台帳技術を利用するプロジェクトのコンサルティング業務を行っております。</p>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <h3>講師</h3>
+  <p>社内勉強会の講師や、イベントの登壇の依頼も承っております。</p>
+</app-section>
+<app-section>
+  <h3>知見のある分散型台帳技術</h3>
+  <div class="ledger" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div *ngFor="let l of ledger" [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <img mat-card-image src="{{l.image}}" />
+        <mat-card-content>
+          <h3>{{l.name}}</h3>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</app-section>
+<app-section>
+  <div [fxLayout]="'row'" fxFill>
+    <h3>{{translation.contact[lang]}}</h3>
+    <span class="fill-remaining-space"></span>
+    <div>
+      <a mat-flat-button class="mat-radius-button" [color]="'accent'"
+        [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
+    </div>
+  </div>
+</app-section>
