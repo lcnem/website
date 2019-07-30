@@ -1,7 +1,13 @@
 <app-header [heading]="translation.recruit[lang]" [image]="'assets/images/lcnem.svg'"></app-header>
 <app-section color="mat-primary">
-  <h3>給与</h3>
-  <p>給与は能力に応じて相談させていただきます。コミット度合いに応じてストックオプションがあります。</p>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>給与</h3>
+    <p>給与は能力に応じて相談させていただきます。コミット度合いに応じてストックオプションがあります。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Salary</h3>
+    <p>給与は能力に応じて相談させていただきます。コミット度合いに応じてストックオプションがあります。</p>
+  </ng-container>
 </app-section>
 <app-section>
   <h3>勤務体系</h3>
