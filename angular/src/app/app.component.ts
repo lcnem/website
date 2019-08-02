@@ -29,8 +29,8 @@ export class AppComponent implements OnInit {
       en: 'Contacts',
       ja: '問い合わせ'
     } as any,
-    recruitInformation: {
-      en: 'Recruit',
+    recruitmentInformation: {
+      en: 'Recruitment',
       ja: '採用情報'
     } as any
   };

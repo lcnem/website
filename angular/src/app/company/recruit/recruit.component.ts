@@ -14,8 +14,8 @@ export class RecruitComponent implements OnInit {
   ) { }
 
   public translation = {
-    recruit: {
-      en: 'Recruit',
+    recruitment: {
+      en: 'Recruitment',
       ja: '採用情報'
     } as any,
     contact: {

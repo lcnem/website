@@ -1,4 +1,4 @@
-<app-header [heading]="translation.recruit[lang]" [image]="'assets/images/lcnem.svg'"></app-header>
+<app-header [heading]="translation.recruitment[lang]" [image]="'assets/images/lcnem.svg'"></app-header>
 <app-section color="mat-primary">
   <ng-container *ngIf="lang === 'ja'">
     <h3>給与</h3>
@@ -6,42 +6,110 @@
   </ng-container>
   <ng-container *ngIf="lang === 'en'">
     <h3>Salary</h3>
-    <p>給与は能力に応じて相談させていただきます。コミット度合いに応じてストックオプションがあります。</p>
+    <p>We'll discuss your salary according to your ability. We will provide you with some stock options according to your commitment level.</p>
   </ng-container>
 </app-section>
 <app-section>
-  <h3>勤務体系</h3>
-  <p>基本的には、月火水木金のフルタイムです。ただし、一定程度の生産性を持つと判断した方には、水曜休みで月火木金の勤務とします。</p>
+  <ng-container *ngIf="lang === 'ja'">
+      <h3>勤務体系</h3>
+      <p>基本的には、月火水木金のフルタイムです。ただし、一定程度の生産性を持つと判断した方には、水曜休みで月火木金の勤務とします。</p>
+  </ng-container>>
+  <ng-container *ngIf="lang === 'en'">
+      <h3>Work Style</h3>
+      <p>It's the basic style that full-time working from Monday to Friday, but we can offer the merginal horiday on Wednesday if you can exert considerable productivity. </p>
+  </ng-container>>
   <mat-horizontal-stepper>
     <mat-step>
-      <ng-template matStepLabel>月</ng-template>
-      フルタイムです。
+      <ng-container *ngIf="lang === 'ja'">
+          <ng-template matStepLabel>月</ng-template>
+      </ng-container>
+      <ng-container *ngIf="lang === 'en'">
+          <ng-template matStepLabel>Mon</ng-template>
+      </ng-container>
+      <ng-container *ngIf="lang === 'ja'">
+          フルタイムです。
+      </ng-container>
+      <ng-container *ngIf="lang === 'en'">
+          full-time.
+      </ng-container>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>火</ng-template>
-      フルタイムです。
+        <ng-container *ngIf="lang === 'ja'">
+            <ng-template matStepLabel>火</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            <ng-template matStepLabel>Tue</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'ja'">
+            フルタイムです。
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            full-time.
+        </ng-container>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>水</ng-template>
-      フルタイムです。ただし一定程度の生産性を持つと判断した方は休みとなります。
+        <ng-container *ngIf="lang === 'ja'">
+            <ng-template matStepLabel>水</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            <ng-template matStepLabel>Wen</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'ja'">
+            フルタイムです。ただし一定以上の生産性を持つ人は休みです。
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            full-time, but those who can exert considerable productivity will be given merginal horiday.
+        </ng-container>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>木</ng-template>
-      フルタイムです。
+        <ng-container *ngIf="lang === 'ja'">
+            <ng-template matStepLabel>木</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            <ng-template matStepLabel>Thr</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'ja'">
+            フルタイムです。
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            full-time.
+        </ng-container>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>金</ng-template>
-      フルタイムです。
+        <ng-container *ngIf="lang === 'ja'">
+            <ng-template matStepLabel>金</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            <ng-template matStepLabel>Fri</ng-template>
+        </ng-container>
+        <ng-container *ngIf="lang === 'ja'">
+            フルタイムです。
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+            full-time.
+        </ng-container>
     </mat-step>
   </mat-horizontal-stepper>
 </app-section>
 <app-section color="mat-primary">
-  <h3>勤務地</h3>
-  <p>リモートワークが基本です。通勤はありません。</p>
+  <ng-container *ngIf="lang === 'ja'">
+      <h3>勤務地</h3>
+      <p>リモートワークが基本です。通勤はありません。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+      <h3>Work Place</h3>
+      <p> Telecommute is the basic style. Commute won't be needed.</p>
+  </ng-container>
 </app-section>
 <app-section>
-  <h3>エンジニアリングサイド募集</h3>
-  <p>サービスを一緒に作るエンジニアを募集しています！2つのコースに分けて募集をしていますが、入社後は興味に応じてどちらもやっていただきます。</p>
+  <ng-container *ngIf="lang === 'ja'">
+      <h3>エンジニアリングサイド募集</h3>
+      <p>サービスを一緒に作るエンジニアを募集しています！2つのコースに分けて募集をしていますが、入社後は興味に応じてどちらもやっていただきます。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+      <h3>Recruitment of the development-side menber</h3>
+      <p>We are recruiting engineers who can develop our services together! Two courses are prepared, but you should acquire contents of both courses finally according to your interest. </p>
+  </ng-container>
   <div class="job" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
     <div [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
