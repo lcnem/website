@@ -115,28 +115,60 @@
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>build</mat-icon>
-          <mat-card-title>Webアプリエンジニア</mat-card-title>
+          <ng-container *ngIf="lang === 'ja'">
+            <mat-card-title>Webアプリエンジニア</mat-card-title>
+          </ng-container>
+          <ng-container *ngIf="lang === 'en'">
+            <mat-card-title>Web Application Engineer</mat-card-title>
+          </ng-container>
         </mat-card-header>
         <mat-card-content>
-          <h4>応募必要条件</h4>
+          <ng-container *ngIf="lang === 'ja'">
+              <h4>応募必要条件</h4>
+          </ng-container>
+          <ng-container *ngIf="lang === 'en'">
+              <h4>Requirements</h4>
+          </ng-container>
+          <ng-container *ngIf="lang === 'ja'">
           <ul>
-            <li>Git,GitHubを使えること</li>
-            <li>HTML,CSS,JavaScriptを使えること</li>
-            <li>TypeScriptを使えること</li>
-            <li>Angular,Vue.js,Reactのうち1つ以上を使えること</li>
-          </ul>
-          <h4>なかで使える/習得できるスキル</h4>
-          <mat-chip-list>
-            <mat-chip>経済学</mat-chip>
-            <mat-chip>情報学</mat-chip>
-            <mat-chip>TypeScript</mat-chip>
-            <mat-chip>Angular</mat-chip>
-            <mat-chip>Firebase</mat-chip>
-            <mat-chip>Google Cloud Platform</mat-chip>
-            <mat-chip>Go</mat-chip>
-            <mat-chip>ブロックチェーン</mat-chip>
-            <mat-chip>Cosmos SDK</mat-chip>
-          </mat-chip-list>
+               <li>Git,GitHubを使えること</li>
+               <li>HTML,CSS,JavaScriptを使えること</li>
+               <li>TypeScriptを使えること</li>
+               <li>Angular,Vue.js,Reactのうち1つ以上を使えること</li>
+             </ul>
+             <h4>なかで使える/習得できるスキル</h4>
+             <mat-chip-list>
+               <mat-chip>経済学</mat-chip>
+               <mat-chip>情報学</mat-chip>
+               <mat-chip>TypeScript</mat-chip>
+               <mat-chip>Angular</mat-chip>
+               <mat-chip>Firebase</mat-chip>
+               <mat-chip>Google Cloud Platform</mat-chip>
+               <mat-chip>Go</mat-chip>
+               <mat-chip>ブロックチェーン</mat-chip>
+               <mat-chip>Cosmos SDK</mat-chip>
+             </mat-chip-list>
+             </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+              <ul>
+                <li>able to use Git,Github</li>
+                <li>able to use HTML,CSS,JavaScript</li>
+                <li>able to use TypeScript</li>
+                <li>able to use at least one of languages of Angular,Vue.js,React</li>
+              </ul>
+              <h4>Skills that can be used/learned inside</h4>
+              <mat-chip-list>
+                <mat-chip>Economics</mat-chip>
+                <mat-chip>Infomatics</mat-chip>
+                <mat-chip>TypeScript</mat-chip>
+                <mat-chip>Angular</mat-chip>
+                <mat-chip>Firebase</mat-chip>
+                <mat-chip>Google Cloud Platform</mat-chip>
+                <mat-chip>Go</mat-chip>
+                <mat-chip>Blockchains</mat-chip>
+                <mat-chip>Cosmos SDK</mat-chip>
+              </mat-chip-list>
+          </ng-container>
         </mat-card-content>
       </mat-card>
     </div>
@@ -144,10 +176,21 @@
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>build</mat-icon>
-          <mat-card-title>データエンジニア</mat-card-title>
+          <ng-container *ngIf="lang === 'ja'">
+              <mat-card-title>データエンジニア</mat-card-title>
+            </ng-container>
+            <ng-container *ngIf="lang === 'en'">
+              <mat-card-title>Data Engineer</mat-card-title>
+            </ng-container>
         </mat-card-header>
         <mat-card-content>
-          <h4>応募必要条件</h4>
+            <ng-container *ngIf="lang === 'ja'">
+                <h4>応募必要条件</h4>
+            </ng-container>
+            <ng-container *ngIf="lang === 'en'">
+                <h4>Requirements</h4>
+            </ng-container>
+            <ng-container *ngIf="lang === 'ja'">
           <ul>
             <li>Git,GitHubを使えること</li>
             <li>Goを使えること</li>
@@ -164,28 +207,68 @@
             <mat-chip>ブロックチェーン</mat-chip>
             <mat-chip>Cosmos SDK</mat-chip>
           </mat-chip-list>
+          </ng-container>
+          <ng-container *ngIf="lang === 'en'">
+              <ul>
+                <li>able to use Git,GitHub</li>
+                <li>able to use Go</li>
+                <li>abe to use Machine learning</li>
+              </ul>
+              <h4>Skills that can be used/learned inside</h4>
+              <mat-chip-list>
+                <mat-chip>Statistics</mat-chip>
+                <mat-chip>Economics</mat-chip>
+                <mat-chip>Infomatics</mat-chip>
+                <mat-chip>Machine learning</mat-chip>
+                <mat-chip>Google Cloud Platform</mat-chip>
+                <mat-chip>Go</mat-chip>
+                <mat-chip>Blockchains</mat-chip>
+                <mat-chip>Cosmos SDK</mat-chip>
+              </mat-chip-list>
+              </ng-container>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
 </app-section>
 <app-section>
-  <h3>ビジネスサイド募集</h3>
-  <p>興味に応じてエンジニアリング習得も可能です。</p>
+  <ng-container *ngIf="lang === 'ja'">
+      <h3>ビジネスサイド募集</h3>
+      <p>興味に応じてエンジニアリング習得も可能です。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+      <h3>Recruitment of the development-side menber</h3>
+      <p>You can also learn engineering skills according to your interest</p>
+      </ng-container>
   <div class="job" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
     <div [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>business</mat-icon>
-          <mat-card-title>マーケター</mat-card-title>
+          <ng-container *ngIf="lang === 'ja'">
+            <mat-card-title>マーケター</mat-card-title>
+          </ng-container>
+          <ng-container *ngIf="lang === 'en'">
+            <mat-card-title>Marketer</mat-card-title>
+          </ng-container>
         </mat-card-header>
         <mat-card-content>
-          <h4>応募必要条件</h4>
-          <ul>
-            <li>実務経験2年以上</li>
-            <li>英語で基本的な意思疎通ができること</li>
-            <li>HTML,CSSを使えること</li>
+            <ng-container *ngIf="lang === 'ja'">
+             <h4>応募必要条件</h4>
+             <ul>
+               <li>実務経験2年以上</li>
+               <li>英語で基本的な意思疎通ができること</li>
+               <li>HTML,CSSを使えること</li>
           </ul>
+          </ng-container>
+          <ng-container *ngIf="lang === 'en'">
+              <h4>Requirements</h4>
+              <ul>
+                <li>2 + years of practical experience</li>
+                <li>able to basically communicate with team member in English</li>
+                <li>able to use HTML,CSS</li>
+              </ul>
+          </ng-container>
         </mat-card-content>
       </mat-card>
     </div>
