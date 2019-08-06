@@ -1,58 +1,118 @@
 version: 2
+
+defaults: &defaults
+  working_directory: ~/lcnem-website
+  docker:
+   - image: circleci/node:10-browsers
+
+master-filter: &master-filter
+  filters:
+    branches:
+      only:
+        - master
+
 jobs:
   test:
-    working_directory: ~/lcnem-website
-    docker:
-      - image: circleci/node:8-browsers
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+          keys:
+            - lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+            - lcnem-website-{{ .Branch }}
       - run:
           name: npm install
-          command: make install
+          command: make angular/install
       - save_cache:
           key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
           paths:
-            - "angular/node_modules"
+            - 'angular/node_modules'
       - run:
           name: unit test
-          command: make test/ci
+          command: make ci/test
       - run:
           name: e2e test
-          command: make e2e/ci
+          command: make ci/test
 
-  deploy_angular:
-    working_directory: ~/lcnem-website
-    docker:
-      - image: circleci/node:8-browsers
+  deploy:
+    <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+          keys:
+            - lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+            - lcnem-website-{{ .Branch }}
       - run:
-          name: npm install
-          command: make install
+          name: npm install for angular
+          command: make angular/install
       - save_cache:
           key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
           paths:
-            - "angular/node_modules"
+            - 'angular/node_modules'
+      - restore_cache:
+          keys:
+            - lcnem-website-firebase-{{ .Branch }}-{{ checksum "firebase/functions/package-lock.json" }}
+            - lcnem-website-firebase-{{ .Branch }}
+      - run:
+          name: npm install for firebase
+          command: make firebase/install
+      - save_cache:
+          key: lcnem-website-firebase-{{ .Branch }}-{{ checksum "firebase/functions/package-lock.json" }}
+          paths:
+            - 'firebase/node_modules'
       - run:
           name: build
-          command: make build
+          command: make angular/build && cd ~/lcnem-website && make firebase/build
       - run:
           name: deploy
-          command: make deploy/angular/ci
+          command: make ci/deploy
+
+  deploy_prod:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+            - lcnem-website-{{ .Branch }}
+      - run:
+          name: npm install
+          command: make angular/install
+      - save_cache:
+          key: lcnem-website-{{ .Branch }}-{{ checksum "angular/package-lock.json" }}
+          paths:
+            - 'angular/node_modules'
+      - run:
+          name: build
+          command: make angular/build/prod
+      - run:
+          name: deploy
+          command: make ci/deploy/prod
 
 workflows:
   version: 2
-  test_and_deploy:
+  test:
     jobs:
       - test
-      - deploy_angular:
+#  test_and_deploy:
+#    jobs:
+#      - test
+#      - deploy:
+#          requires:
+#            - test
+#          filters:
+#            branches:
+#              only:
+#                - develop
+  test_and_deploy_prod:
+    jobs:
+      - test:
+          <<: *master-filter
+      - approval:
+          type: approval
           requires:
             - test
-          filters:
-            branches:
-              only:
-                - master
+      - deploy_prod:
+          requires:
+            - approval
+          <<: *master-filter

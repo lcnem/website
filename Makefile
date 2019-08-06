@@ -1,50 +1,69 @@
-
-install:
-	@cd angular &&\
+angular/install:
+	@cd angular && \
 	npm i
 
-build:
-	@cd angular &&\
+angular/build:
+	@cd angular && \
 	npm run build
 
-start:
-	@cd angular &&\
-	ng serve
+angular/build/prod:
+	@cd angular && \
+	npm run build-prod
 
-test:
-	@cd angular &&\
-	npm run test --watch=false
+firebase/install:
+	@cd firebase/functions && \
+	npm i
 
-test/ci:
-	@cd angular &&\
-	npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+firebase/build:
+	@cd firebase/functions && \
+	npm run build
 
-e2e:
-	@cd angular &&\
-	npm run e2e
-
-e2e/ci:
-	@cd angular &&\
-	npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
-
-deploy/angular: build
-	@cd firebase &&\
+firebase/deploy/hosting:
+	@cd firebase && \
+	firebase use staging && \
 	firebase deploy --only hosting
 
-deploy/angular/ci:
-	@which firebase || sudo npm install -g firebase-tools
-	@cd firebase &&\
-	firebase deploy --only hosting --token $(FIREBASE_TOKEN)
+firebase/deploy/hosting/prod:
+	@cd firebase && \
+	firebase use default && \
+	firebase deploy --only hosting
 
-deploy/functions:
-	@cd firebase &&\
+firebase/deploy/functions:
+	@cd firebase && \
+	firebase use staging && \
 	firebase deploy --only functions
 
-deploy/rules:
-	@cd firebase &&\
-	firebase deploy --only rules
+firebase/deploy/functions/prod:
+	@cd firebase && \
+	firebase use default && \
+	firebase deploy --only functions
 
-deploy:
-	@make deploy/angular
-	@make deploy/functions
-	@make deploy/rules
+firebase/deploy/firestore:
+	@cd firebase && \
+	firebase use staging && \
+	firebase deploy --only firestore:rules
+
+firebase/deploy/firestore/prod:
+	@cd firebase && \
+	firebase use default && \
+	firebase deploy --only firestore:rules
+
+ci/test:
+	@cd angular && \
+	npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
+ci/e2e:
+	@cd angular && \
+	npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+
+ci/deploy:
+	@which firebase || sudo npm install -g firebase-tools
+	@cd firebase && \
+	firebase use staging && \
+	firebase deploy --only hosting,functions --token $(FIREBASE_TOKEN_TEST)
+
+ci/deploy/prod:
+	@which firebase || sudo npm install -g firebase-tools
+	@cd firebase && \
+	firebase use default && \
+	firebase deploy --only hosting --token $(FIREBASE_TOKEN)
