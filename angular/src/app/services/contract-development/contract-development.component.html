@@ -2,18 +2,30 @@
   [image]="'assets/images/services/contract-development.png'"></app-header>
 <app-section [color]="'mat-primary'">
   <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
-  <h3>Webアプリ形式の業務用システム開発</h3>
-  <p>Webアプリ形式の業務用システムの開発を請け負います。Angularを使用します。</p>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>Webアプリ形式の業務用システム開発</h3>
+    <p>Webアプリ形式の業務用システムの開発を請け負います。Angularを使用します。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Development of systems as business applications in the form of Web applications</h3>
+    <p>We are contracted to develop systems as business applications in the form of Web applications. We use Angular.</p>
+  </ng-container>
 </app-section>
 <app-section [color]="'black'">
   <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
-  <h3>Webアプリ形式の一般提供用システム開発</h3>
-  <p>Webアプリ形式の一般提供用システムの開発を請け負います。Angularを使用します。</p>
+  <h3>Development of systems for general customers in the form of web applications</h3>
+  <p>We are contracted to develop systems for general customers in the form of web applications. We use Angular.</p>
 </app-section>
 <app-section [color]="'mat-primary'">
   <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
-  <h3>独自のブロックチェーン開発</h3>
-  <p>独自のブロックチェーンの開発を請け負います。設計に関してコンサルティングを行うことも可能です。Cosmos SDKを使用します。</p>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>独自のブロックチェーン開発</h3>
+    <p>独自のブロックチェーンの開発を請け負います。設計に関してコンサルティングを行うことも可能です。Cosmos SDKを使用します。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Development of your unique blockchain</h3>
+    <p>We are contracted to develop your unique blockchain. We can alse do the design consulting. We use Cosmos SDK. </p>
+  </ng-container>
 </app-section>
 <app-section>
   <div [fxLayout]="'row'" fxFill>
