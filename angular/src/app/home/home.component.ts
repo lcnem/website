@@ -70,6 +70,57 @@ export class HomeComponent implements OnInit {
     }
   ];
 
+  public members = [
+    {
+      name: 'Yu Kimura',
+      position: 'CEO, CTO',
+      image: 'https://pbs.twimg.com/profile_images/1059679360070836224/uNbHbPfg_400x400.jpg',
+      description: {
+        en: 'Faculty of Economics, Kyoto University and Graduate School of Business Administration, Kyoto University. At the age of 15, started programming in C, then C #, then TypeScript, Angular, and Go. The inventor of Ticket Peer to Peer. The first person to start building Cosmos SDK chains in Japan. Proposer of MTPL which integrates FTPL and MMT which are the theory of economics.',
+        ja: '京都大学経済学部、京都大学経営管理大学院。15歳からCによるプログラミングを始め、C#を経てTypeScript,AngularやGoに至る。Ticket Peer to Peerの考案者。日本でCosmos SDK製チェーンを最初に作り始めた人。経済学の理論であるFTPLとMMTを統合したMTPLを提唱。'
+      } as any,
+      twitter: 'https://twitter.com/YuKimura45z',
+      facebook: 'https://facebook.com/YuKimura45z',
+      website: 'https://yu-kimura.jp'
+    },
+    {
+      name: 'Takeru Shimojima',
+      position: 'COO, CFO',
+      image: 'https://pbs.twimg.com/profile_images/1142824894830239751/TN4D_5lg_400x400.jpg',
+      description: {
+        en: 'He graduated from the Department of Language and Culture, Tokyo University of Foreign Studies. Having experience living abroad, he has knowledge in languages and international relations. In March 2018, he established LCNEM Co., Ltd. with CEO Kimura. As a management and strategy consultant, he also provides solutions to top management.',
+        ja: '東京外国語大学言語文化学部卒業。 海外在住経験を経て、語学と国際関係学に知見を有す。 2018年3月に株式会社LCNEMをCEO木村と共同起業する。 また、経営・戦略コンサルタントとしても、トップ企業の経営陣にソリューションを提供している。'
+      } as any,
+      twitter: 'https://twitter.com/thetalcnem',
+      facebook: '',
+      website: ''
+    },
+    {
+      name: 'Yugo Maki',
+      position: 'Engineer',
+      image: 'https://pbs.twimg.com/profile_images/1069949976132767744/iAhB6l0a_400x400.jpg',
+      description: {
+        en: 'Joined after working as a freelance engineer. I am mainly in charge of the front end. I like developing with the NEM blockchain.',
+        ja: 'フリーランスエンジニアを経てジョイン。主にフロントエンドを担当。NEMブロックチェーンで開発するのが好き。'
+      } as any,
+      twitter: 'https://twitter.com/yutaro_elk',
+      facebook: '',
+      website: ''
+    },
+    {
+      name: 'Hiroaki Joya',
+      position: 'Engineer',
+      image: 'https://pbs.twimg.com/profile_images/1126783220438036480/UdNrHbgF_400x400.jpg',
+      description: {
+        en: 'He graduated from the Business Administration Department, Faculty of Business Administration, Meiji University. He has knowledge of leadership theory and marketing theory. Experience in the maintenance and operation of aviation systems at foreign SI companies. When he was a university student, he made sales materials at an IT consulting company. We are working hard to achieve growth hacking not only in software engineering but also in marketing.',
+        ja: '明治大学経営学部経営学科卒業。リーダーシップ論・マーケティング論に知見を有する。外資系SI企業にて航空系システムの保守・運用を経験。大学時代にはITコンサル系企業にて営業資料の作成を行なっていた。ソフトウェアエンジニアリングのみならず、マーケティング含めたグロースハックを実現すべく奮闘中。'
+      } as any,
+      twitter: 'https://twitter.com/IYRKcryptoJ',
+      facebook: '',
+      website: ''
+    },
+  ];
+
   public partners = [
     {
       name: 'Ether Security',
@@ -111,6 +162,10 @@ export class HomeComponent implements OnInit {
     gettingStarted: {
       en: 'Getting started',
       ja: 'いますぐつかう'
+    } as any,
+    members: {
+      en: 'Members',
+      ja: 'メンバー'
     } as any,
     partners: {
       en: 'Partners',
