@@ -70,6 +70,69 @@ export class HomeComponent implements OnInit {
     }
   ];
 
+  public members = [
+    {
+      name: {
+        en: 'Yu Kimura',
+        ja: '木村 優'
+      } as any,
+      position: 'CEO, CTO',
+      image: 'https://pbs.twimg.com/profile_images/1059679360070836224/uNbHbPfg_400x400.jpg',
+      description: {
+        en: '',
+        ja: '京都大学経済学部、京都大学経営管理大学院。15歳からCによるプログラミングを始め、C#を経てTypeScript,AngularやGoに至る。Ticket Peer to Peerの考案者。日本でCosmos SDK製チェーンを最初に作り始めた人。経済学の理論であるFTPLとMMTを統合したMTPLを提唱。'
+      } as any,
+      twitter: 'https://twitter.com/YuKimura45z',
+      facebook: '',
+      website: 'https://yu-kimura.jp'
+    },
+    {
+      name: {
+        en: 'Takeru Shimojima',
+        ja: '下島 健'
+      } as any,
+      position: 'COO, CFO',
+      image: 'https://pbs.twimg.com/profile_images/1142824894830239751/TN4D_5lg_400x400.jpg',
+      description: {
+        en: '',
+        ja: 'コンサルティングを経験。'
+      } as any,
+      twitter: 'https://twitter.com/thetalcnem',
+      facebook: '',
+      website: ''
+    },
+    {
+      name: {
+        en: 'Yugo Maki',
+        ja: '槇 悠悟'
+      } as any,
+      position: 'Engineer',
+      image: 'https://pbs.twimg.com/profile_images/1069949976132767744/iAhB6l0a_400x400.jpg',
+      description: {
+        en: '',
+        ja: 'フリーランスエンジニアを経てジョイン。'
+      } as any,
+      twitter: 'https://twitter.com/yutaro_elk',
+      facebook: '',
+      website: ''
+    },
+    {
+      name: {
+        en: 'Hiroaki Joya',
+        ja: '城谷 弘明'
+      } as any,
+      position: 'Engineer',
+      image: 'https://pbs.twimg.com/profile_images/1126783220438036480/UdNrHbgF_400x400.jpg',
+      description: {
+        en: '',
+        ja: 'SI、外資SIを経てジョイン。'
+      } as any,
+      twitter: 'https://twitter.com/IYRKcryptoJ',
+      facebook: '',
+      website: ''
+    },
+  ];
+
   public partners = [
     {
       name: 'Ether Security',
@@ -111,6 +174,10 @@ export class HomeComponent implements OnInit {
     gettingStarted: {
       en: 'Getting started',
       ja: 'いますぐつかう'
+    } as any,
+    members: {
+      en: 'Members',
+      ja: 'メンバー'
     } as any,
     partners: {
       en: 'Partners',
