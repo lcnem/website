@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
+import { TRANSLATION } from './about.translation';
 
 @Component({
   selector: 'app-about',
@@ -136,16 +137,7 @@ export class AboutComponent implements OnInit {
     }
   ]
 
-  public translation = {
-    corporateInformation: {
-      en: 'Corporate information',
-      ja: '企業情報'
-    } as any,
-    officers: {
-      en: 'Officers',
-      ja: '役員'
-    } as any
-  };
+  public translation = TRANSLATION;
 
   ngOnInit() {
   }
