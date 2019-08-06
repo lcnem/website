@@ -95,7 +95,7 @@ export class HomeComponent implements OnInit {
       image: 'https://pbs.twimg.com/profile_images/1142824894830239751/TN4D_5lg_400x400.jpg',
       description: {
         en: '',
-        ja: 'コンサルティングを経験。'
+        ja: '東京外国語大学言語文化学部卒業。 海外在住経験を経て、語学と国際関係学に知見を有す。 2018年3月に株式会社LCNEMをCEO木村と共同起業する。 また、経営・戦略コンサルタントとしても、トップ企業の経営陣にソリューションを提供している。'
       } as any,
       twitter: 'https://twitter.com/thetalcnem',
       facebook: '',
