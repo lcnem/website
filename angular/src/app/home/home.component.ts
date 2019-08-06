@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
       website: ''
     },
     {
-      name: 'Yugo Maki',
+      name: 'Yutaro',
       position: 'Engineer',
       image: 'https://pbs.twimg.com/profile_images/1069949976132767744/iAhB6l0a_400x400.jpg',
       description: {
