@@ -95,7 +95,7 @@ export class HomeComponent implements OnInit {
       facebook: '',
       website: ''
     },
-    {
+    /*{
       name: 'Yutaro',
       position: 'Engineer',
       image: 'https://pbs.twimg.com/profile_images/1069949976132767744/iAhB6l0a_400x400.jpg',
@@ -106,7 +106,7 @@ export class HomeComponent implements OnInit {
       twitter: 'https://twitter.com/yutaro_elk',
       facebook: '',
       website: ''
-    },
+    },*/
     {
       name: 'Hiroaki Joya',
       position: 'Engineer',
