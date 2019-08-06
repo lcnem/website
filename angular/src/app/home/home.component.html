@@ -5,7 +5,8 @@
   <ng-container *ngIf="lang === 'en'">
     <h2>Philosophy</h2>
     <p>The mission of LCNEM is to enhance economic welfare.</p>
-    <p>The step is to spread some mechanism designs depend with appropriate incentives, and to make the Narrow Bank using the distributed ledger technology into a reality.</p>
+    <p>The step is to spread some mechanism designs depend with appropriate incentives, and to make the Narrow Bank
+      using the distributed ledger technology into a reality.</p>
   </ng-container>
   <ng-container *ngIf="lang === 'ja'">
     <h2>理念</h2>
@@ -31,10 +32,39 @@
           <p>{{s.copy[lang]}}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button fxFill class="mat-radius-button" [color]="'primary'"
-            [routerLink]="s.link" *ngIf="s.link">{{translation.readMore[lang]}}</button>
-          <a mat-button fxFill class="mat-radius-button" [color]="'primary'"
-            [href]="s.url" [target]="'_blank'" *ngIf="s.url">{{translation.gettingStarted[lang]}}</a>
+          <button mat-button fxFill class="mat-radius-button" [color]="'primary'" [routerLink]="s.link"
+            *ngIf="s.link">{{translation.readMore[lang]}}</button>
+          <a mat-button fxFill class="mat-radius-button" [color]="'primary'" [href]="s.url" [target]="'_blank'"
+            *ngIf="s.url">{{translation.gettingStarted[lang]}}</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</app-section>
+<app-section>
+  <h2>{{translation.members[lang]}}</h2>
+  <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div *ngFor="let m of members" [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <img mat-card-avatar src="{{m.image}}" />
+          <mat-card-title>{{m.name}}</mat-card-title>
+          <mat-card-subtitle>{{m.position}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{m.description[lang]}}</p>
+        </mat-card-content>
+        <mat-card-actions fxLayout="row">
+          <span class="fill-remaining-space"></span>
+          <a mat-icon-button *ngIf="m.twitter" href="{{m.twitter}}" target="_blank">
+            <img class="icon" src="assets/images/twitter.svg" />
+          </a>
+          <a mat-icon-button *ngIf="m.facebook" href="{{m.facebook}}" target="_blank">
+            <img class="icon" src="assets/images/facebook.svg" />
+          </a>
+          <a mat-icon-button *ngIf="m.website" href="{{m.website}}" target="_blank">
+            <mat-icon>web</mat-icon>
+          </a>
         </mat-card-actions>
       </mat-card>
     </div>

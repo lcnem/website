@@ -1,16 +1,33 @@
 <app-header [heading]="translation.consulting[lang]" [image]="'assets/images/services/consulting.png'"></app-header>
 <app-section [color]="'mat-primary'">
   <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
-  <h3>コンサルティング</h3>
-  <p>弊社の知見を活かした分散型台帳技術を利用するプロジェクトのコンサルティング業務を行っております。</p>
-</app-section>
-<app-section [color]="'black'">
-  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
-  <h3>講師</h3>
-  <p>社内勉強会の講師や、イベントの登壇の依頼も承っております。</p>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>分散型台帳技術</h3>
+    <p>弊社の知見を活かした分散型台帳技術を利用するプロジェクトのコンサルティング業務を行っております。</p>
+  　</ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Distributed Ledger Technology</h3>
+    <p>Our Company provides consulting services for projects that utilize our expertise in distributed ledger technology.</p>
+  　</ng-container>
+  </app-section>
+  <app-section [color]="'black'">
+    <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+    <ng-container *ngIf="lang === 'ja'">
+    <h3>講師</h3>
+    <p>社内勉強会の講師や、イベントの登壇の依頼も承っております。</p>
+    </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Lecturer</h3>
+    <p>We also accept requests for lecturers at the study meeting at your company and for the presentation of the event.</p>
+  </ng-container>
 </app-section>
 <app-section>
+  <ng-container *ngIf="lang === 'ja'">
   <h3>知見のある分散型台帳技術</h3>
+  　</ng-container>
+  <ng-container *ngIf="lang === 'en'">
+  <h3>Distributed ledger technology we know well</h3>
+   </ng-container>
   <div class="ledger" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
     <div *ngFor="let l of ledger" [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
