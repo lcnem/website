@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
+import { TRANSLATION } from 'src/app/app.translation';
 @Component({
   selector: 'app-cheque',
   templateUrl: './cheque.component.html',
@@ -15,14 +16,5 @@ export class ChequeComponent implements OnInit {
   ngOnInit() {
   }
 
-  public translation = {
-    gettingStarted: {
-      en: 'Getting started',
-      ja: '今すぐ使う'
-    } as any,
-    contact: {
-      en: "Contact us",
-      ja: "問い合わせ"
-    } as any
-  };
+  public translation = TRANSLATION;
 }

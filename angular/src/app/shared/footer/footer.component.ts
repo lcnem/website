@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../language.service';
+import { TRANSLATION } from './footer.translation';
 
 @Component({
   selector: 'app-footer',
@@ -14,24 +15,7 @@ export class FooterComponent implements OnInit {
     private language: LanguageService
   ) { }
 
-  public translation = {
-    lcnemInc: {
-      en: 'LCNEM, Inc.',
-      ja: '株式会社LCNEM'
-    } as any,
-    privacyPolicy: {
-      ja: 'プライバシーポリシー',
-      en: 'Privacy Policy'
-    } as any,
-    aboutCompany: {
-      en: 'About us',
-      ja: '会社概要'
-    } as any,
-    mediaKit: {
-      en: 'Media kit',
-      ja: 'メディアキット'
-    } as any
-  };
+  public translation = TRANSLATION;
 
   ngOnInit() {
   }
