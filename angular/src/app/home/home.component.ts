@@ -113,7 +113,7 @@ export class HomeComponent implements OnInit {
       position: 'Engineer',
       image: 'https://pbs.twimg.com/profile_images/1126783220438036480/UdNrHbgF_400x400.jpg',
       description: {
-        en: 'He graduated from the Business Administration Department, Faculty of Business Administration, Meiji University. He has knowledge of leadership theory and marketing theory. Experience in the maintenance and operation of aviation systems at foreign SI companies. When he was a university student, he made sales materials at an IT consulting company. He is working hard to achieve growth hacking not only in software engineering but also in marketing.',
+        en: 'He graduated from the Business Administration Department, Faculty of Business Administration, Meiji University. He has knowledge of leadership theory and marketing theory. He has experienced in the maintenance and operation of aviation systems at foreign SI companies. When he was a university student, he made sales materials at an IT consulting company. He is working hard to achieve growth hacking not only in software engineering but also in marketing.',
         ja: '明治大学経営学部経営学科卒業。リーダーシップ論・マーケティング論に知見を有する。外資系SI企業にて航空系システムの保守・運用を経験。大学時代にはITコンサル系企業にて営業資料の作成を行なっていた。ソフトウェアエンジニアリングのみならず、マーケティング含めたグロースハックを実現すべく奮闘中。'
       } as any,
       twitter: 'https://twitter.com/IYRKcryptoJ',
