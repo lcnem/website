@@ -13,8 +13,14 @@
 </app-section>
 <app-section [color]="'black'">
   <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
-  <h3>Development of systems for general customers in the form of web applications</h3>
-  <p>We are contracted to develop systems for general customers in the form of web applications. We use Angular.</p>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>Webアプリケーションによる一般顧客向けシステムの開発</h3>
+    <p>一般のお客様向けにWebアプリケーションの開発を受託しています。Angularを使用します。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Development of systems for general customers in the form of web applications</h3>
+    <p>We are contracted to develop systems for general customers in the form of web applications. We use Angular.</p>
+  </ng-container>
 </app-section>
 <app-section [color]="'mat-primary'">
   <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>

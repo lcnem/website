@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
+import { TRANSLATION } from './recruit.translation';
 
 @Component({
   selector: 'app-recruit',
@@ -13,16 +14,7 @@ export class RecruitComponent implements OnInit {
     private language: LanguageService
   ) { }
 
-  public translation = {
-    recruitment: {
-      en: 'Recruitment',
-      ja: '採用情報'
-    } as any,
-    contact: {
-      en: 'Contact us',
-      ja: 'まずは話を聞いてみる'
-    } as any
-  };
+  public translation = TRANSLATION;
 
   ngOnInit() {
   }
