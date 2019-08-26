@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from 'src/app/shared/language.service';
+import { TRANSLATION } from './media-kit.translation';
 
 @Component({
   selector: 'app-media-kit',
@@ -16,19 +17,6 @@ export class MediaKitComponent implements OnInit {
   ngOnInit() {
   }
 
-  public translation = {
-    mediaKit: {
-      en: 'Media kit',
-      ja: 'メディアキット'
-    } as any,
-    companyLogo: {
-      en: "Company logo",
-      ja: "ロゴ"
-    } as any,
-    download: {
-      en: 'Download',
-      ja: 'ダウンロード'
-    } as any
-  };
+  public translation = TRANSLATION;
 
 }

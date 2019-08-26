@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
+import { TRANSLATION } from './contract-development.translation';
 
 @Component({
   selector: 'app-contract-development',
@@ -27,14 +28,5 @@ export class ContractDevelopmentComponent implements OnInit {
     },
   ];
 
-  public translation = {
-    contractDevelopment: {
-      en: "Contract development",
-      ja: "受託開発"
-    } as any,
-    contact: {
-      en: "Contact us",
-      ja: "問い合わせ"
-    } as any
-  };
+  public translation = TRANSLATION;
 }

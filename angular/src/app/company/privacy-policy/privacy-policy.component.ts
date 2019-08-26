@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from '../../shared/language.service';
+import { TRANSLATION } from './privacy-policy.translation';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -18,12 +19,7 @@ export class PrivacyPolicyComponent implements OnInit {
 
   public safeSite: SafeResourceUrl;
 
-  public translation = {
-    privacyPolicy: {
-      ja: 'プライバシーポリシー',
-      en: 'Privacy Policy'
-    } as any
-  };
+  public translation = TRANSLATION;
 
   ngOnInit() {
   }

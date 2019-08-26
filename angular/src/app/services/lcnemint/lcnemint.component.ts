@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
+import { TRANSLATION } from './lcnemint.translation';
 
 @Component({
   selector: 'app-lcnemint',
@@ -16,18 +17,5 @@ export class LcnemintComponent implements OnInit {
   ngOnInit() {
   }
 
-  public translation = {
-    top: {
-      en: 'Cosmos blockchain for LCNEM Cheque',
-      ja: 'LCNEM ChequeのためのCosmosネットワークのブロックチェーン'
-    } as any,
-    words: {
-      en: 'Words',
-      ja: '用語'
-    } as any,
-    contact: {
-      en: "Contact us",
-      ja: "問い合わせ"
-    } as any
-  }
+  public translation = TRANSLATION;
 }

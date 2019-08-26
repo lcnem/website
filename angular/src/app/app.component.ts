@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { LanguageService } from './shared/language.service';
+import { TRANSLATION } from './app.translation';
 
 @Component({
   selector: 'app-root',
@@ -24,14 +25,5 @@ export class AppComponent implements OnInit {
     });
   }
 
-  public translation = {
-    contacts: {
-      en: 'Contacts',
-      ja: '問い合わせ'
-    } as any,
-    recruitmentInformation: {
-      en: 'Recruitment',
-      ja: '採用情報'
-    } as any
-  };
+  public translation = TRANSLATION;
 }
