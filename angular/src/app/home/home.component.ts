@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Consulting/Lecture',
       link: '/services/consulting',
-      image: 'assets/images/services/consulting.png',
+      image: 'assets/images/services/tie-690084_1920.jpg',
       copy: {
         en: 'Consulting/Lecture',
         ja: 'コンサルティング/講師'
@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Contract development',
       link: '/services/contract-development',
-      image: 'assets/images/services/contract-development.png',
+      image: 'assets/images/services/laptop-3190194_1920.jpg',
       copy: {
         en: 'Contract development',
         ja: '受託開発'
