@@ -1,0 +1,40 @@
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <h2>ブロックチェーンの利用ではなく、ブロックチェーンそのもの自体を作れる時代。</h2>
+  <p>
+    ブロックチェーンを活かしたシステムを実証、開発、運用するにあたって、既存のブロックチェーンを利用する場合、ブロックチェーンそのものの機能が事業会社のニーズ完全にマッチしないこともあります。
+    しかしながら、CosmosSDKを利用すれば、ブロックチェーンそのものを作れる時代になっています。    
+  </p>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">money_off</mat-icon>
+  <h2>月額制で、実証、開発、運用のコストを圧縮。</h2>
+  <p>月額制の料金で、弊社がブロックチェーンそのものの開発を行います。CosmosSDKの経験から、弊社は低コストでスピーディーに開発を行います。ブロックチェーンの実証実験に100万円を積む時代は過ぎ去りました。</p>
+</app-section>
+<app-section>
+  <h2>{{translation.subscription[lang]}}</h2>
+  <form #form="ngForm" (ngSubmit)="sendMail()">
+    <mat-form-field fxFill appearance="outline">
+      <input matInput name="name" placeholder="{{translation.name[lang]}}" required [(ngModel)]="forms.name" />
+    </mat-form-field>
+    <mat-form-field fxFill appearance="outline">
+      <input matInput name="organization" placeholder="{{translation.organization[lang]}}" required [(ngModel)]="forms.organization" />
+    </mat-form-field>
+    <mat-form-field fxFill appearance="outline">
+      <input matInput name="email" placeholder="{{translation.email[lang]}}" required type="email"
+        [(ngModel)]="forms.email" />
+    </mat-form-field>
+    <mat-form-field fxFill appearance="outline">
+      <textarea matInput name="imagination" placeholder="{{translation.imagination[lang]}}" required
+        [(ngModel)]="forms.imagination"></textarea>
+    </mat-form-field>
+    <div class="checkbox">
+      <mat-checkbox fxFill name="agree" required [(ngModel)]="forms.agree">
+        <span *ngIf="lang == 'ja'"><a routerLink="/privacy-policy">プライバシーポリシ</a>に同意する</span>
+        <span *ngIf="lang == 'en'">I agree to <a routerLink="/privacy-policy">privacy policy</a></span>
+      </mat-checkbox>
+    </div>
+
+    <button mat-raised-button fxFill [color]="'accent'" [disabled]="form.invalid">{{translation.send[lang]}}</button>
+  </form>
+</app-section>
