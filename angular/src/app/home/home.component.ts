@@ -34,9 +34,18 @@ export class HomeComponent implements OnInit {
       } as any
     },
     {
+      name: 'DLT Subscription',
+      link: '/services/dlt-subscription',
+      image: 'assets/images/services/development.jpg',
+      copy: {
+        en: 'Blockchain subscription development',
+        ja: 'ブロックチェーンサブスクリプション開発'
+      } as any
+    },
+    {
       name: 'Consulting/Lecture',
       link: '/services/consulting',
-      image: 'assets/images/services/tie-690084_1920.jpg',
+      image: 'assets/images/services/consulting.jpg',
       copy: {
         en: 'Consulting/Lecture',
         ja: 'コンサルティング/講師'
@@ -45,7 +54,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Contract development',
       link: '/services/contract-development',
-      image: 'assets/images/services/laptop-3190194_1920.jpg',
+      image: 'assets/images/services/development.jpg',
       copy: {
         en: 'Contract development',
         ja: '受託開発'

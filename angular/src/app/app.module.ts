@@ -46,6 +46,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { effects } from './effect';
 import { SharedModule } from './shared/shared.module';
 import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
+import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.c
     ConsultingComponent,
     ContractDevelopmentComponent,
     MediaKitComponent,
+    DltSubscriptionComponent,
   ],
   imports: [
     BrowserModule,
