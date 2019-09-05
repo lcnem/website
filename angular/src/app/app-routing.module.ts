@@ -13,11 +13,13 @@ import { ContractDevelopmentComponent } from './services/contract-development/co
 import { MediaKitComponent } from './company/media-kit/media-kit.component';
 import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
 import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
+import { ConsultingContactComponent } from './company/consulting-contact/consulting-contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'company/about', component: AboutComponent },
   { path: 'company/contact', component: ContactComponent },
+  { path: 'company/consulting-contact', component: ConsultingContactComponent },
   { path: 'company/recruit', component: RecruitComponent },
   { path: 'company/media-kit', component: MediaKitComponent },
   { path: 'services/cheque', component: ChequeComponent },

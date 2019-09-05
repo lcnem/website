@@ -48,6 +48,7 @@ import { SharedModule } from './shared/shared.module';
 import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
 import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
 import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
+import { ConsultingContactComponent } from './company/consulting-contact/consulting-contact.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { SubscriptionPrivacyPolicyComponent } from './company/subscription-priva
     PrivacyPolicyComponent,
     SubscriptionPrivacyPolicyComponent,
     ContactComponent,
+    ConsultingContactComponent,
     RecruitComponent,
     ChequeComponent,
     LcnemintComponent,
