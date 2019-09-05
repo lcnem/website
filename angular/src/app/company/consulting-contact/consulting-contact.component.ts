@@ -15,8 +15,7 @@ export class ConsultingContactComponent implements OnInit {
   forms = {} as {
     name: string,
     email: string,
-    subject: number,
-    body: string,
+    subject: string,
     agree: boolean
   };
 
@@ -42,8 +41,7 @@ export class ConsultingContactComponent implements OnInit {
       {
         email: this.forms.email,
         name: this.forms.name,
-        subject: this.translation.subjects[this.forms.subject][this.lang],
-        text: this.forms.body,
+        subject: this.forms.subject,
         lang: this.lang
       }
     ).subscribe(

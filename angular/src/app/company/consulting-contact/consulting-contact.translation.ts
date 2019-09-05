@@ -8,42 +8,20 @@ export const TRANSLATION = {
     ja: '貴社名/お名前'
   } as any,
   email: {
-    en: 'email',
-    ja: 'メールアドレス'
+    en: 'Email adress',
+    ja: 'ご連絡先メールアドレス'
   } as any,
   subject: {
-    en: 'Subject',
-    ja: 'お問い合わせの目的'
+    en: 'Subject for developing your unique blockchain',
+    ja: '独自ブロックチェーン開発の目的'
   } as any,
-  subjects: [
-    {
-      en: 'About services',
-      ja: 'サービスについて'
-    } as any,
-    {
-      en: 'Partnerships',
-      ja: '業務提携や投資について'
-    } as any,
-    {
-      en: 'Consulting/Lecture',
-      ja: 'コンサルティング/講師の依頼'
-    } as any,
-    {
-      en: 'Contract development',
-      ja: '受託開発の依頼'
-    } as any,
-  ],
-  body: {
-    en: 'Content',
-    ja: 'お問い合わせ内容'
-  } as any,
-  send: {
-    en: 'Send',
-    ja: '送信'
+  apply: {
+    en: 'Apply',
+    ja: '申請'
   } as any,
   confirm: {
     en: 'Are you sure?',
-    ja: '送信しますか？'
+    ja: '申請しますか？'
   } as any,
   error: {
     en: 'Error',
@@ -51,6 +29,6 @@ export const TRANSLATION = {
   } as any,
   completed: {
     en: 'Completed',
-    ja: '送信しました。'
+    ja: '申請しました。'
   } as any
 };

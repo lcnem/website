@@ -9,15 +9,8 @@
         [(ngModel)]="forms.email" />
     </mat-form-field>
     <mat-form-field fxFill appearance="outline">
-      <mat-select name="subject" placeholder="{{translation.subject[lang]}}" required [(ngModel)]="forms.subject">
-        <ng-container *ngFor="let subject of translation.subjects; let i = index">
-          <mat-option [value]="i">{{subject[lang]}}</mat-option>
-        </ng-container>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field fxFill appearance="outline">
-      <textarea matInput name="body" placeholder="{{translation.body[lang]}}" required
-        [(ngModel)]="forms.body"></textarea>
+      <textarea matInput name="subject" placeholder="{{translation.subject[lang]}}" required
+        [(ngModel)]="forms.subject"></textarea>
     </mat-form-field>
     <div class="checkbox">
       <mat-checkbox fxFill name="agree" required [(ngModel)]="forms.agree">
@@ -26,6 +19,6 @@
       </mat-checkbox>
     </div>
 
-    <button mat-raised-button fxFill [color]="'accent'" [disabled]="form.invalid">{{translation.send[lang]}}</button>
+    <button mat-raised-button fxFill [color]="'accent'" [disabled]="form.invalid">{{translation.apply[lang]}}</button>
   </form>
 </app-section>
