@@ -12,6 +12,7 @@ import { ConsultingComponent } from './services/consulting/consulting.component'
 import { ContractDevelopmentComponent } from './services/contract-development/contract-development.component';
 import { MediaKitComponent } from './company/media-kit/media-kit.component';
 import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
+import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'services/consulting', component: ConsultingComponent },
   { path: 'services/contract-development', component: ContractDevelopmentComponent },
   { path: 'terms/privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms/subscription-privacy-policy', component: SubscriptionPrivacyPolicyComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

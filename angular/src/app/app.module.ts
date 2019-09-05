@@ -47,6 +47,7 @@ import { effects } from './effect';
 import { SharedModule } from './shared/shared.module';
 import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
 import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
+import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscr
     HomeComponent,
     AboutComponent,
     PrivacyPolicyComponent,
+    SubscriptionPrivacyPolicyComponent,
     ContactComponent,
     RecruitComponent,
     ChequeComponent,
