@@ -61,6 +61,20 @@
     <div [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
         <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title>見積もり・初回相談(30分)</mat-card-title>
+          <mat-card-subtitle>無料</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            見積もり・初回相談は無料です！ビデオ通話にて見積もりをさせていただきます。ビデオ通話のURLをお送りしますので、何もインストールして頂く必要はありません。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
           <mat-icon mat-card-avatar>build</mat-icon>
           <mat-card-title>開発・保守</mat-card-title>
           <mat-card-subtitle>月額9万円</mat-card-subtitle>
@@ -105,6 +119,20 @@
   <ng-container *ngIf="lang === 'en'">
   <h2>Fee</h2>
   <div [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title>Estimation and first consultation (30 minutes)</mat-card-title>
+          <mat-card-subtitle>free</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Estimation and first consultation are free! We will make an estimate by video call. I will send you the video call URL so you don't need to install anything.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
     <div [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
         <mat-card-header>
