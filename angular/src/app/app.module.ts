@@ -48,10 +48,8 @@ import { SharedModule } from './shared/shared.module';
 import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
 import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
 import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
-import { ConsultingContactComponent } from './company/consulting-contact/consulting-contact.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
-import { Ng2FlatpickrModule } from 'ng2-flatpickr';
 
 @NgModule({
   declarations: [
@@ -61,7 +59,6 @@ import { Ng2FlatpickrModule } from 'ng2-flatpickr';
     PrivacyPolicyComponent,
     SubscriptionPrivacyPolicyComponent,
     ContactComponent,
-    ConsultingContactComponent,
     RecruitComponent,
     ChequeComponent,
     LcnemintComponent,
@@ -81,7 +78,6 @@ import { Ng2FlatpickrModule } from 'ng2-flatpickr';
     EffectsModule.forRoot(effects),
     FormsModule,
     SharedModule,
-    Ng2FlatpickrModule,
     MatButtonModule,
     MatCardModule,
     MatChipsModule,

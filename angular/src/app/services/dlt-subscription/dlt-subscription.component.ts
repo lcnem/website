@@ -32,7 +32,21 @@ export class DltSubscriptionComponent implements OnInit {
       name: '',
       organization: '',
       email: '',
-      imagination: '',
+      imagination: `・初回相談の場合
+日程
+第一希望：
+第二希望：
+第三希望：
+
+・見積もりの場合
+つけたいブロックチェーンの名前：
+作りたい独自ブロックチェーンの機能：
+ブロックチェーンのノード数：
+日程
+第一希望：
+第二希望：
+第三希望：
+`,
       agree: false
     }
   }
