@@ -17,7 +17,7 @@ export const TRANSLATION = {
     } as any,
     imagination: {
       en: 'Imagination of blockchain which you want to create or demonstrate',
-      ja: '作りたい、または実証したいブロックチェーンのイメージ'
+      ja: '作りたい、または実証したいブロックチェーンのイメージ(どのような機能、どれくらいのノード数)'
     } as any,
     send: {
       en: 'Advance application / inquiries',

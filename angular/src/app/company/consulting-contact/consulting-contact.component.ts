@@ -4,19 +4,20 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LanguageService } from '../../shared/language.service';
 import { LoadingDialogComponent } from '../../shared/loading-dialog/loading-dialog.component';
-import { TRANSLATION } from './dlt-subscription.translation';
+import { TRANSLATION } from './consulting-contact.translation';
 
 @Component({
-  selector: 'app-dlt-subscription',
-  templateUrl: './dlt-subscription.component.html',
-  styleUrls: ['./dlt-subscription.component.css']
+  selector: 'app-consulting-contact',
+  templateUrl: './consulting-contact.component.html',
+  styleUrls: ['./consulting-contact.component.css']
 })
-export class DltSubscriptionComponent implements OnInit {
-  forms: {
+export class ConsultingContactComponent implements OnInit {
+
+  forms = {} as {
     name: string,
-    organization: string,
     email: string,
-    imagination: string,
+    subject: string,
+    date: string,
     agree: boolean
   };
 
@@ -27,15 +28,7 @@ export class DltSubscriptionComponent implements OnInit {
     private dialog: MatDialog,
     private snackBar: MatSnackBar,
     private language: LanguageService,
-  ) {
-    this.forms = {
-      name: '',
-      organization: '',
-      email: '',
-      imagination: '',
-      agree: false
-    }
-  }
+  ) { }
 
   ngOnInit() {
   }
@@ -49,9 +42,8 @@ export class DltSubscriptionComponent implements OnInit {
       '/api/send-mail',
       {
         email: this.forms.email,
-        name: `${this.forms.organization} ${this.forms.name}`,
-        subject: 'DLT Subscription',
-        text: this.forms.imagination,
+        name: this.forms.name,
+        subject: this.forms.subject,
         lang: this.lang
       }
     ).subscribe(
@@ -67,4 +59,5 @@ export class DltSubscriptionComponent implements OnInit {
       }
     );
   }
+
 }
