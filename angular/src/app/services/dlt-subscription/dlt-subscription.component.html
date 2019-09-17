@@ -1,0 +1,242 @@
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <ng-container *ngIf="lang === 'ja'">
+  <h2>
+    ブロックチェーンを利用するだけではなく、ブロックチェーンそのものを作れる時代。
+  </h2>
+  <p>
+    ブロックチェーンを活かしたシステムを実証・開発・運用するにあたって、大きな問題があります。
+  </p>
+  <p>
+    それは「既存のブロックチェーンを利用した結果、その機能が利用者のニーズを満たしきれないこと」です。
+  </p>
+  <p>
+    しかしながら、CosmosSDKを利用すれば、皆様がお望みのブロックチェーンを自由に作る事が出来るのです。
+  </p>
+  <p>
+    皆様が作りたいブロックチェーンを、どんな形でも大丈夫ですので下記のフォームより是非お話下さい。
+  </p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+  <h2>
+    This is an era in which not only using blockchains but also blockchains themselves can be made.
+  </h2>
+  <p>
+    There are major problems in verifying, developing, and operating systems that are based on blockchains.
+  </p>
+  <p>
+    It is "As a result of using an existing blockchain, the function cannot satisfy the needs of users".
+  </p>
+  <p>
+    With the Cosmos SDK, however, you can create whatever blockchain as you want.
+  </p>
+  <p>
+    You want to make any kind of block chain as you want, so please use the form below and contact us.
+  </p>
+  </ng-container>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">money_off</mat-icon>
+  <ng-container *ngIf="lang === 'ja'">
+  <h2>月額制で実証・開発・運用のコストを圧縮。</h2>
+  <p>
+    月額制の料金で、弊社がブロックチェーンそのものの開発を行います。CosmosSDKの経験から、弊社は低コストでスピーディーに開発を行います。
+  </p>
+  <p>ブロックチェーンの実証実験に100万円を積む時代は過ぎ去りました。</p>
+  <p>LCNEMならば、低コストなサブスクリプション型でブロックチェーンの導入を実験できます。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+  <h2>Monthly subscription system reduces costs for demonstration, development and operation.</h2>
+  <p>
+    our company will develop the blockchain itself for a monthly fee. our company 's experience with Cosmos SDK allows us to develop quickly and cheaply.
+  </p>
+  <p>The age of wasting 1 million yen for the demonstration experiment of blockchain is over.</p>
+  <p>With LCNEM, you can experiment with low-cost subscription blockchain deployments.</p>
+  </ng-container>
+</app-section>
+<app-section>
+  <ng-container *ngIf="lang === 'ja'">
+  <h2>料金</h2>
+  <div [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title><a [routerLink]="'/company/consulting-contact'">見積もり・初回相談(30分)</a></mat-card-title>
+          <mat-card-subtitle>無料</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            見積もり・初回相談は無料です！ビデオ通話にて見積もりをさせていただきます。ビデオ通話のURLをお送りしますので、何もインストールして頂く必要はありません。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>build</mat-icon>
+          <mat-card-title>開発・保守</mat-card-title>
+          <mat-card-subtitle>月額9万円</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            月額9万円定額で、貴社の理想の独自ブロックチェーンを開発・保守します。開発にはCosmosSDKを用います。完成までの期間は、要望のヒアリングによりお答えさせていただきます。運用とは別料金となります。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>build</mat-icon>
+          <mat-card-title>運用</mat-card-title>
+          <mat-card-subtitle>月額2万円×ノード数定額</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            月額2万円×ノード数定額で、CosmosSDKを用いてつくられた貴社の独自のブロックチェーンを運用します。開発・保守とは別料金となります。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>people</mat-icon>
+          <mat-card-title>コンサルティング</mat-card-title>
+          <mat-card-subtitle>3万円/30分</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            独自ブロックチェーンの活用などに関して、ブロックチェーン専門コンサルタントがコンサルティング致します。どのような疑問でも結構ですので、お気軽にご相談下さい。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+  <h2>Fee</h2>
+  <div [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title><a [routerLink]="'/company/consulting-contact'">Estimation and first consultation (30 minutes)</a></mat-card-title>
+          <mat-card-subtitle>free</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Estimation and first consultation are free! We will make an estimate by video call. I will send you the video call URL so you don't need to install anything.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>build</mat-icon>
+          <mat-card-title>development and maintenance</mat-card-title>
+          <mat-card-subtitle>90,000 yen per month</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            We develop and maintain your company 's ideal proprietary blockchain for a flat monthly fee of 90,000 yen. The CosmosSDK is used for development. We will answer the time until the completion by hearing your request. There is an extra charge for the operation.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>build</mat-icon>
+          <mat-card-title>operations</mat-card-title>
+          <mat-card-subtitle>20.000 yen per month × Number of Nodes(flat price)</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            20.000 yen per month × Number of Nodes(flat price) operates your company 's own blockchain created using the Cosmos SDK. Development and maintenance are charged separately.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>people</mat-icon>
+          <mat-card-title>consulting</mat-card-title>
+          <mat-card-subtitle>20.000 yen per month × Number of Nodes(flat price)</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            20.000 yen per month × Number of Nodes(flat price) operates your company 's own blockchain created using the Cosmos SDK. Development and maintenance are charged separately.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  </ng-container>
+</app-section>
+<app-section>
+  <h2>{{ translation.subscription[lang] }}</h2>
+  <form #form="ngForm" (ngSubmit)="sendMail()">
+    <mat-form-field fxFill appearance="outline">
+      <input
+        matInput
+        name="name"
+        placeholder="{{ translation.name[lang] }}"
+        required
+        [(ngModel)]="forms.name"
+      />
+    </mat-form-field>
+    <mat-form-field fxFill appearance="outline">
+      <input
+        matInput
+        name="organization"
+        placeholder="{{ translation.organization[lang] }}"
+        required
+        [(ngModel)]="forms.organization"
+      />
+    </mat-form-field>
+    <mat-form-field fxFill appearance="outline">
+      <input
+        matInput
+        name="email"
+        placeholder="{{ translation.email[lang] }}"
+        required
+        type="email"
+        [(ngModel)]="forms.email"
+      />
+    </mat-form-field>
+    <mat-form-field fxFill appearance="outline">
+      <textarea
+        matInput
+        name="imagination"
+        placeholder="{{ translation.imagination[lang] }}"
+        required
+        [(ngModel)]="forms.imagination"
+      ></textarea>
+    </mat-form-field>
+    <div class="checkbox">
+      <mat-checkbox fxFill name="agree" required [(ngModel)]="forms.agree">
+        <span *ngIf="lang == 'ja'"
+          ><a routerLink="/terms/subscription-privacy-policy">利用規約</a
+          >に同意する</span
+        >
+        <span *ngIf="lang == 'en'"
+          >I agree to <a routerLink="/subscription-privacy-policy">privacy policy</a></span
+        >
+      </mat-checkbox>
+    </div>
+
+    <button
+      mat-raised-button
+      fxFill
+      [color]="'accent'"
+      [disabled]="form.invalid"
+    >
+      {{ translation.send[lang] }}
+    </button>
+  </form>
+</app-section>

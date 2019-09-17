@@ -4,19 +4,20 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LanguageService } from '../../shared/language.service';
 import { LoadingDialogComponent } from '../../shared/loading-dialog/loading-dialog.component';
-import { TRANSLATION } from './contact.translation';
+import { TRANSLATION } from './consulting-contact.translation';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  selector: 'app-consulting-contact',
+  templateUrl: './consulting-contact.component.html',
+  styleUrls: ['./consulting-contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ConsultingContactComponent implements OnInit {
+
   forms = {} as {
     name: string,
     email: string,
-    subject: number,
-    body: string,
+    subject: string,
+    date: string,
     agree: boolean
   };
 
@@ -42,8 +43,7 @@ export class ContactComponent implements OnInit {
       {
         email: this.forms.email,
         name: this.forms.name,
-        subject: this.translation.subjects[this.forms.subject][this.lang],
-        text: this.forms.body,
+        subject: this.forms.subject,
         lang: this.lang
       }
     ).subscribe(
