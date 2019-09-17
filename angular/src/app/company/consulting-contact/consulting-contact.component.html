@@ -32,28 +32,14 @@
       ></textarea>
     </mat-form-field>
 
-    <ng2-flatpickr [config]="options"></ng2-flatpickr>
-
-    <mat-form-field class="example-full-width">
-      <input
+    <mat-form-field fxFill appearance="outline">
+      <textarea
         matInput
-        [matDatepicker]="picker"
+        name="date"
         placeholder="{{ translation.date[lang] }}"
-      />
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker touchUi #picker></mat-datepicker>
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <input matInput [matDatepicker]="picker2" placeholder="" />
-      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-      <mat-datepicker touchUi #picker2></mat-datepicker>
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <input matInput [matDatepicker]="picker3" placeholder="" />
-      <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-      <mat-datepicker touchUi #picker3></mat-datepicker>
+        required
+        [(ngModel)]="forms.date"
+      ></textarea>
     </mat-form-field>
 
     <button

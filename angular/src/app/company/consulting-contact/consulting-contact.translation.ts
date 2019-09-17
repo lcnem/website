@@ -12,8 +12,8 @@ export const TRANSLATION = {
     ja: 'ご連絡先メールアドレス'
   } as any,
   date: {
-    en: 'Pick dates which you are availale by 3',
-    ja: 'ご希望日時を3つまで選択できます'
+    en: 'Pick dates which you are availale',
+    ja: 'ご希望日時をご入力下さい'
   } as any,
   subject: {
     en: 'Subject for developing your unique blockchain',

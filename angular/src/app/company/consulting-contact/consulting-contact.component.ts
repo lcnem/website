@@ -5,9 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { LanguageService } from '../../shared/language.service';
 import { LoadingDialogComponent } from '../../shared/loading-dialog/loading-dialog.component';
 import { TRANSLATION } from './consulting-contact.translation';
-import { FormControl } from '@angular/forms';
-import { FlatpickrOptions } from 'ng2-flatpickr';
-import Japanese from 'flatpickr/dist/l10n/ja.js';
 
 @Component({
   selector: 'app-consulting-contact',
@@ -15,17 +12,12 @@ import Japanese from 'flatpickr/dist/l10n/ja.js';
   styleUrls: ['./consulting-contact.component.css']
 })
 export class ConsultingContactComponent implements OnInit {
-  options: FlatpickrOptions = {
-    locale: Japanese,      // ロケールを日本
-    enableTime: true,      // 時刻選択を有効
-    time_24hr: true,       // 24時間表記を有効
-    minDate: '2018-06-10', // 最小選択日時
-  };
 
   forms = {} as {
     name: string,
     email: string,
     subject: string,
+    date: string,
     agree: boolean
   };
 
