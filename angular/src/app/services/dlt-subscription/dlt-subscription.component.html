@@ -11,10 +11,7 @@
     それは「既存のブロックチェーンを利用した結果、その機能が利用者のニーズを満たしきれないこと」です。
   </p>
   <p>
-    しかしながら、CosmosSDKを利用すれば、皆様がお望みのブロックチェーンを自由に作る事が出来るのです。
-  </p>
-  <p>
-    皆様が作りたいブロックチェーンを、どんな形でも大丈夫ですので下記のフォームより是非お話下さい。
+    しかしながら、CosmosSDKを利用すれば、理想のブロックチェーンを自由に作る事が出来ます。
   </p>
   </ng-container>
   <ng-container *ngIf="lang === 'en'">
@@ -62,12 +59,26 @@
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>person</mat-icon>
-          <mat-card-title><a [routerLink]="'/company/consulting-contact'">見積もり・初回相談(30分)</a></mat-card-title>
+          <mat-card-title>初回相談(30分)</mat-card-title>
           <mat-card-subtitle>無料</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <p>
-            見積もり・初回相談は無料です！ビデオ通話にて見積もりをさせていただきます。ビデオ通話のURLをお送りしますので、何もインストールして頂く必要はありません。
+            初回相談は無料です！ビデオ通話にて見積もりをさせていただきます。ビデオ通話のURLをお送りしますので、何もインストールして頂く必要はありません。時間を超えた相談に関しては、<a routerLink="/services/consulting">コンサルティング / 講師</a>も合わせてご利用ください。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title>見積もり</mat-card-title>
+          <mat-card-subtitle>無料</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            見積もりも無料です！ビデオ通話にて見積もりをさせていただきます。
           </p>
         </mat-card-content>
       </mat-card>
@@ -100,20 +111,6 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <div [fxFlex]="50" [fxFlex.xs]="100">
-      <mat-card>
-        <mat-card-header>
-          <mat-icon mat-card-avatar>people</mat-icon>
-          <mat-card-title>コンサルティング</mat-card-title>
-          <mat-card-subtitle>3万円/30分</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            独自ブロックチェーンの活用などに関して、ブロックチェーン専門コンサルタントがコンサルティング致します。どのような疑問でも結構ですので、お気軽にご相談下さい。
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>
   </div>
   </ng-container>
   <ng-container *ngIf="lang === 'en'">
@@ -123,12 +120,26 @@
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>person</mat-icon>
-          <mat-card-title><a [routerLink]="'/company/consulting-contact'">Estimation and first consultation (30 minutes)</a></mat-card-title>
-          <mat-card-subtitle>free</mat-card-subtitle>
+          <mat-card-title>初回相談(30分)</mat-card-title>
+          <mat-card-subtitle>無料</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <p>
-            Estimation and first consultation are free! We will make an estimate by video call. I will send you the video call URL so you don't need to install anything.
+            初回相談は無料です！ビデオ通話にて見積もりをさせていただきます。ビデオ通話のURLをお送りしますので、何もインストールして頂く必要はありません。時間を超えた相談に関しては、<a routerLink="/services/consulting">コンサルティング / 講師</a>も合わせてご利用ください。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title>見積もり</mat-card-title>
+          <mat-card-subtitle>無料</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            見積もりも無料です！ビデオ通話にて見積もりをさせていただきます。
           </p>
         </mat-card-content>
       </mat-card>
@@ -152,20 +163,6 @@
         <mat-card-header>
           <mat-icon mat-card-avatar>build</mat-icon>
           <mat-card-title>operations</mat-card-title>
-          <mat-card-subtitle>20.000 yen per month × Number of Nodes(flat price)</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            20.000 yen per month × Number of Nodes(flat price) operates your company 's own blockchain created using the Cosmos SDK. Development and maintenance are charged separately.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div [fxFlex]="50" [fxFlex.xs]="100">
-      <mat-card>
-        <mat-card-header>
-          <mat-icon mat-card-avatar>people</mat-icon>
-          <mat-card-title>consulting</mat-card-title>
           <mat-card-subtitle>20.000 yen per month × Number of Nodes(flat price)</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>

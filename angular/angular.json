@@ -26,9 +26,7 @@
               {
                 "input": "src/theme/light-theme.scss"
               },
-              "src/styles.css",
-              "./node_modules/flatpickr/dist/flatpickr.min.css",
-              "./node_modules/flatpickr/dist/themes/material_blue.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -80,9 +78,7 @@
               {
                 "input": "src/theme/light-theme.scss"
               },
-              "src/styles.css",
-              "./node_modules/flatpickr/dist/flatpickr.min.css",
-              "./node_modules/flatpickr/dist/themes/material_blue.css"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": [
