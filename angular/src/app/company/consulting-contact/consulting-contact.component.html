@@ -10,6 +10,7 @@
         [(ngModel)]="forms.name"
       />
     </mat-form-field>
+
     <mat-form-field fxFill appearance="outline">
       <input
         matInput
@@ -20,6 +21,7 @@
         [(ngModel)]="forms.email"
       />
     </mat-form-field>
+
     <mat-form-field fxFill appearance="outline">
       <textarea
         matInput
@@ -29,37 +31,29 @@
         [(ngModel)]="forms.subject"
       ></textarea>
     </mat-form-field>
-    <mat-form-field>
+
+    <ng2-flatpickr [config]="options"></ng2-flatpickr>
+
+    <mat-form-field class="example-full-width">
       <input
         matInput
-        [matDatepicker]="picker1"
+        [matDatepicker]="picker"
         placeholder="{{ translation.date[lang] }}"
-        [formControl]="date"
       />
-      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-      <mat-datepicker #picker1></mat-datepicker>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
     </mat-form-field>
 
-    <mat-form-field>
-      <input
-        matInput
-        [matDatepicker]="picker2"
-        placeholder=""
-        [formControl]="serializedDate"
-      />
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker2" placeholder="" />
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-      <mat-datepicker #picker2></mat-datepicker>
+      <mat-datepicker touchUi #picker2></mat-datepicker>
     </mat-form-field>
 
-    <mat-form-field>
-      <input
-        matInput
-        [matDatepicker]="picker3"
-        placeholder=""
-        [value]="date.value"
-      />
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker3" placeholder="" />
       <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-      <mat-datepicker #picker3></mat-datepicker>
+      <mat-datepicker touchUi #picker3></mat-datepicker>
     </mat-form-field>
 
     <button

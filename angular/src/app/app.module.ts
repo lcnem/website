@@ -50,7 +50,8 @@ import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscr
 import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
 import { ConsultingContactComponent } from './company/consulting-contact/consulting-contact.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { Ng2FlatpickrModule } from 'ng2-flatpickr';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     EffectsModule.forRoot(effects),
     FormsModule,
     SharedModule,
+    Ng2FlatpickrModule,
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
@@ -127,7 +129,8 @@ import { MatNativeDateModule } from '@angular/material/core';
   entryComponents: [
     LoadingDialogComponent
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'ja-JP' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
