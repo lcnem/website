@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { LanguageService } from '../../shared/language.service';
 import { LoadingDialogComponent } from '../../shared/loading-dialog/loading-dialog.component';
 import { TRANSLATION } from './consulting-contact.translation';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-consulting-contact',
@@ -12,6 +13,9 @@ import { TRANSLATION } from './consulting-contact.translation';
   styleUrls: ['./consulting-contact.component.css']
 })
 export class ConsultingContactComponent implements OnInit {
+  date = new FormControl(new Date());
+  serializedDate = new FormControl((new Date()).toISOString());
+  
   forms = {} as {
     name: string,
     email: string,
