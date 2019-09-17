@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrivacyPolicyComponent } from './subscription-privacy-policy.component';
+import { SubscriptionPrivacyPolicyComponent } from './subscription-privacy-policy.component';
 
 describe('PrivacyPolicyComponent', () => {
   // let component: PrivacyPolicyComponent;
