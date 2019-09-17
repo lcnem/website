@@ -15,7 +15,7 @@ import { FormControl } from '@angular/forms';
 export class ConsultingContactComponent implements OnInit {
   date = new FormControl(new Date());
   serializedDate = new FormControl((new Date()).toISOString());
-  
+
   forms = {} as {
     name: string,
     email: string,
