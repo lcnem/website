@@ -34,7 +34,6 @@ import { ContactComponent } from './company/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecruitComponent } from './company/recruit/recruit.component';
 import { ChequeComponent } from './services/cheque/cheque.component';
-import { LcnemintComponent } from './services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './services/consulting/consulting.component';
 import { ContractDevelopmentComponent } from './services/contract-development/contract-development.component';
 import { MediaKitComponent } from './company/media-kit/media-kit.component';
@@ -61,7 +60,6 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
     ContactComponent,
     RecruitComponent,
     ChequeComponent,
-    LcnemintComponent,
     ConsultingComponent,
     ContractDevelopmentComponent,
     MediaKitComponent,

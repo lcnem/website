@@ -1,0 +1,51 @@
+<app-header [heading]="translation.contractDevelopment[lang]"
+  [image]="'assets/images/services/development.jpg'"></app-header>
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>Webアプリケーション</h3>
+    <p>一般向け、業務用どちらにも対応可能です。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Web applications</h3>
+    <p>It can be used for both general and business use.</p>
+  </ng-container>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>iOS,Android向けアプリケーション</h3>
+    <p>iOS,Androidに同時に対応可能です。一般向け、業務用どちらにも対応可能です。同時にWebにも対応可能です。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>iOS and Android applications</h3>
+    <p>It can support iOS and Android at the same time. It can be used for both general and business use. It's also web-ready.</p>
+  </ng-container>
+</app-section>
+<app-section [color]="'mat-primary'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <ng-container *ngIf="lang === 'ja'">
+    <h3>ブロックチェーンを利用したシステム</h3>
+    <p>
+      既存のブロックチェーンの利用ではなく、要件を全て満たす独自のブロックチェーン開発と、独自ブロックチェーンを利用したシステムの開発に対応いたします。
+      Webアプリケーション,iOS,Android向けアプリケーションは別途対応となります。
+    </p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Systems using blockchain</h3>
+    <p>
+        Instead of using an existing blockchain, we will develop our own blockchain that meets all the requirements and a system using our own blockchain.
+        Web applications, iOS and Android applications will be supported separately.
+    </p>
+  </ng-container>
+</app-section>
+<app-section>
+  <div [fxLayout]="'row'" fxFill>
+    <h3>{{translation.contact[lang]}}</h3>
+    <span class="fill-remaining-space"></span>
+    <div>
+      <a mat-flat-button class="mat-radius-button" [color]="'accent'"
+        [routerLink]="'/company/contact'">{{translation.contact[lang]}}</a>
+    </div>
+  </div>
+</app-section>
