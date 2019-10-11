@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { LanguageService } from './shared/language.service';
+import { LanguageService } from './_services/language.service';
 import { TRANSLATION } from './app.translation';
 
 @Component({

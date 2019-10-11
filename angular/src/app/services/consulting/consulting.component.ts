@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../../shared/language.service';
+import { LanguageService } from '../../_services/language.service';
 import { TRANSLATION } from './consulting.translation';
 
 @Component({
@@ -16,17 +16,6 @@ export class ConsultingComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  public ledger = [
-    {
-      image: 'assets/images/dlt/nem.svg',
-      name: 'NEM'
-    },
-    {
-      image: 'assets/images/dlt/tendermint.svg',
-      name: 'Tendermint(Cosmos SDK)'
-    },
-  ];
 
   public translation = TRANSLATION;
 }

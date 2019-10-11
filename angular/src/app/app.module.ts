@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { environment } from '../environments/environment';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,28 +29,28 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
-import { AboutComponent } from './company/about/about.component';
-import { PrivacyPolicyComponent } from './company/privacy-policy/privacy-policy.component';
-import { ContactComponent } from './company/contact/contact.component';
-import { HttpClientModule } from '@angular/common/http';
-import { RecruitComponent } from './company/recruit/recruit.component';
-import { ChequeComponent } from './services/cheque/cheque.component';
-import { ConsultingComponent } from './services/consulting/consulting.component';
-import { ContractDevelopmentComponent } from './services/contract-development/contract-development.component';
-import { MediaKitComponent } from './company/media-kit/media-kit.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './effect';
-import { SharedModule } from './shared/shared.module';
-import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
+import { SharedModule } from './_shared/shared.module';
+
+import { AboutComponent } from './company/about/about.component';
+import { PrivacyPolicyComponent } from './company/privacy-policy/privacy-policy.component';
+import { ContactComponent } from './company/contact/contact.component';
+import { RecruitComponent } from './company/recruit/recruit.component';
+import { ChequeComponent } from './services/cheque/cheque.component';
+import { ConsultingComponent } from './services/consulting/consulting.component';
+import { ContractDevelopmentComponent } from './services/contract-development/contract-development.component';
+import { MediaKitComponent } from './company/media-kit/media-kit.component';
 import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
 import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { LoadingDialogComponent } from './_shared/loading-dialog/loading-dialog.component';
+import { NewsComponent } from './home/news/news.component';
 
 @NgModule({
   declarations: [
@@ -64,17 +66,18 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
     ContractDevelopmentComponent,
     MediaKitComponent,
     DltSubscriptionComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     FlexLayoutModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot(effects),
-    FormsModule,
     SharedModule,
     MatButtonModule,
     MatCardModule,
@@ -93,13 +96,10 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
     MatToolbarModule,
     MatTooltipModule,
     MatMenuModule,
-    HttpClientModule,
     MatCheckboxModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
   ],
   exports: [
-
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
