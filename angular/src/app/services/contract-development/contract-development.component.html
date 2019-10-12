@@ -25,6 +25,17 @@
 <app-section [color]="'mat-primary'">
   <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
   <ng-container *ngIf="lang === 'ja'">
+    <h3>iOS・Androidアプリケーション開発</h3>
+    <p>一般のお客様向けにiOS・Androidアプリケーションの開発を受託しています。Ionicを使用します。</p>
+  </ng-container>
+  <ng-container *ngIf="lang === 'en'">
+    <h3>Development of Application for general customers in the form of iOS・Android applications</h3>
+    <p>We are contracted to develop Application for general customers in the form of iOS/Android applications. We use Ionic.</p>
+  </ng-container>
+</app-section>
+<app-section [color]="'black'">
+  <mat-icon style="font-size: 48px;" [inline]="true">build</mat-icon>
+  <ng-container *ngIf="lang === 'ja'">
     <h3>独自のブロックチェーン開発</h3>
     <p>独自のブロックチェーンの開発を請け負います。設計に関してコンサルティングを行うことも可能です。Cosmos SDKを使用します。</p>
   </ng-container>
