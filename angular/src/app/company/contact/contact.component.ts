@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { LanguageService } from '../../shared/language.service';
+import { LanguageService } from '../../core/services/language.service';
 import { LoadingDialogComponent } from '../../shared/loading-dialog/loading-dialog.component';
 import { TRANSLATION } from './contact.translation';
 

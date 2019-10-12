@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../shared/language.service';
+import { LanguageService } from '../core/services/language.service';
 import { TRANSLATION } from './home.translation';
 
 @Component({
@@ -69,15 +69,6 @@ export class HomeComponent implements OnInit {
         ja: 'LCNEMの技術・社内情報メディア'
       } as any
     },
-    {
-      name: 'lcnemint',
-      link: '/services/lcnemint',
-      image: 'assets/images/dlt/cosmos.svg',
-      copy: {
-        en: 'The original blockchain in Cosmos Network for LCNEM Cheque',
-        ja: 'LCNEM Cheque用のCosmosネットワーク独自ブロックチェーン'
-      } as any
-    }
   ];
 
   public members = [
@@ -86,8 +77,8 @@ export class HomeComponent implements OnInit {
       position: 'CEO, CTO',
       image: 'https://pbs.twimg.com/profile_images/1059679360070836224/uNbHbPfg_400x400.jpg',
       description: {
-        en: 'Faculty of Economics, Kyoto University and Graduate School of Business Administration, Kyoto University. At the age of 15, started programming in C, then C #, then TypeScript, Angular, and Go. The inventor of Ticket Peer to Peer. The first person to start building Cosmos SDK chains in Japan. Proposer of MTPL which integrates FTPL and MMT which are the theory of economics.',
-        ja: '京都大学経済学部、京都大学経営管理大学院。15歳からCによるプログラミングを始め、C#を経てTypeScript,AngularやGoに至る。Ticket Peer to Peerの考案者。日本でCosmos SDK製チェーンを最初に作り始めた人。経済学の理論であるFTPLとMMTを統合したMTPLを提唱。'
+        en: 'Faculty of Economics, Kyoto University and Graduate School of Business Administration, Kyoto University. At the age of 15, started programming in C and C #. The inventor of Ticket Peer to Peer. The first person to start building Cosmos SDK chains in Japan. Proposer of MTPL which integrates FTPL and MMT which are the theory of economics. Pioneer of development using Cosmos SDK in Japan.',
+        ja: '京都大学経済学部、京都大学経営管理大学院。15歳からC,C#によるプログラミングを始める。Ticket Peer to Peerの考案者。経済学の理論であるFTPLとMMTを統合したMTPLを提唱。日本におけるCosmos SDKを利用した開発の先駆者。'
       } as any,
       twitter: 'https://twitter.com/YuKimura45z',
       facebook: 'https://facebook.com/YuKimura45z',

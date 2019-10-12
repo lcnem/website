@@ -12,6 +12,10 @@
         "function": "sendMail"
       },
       {
+        "source": "/api/feeds/inside",
+        "function": "feedsInside"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
@@ -21,6 +25,11 @@
     "predeploy": [
       "npm --prefix ./functions run lint",
       "npm --prefix ./functions run build"
-    ]
+    ],
+    "source": "functions"
+  },
+  "firestore": {
+    "rules": "firestore/firestore.rules",
+    "indexes": "firestore/firestore.indexes.json"
   }
 }

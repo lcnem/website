@@ -1,0 +1,7 @@
+<mat-nav-list>
+  <ng-container *ngFor="let item of items">
+    <a mat-list-item href="item.link">{{item.title}}</a>
+    <span class="fill-remaining-space"></span>
+    <span>{{item.pubDate}}</span>
+  </ng-container>
+</mat-nav-list>

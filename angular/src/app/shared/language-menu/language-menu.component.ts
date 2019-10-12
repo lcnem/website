@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../../core/services/language.service';
 
 @Component({
   selector: 'app-language-menu',

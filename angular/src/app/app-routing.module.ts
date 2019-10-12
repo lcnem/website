@@ -7,7 +7,6 @@ import { PrivacyPolicyComponent } from './company/privacy-policy/privacy-policy.
 import { ContactComponent } from './company/contact/contact.component';
 import { RecruitComponent } from './company/recruit/recruit.component';
 import { ChequeComponent } from './services/cheque/cheque.component';
-import { LcnemintComponent } from './services/lcnemint/lcnemint.component';
 import { ConsultingComponent } from './services/consulting/consulting.component';
 import { ContractDevelopmentComponent } from './services/contract-development/contract-development.component';
 import { MediaKitComponent } from './company/media-kit/media-kit.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   { path: 'company/media-kit', component: MediaKitComponent },
   { path: 'services/cheque', component: ChequeComponent },
   { path: 'services/dlt-subscription', component: DltSubscriptionComponent },
-  { path: 'services/lcnemint', component: LcnemintComponent },
   { path: 'services/consulting', component: ConsultingComponent },
   { path: 'services/contract-development', component: ContractDevelopmentComponent },
   { path: 'terms/privacy-policy', component: PrivacyPolicyComponent },

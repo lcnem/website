@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from 'src/app/shared/language.service';
+import { LanguageService } from 'src/app/core/services/language.service';
 import { TRANSLATION } from './media-kit.translation';
 
 @Component({

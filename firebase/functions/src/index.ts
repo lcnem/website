@@ -1,54 +1,28 @@
 import * as functions from 'firebase-functions';
-import * as request from 'request';
+import * as admin from 'firebase-admin';
+
+import { sendMail as _sendMail }from './send-mail'
+import { feedsInside as _feedsInside } from './feeds/inside';
+
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
 // export const helloWorld = functions.https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // });
-
-export const sendMail = functions.https.onRequest((req, res) => {
-  try {
-    const email = req.body.email as string;
-    const lang = req.body.lang as string;
-    const subject = req.body.subject as string;
-    const name = req.body.name as string;
-    const text = req.body.text as string;
-
-    if (!email || !name || !subject || !text || !lang) {
-      throw Error("INVALID_PARAMETERS");
-    }
-
-    const body = lang === 'en'
-    ? `Dear ${name}.
-Your inquiry has been submitted.
-Thanks for your inquiry.
-
-Inquiry details:
-${text}`
-    : `${name}様
-お問い合わせを送信しました。
-お問い合わせいただきありがとうございます。
-
-お問い合わせ内容:
-${text}`
-
-
-    request.post(
-      functions.config().gas.send_mail,
-      {
-        form: {
-          email: email,
-          lang: lang,
-          subject: subject,
-          body: body
-        }
-      },
-      () => {
-        res.status(200).send();
-      }
-    )
-  } catch (e) {
-    res.status(400).send(e.message);
-  }
+admin.initializeApp({
+  credential: admin.credential.cert(JSON.parse(JSON.stringify(functions.config().service_account).replace(/\\\\n/g, "\\n"))),
+  databaseURL: functions.config().admin.database_url
 });
+
+
+export const sendMail: functions.HttpsFunction | null =
+  !process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'sendMail'
+    ? _sendMail
+    : null;
+
+export const feedsInside: functions.HttpsFunction | null =
+  !process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'feedsInside'
+    ? _feedsInside
+    : null;
+  

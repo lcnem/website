@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from '../../shared/language.service';
+import { LanguageService } from '../../core/services/language.service';
 import { TRANSLATION } from './contract-development.translation';
 
 @Component({
