@@ -12,6 +12,10 @@
         "function": "sendMail"
       },
       {
+        "source": "/api/feeds/inside",
+        "function": "feedsInside"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

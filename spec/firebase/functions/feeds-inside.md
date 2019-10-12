@@ -1,4 +1,4 @@
-# inside feed
+# feeds inside
 
 - `https://inside.lcnem.com/category/news/feed/`のXMLをJSONに変換
 - JSONをfirestoreの`feeds/inside`に保管

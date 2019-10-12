@@ -5,7 +5,8 @@
     "noImplicitReturns": true,
     "outDir": "lib",
     "sourceMap": true,
-    "target": "es2015"
+    "target": "es2015",
+    "strict": true
   },
   "compileOnSave": true,
   "include": [
