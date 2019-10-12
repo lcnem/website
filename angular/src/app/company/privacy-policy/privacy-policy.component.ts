@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { LanguageService } from '../../_services/language.service';
+import { LanguageService } from '../../core/services/language.service';
 import { TRANSLATION } from './privacy-policy.translation';
 
 @Component({

@@ -37,7 +37,7 @@ import { reducers, metaReducers } from './reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './effect';
-import { SharedModule } from './_shared/shared.module';
+import { SharedModule } from './shared/shared.module';
 
 import { AboutComponent } from './company/about/about.component';
 import { PrivacyPolicyComponent } from './company/privacy-policy/privacy-policy.component';
@@ -49,7 +49,7 @@ import { ContractDevelopmentComponent } from './services/contract-development/co
 import { MediaKitComponent } from './company/media-kit/media-kit.component';
 import { DltSubscriptionComponent } from './services/dlt-subscription/dlt-subscription.component';
 import { SubscriptionPrivacyPolicyComponent } from './company/subscription-privacy-policy/subscription-privacy-policy.component';
-import { LoadingDialogComponent } from './_shared/loading-dialog/loading-dialog.component';
+import { LoadingDialogComponent } from './shared/loading-dialog/loading-dialog.component';
 import { NewsComponent } from './home/news/news.component';
 
 @NgModule({

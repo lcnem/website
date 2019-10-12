@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './_shared/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { AboutComponent } from './company/about/about.component';
 import { PrivacyPolicyComponent } from './company/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './company/contact/contact.component';

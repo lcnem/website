@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { LanguageService } from '../../_services/language.service';
-import { LoadingDialogComponent } from '../../_shared/loading-dialog/loading-dialog.component';
+import { LanguageService } from '../../core/services/language.service';
+import { LoadingDialogComponent } from '../../shared/loading-dialog/loading-dialog.component';
 import { TRANSLATION } from './dlt-subscription.translation';
 
 @Component({
