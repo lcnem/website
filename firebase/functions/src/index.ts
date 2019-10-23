@@ -25,4 +25,3 @@ export const feedsInside: functions.HttpsFunction | null =
   !process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === 'feedsInside'
     ? _feedsInside
     : null;
-  

@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -66,10 +68,12 @@ import { NewsComponent } from './home/news/news.component';
     ContractDevelopmentComponent,
     MediaKitComponent,
     DltSubscriptionComponent,
-    NewsComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -97,7 +101,7 @@ import { NewsComponent } from './home/news/news.component';
     MatTooltipModule,
     MatMenuModule,
     MatCheckboxModule,
-    MatNativeDateModule,
+    MatNativeDateModule
   ],
   exports: [
     MatButtonModule,
@@ -118,13 +122,10 @@ import { NewsComponent } from './home/news/news.component';
     MatTooltipModule,
     MatMenuModule,
     MatCheckboxModule,
-    MatNativeDateModule,
+    MatNativeDateModule
   ],
-  entryComponents: [
-    LoadingDialogComponent
-  ],
-  providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'ja-JP' }],
+  entryComponents: [LoadingDialogComponent],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'ja-JP' }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

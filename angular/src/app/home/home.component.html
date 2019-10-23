@@ -1,17 +1,25 @@
-<app-header [heading]="translation.lcnem[lang]" [image]="'assets/images/lcnem.svg'">
-  <p>{{translation.top[lang]}}</p>
+<app-header
+  [heading]="translation.lcnem[lang]"
+  [image]="'assets/images/lcnem.svg'"
+>
+  <p>{{ translation.top[lang] }}</p>
 </app-header>
 <app-section [color]="'mat-primary'">
   <ng-container *ngIf="lang === 'en'">
     <h2>Philosophy</h2>
     <p>The mission of LCNEM is to enhance economic welfare.</p>
-    <p>The step is to spread some mechanism designs depend with appropriate incentives, and to make the Narrow Bank
-      using the distributed ledger technology into a reality.</p>
+    <p>
+      The step is to spread some mechanism designs depend with appropriate
+      incentives, and to make the Narrow Bank using the distributed ledger
+      technology into a reality.
+    </p>
   </ng-container>
   <ng-container *ngIf="lang === 'ja'">
     <h2>理念</h2>
     <p>経済厚生を高めることこそがLCNEMのミッションです。</p>
-    <p>手段は、インセンティブによるメカニズムデザインの考え方を広めること。そして、分散型台帳技術を使ったナローバンクを実現することです。</p>
+    <p>
+      手段は、インセンティブによるメカニズムデザインの考え方を広めること。そして、分散型台帳技術を使ったナローバンクを実現することです。
+    </p>
   </ng-container>
 
   <ul>
@@ -21,53 +29,86 @@
     <li>short-form of them</li>
   </ul>
 </app-section>
-<!--
+
+
 <app-section>
   <app-news></app-news>
 </app-section>
--->
+
+
 <app-section>
-  <h2>{{translation.services[lang]}}</h2>
+  <h2>{{ translation.services[lang] }}</h2>
   <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
     <div *ngFor="let s of service" [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
-        <img mat-card-image src="{{s.image}}" />
+        <img mat-card-image src="{{ s.image }}" />
         <mat-card-content>
-          <h3>{{s.name}}</h3>
-          <p>{{s.copy[lang]}}</p>
+          <h3>{{ s.name }}</h3>
+          <p>{{ s.copy[lang] }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button fxFill class="mat-radius-button" [color]="'primary'" [routerLink]="s.link"
-            *ngIf="s.link">{{translation.readMore[lang]}}</button>
-          <a mat-button fxFill class="mat-radius-button" [color]="'primary'" [href]="s.url" [target]="'_blank'"
-            *ngIf="s.url">{{translation.gettingStarted[lang]}}</a>
+          <button
+            mat-button
+            fxFill
+            class="mat-radius-button"
+            [color]="'primary'"
+            [routerLink]="s.link"
+            *ngIf="s.link"
+          >
+            {{ translation.readMore[lang] }}
+          </button>
+          <a
+            mat-button
+            fxFill
+            class="mat-radius-button"
+            [color]="'primary'"
+            [href]="s.url"
+            [target]="'_blank'"
+            *ngIf="s.url"
+            >{{ translation.gettingStarted[lang] }}</a
+          >
         </mat-card-actions>
       </mat-card>
     </div>
   </div>
 </app-section>
 <app-section>
-  <h2>{{translation.members[lang]}}</h2>
+  <h2>{{ translation.members[lang] }}</h2>
   <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
     <div *ngFor="let m of members" [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
         <mat-card-header>
-          <img mat-card-avatar src="{{m.image}}" />
-          <mat-card-title>{{m.name}}</mat-card-title>
-          <mat-card-subtitle>{{m.position}}</mat-card-subtitle>
+          <img mat-card-avatar src="{{ m.image }}" />
+          <mat-card-title>{{ m.name }}</mat-card-title>
+          <mat-card-subtitle>{{ m.position }}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <p>{{m.description[lang]}}</p>
+          <p>{{ m.description[lang] }}</p>
         </mat-card-content>
         <mat-card-actions fxLayout="row">
           <span class="fill-remaining-space"></span>
-          <a mat-icon-button *ngIf="m.twitter" href="{{m.twitter}}" target="_blank">
+          <a
+            mat-icon-button
+            *ngIf="m.twitter"
+            href="{{ m.twitter }}"
+            target="_blank"
+          >
             <img class="icon" src="assets/images/twitter.svg" />
           </a>
-          <a mat-icon-button *ngIf="m.facebook" href="{{m.facebook}}" target="_blank">
+          <a
+            mat-icon-button
+            *ngIf="m.facebook"
+            href="{{ m.facebook }}"
+            target="_blank"
+          >
             <img class="icon" src="assets/images/facebook.svg" />
           </a>
-          <a mat-icon-button *ngIf="m.website" href="{{m.website}}" target="_blank">
+          <a
+            mat-icon-button
+            *ngIf="m.website"
+            href="{{ m.website }}"
+            target="_blank"
+          >
             <mat-icon>web</mat-icon>
           </a>
         </mat-card-actions>
@@ -76,17 +117,24 @@
   </div>
 </app-section>
 <app-section>
-  <h2>{{translation.partners[lang]}}</h2>
+  <h2>{{ translation.partners[lang] }}</h2>
   <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
     <div *ngFor="let p of partners" [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
-        <img mat-card-image src="{{p.image}}" />
+        <img mat-card-image src="{{ p.image }}" />
         <mat-card-content>
-          <p>{{p.description[lang]}}</p>
+          <p>{{ p.description[lang] }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-button fxFill class="mat-radius-button" href="{{p.link}}" target="_blank"
-            [color]="'primary'">{{p.name}}<mat-icon>open_in_new</mat-icon></a>
+          <a
+            mat-button
+            fxFill
+            class="mat-radius-button"
+            href="{{ p.link }}"
+            target="_blank"
+            [color]="'primary'"
+            >{{ p.name }}<mat-icon>open_in_new</mat-icon></a
+          >
         </mat-card-actions>
       </mat-card>
     </div>

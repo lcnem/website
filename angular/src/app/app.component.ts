@@ -9,7 +9,7 @@ import { TRANSLATION } from './app.translation';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
+   
   public get lang() { return this.language.code; }
 
   constructor(
