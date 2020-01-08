@@ -1,0 +1,43 @@
+<form
+  #form="ngForm"
+  (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
+>
+  <mat-form-field fxFill>
+    <mat-label [ngSwitch]="''">
+      <ng-container *ngSwitchDefault>お名前</ng-container>
+    </mat-label>
+    <input #name matInput required ngModel name="name" />
+  </mat-form-field>
+  <mat-form-field fxFill>
+    <mat-label [ngSwitch]="''">
+      <ng-container *ngSwitchDefault>メールアドレス</ng-container>
+    </mat-label>
+    <input #email matInput required type="email" ngModel name="email" />
+  </mat-form-field>
+  <mat-form-field fxFill>
+    <mat-label [ngSwitch]="''">
+      <ng-container *ngSwitchDefault>内容</ng-container>
+    </mat-label>
+    <textarea #body matInput required ngModel name="body"></textarea>
+  </mat-form-field>
+  <div class="checkbox">
+    <mat-checkbox fxFill required ngModel name="agree" [ngSwitch]="''">
+      <ng-container *ngSwitchDefault>
+        <span
+          ><a routerLink="/privacy-policy">プライバシーポリシ </a
+          >に同意する</span
+        >
+      </ng-container>
+    </mat-checkbox>
+  </div>
+
+  <button
+    mat-raised-button
+    fxFill
+    [color]="'accent'"
+    [disabled]="form.invalid"
+    [ngSwitch]="''"
+  >
+    <ng-container *ngSwitchDefault>送信する</ng-container>
+  </button>
+</form>
