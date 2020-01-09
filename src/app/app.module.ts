@@ -14,11 +14,15 @@ import { environment } from '../environments/environment';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material.module';
+import { AboutComponent } from './home/about/about.component';
+import { OfficersComponent } from './home/officers/officers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    OfficersComponent
   ],
   imports: [
     BrowserModule,
