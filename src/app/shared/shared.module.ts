@@ -5,11 +5,12 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
 import { HeaderComponent } from './header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
+import { SectionComponent } from './section/section.component';
 
 
 
 @NgModule({
-  declarations: [LoadingDialogComponent, TwitterTimelineComponent, HeaderComponent],
+  declarations: [LoadingDialogComponent, TwitterTimelineComponent, HeaderComponent, SectionComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
@@ -19,6 +20,7 @@ import { MaterialModule } from '../material/material.module';
     TwitterTimelineComponent,
     HeaderComponent,
     LoadingDialogComponent,
+    SectionComponent,
   ]
 })
 export class SharedModule { }
