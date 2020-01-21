@@ -20,67 +20,35 @@
 
 <app-section>
   <h2>サービス</h2>
-  <div
-    class="service"
-    [fxLayout]="'row wrap'"
-    [fxLayoutAlign]="'space-around'"
-    [fxLayoutGap]="'16px grid'"
-  >
+  <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div *ngFor="let s of services" [fxFlex]="50" [fxFlex.xs]="100">
+      <mat-card>
+        <img mat-card-image src="{{ s.image }}" />
+        <mat-card-content>
+          <h3>{{ s.name }}</h3>
+          <p>{{ s.copy }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            mat-button
+            fxFill
+            class="mat-radius-button"
+            [color]="'primary'"
+            [routerLink]="s.link"
+          >
+            詳しく見る
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</app-section>
+
+<app-section>
+  <h2>メンバー</h2>
+  <div [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
     <div [fxFlex]="50" [fxFlex.xs]="100">
-      <mat-card>
-        <img mat-card-image src="assets/images/development.jpg" />
-        <mat-card-content>
-          <h3>Blockchain Subscription</h3>
-          <p>サブスクリプション型のブロックチェーン開発サービス</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button
-            mat-button
-            fxFill
-            class="mat-radius-button"
-            [color]="'primary'"
-            [routerLink]="'services/blockchain-subscription'"
-          >
-            詳しく見る
-          </button>
-        </mat-card-actions>
-      </mat-card>
-      <mat-card>
-        <img mat-card-image src="assets/images/consulting.jpg" />
-        <mat-card-content>
-          <h3>Minimum Viable Product</h3>
-          <p>MVP開発設計参加&コンサルティングサービス</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button
-            mat-button
-            fxFill
-            class="mat-radius-button"
-            [color]="'primary'"
-            [routerLink]="'services/minimum-viable-product'"
-          >
-            詳しく見る
-          </button>
-        </mat-card-actions>
-      </mat-card>
-      <mat-card>
-        <img mat-card-image src="assets/images/development.jpg" />
-        <mat-card-content>
-          <h3>System Integration</h3>
-          <p>システム開発受託</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button
-            mat-button
-            fxFill
-            class="mat-radius-button"
-            [color]="'primary'"
-            [routerLink]="'services/minimum-viable-product'"
-          >
-            詳しく見る
-          </button>
-        </mat-card-actions>
-      </mat-card>
+      <app-officers></app-officers>
     </div>
   </div>
 </app-section>
