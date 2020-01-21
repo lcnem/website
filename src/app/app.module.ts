@@ -22,7 +22,7 @@ import { OfficersComponent } from './home/officers/officers.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    OfficersComponent
+    OfficersComponent,
   ],
   imports: [
     BrowserModule,

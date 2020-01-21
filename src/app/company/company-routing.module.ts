@@ -7,7 +7,7 @@ import { MediaKitComponent } from './media-kit/media-kit.component';
 
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent },
+  // { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'recruit', component: RecruitComponent },
   { path: 'media-kit', component: MediaKitComponent },
