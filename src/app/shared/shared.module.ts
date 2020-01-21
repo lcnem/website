@@ -4,14 +4,16 @@ import { LoadingDialogComponent } from './loading-dialog/loading-dialog.componen
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 import { HeaderComponent } from './header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
 
 
 
 @NgModule({
   declarations: [LoadingDialogComponent, TwitterTimelineComponent, HeaderComponent],
   imports: [
-    FlexLayoutModule,
     CommonModule,
+    FlexLayoutModule,
+    MaterialModule,
   ],
   exports: [
     TwitterTimelineComponent,
