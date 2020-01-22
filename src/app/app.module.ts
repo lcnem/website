@@ -17,6 +17,7 @@ import { MaterialModule } from './material/material.module';
 import { AboutComponent } from './home/about/about.component';
 import { OfficersComponent } from './home/officers/officers.component';
 import { IntroductionComponent } from './home/introduction/introduction.component';
+import { ProductComponent } from './home/product/product.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { IntroductionComponent } from './home/introduction/introduction.componen
     AboutComponent,
     OfficersComponent,
     IntroductionComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
