@@ -1,3 +1,14 @@
+<app-section [color]="'mat-primary'">
+  お問い合わせいただきありがとうございます。
+  <br />
+  お客様からのご意見・ご要望はサービスの向上に活用させていただきます。
+  <br />
+  <br />
+  我々の不備に関しましても、速やかにご対応させていただきます。
+  <br />
+  お待たせしてしまい申し訳ございませんが、担当者からの連絡をお待ちくださいませ。
+</app-section>
+
 <form
   #form="ngForm"
   (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
@@ -16,7 +27,7 @@
   </mat-form-field>
   <mat-form-field fxFill>
     <mat-label [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>内容</ng-container>
+      <ng-container *ngSwitchDefault>ご用件</ng-container>
     </mat-label>
     <textarea #body matInput required ngModel name="body"></textarea>
   </mat-form-field>
