@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './home/about/about.component';
 import { OfficersComponent } from './home/officers/officers.component';
+import { IntroductionComponent } from './home/introduction/introduction.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'officers', component: OfficersComponent },
+  { path: 'introduction', component: IntroductionComponent },
   {
     path: 'company',
     loadChildren: () => import('./company/company.module').then(m => m.CompanyModule)

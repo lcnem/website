@@ -16,6 +16,7 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material.module';
 import { AboutComponent } from './home/about/about.component';
 import { OfficersComponent } from './home/officers/officers.component';
+import { IntroductionComponent } from './home/introduction/introduction.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { OfficersComponent } from './home/officers/officers.component';
     HomeComponent,
     AboutComponent,
     OfficersComponent,
+    IntroductionComponent,
   ],
   imports: [
     BrowserModule,
