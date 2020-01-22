@@ -1,3 +1,10 @@
-.service {
+/* service */
+.service .mat-card-image {
   object-fit: contain;
+}
+
+/* partner */
+.partner .mat-card-image {
+  object-fit: cover;
+  height: 200px;
 }

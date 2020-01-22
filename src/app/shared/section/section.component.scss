@@ -9,6 +9,16 @@ section {
     background: #222222;
   }
 
+  &.mat-orange {
+    color: white;
+    background: mat-color(mat-palette($mat-orange));
+  }
+
+  &.mat-gray {
+    color: white;
+    background: mat-color(mat-palette($mat-gray));
+  }
+
   &.mat-primary {
     color: white;
     background: mat-color(mat-palette($mat-blue));

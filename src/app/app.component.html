@@ -9,6 +9,9 @@
         </button>
         <h1 [fxHide.xs]="true">LCNEM</h1>
         <span class="fill-remaining-space"></span>
+        <a mat-button [routerLink]="'/officers'">
+          <span>メンバー紹介</span>
+        </a>
         <a mat-button [routerLink]="'company/contact'">
           <span>お問い合わせ</span>
         </a>
@@ -18,6 +21,5 @@
       </mat-toolbar-row>
     </mat-toolbar>
     <router-outlet></router-outlet>
-    <!-- <app-footer></app-footer> -->
   </mat-drawer-content>
 </mat-drawer-container>

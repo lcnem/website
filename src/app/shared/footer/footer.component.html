@@ -1,0 +1,30 @@
+<mat-divider></mat-divider>
+<footer>
+  <div class="container">
+    <div [fxLayout]="'row'" [fxLayout.xs]="'column'" [fxLayoutAlign]="'center'">
+      <ul [fxFlex]="50" [fxFlex.xs]="100">
+        <li>
+          <a [routerLink]="'/about'">
+            <span>会社概要</span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="'/company/media-kit'">
+            <span>メディアキット</span>
+          </a>
+        </li>
+      </ul>
+      <app-twitter-timeline
+        [twitterId]="'lcnem_ja'"
+        [theme]="'dark'"
+        [fxFlex]="50"
+        [fxFlex.xs]="100"
+      >
+      </app-twitter-timeline>
+    </div>
+    <div [fxLayout]="'row'" [fxLayoutAlign]="'center'">
+      <a [routerLink]="'/privacy-policy'">プライバシーポリシー</a>
+    </div>
+    <p class="copy-right">&copy; 株式会社LCNEM</p>
+  </div>
+</footer>
