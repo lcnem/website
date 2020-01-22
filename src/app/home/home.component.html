@@ -1,6 +1,4 @@
-<app-header [heading]="'株式会社LCNEM'" [image]="'assets/images/lcnem.svg'">
-  <p>経済厚生のためのフィンテック</p>
-</app-header>
+<app-header [image]="'assets/images/tokyo.jpg'"> </app-header>
 
 <app-section [color]="'mat-primary'">
   <h2>理念</h2>
@@ -21,12 +19,12 @@
 <app-section>
   <h2>サービス</h2>
   <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
-    <div *ngFor="let s of services" [fxFlex]="50" [fxFlex.xs]="100">
+    <div [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
-        <img mat-card-image src="{{ s.image }}" />
+        <img mat-card-image src="assets/images/development.jpg" />
         <mat-card-content>
-          <h3>{{ s.name }}</h3>
-          <p>{{ s.copy }}</p>
+          <h3>Blockchain Subscription</h3>
+          <p>サブスクリプション型のブロックチェーン開発サービス</p>
         </mat-card-content>
         <mat-card-actions>
           <button
@@ -34,7 +32,43 @@
             fxFill
             class="mat-flat-button"
             [color]="'primary'"
-            [routerLink]="s.link"
+            [routerLink]="'services/blockchain-subscription'"
+          >
+            詳しく見る
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card>
+        <img mat-card-image src="assets/images/consulting.jpg" />
+        <mat-card-content>
+          <h3>Minimum Viable Product</h3>
+          <p>MVP開発設計参加&コンサルティングサービス</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            mat-button
+            fxFill
+            class="mat-flat-button"
+            [color]="'primary'"
+            [routerLink]="'services/minimum-viable-product'"
+          >
+            詳しく見る
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card>
+        <img mat-card-image src="assets/images/development.jpg" />
+        <mat-card-content
+          ><h3>System IntegrationMinimum Viable Product</h3>
+          <p>システム開発受託</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            mat-button
+            fxFill
+            class="mat-flat-button"
+            [color]="'primary'"
+            [routerLink]="'services/minimum-viable-product'"
           >
             詳しく見る
           </button>
@@ -47,21 +81,38 @@
 <app-section>
   <h2>パートナーの皆様</h2>
   <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
-    <div *ngFor="let p of partners" [fxFlex]="50" [fxFlex.xs]="100">
+    <div [fxFlex]="50" [fxFlex.xs]="100">
       <mat-card>
-        <img mat-card-image src="{{ p.image }}" />
+        <img mat-card-image src="assets/images/partners/etherinc_bnr.png" />
         <mat-card-content>
-          <p>{{ p.description }}</p>
+          <p>各種ブロックチェーンノード運用、lcnemintのバリデーション</p>
         </mat-card-content>
         <mat-card-actions>
           <a
             mat-button
             fxFill
             class="mat-radius-button"
-            href="{{ p.link }}"
+            href="http://etherinc.co/"
             target="_blank"
             [color]="'primary'"
-            >{{ p.name }}<mat-icon>open_in_new</mat-icon></a
+            >Ether Security<mat-icon>open_in_new</mat-icon></a
+          >
+        </mat-card-actions>
+      </mat-card>
+      <mat-card>
+        <img mat-card-image src="assets/images/partners/ub.png" />
+        <mat-card-content>
+          <p>lcnemintのバリデーション、Lightning</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a
+            mat-button
+            fxFill
+            class="mat-radius-button"
+            href="http://www.unitedbitcoiners.com/"
+            target="_blank"
+            [color]="'primary'"
+            >United Bitcoiners<mat-icon>open_in_new</mat-icon></a
           >
         </mat-card-actions>
       </mat-card>

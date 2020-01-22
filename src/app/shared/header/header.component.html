@@ -4,12 +4,15 @@
     [fxLayout.xs]="'column'"
     [fxLayoutAlign]="'center'"
   >
-    <div [fxFlex]="50" [fxLayout]="'column'" [fxLayoutAlign]="'center'">
-      <h2>{{ heading }}</h2>
-      <ng-content></ng-content>
-    </div>
-    <div [fxFlex]="50">
+    <div
+      class="head"
+      [fxFlex]="100"
+      [fxLayout]="'column'"
+      [fxLayoutAlign]="'center'"
+    >
       <img fxFill src="{{ image }}" />
+      <h2 class="comment">Technology for Enhance Economic Welfare</h2>
+      <ng-content></ng-content>
     </div>
   </header>
 </div>
