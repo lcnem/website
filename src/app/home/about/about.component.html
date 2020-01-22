@@ -1,26 +1,27 @@
-<div class="container">
-  <dl>
-    <dt [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>会社名</ng-container>
-    </dt>
-    <dd [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>株式会社LCNEM</ng-container>
-    </dd>
-  </dl>
-  <dl>
-    <dt [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>本社所在地</ng-container>
-    </dt>
-    <dd [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>京都市上京区油小路中立売下る甲斐守町97番地西陣産業創造會舘2階</ng-container>
-    </dd>
-  </dl>
-  <dl>
-    <dt [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>代表取締役</ng-container>
-    </dt>
-    <dd [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>木村優</ng-container>
-    </dd>
-  </dl>  
-</div>
+<app-section>
+  <h2>ABOUT</h2>
+  <br />
+  <div fxLayout="row wrap" fxLayoutGap="16px">
+    <div fxFlex="55" fxFlex.xs="100">
+      <img mat-card-image src="assets/images/lcnem.svg" />
+    </div>
+    <div>
+      <h2><b>We are LCNEM</b></h2>
+      <h3><b>Our Mission is to Enhance Economic Welfare</b></h3>
+      <h3><b>The step is to spread some mechanism designs</b></h3>
+      <h3><b>depend on appropriate incentives,</b></h3>
+      <h3><b>and to make the Narrow-bank using the distributed</b></h3>
+      <h3><b>ledger technology into a reality</b></h3>
+      <br />
+      <br />
+      <br />
+      <h2><b>LCNEM</b></h2>
+      <ul>
+        <li><b>latest,legal</b></li>
+        <li><b>cryptographic,currency</b></li>
+        <li><b>narrow-bank</b></li>
+        <li><b>short-form of them</b></li>
+      </ul>
+    </div>
+  </div>
+</app-section>

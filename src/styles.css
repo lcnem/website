@@ -3,8 +3,8 @@ html,
 body {
   height: 100%;
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-  background-color: #e6eef9;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #ffffff;
 }
 
 .mat-drawer-container {
