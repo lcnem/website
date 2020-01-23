@@ -20,6 +20,9 @@ import { SharedModule } from '../shared/shared.module';
     FlexLayoutModule,
     MaterialModule,
     SharedModule,
+  ],
+  exports: [
+    ContactComponent, MediaKitComponent, RecruitComponent
   ]
 })
 export class CompanyModule { }
