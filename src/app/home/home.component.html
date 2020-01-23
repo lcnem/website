@@ -2,62 +2,66 @@
 <app-about></app-about>
 <app-product></app-product>
 <app-section>
-  <h2>サービス</h2>
-  <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
-    <div [fxFlex]="50" [fxFlex.xs]="100">
+  <h1><b>Service</b></h1>
+  <br />
+  <div fxLayout="row wrap" fxLayoutGap="16px">
+    <div fxFlex="90" fxFlex.xs="100">
+      <img mat-card-image src="assets/images/LCNEM_Service.jpg" />
+    </div>
+  </div>
+  <div [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
+    <div [fxFlex]="70" [fxFlex.xs]="100">
       <mat-card>
-        <img mat-card-image src="assets/images/development.jpg" />
-        <mat-card-content>
-          <h3>Blockchain Subscription</h3>
-          <p>サブスクリプション型のブロックチェーン開発サービス</p>
-        </mat-card-content>
-        <mat-card-actions>
+        <div class="title" [fxLayoutAlign]="'center'">
+          <img mat-card-image src="assets/images/development.jpg" />
+          <h1 class="comment">
+            サブスクリプション型のブロックチェーン開発サービス
+          </h1>
+        </div>
+        <div class="button" [fxLayoutAlign]="'center'">
           <button
             mat-button
-            fxFill
             class="mat-flat-button"
             [color]="'primary'"
             [routerLink]="'services/blockchain-subscription'"
           >
             詳しく見る
           </button>
-        </mat-card-actions>
+        </div>
       </mat-card>
       <mat-card>
-        <img mat-card-image src="assets/images/consulting.jpg" />
-        <mat-card-content>
-          <h3>Minimum Viable Product</h3>
-          <p>MVP開発設計参加&コンサルティングサービス</p>
-        </mat-card-content>
-        <mat-card-actions>
+        <div class="title" [fxLayoutAlign]="'center'">
+          <img mat-card-image src="assets/images/consulting.jpg" />
+          <h1 class="comment">MVP開発設計参加&コンサルティングサービス</h1>
+        </div>
+        <div class="button" [fxLayoutAlign]="'center'">
           <button
             mat-button
-            fxFill
             class="mat-flat-button"
             [color]="'primary'"
             [routerLink]="'services/minimum-viable-product'"
           >
             詳しく見る
           </button>
-        </mat-card-actions>
+        </div>
       </mat-card>
       <mat-card>
-        <img mat-card-image src="assets/images/development.jpg" />
-        <mat-card-content
-          ><h3>System IntegrationMinimum Viable Product</h3>
-          <p>システム開発受託</p>
-        </mat-card-content>
-        <mat-card-actions>
+        <div class="title" [fxLayoutAlign]="'center'">
+          <img mat-card-image src="assets/images/development.jpg" />
+          <h1 class="comment">
+            サブスクリプション型のブロックチェーン開発サービス
+          </h1>
+        </div>
+        <div class="button" [fxLayoutAlign]="'center'">
           <button
             mat-button
-            fxFill
             class="mat-flat-button"
             [color]="'primary'"
             [routerLink]="'services/minimum-viable-product'"
           >
             詳しく見る
           </button>
-        </mat-card-actions>
+        </div>
       </mat-card>
     </div>
   </div>

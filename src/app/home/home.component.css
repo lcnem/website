@@ -1,10 +1,39 @@
 /* service */
 .service .mat-card-image {
   object-fit: contain;
+  height: 500px;
 }
 
 /* partner */
 .partner .mat-card-image {
   object-fit: cover;
   height: 200px;
+}
+
+.comment {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.button {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.title {
+  position: relative;
 }
