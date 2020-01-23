@@ -1,5 +1,9 @@
 .layout {
   display: flex;
-  width: 550px;
+  width: 400px;
   white-space: nowrap;
+}
+
+.wallet {
+  width: 600px;
 }

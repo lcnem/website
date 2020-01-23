@@ -20,6 +20,8 @@ import { IntroductionComponent } from './home/introduction/introduction.componen
 import { ProductComponent } from './home/product/product.component';
 import { NewsComponent } from './home/news/news.component';
 import { CompanyModule } from './company/company.module';
+import { ServicesModule } from './services/services.module';
+import { PartnerComponent } from './home/partner/partner.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { CompanyModule } from './company/company.module';
     IntroductionComponent,
     ProductComponent,
     NewsComponent,
+    PartnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { CompanyModule } from './company/company.module';
     SharedModule,
     MaterialModule,
     CompanyModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
