@@ -19,6 +19,7 @@ import { OfficersComponent } from './home/officers/officers.component';
 import { IntroductionComponent } from './home/introduction/introduction.component';
 import { ProductComponent } from './home/product/product.component';
 import { NewsComponent } from './home/news/news.component';
+import { CompanyModule } from './company/company.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { NewsComponent } from './home/news/news.component';
     AngularFireFunctionsModule,
     SharedModule,
     MaterialModule,
+    CompanyModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
