@@ -1,8 +1,8 @@
 <mat-divider></mat-divider>
 <footer>
   <div class="container">
-    <div [fxLayout]="'row'" [fxLayout.xs]="'column'" [fxLayoutAlign]="'center'">
-      <ul [fxFlex]="50" [fxFlex.xs]="100">
+    <div>
+      <ul>
         <li>
           <a [routerLink]="'/introduction'">
             <span>会社概要</span>
@@ -14,15 +14,10 @@
           </a>
         </li>
       </ul>
-      <app-twitter-timeline
-        [twitterId]="'lcnem_ja'"
-        [theme]="'dark'"
-        [fxFlex]="50"
-        [fxFlex.xs]="100"
-      >
+      <app-twitter-timeline [twitterId]="'lcnem_ja'" [theme]="'dark'">
       </app-twitter-timeline>
     </div>
-    <div [fxLayout]="'row'" [fxLayoutAlign]="'center'">
+    <div>
       <a [routerLink]="'/privacy-policy'">プライバシーポリシー</a>
     </div>
     <p class="copy-right">&copy; 株式会社LCNEM</p>

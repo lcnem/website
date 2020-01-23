@@ -4,108 +4,81 @@
 <app-section>
   <h1><b>Service</b></h1>
   <br />
-  <div fxLayout="row wrap" fxLayoutGap="16px">
-    <div fxFlex="90" fxFlex.xs="100">
-      <img mat-card-image src="assets/images/LCNEM_Service.jpg" />
-    </div>
+  <div class="layout">
+    <img mat-card-image src="assets/images/LCNEM_Service.jpg" />
   </div>
-  <div [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
-    <div [fxFlex]="70" [fxFlex.xs]="100">
-      <mat-card>
-        <div class="title" [fxLayoutAlign]="'center'">
-          <img mat-card-image src="assets/images/development.jpg" />
-          <h1 class="comment">
+  <br />
+  <div class="layout">
+    <div>
+      <div class="title">
+        <img mat-card-image src="assets/images/development.jpg" />
+        <h1 class="comment">
+          <a routerLink="services/blockchain-subscription">
             サブスクリプション型のブロックチェーン開発サービス
-          </h1>
-        </div>
-        <div class="button" [fxLayoutAlign]="'center'">
-          <button
-            mat-button
-            class="mat-flat-button"
-            [color]="'primary'"
-            [routerLink]="'services/blockchain-subscription'"
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div>
+      <div class="title">
+        <img mat-card-image src="assets/images/consulting.jpg" />
+        <h1 class="comment">
+          <a routerLink="services/minimum-viable-product"
+            >MVP開発設計参加&コンサルティングサービス</a
           >
-            詳しく見る
-          </button>
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="title" [fxLayoutAlign]="'center'">
-          <img mat-card-image src="assets/images/consulting.jpg" />
-          <h1 class="comment">MVP開発設計参加&コンサルティングサービス</h1>
-        </div>
-        <div class="button" [fxLayoutAlign]="'center'">
-          <button
-            mat-button
-            class="mat-flat-button"
-            [color]="'primary'"
-            [routerLink]="'services/minimum-viable-product'"
-          >
-            詳しく見る
-          </button>
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="title" [fxLayoutAlign]="'center'">
-          <img mat-card-image src="assets/images/development.jpg" />
-          <h1 class="comment">
-            サブスクリプション型のブロックチェーン開発サービス
-          </h1>
-        </div>
-        <div class="button" [fxLayoutAlign]="'center'">
-          <button
-            mat-button
-            class="mat-flat-button"
-            [color]="'primary'"
-            [routerLink]="'services/minimum-viable-product'"
-          >
-            詳しく見る
-          </button>
-        </div>
-      </mat-card>
+        </h1>
+      </div>
+    </div>
+    <div>
+      <div class="title">
+        <img mat-card-image src="assets/images/development.jpg" />
+        <h1 class="comment">
+          <a routerLink="services/system-integration">
+            システム開発受託
+          </a>
+        </h1>
+      </div>
     </div>
   </div>
 </app-section>
 
 <app-section>
   <h2>パートナーの皆様</h2>
-  <div class="service" [fxLayout]="'row wrap'" [fxLayoutGap]="'16px grid'">
-    <div [fxFlex]="50" [fxFlex.xs]="100">
-      <mat-card>
-        <img mat-card-image src="assets/images/partners/etherinc_bnr.png" />
-        <mat-card-content>
-          <p>各種ブロックチェーンノード運用、lcnemintのバリデーション</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a
-            mat-button
-            fxFill
-            class="mat-radius-button"
-            href="http://etherinc.co/"
-            target="_blank"
-            [color]="'primary'"
-            >Ether Security<mat-icon>open_in_new</mat-icon></a
-          >
-        </mat-card-actions>
-      </mat-card>
-      <mat-card>
-        <img mat-card-image src="assets/images/partners/ub.png" />
-        <mat-card-content>
-          <p>lcnemintのバリデーション、Lightning</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a
-            mat-button
-            fxFill
-            class="mat-radius-button"
-            href="http://www.unitedbitcoiners.com/"
-            target="_blank"
-            [color]="'primary'"
-            >United Bitcoiners<mat-icon>open_in_new</mat-icon></a
-          >
-        </mat-card-actions>
-      </mat-card>
-    </div>
+  <div class="layout">
+    <mat-card>
+      <img mat-card-image src="assets/images/partners/etherinc_bnr.png" />
+      <mat-card-content>
+        <p>各種ブロックチェーンノード運用、lcnemintのバリデーション</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a
+          mat-button
+          fxFill
+          class="mat-radius-button"
+          href="http://etherinc.co/"
+          target="_blank"
+          [color]="'primary'"
+          >Ether Security<mat-icon>open_in_new</mat-icon></a
+        >
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <img mat-card-image src="assets/images/partners/ub.png" />
+      <mat-card-content>
+        <p>lcnemintのバリデーション、Lightning</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a
+          mat-button
+          fxFill
+          class="mat-radius-button"
+          href="http://www.unitedbitcoiners.com/"
+          target="_blank"
+          [color]="'primary'"
+          >United Bitcoiners<mat-icon>open_in_new</mat-icon></a
+        >
+      </mat-card-actions>
+    </mat-card>
   </div>
 </app-section>
 
