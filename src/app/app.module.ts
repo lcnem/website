@@ -18,6 +18,7 @@ import { AboutComponent } from './home/about/about.component';
 import { OfficersComponent } from './home/officers/officers.component';
 import { IntroductionComponent } from './home/introduction/introduction.component';
 import { ProductComponent } from './home/product/product.component';
+import { NewsComponent } from './home/news/news.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProductComponent } from './home/product/product.component';
     OfficersComponent,
     IntroductionComponent,
     ProductComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
