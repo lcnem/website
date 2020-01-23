@@ -1,44 +1,56 @@
-<div class="container">
-  <h3 [ngSwitch]="'ja'">
-    <img
-      src="https://pbs.twimg.com/profile_images/1059679360070836224/uNbHbPfg_400x400.jpg"
-    />
-    <br />
-    <ng-container *ngSwitchCase="'ja'">木村 優</ng-container>
-    <ng-container *ngSwitchDefault>Yu Kimura</ng-container>
-  </h3>
-  <p>CEO & CTO</p>
-  <p>
-    京都大学経済学部、京都大学経営管理大学院。15歳からCによるプログラミングを始め、C#を経てTypeScript,AngularやGoに至る。Ticket
-    Peer to Peerの考案者。日本でCosmos
-    SDK製チェーンを最初に作り始めた人。経済学の理論であるFTPLとMMTを統合したMTPLを提唱。
-  </p>
-  <a href="https://twitter.com/KimuraYu45z" target="_blank">
-    <img class="icon" src="assets/images/twitter.svg" />
-  </a>
-  <a href="https://facebook.com/KimuraYu45z" target="_blank">
-    <img class="icon" src="assets/images/facebook.svg" />
-  </a>
-</div>
-
-<div class="container">
-  <h3 [ngSwitch]="'ja'">
-    <img src="assets/images/takeru.jpg" />
-    <br />
-    <ng-container *ngSwitchCase="'ja'">下島 健</ng-container>
-    <ng-container *ngSwitchDefault>Takeru Shimojima</ng-container>
-  </h3>
-  <p>COO & CFO</p>
-  <p>
-    東京外国語大学言語文化学部卒業。
-    海外在住経験を経て、語学と国際関係学に知見を有す。
-    2018年3月に株式会社LCNEMをCEO木村と共同起業する。
-    また、経営・戦略コンサルタントとしても、トップ企業の経営陣にソリューションを提供している。
-  </p>
-  <a href="https://twitter.com/thetalcnem" target="_blank">
-    <img class="icon" src="assets/images/twitter.svg"
-  /></a>
-  <a href="https://facebook.com/takeru.shimojima" target="_blank">
-    <img class="icon" src="assets/images/facebook.svg"
-  /></a>
-</div>
+<app-section>
+  <h1><b>MEMBER</b></h1>
+  <div class="member">
+    <h3 [ngSwitch]="'ja'">
+      <img
+        src="https://pbs.twimg.com/profile_images/1059679360070836224/uNbHbPfg_400x400.jpg"
+      />
+      <br />
+      <ng-container *ngSwitchCase="'ja'"
+        ><h2><b>木村 優</b></h2></ng-container
+      >
+      <ng-container *ngSwitchDefault><b>Yu Kimura</b></ng-container>
+    </h3>
+    <p><b>CEO & CTO</b></p>
+    <p>
+      <b>
+        京都大学経済学部、京都大学経営管理大学院。15歳からCによるプログラミングを始め、C#を経てTypeScript,AngularやGoに至る。Ticket
+        Peer to Peerの考案者。日本でCosmos
+        SDK製チェーンを最初に作り始めた人。経済学の理論であるFTPLとMMTを統合したMTPLを提唱。
+      </b>
+    </p>
+    <a href="https://twitter.com/KimuraYu45z" target="_blank">
+      <img class="icon" src="assets/images/twitter.svg" />
+    </a>
+    <a href="https://facebook.com/KimuraYu45z" target="_blank">
+      <img class="icon" src="assets/images/facebook.svg" />
+    </a>
+  </div>
+  <br />
+  <br />
+  <div class="member">
+    <h3 [ngSwitch]="'ja'">
+      <img src="assets/images/takeru.jpg" />
+      <br />
+      <ng-container *ngSwitchCase="'ja'"
+        ><h2><b>下島 健</b></h2></ng-container
+      >
+      <ng-container *ngSwitchDefault><b>Takeru Shimojima</b></ng-container>
+    </h3>
+    <p><b>COO & CFO</b></p>
+    <p>
+      <b>
+        東京外国語大学言語文化学部卒業。
+        海外在住経験を経て、語学と国際関係学に知見を有す。
+        2018年3月に株式会社LCNEMをCEO木村と共同起業する。
+        また、経営・戦略コンサルタントとしても、トップ企業の経営陣にソリューションを提供している。
+      </b>
+    </p>
+    <a href="https://twitter.com/thetalcnem" target="_blank">
+      <img class="icon" src="assets/images/twitter.svg"
+    /></a>
+    <a href="https://facebook.com/takeru.shimojima" target="_blank">
+      <img class="icon" src="assets/images/facebook.svg"
+    /></a>
+  </div>
+</app-section>

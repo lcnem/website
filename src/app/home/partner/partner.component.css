@@ -1,0 +1,52 @@
+/* partner */
+.partner .mat-card-image {
+  object-fit: cover;
+  height: 200px;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  width: 900px;
+}
+
+.comment {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.button {
+  position: relative;
+  top: 10%;
+  left: 70%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.title {
+  position: relative;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+.partners {
+  width: 350px;
+  height: 200px;
+}

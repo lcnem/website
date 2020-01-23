@@ -6,13 +6,29 @@ import { BlockchainSubscriptionComponent } from './blockchain-subscription/block
 import { SystemIntegrationComponent } from './system-integration/system-integration.component';
 import { MinimumViableProductComponent } from './minimum-viable-product/minimum-viable-product.component';
 import { FirebaseMigrationComponent } from './firebase-migration/firebase-migration.component';
+import { ServicesComponent } from './services/services.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [BlockchainSubscriptionComponent, SystemIntegrationComponent, MinimumViableProductComponent, FirebaseMigrationComponent],
+  declarations: [
+    BlockchainSubscriptionComponent,
+    SystemIntegrationComponent,
+    MinimumViableProductComponent,
+    FirebaseMigrationComponent,
+    ServicesComponent,
+  ],
   imports: [
     CommonModule,
-    ServicesRoutingModule
+    ServicesRoutingModule,
+    SharedModule,
+  ],
+  exports: [
+    BlockchainSubscriptionComponent,
+    SystemIntegrationComponent,
+    MinimumViableProductComponent,
+    FirebaseMigrationComponent,
+    ServicesComponent,
   ]
 })
 export class ServicesModule { }
