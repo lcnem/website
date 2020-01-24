@@ -1,28 +1,82 @@
-<div class="container">
-  <dl>
-    <dt [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>会社名</ng-container>
-    </dt>
-    <dd [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>株式会社LCNEM</ng-container>
-    </dd>
-  </dl>
-  <dl>
-    <dt [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>本社所在地</ng-container>
-    </dt>
-    <dd [ngSwitch]="''">
-      <ng-container *ngSwitchDefault
-        >京都市上京区油小路中立売下る甲斐守町97番地西陣産業創造會舘2階</ng-container
-      >
-    </dd>
-  </dl>
-  <dl>
-    <dt [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>代表取締役</ng-container>
-    </dt>
-    <dd [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>木村優</ng-container>
-    </dd>
-  </dl>
-</div>
+<app-section>
+  <div class="layout">
+    <h1><b>COMPANY</b></h1>
+    <br />
+    <div class="container">
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>会社名</b></ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>株式会社LCNEM</b></ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>本社所在地</b></ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault
+            ><b
+              >京都市上京区油小路中立売下る甲斐守町97番地西陣産業創造會舘2階</b
+            ></ng-container
+          >
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>資本金等</b></ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>9,050,000円</b></ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>設立日</b></ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>2018/03</b></ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>会計期間</b></ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>1月〜12月</b></ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>代表取締役</b></ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>木村優</b></ng-container>
+        </dd>
+      </dl>
+      <dl>
+        <dt [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>取締役</b></ng-container>
+        </dt>
+        <dd [ngSwitch]="''">
+          <ng-container *ngSwitchDefault><b>下島健</b></ng-container>
+        </dd>
+      </dl>
+      <br />
+      <br />
+      <br />
+      <b>LCNEM公式Twitterアカウント</b>
+      <br />
+      <a href="https://twitter.com/lcnem_ja" target="_blank">
+        <img class="icon" src="assets/images/twitter.svg"
+      /></a>
+      <div>
+        <button>
+          <a [routerLink]="'/privacy-policy'">プライバシーポリシー</a>
+        </button>
+      </div>
+    </div>
+    <img class="logo" mat-card-image src="assets/images/lcnem.svg" />
+  </div>
+</app-section>
