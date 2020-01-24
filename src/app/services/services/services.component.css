@@ -56,8 +56,10 @@ a:visited {
 .services {
   width: 400px;
   height: 300px;
+  object-fit: cover;
 }
 
 .main {
   width: 1000px;
+  object-fit: cover;
 }

@@ -1,54 +1,77 @@
-<app-section [color]="'mat-primary'">
-  お問い合わせいただきありがとうございます。
-  <br />
-  お客様からのご意見・ご要望はサービスの向上に活用させていただきます。
-  <br />
-  <br />
-  我々の不備に関しましても、速やかにご対応させていただきます。
-  <br />
-  お待たせしてしまい申し訳ございませんが、担当者からの連絡をお待ちくださいませ。
-</app-section>
-
-<form
-  #form="ngForm"
-  (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
->
-  <mat-form-field fxFill>
-    <mat-label [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>お名前</ng-container>
-    </mat-label>
-    <input #name matInput required ngModel name="name" />
-  </mat-form-field>
-  <mat-form-field fxFill>
-    <mat-label [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>メールアドレス</ng-container>
-    </mat-label>
-    <input #email matInput required type="email" ngModel name="email" />
-  </mat-form-field>
-  <mat-form-field fxFill>
-    <mat-label [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>ご用件</ng-container>
-    </mat-label>
-    <textarea #body matInput required ngModel name="body"></textarea>
-  </mat-form-field>
-  <div class="checkbox">
-    <mat-checkbox fxFill required ngModel name="agree" [ngSwitch]="''">
-      <ng-container *ngSwitchDefault>
-        <span
-          ><a routerLink="/privacy-policy">プライバシーポリシ </a
-          >に同意する</span
-        >
-      </ng-container>
-    </mat-checkbox>
-  </div>
-
-  <button
-    mat-raised-button
-    fxFill
-    [color]="'accent'"
-    [disabled]="form.invalid"
-    [ngSwitch]="''"
+<app-section>
+  <h1><b>CONTACT</b></h1>
+  <app-section [color]="'mat-primary'">
+    お問い合わせいただきありがとうございます。
+    <br />
+    お客様からのご意見・ご要望はサービスの向上に活用させていただきます。
+  </app-section>
+  <form
+    #form="ngForm"
+    (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
   >
-    <ng-container *ngSwitchDefault>送信する</ng-container>
-  </button>
-</form>
+    <mat-form-field fxFill>
+      <mat-label [ngSwitch]="''">
+        <ng-container *ngSwitchDefault>お名前</ng-container>
+      </mat-label>
+      <input #name matInput required ngModel name="name" />
+    </mat-form-field>
+    <mat-form-field fxFill>
+      <mat-label [ngSwitch]="''">
+        <ng-container *ngSwitchDefault>メールアドレス</ng-container>
+      </mat-label>
+      <input #email matInput required type="email" ngModel name="email" />
+    </mat-form-field>
+    <mat-form-field fxFill>
+      <mat-select placeholder="オプションを選択">
+        <mat-option value="development">受託開発に関して</mat-option>
+        <mat-option value="recruit">採用に関して</mat-option>
+        <mat-option value="consulting"
+          >コンサルティング/講師に関して</mat-option
+        >
+        <mat-option value="collaboration">協業に関して</mat-option>
+        <mat-option value="other">その他</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field fxFill>
+      <mat-label [ngSwitch]="''">
+        <ng-container *ngSwitchDefault>件名</ng-container>
+      </mat-label>
+      <input
+        #requirement
+        matInput
+        required
+        type="requirement"
+        ngModel
+        name="requirement"
+      />
+    </mat-form-field>
+    <mat-form-field fxFill>
+      <mat-label [ngSwitch]="''">
+        <ng-container *ngSwitchDefault
+          >メッセージを入力してください</ng-container
+        >
+      </mat-label>
+      <textarea #body matInput required ngModel name="body"></textarea>
+    </mat-form-field>
+    <div class="checkbox">
+      <mat-checkbox fxFill required ngModel name="agree" [ngSwitch]="''">
+        <ng-container *ngSwitchDefault>
+          <span
+            ><a routerLink="/privacy-policy">プライバシーポリシ </a
+            >に同意する</span
+          >
+        </ng-container>
+      </mat-checkbox>
+    </div>
+
+    <button
+      mat-raised-button
+      fxFill
+      [color]="'accent'"
+      [disabled]="form.invalid"
+      [ngSwitch]="''"
+    >
+      <ng-container *ngSwitchDefault>送信する</ng-container>
+    </button>
+  </form>
+</app-section>
