@@ -1,1 +1,103 @@
-<p>system-integration works!</p>
+<h1><b>LCNEM</b></h1>
+<div class="layout">
+  <img class="development" src="assets/images/development.jpg" />
+</div>
+<br />
+<br />
+<div>
+  <h1 class="cost"><b>業務用システム開発</b></h1>
+  <div class="card">
+    <h2>
+      <b>Webアプリ形式の業務用システムの開発を請け負います。</b>
+    </h2>
+    <br />
+    <h3>Angularを使用します。</h3>
+  </div>
+  <div class="card">
+    <h2><b>​一般顧客向けシステム開発</b></h2>
+    <br />
+    <h3>
+      一般のお客様向けにWebアプリケーションの開発を受託しています。
+      <br />
+      Angularを使用します。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​アプリケーション ​開発</b></h2>
+    <br />
+    <h3>
+      iOS/Androidアプリケーションを開発します。
+      <br />Ionicを使用します。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​​独自ブロックチェーン 開発・保守・運用​</b></h2>
+    <br />
+    <h3>
+      独自のブロックチェーンの開発を請け負います。
+      <br />Cosmos SDKを使用します。
+    </h3>
+  </div>
+</div>
+<div class="cost">
+  <h1><b>申請フォーム</b></h1>
+</div>
+<br />
+<br />
+<app-section>
+  <div class="contact">
+    <form
+      #form="ngForm"
+      (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
+    >
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>お名前</ng-container>
+        </mat-label>
+        <input #name matInput required ngModel name="name" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>メールアドレス</ng-container>
+        </mat-label>
+        <input #email matInput required type="email" ngModel name="email" />
+      </mat-form-field>
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>電話番号</ng-container>
+        </mat-label>
+        <input #email matInput required type="number" ngModel name="number" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-select placeholder="オプションを選択">
+          <mat-option value="general">一般顧客向けシステム開発</mat-option>
+          <mat-option value="business">業務用システム開発</mat-option>
+          <mat-option value="application">アプリケーション開発</mat-option>
+          <mat-option value="unique">独自ブロックチェーン開発</mat-option>
+          <mat-option value="other">その他</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault
+            >メッセージを入力してください</ng-container
+          >
+        </mat-label>
+        <textarea #body matInput required ngModel name="body"></textarea>
+      </mat-form-field>
+
+      <br />
+      <button
+        mat-raised-button
+        fxFill
+        [color]="'accent'"
+        [disabled]="form.invalid"
+        [ngSwitch]="''"
+      >
+        <ng-container *ngSwitchDefault>送信する</ng-container>
+      </button>
+    </form>
+  </div>
+</app-section>

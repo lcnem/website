@@ -1,1 +1,140 @@
-<p>blockchain-subscription works!</p>
+<h1><b>LCNEM</b></h1>
+<div class="layout">
+  <img class="subscription" src="assets/images/development.jpg" />
+  <div>
+    <h1><b>独自ブロックチェーン開発・運用・保守</b></h1>
+    <h1><b>サブスクリプションサービス</b></h1>
+    <br />
+    <br />
+    <h5>
+      ブロックチェーンを利用するだけではなく、ブロックチェーンそのものを作れる時代。
+      <br />
+      ブロックチェーンを活かしたシステムを実証・開発・運用するにあたって、大きな問題があります。
+      <br />
+      それは「既存のブロックチェーンを利用した結果、その機能が利用者のニーズを満たしきれないこと」です。
+      <br />
+      <br />
+      しかしながら、CosmosSDKを利用すれば、理想のブロックチェーンを自由に作る事が出来ます。
+      <br />
+      月額制の料金で、弊社がブロックチェーンそのものの開発を行います。
+      <br />
+      CosmosSDKの経験から、弊社は低コストでスピーディーに開発を行います。
+      <br />
+      <br />
+      ブロックチェーンの実証実験に100万円を積む時代は過ぎ去りました。
+      <br />
+      LCNEMならば、低コストなサブスクリプション型でブロックチェーンの導入を実験できます。
+    </h5>
+
+    <a mat-flat-button color="accent" href="https://wallet.lcnem.com/"> </a>
+  </div>
+</div>
+<br />
+<br />
+<div>
+  <h1 class="cost"><b>費用</b></h1>
+  <div class="card">
+    <h2><b>初期相談無料</b></h2>
+    <br />
+    <h3>
+      初回相談は無料。
+      ビデオ通話にて見積もりをさせていただきます。ビデオ通話のURLをお送りしますので、何もインストールして頂く必要はありません。
+      <br />
+      時間を超えた相談に関しては、コンサルティング/
+      講師も合わせてご利用ください。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​見積もり​無料</b></h2>
+    <br />
+    <h3>
+      見積もりも無料です！ビデオ通話にて見積もりをさせていただきます。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​開発・保守 ​月額9万円</b></h2>
+    <br />
+    <h3>
+      月額9万円定額で、貴社の理想の独自ブロックチェーンを開発・保守します。
+      開発にはCosmosSDKを用います。<br />
+      完成までの期間は、
+      要望のヒアリングによりお答えさせていただきます。運用とは別料金となります。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​​運用 ​月額2万円×ノード数 ​</b></h2>
+    <br />
+    <h3>
+      月額2万円×ノード数定額で、
+      CosmosSDKを用いてつくられた貴社の独自のブロックチェーンを運用します。
+      開発・保守とは別料金となります。
+    </h3>
+  </div>
+</div>
+<div class="cost">
+  <h1><b>申請フォーム</b></h1>
+</div>
+<br />
+<br />
+<div class="contact">
+  <h3>
+    <b
+      >※内容には <br />[初回相談の場合]日程 第一希望: 第二希望: 第三希望:
+      <br />
+      [見積もりの場合] つけたいブロックチェーンの名前: <br />
+      作りたいブロックチェーンの機能: <br />
+      ブロックチェーンのノード数をご記入ください</b
+    >
+  </h3>
+</div>
+<app-section>
+  <div class="contact">
+    <form
+      #form="ngForm"
+      (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
+    >
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>お名前</ng-container>
+        </mat-label>
+        <input #name matInput required ngModel name="name" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>メールアドレス</ng-container>
+        </mat-label>
+        <input #email matInput required type="email" ngModel name="email" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>内容</ng-container>
+        </mat-label>
+        <textarea #body matInput required ngModel name="body"></textarea>
+      </mat-form-field>
+      <div class="checkbox">
+        <mat-checkbox fxFill required ngModel name="agree" [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>
+            <span
+              ><a
+                href="https://c8410cc6-f8ed-41a1-8589-3f6d6aabc44f.filesusr.com/ugd/baae61_d104c62925294775a8f59680aeb42042.pdf"
+                >利用規約 </a
+              >に同意する</span
+            >
+          </ng-container>
+        </mat-checkbox>
+      </div>
+
+      <button
+        mat-raised-button
+        fxFill
+        [color]="'accent'"
+        [disabled]="form.invalid"
+        [ngSwitch]="''"
+      >
+        <ng-container *ngSwitchDefault>送信する</ng-container>
+      </button>
+    </form>
+  </div>
+</app-section>
