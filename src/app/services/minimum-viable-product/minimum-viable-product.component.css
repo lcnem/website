@@ -1,0 +1,39 @@
+.layout {
+  text-align: center;
+  display: flex;
+  width: 400px;
+  white-space: nowrap;
+}
+
+.mvp {
+  object-fit: cover;
+  widows: 400px;
+  height: 400px;
+}
+
+.development {
+  object-fit: cover;
+  widows: 600px;
+  height: 600px;
+}
+
+.cost {
+  text-align: center;
+  color: gray;
+}
+
+.contents {
+  display: flex;
+}
+
+.card {
+  background-color: bisque;
+}
+
+.contact {
+  text-align: center;
+}
+
+.logo {
+  width: 400px;
+}
