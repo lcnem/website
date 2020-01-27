@@ -4,4 +4,5 @@
 
 .member {
   border-bottom: solid 5px orange;
+  object-fit: cover;
 }

@@ -1,8 +1,10 @@
 .layout {
   display: flex;
   width: 800px;
+  object-fit: cover;
 }
 
 .logo {
   width: 900px;
+  object-fit: cover;
 }

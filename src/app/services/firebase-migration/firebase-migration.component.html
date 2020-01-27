@@ -1,1 +1,110 @@
-<p>firebase-migration works!</p>
+<h1><b>LCNEM</b></h1>
+<div class="layout">
+  <img class="migration" src="assets/images/migration.jpg" />
+  <div>
+    <h1><b>Firebase移行サービス</b></h1>
+    <br />
+    <br />
+    <h4>
+      「SQLを使ってるけど、NoSQLにしたい」
+      <br />
+      「API群をサーバーレスアーキテクチャにしたい」
+      <br />
+      「firestoreをすでにつかってるが、DBスキーマを更新したい」
+      <br />
+      「AWSやAzureからFirebaseに移行したい」
+      <br />
+      <br />
+      このようなお悩みをお持ちのお客様を対象に、既存のシステムを
+      <br />
+      Firebaseに移行する実装やコンサルティングを行っております。
+    </h4>
+  </div>
+</div>
+<br />
+<br />
+<!-- <div>
+  <h1 class="cost"><b>費用</b></h1>
+  <div class="card">
+    <h2><b>初期相談無料</b></h2>
+    <br />
+    <h3>
+      初回相談は無料。
+      ビデオ通話にて見積もりをさせていただきます。ビデオ通話のURLをお送りしますので、何もインストールして頂く必要はありません。
+      <br />
+      時間を超えた相談に関しては、コンサルティング/
+      講師も合わせてご利用ください。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​見積もり​無料</b></h2>
+    <br />
+    <h3>
+      見積もりも無料です！ビデオ通話にて見積もりをさせていただきます。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​開発・保守 ​月額9万円</b></h2>
+    <br />
+    <h3>
+      月額9万円定額で、貴社の理想の独自ブロックチェーンを開発・保守します。
+      開発にはCosmosSDKを用います。<br />
+      完成までの期間は、
+      要望のヒアリングによりお答えさせていただきます。運用とは別料金となります。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​​運用 ​月額2万円×ノード数 ​</b></h2>
+    <br />
+    <h3>
+      月額2万円×ノード数定額で、
+      CosmosSDKを用いてつくられた貴社の独自のブロックチェーンを運用します。
+      開発・保守とは別料金となります。
+    </h3>
+  </div>
+</div> -->
+<div class="cost">
+  <h1><b>申請フォーム</b></h1>
+</div>
+<br />
+<br />
+<app-section>
+  <div class="contact">
+    <form
+      #form="ngForm"
+      (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
+    >
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>お名前</ng-container>
+        </mat-label>
+        <input #name matInput required ngModel name="name" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>メールアドレス</ng-container>
+        </mat-label>
+        <input #email matInput required type="email" ngModel name="email" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>内容</ng-container>
+        </mat-label>
+        <textarea #body matInput required ngModel name="body"></textarea>
+      </mat-form-field>
+      <br />
+
+      <button
+        mat-raised-button
+        fxFill
+        [color]="'accent'"
+        [disabled]="form.invalid"
+        [ngSwitch]="''"
+      >
+        <ng-container *ngSwitchDefault>送信する</ng-container>
+      </button>
+    </form>
+  </div>
+</app-section>

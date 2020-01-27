@@ -1,1 +1,163 @@
-<p>minimum-viable-product works!</p>
+<h1><b>LCNEM</b></h1>
+<div class="layout">
+  <img class="mvp" src="assets/images/consulting.jpg" />
+  <div>
+    <h1><b>MVP開発設計参加&コンサルティングサービス</b></h1>
+    <br />
+    <br />
+    <h4>
+      MVP(Minimum Viable
+      Product)とは、「顧客に価値を提供できる最低限の製品」のことです。
+      <br />
+      これからのシステム開発では、従来のウォーターフォール型の開発方式が最適とは限りません。
+      <br />
+      むしろ、アジャイル型のシステム開発こそが不確実性に満ちた未来の開発にふさわしいと言えます。
+      <br />
+      <br />
+      我々は、テック人材が不足しているお客様に、月額定額制でプロダクト設計の
+      <br />
+      コンサルティングと開発を提供いたします。
+      <br />
+      MVPを通じた製品やサービスの仮説検証に、ぜひ我々の力を発揮させてください。
+    </h4>
+  </div>
+</div>
+<br />
+<br />
+<div class="layout">
+  <img class="development" src="assets/images/development_method.jpg" />
+  <div>
+    <h1>
+      <b>ウォーターフォール型開発とアジャイル開発の違いとは？</b>
+    </h1>
+    <br />
+    <br />
+    <h4>
+      ウォーターフォール開発とは、上流工程から下流工程へ順次移行していく開発手法で、
+    </h4>
+    <h4>
+      「水が下に落ちていく様に各工程が進んでいく様子」を模した名前となっています。
+    </h4>
+    <h4>
+      この形式は実際に動くものを触るまでに長い時間がかかるというデメリットがあります。
+    </h4>
+    <h4>
+      刻一刻とそのあり方を変える市場に対応するには、ウォーターフォール型は不向きなのです。
+    </h4>
+    <br />
+    <br />
+    <h4>
+      そこで、我々はMVPの開発と仮説検証を通じて、お客様の経営戦略をサポートいたします。
+    </h4>
+    <h4>
+      アジャイル開発の手法は「常に動くものを開発・修正していく」方式ですので、
+    </h4>
+    <h4>
+      お客様の製品・サービスが市場にマッチしていないときは、すぐさまやり直したり、
+    </h4>
+    <h4>
+      逆にマッチした場合は、余分なコストをすべてその製品・サービスに注力できます。
+    </h4>
+  </div>
+</div>
+<div>
+  <h1 class="cost"><b>内容</b></h1>
+  <div class="card">
+    <h2><b>費用</b></h2>
+    <br />
+    <h3>
+      MVP開発期間中は月30万円、リリース後の対応は月20万にて承ります。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​仕様変更</b></h2>
+    <br />
+    <h3>
+      MVPは何度も仕様が変更するものです。
+    </h3>
+    <h3>お客様のニーズに合わせ、契約中は柔軟に対応させていただきます。</h3>
+  </div>
+  <div class="card">
+    <h2><b>​​アジャイル開発​</b></h2>
+    <br />
+    <h3>
+      我々は従来のウォーターフォール開発の形式でシステム開発を行いません。
+    </h3>
+    <h3>
+      クライアントの皆様とアジャイル開発で、長期的にプロダクト開発をさせて頂きたいと考えております。
+    </h3>
+  </div>
+  <div class="card">
+    <h2><b>​​技術など</b></h2>
+    <br />
+    <h3>
+      依頼されたお客様には、リモートでSlackチャンネルに参加していただきます。
+    </h3>
+    <h3>
+      技術はAngularとFirebaseを使用いたします。
+    </h3>
+    <h3>
+      最初に30分間お客様とビデオ通話の時間をご用意いたしますので、ご質問等お気軽にお聞きください。
+    </h3>
+  </div>
+</div>
+<div class="cost">
+  <h1><b>申請フォーム</b></h1>
+</div>
+<br />
+<br />
+<app-section>
+  <div class="contact">
+    <form
+      #form="ngForm"
+      (submit)="onSubmit(name.value, email.value, body.value, 'ja')"
+    >
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>会社名</ng-container>
+        </mat-label>
+        <input #name matInput required ngModel name="name" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>メールアドレス</ng-container>
+        </mat-label>
+        <input #email matInput required type="email" ngModel name="email" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>お電話番号</ng-container>
+        </mat-label>
+        <input #email matInput required type="number" ngModel name="number" />
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-select placeholder="オプションを選択">
+          <mat-option value="mvp">mvp開発</mat-option>
+          <mat-option value="consulting">コンサルティング</mat-option>
+          <mat-option value="other">その他</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br />
+      <mat-form-field fxFill>
+        <mat-label [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>詳細</ng-container>
+        </mat-label>
+        <textarea #body matInput required ngModel name="detail"></textarea>
+      </mat-form-field>
+      <br />
+
+      <button
+        mat-raised-button
+        fxFill
+        [color]="'accent'"
+        [disabled]="form.invalid"
+        [ngSwitch]="''"
+      >
+        <ng-container *ngSwitchDefault>送信する</ng-container>
+      </button>
+    </form>
+  </div>
+</app-section>

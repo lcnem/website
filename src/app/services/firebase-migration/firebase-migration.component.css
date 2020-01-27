@@ -1,0 +1,33 @@
+.layout {
+  text-align: center;
+  display: flex;
+  width: 400px;
+  white-space: nowrap;
+}
+
+.migration {
+  object-fit: cover;
+  widows: 400px;
+  height: 400px;
+}
+
+.cost {
+  text-align: center;
+  color: gray;
+}
+
+.contents {
+  display: flex;
+}
+
+.card {
+  background-color: bisque;
+}
+
+.contact {
+  text-align: center;
+}
+
+.logo {
+  width: 400px;
+}

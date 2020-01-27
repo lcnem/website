@@ -8,6 +8,9 @@ import { MinimumViableProductComponent } from './minimum-viable-product/minimum-
 import { FirebaseMigrationComponent } from './firebase-migration/firebase-migration.component';
 import { ServicesComponent } from './services/services.component';
 import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material/material.module';
+import { CompanyModule } from '../company/company.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,8 +23,11 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    MaterialModule,
     ServicesRoutingModule,
     SharedModule,
+    CompanyModule,
   ],
   exports: [
     BlockchainSubscriptionComponent,
