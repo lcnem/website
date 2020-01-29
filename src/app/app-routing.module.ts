@@ -23,7 +23,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled', // enabled で有効化
+    anchorScrolling: 'enabled', // enabled で有効化)],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
