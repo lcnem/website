@@ -4,9 +4,11 @@ import { BlockchainSubscriptionComponent } from './blockchain-subscription/block
 import { MinimumViableProductComponent } from './minimum-viable-product/minimum-viable-product.component';
 import { SystemIntegrationComponent } from './system-integration/system-integration.component';
 import { FirebaseMigrationComponent } from './firebase-migration/firebase-migration.component';
+import { ServicesComponent } from './services/services.component';
 
 
 const routes: Routes = [
+  { path: '', component: ServicesComponent },
   { path: 'blockchain-subscription', component: BlockchainSubscriptionComponent },
   { path: 'minimum-viable-product', component: MinimumViableProductComponent },
   { path: 'system-integration', component: SystemIntegrationComponent },
