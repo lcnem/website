@@ -4,6 +4,10 @@
   object-fit: cover;
 }
 
+.message {
+  font-family: HelveticaNeue-CondensedBold;
+}
+
 .logo {
   width: 900px;
   object-fit: cover;

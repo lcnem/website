@@ -4,6 +4,10 @@
   white-space: nowrap;
 }
 
+.message {
+  font-family: HelveticaNeue-CondensedBold;
+}
+
 .wallet {
   width: 600px;
 }
