@@ -21,3 +21,7 @@ a:hover {
 .layout {
   border-bottom: solid 5px orange;
 }
+
+.message {
+  font-family: HelveticaNeue-CondensedBold;
+}

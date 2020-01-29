@@ -60,6 +60,10 @@ a:visited {
   opacity: 0.6;
 }
 
+.message {
+  font-family: HelveticaNeue-CondensedBold;
+}
+
 .main {
   width: 1000px;
   object-fit: cover;

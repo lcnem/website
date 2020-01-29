@@ -13,6 +13,35 @@
   padding: 0;
   color: white;
   font-size: 300%;
+  font-family: HelveticaNeue-CondensedBold;
+}
+
+.for {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 300%;
+  font-family: HelveticaNeue-CondensedBold;
+}
+
+.enhance {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 300%;
+  font-family: HelveticaNeue-CondensedBold;
 }
 
 .img {
