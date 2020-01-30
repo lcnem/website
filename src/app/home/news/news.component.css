@@ -19,9 +19,12 @@ a:hover {
 }
 
 .layout {
-  border-bottom: solid 5px orange;
+  border-bottom: solid 3px orange;
+  color: gray;
+  padding: 5px;
 }
 
 .message {
   font-family: HelveticaNeue-CondensedBold;
+  color: gray;
 }

@@ -26,6 +26,6 @@ section {
 
   &.mat-accent {
     color: white;
-    background: mat-color(mat-palette($mat-pink));
+    background: mat-color(mat-palette($mat-pink, 50));
   }
 }

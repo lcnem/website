@@ -22,6 +22,8 @@ import { NewsComponent } from './home/news/news.component';
 import { CompanyModule } from './company/company.module';
 import { ServicesModule } from './services/services.module';
 import { PartnerComponent } from './home/partner/partner.component';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { PartnerComponent } from './home/partner/partner.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxPageScrollCoreModule,
+    NgxPageScrollModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
@@ -46,7 +50,7 @@ import { PartnerComponent } from './home/partner/partner.component';
     SharedModule,
     MaterialModule,
     CompanyModule,
-    ServicesModule
+    ServicesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
