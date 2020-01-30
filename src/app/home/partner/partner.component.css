@@ -6,7 +6,6 @@
 
 .layout {
   display: flex;
-  justify-content: center;
   width: 900px;
   object-fit: cover;
 }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 840 594" style="enable-background:new 0 0 840 594;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:url(#SVGID_4_);}
+	.st4{fill:url(#SVGID_5_);}
+	.st5{fill:#FF7F00;}
+</style>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1.2422" y1="323.5584" x2="838.7578" y2="323.5584">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.2373" style="stop-color:#E5EAEB"/>
+		<stop  offset="0.5233" style="stop-color:#CCD5D8"/>
+		<stop  offset="0.7855" style="stop-color:#BDC9CC"/>
+		<stop  offset="1" style="stop-color:#B8C5C8"/>
+	</linearGradient>
+	<path class="st0" d="M750.2,402.9h20.7v-70h67.8v-25.6h-67.8v-59.1h-28.7v59.1h-31.8l-46.3-63.1h-20.7v63.1h-94.3V274h47.6v-25.7
+		h-76.3v59.1h-48.5v-59.1h-28.7v59.1h-31.8L365,244.2h-20.7v63.1H250V274h47.6v-25.7h-76.3v59.1H178c-6.4-34.6-32.8-59.1-69.7-59.1
+		H67.2v59.1h-66v25.6h66v66.9h40.9c39.1,0,67.2-28.5,71-66.9h42.2v66.9h76.3v-25.7H250v-41h45.8v-0.1h48.5v66.9H373v-66.9h26.8
+		l51.2,70h20.8v-70h48.5v66.9h76.3v-25.7h-47.6v-41h45.7v-0.1h48.6v66.9h28.8v-66.9h26.8L750.2,402.9"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="729.1656" y1="341.5608" x2="742.1836" y2="341.5608">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.2373" style="stop-color:#E5EAEB"/>
+		<stop  offset="0.5233" style="stop-color:#CCD5D8"/>
+		<stop  offset="0.7855" style="stop-color:#BDC9CC"/>
+		<stop  offset="1" style="stop-color:#B8C5C8"/>
+	</linearGradient>
+	<polyline class="st1" points="741.8,350.2 729.2,332.9 742.2,332.9 742.2,350.2 741.8,350.2 	"/>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="430.0501" y1="341.5608" x2="443.0696" y2="341.5608">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.2373" style="stop-color:#E5EAEB"/>
+		<stop  offset="0.5233" style="stop-color:#CCD5D8"/>
+		<stop  offset="0.7855" style="stop-color:#BDC9CC"/>
+		<stop  offset="1" style="stop-color:#B8C5C8"/>
+	</linearGradient>
+	<polyline class="st2" points="442.7,350.2 430.1,332.9 443.1,332.9 443.1,350.2 442.7,350.2 	"/>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="672.1351" y1="302.1244" x2="680.1622" y2="302.1244">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.2373" style="stop-color:#E5EAEB"/>
+		<stop  offset="0.5233" style="stop-color:#CCD5D8"/>
+		<stop  offset="0.7855" style="stop-color:#BDC9CC"/>
+		<stop  offset="1" style="stop-color:#B8C5C8"/>
+	</linearGradient>
+	<polyline class="st3" points="672.1,307.3 672.1,296.9 672.5,296.9 680.2,307.3 672.1,307.3 	"/>
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="372.9948" y1="302.1244" x2="381.0466" y2="302.1244">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.2373" style="stop-color:#E5EAEB"/>
+		<stop  offset="0.5233" style="stop-color:#CCD5D8"/>
+		<stop  offset="0.7855" style="stop-color:#BDC9CC"/>
+		<stop  offset="1" style="stop-color:#B8C5C8"/>
+	</linearGradient>
+	<polyline class="st4" points="373,307.3 373,296.9 373.4,296.9 381,307.3 373,307.3 	"/>
+	<path d="M67.2,399.9v-66.9H96v41.2h4.7c31.8,0,46.1-16.2,48.7-41.2h29.7c-3.7,38.4-31.8,66.9-71,66.9H67.2 M148.1,307.3
+		c-5-22-20.8-33.4-47.4-33.4H96v33.4H67.2v-59.1h41.1c36.9,0,63.2,24.5,69.7,59.1H148.1"/>
+	<path d="M451,402.9l-51.2-70h30.3l12.6,17.2h0.4v-17.2h28.7v70H451 M344.3,399.9v-66.9H373v66.9H344.3 M443.1,307.3v-59.1h28.7
+		v59.1H443.1 M381,307.3l-7.7-10.4H373v10.4h-28.7v-63.1H365l46.3,63.1H381"/>
+	<path d="M750.2,402.9l-51.3-70h30.2l12.6,17.2h0.4v-17.2h28.7v70H750.2 M643.4,399.9v-66.9h28.8v66.9H643.4 M742.2,307.3v-59.1
+		h28.7v59.1H742.2 M680.2,307.3l-7.7-10.4h-0.4v10.4h-28.8v-63.1h20.7l46.3,63.1H680.2"/>
+	<path class="st5" d="M594.8,332.9v-25.6h-45.7h289.7v25.6H594.8 M295.7,332.9v-25.6H250h270.3v25.6H295.7 M1.2,332.9v-25.6h220
+		v25.6H1.2"/>
+	<polyline points="221.2,399.9 221.2,248.2 297.5,248.2 297.5,274 250,274 250,307.3 295.7,307.3 295.7,333.1 250,333.1 250,374.1 
+		297.5,374.1 297.5,399.9 221.2,399.9 	"/>
+	<polyline points="520.3,399.9 520.3,248.2 596.6,248.2 596.6,274 549.1,274 549.1,307.3 594.8,307.3 594.8,333.1 549.1,333.1 
+		549.1,374.1 596.6,374.1 596.6,399.9 520.3,399.9 	"/>
+</g>
+</svg>
