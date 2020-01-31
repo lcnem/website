@@ -1,7 +1,10 @@
+.title {
+  font-family: HelveticaNeue-CondensedBold;
+}
+
 .layout {
-  text-align: center;
   display: flex;
-  width: 400px;
+  object-fit: cover;
   white-space: nowrap;
 }
 
@@ -9,6 +12,8 @@
   object-fit: cover;
   widows: 400px;
   height: 400px;
+  object-fit: cover;
+  padding: 30px;
 }
 
 .cost {
@@ -21,7 +26,18 @@
 }
 
 .card {
-  background-color: bisque;
+  background-color: rgb(197, 194, 194);
+  border-color: bisque;
+  border-radius: 1px;
+  border-style: solid;
+}
+
+.cards {
+  display: flex;
+}
+
+.center {
+  text-align: center;
 }
 
 .contact {
