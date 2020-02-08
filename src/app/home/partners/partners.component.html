@@ -1,0 +1,43 @@
+<app-section [color]="'mat-gray'">
+  <h2 class="bold-heading">PARTNERS</h2>
+  <div
+    fxLayout="row wrap"
+    fxLayoutGap="16px grid"
+    fxLayoutAlign="space-around center"
+  >
+    <ng-container
+      *ngFor="
+        let e of [
+          [
+            'http://etherinc.co/',
+            'EtherSecurity',
+            'assets/images/partners/etherinc.png'
+          ],
+          [
+            'http://www.unitedbitcoiners.com/',
+            'United Bitcoiners',
+            'assets/images/partners/ub.png'
+          ],
+          [
+            'https://www.denen.com/',
+            'Denen',
+            'assets/images/partners/denen.svg'
+          ],
+          [
+            'https://www.proximax.io/',
+            'ProximaX',
+            'assets/images/partners/proximax.jpg'
+          ]
+        ]
+      "
+    >
+      <div>
+        <div matRipple>
+          <a href="{{ e[0] }}" target="_blank">
+            <img class="partner-image" alt="{{ e[1] }}" src="{{ e[2] }}" />
+          </a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</app-section>

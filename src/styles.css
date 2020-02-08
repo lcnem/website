@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/angular-firebase-template/styles.css');
+
+mat-progress-spinner {
+  margin: 1em auto;
+}
+
+.mat-card {
+  border-radius: 12px !important;
+}
+
+.mat-card:not([class*='mat-elevation-z']) {
+  box-shadow: 0 6px 16px 0 rgba(24, 52, 117, 0.2) !important;
+}
+
+.bold-heading {
+  font-family: 'HelveticaNeue-CondensedBold';
+  font-weight: bold;
+}
+
+.big-button {
+  font-size: 2em;
+  line-height: 180% !important;
+}

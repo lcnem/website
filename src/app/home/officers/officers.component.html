@@ -1,0 +1,82 @@
+<app-section>
+  <h2 class="bold-heading">OFFICERS</h2>
+  <div
+    fxLayout="row"
+    fxLayout.xs="row wrap"
+    fxLayoutGap="16px grid"
+    class="officer-wrapper"
+  >
+    <div fxFlex="256px" fxFlex.xs="100">
+      <img class="officer-image" src="assets/images/luster/yu.jpg" />
+    </div>
+    <div fxFlex="1 1 auto" fxFlex.xs="100">
+      <h3 class="bold-heading" [ngSwitch]="'ja'">
+        <ng-container *ngSwitchCase="'ja'">木村 優</ng-container>
+        <ng-container *ngSwitchDefault>Yu Kimura</ng-container>
+      </h3>
+      <h4>代表取締役 CEO & CTO</h4>
+      <p>
+        京都大学経済学部、京都大学経営管理大学院。14歳からアセンブラ言語によるコード解析、Cによるプログラミングを始め、C#を経てTypeScript,Angular、Go、Rustに至る。
+        ブロックチェーンを利用したチケット転売防止システムTicket Peer to
+        Peerの考案、 日本で最初の商用Cosmos SDK製ブロックチェーンの開発、
+        FTPLに着想を得てMMTを数式化する理論MTPLの提唱をはじめとした経済学研究など、
+        幅広い知見をもとに活動している。
+      </p>
+      <div fxLayout="row">
+        <a
+          mat-icon-button
+          href="https://twitter.com/KimuraYu45z"
+          target="_blank"
+        >
+          <img class="icon" src="assets/images/twitter.svg" />
+        </a>
+        <a
+          mat-icon-button
+          href="https://facebook.com/KimuraYu45z"
+          target="_blank"
+        >
+          <img class="icon" src="assets/images/facebook.svg" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    fxLayout="row"
+    fxLayout.xs="row wrap"
+    fxLayoutGap="16px grid"
+    class="officer-wrapper"
+  >
+    <div fxFlex="256px" fxFlex.xs="100">
+      <img class="officer-image" src="assets/images/luster/takeru.jpg" />
+    </div>
+    <div fxFlex="1 1 auto" fxFlex.xs="100">
+      <h3 class="bold-heading" [ngSwitch]="'ja'">
+        <ng-container *ngSwitchCase="'ja'">下島 健</ng-container>
+        <ng-container *ngSwitchDefault>Takeru Shimojima</ng-container>
+      </h3>
+      <h4>取締役 COO & CFO</h4>
+      <p>
+        東京外国語大学言語文化学部卒業。
+        海外在住経験を経て、語学と国際関係学に知見を有す。
+        2018年3月に株式会社LCNEMをCEO木村と共同起業する。
+        また、経営・戦略コンサルタントとしても、トップ企業の経営陣にソリューションを提供している。
+      </p>
+      <div fxLayout="row">
+        <a
+          mat-icon-button
+          href="https://twitter.com/thetalcnem"
+          target="_blank"
+        >
+          <img class="icon" src="assets/images/twitter.svg" />
+        </a>
+        <a
+          mat-icon-button
+          href="https://facebook.com/takeru.shimojima"
+          target="_blank"
+        >
+          <img class="icon" src="assets/images/facebook.svg" />
+        </a>
+      </div>
+    </div>
+  </div>
+</app-section>

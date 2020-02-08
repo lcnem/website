@@ -1,0 +1,21 @@
+<app-section [color]="'mat-gray'">
+  <h2 class="bold-heading">NEWS</h2>
+  <ng-container *ngIf="inside$ | async as inside">
+    <ng-container *ngFor="let e of inside">
+      <div matRipple routerLink="e.pubData">
+        <h3>e.title</h3>
+      </div>
+
+      <mat-divider></mat-divider>
+    </ng-container>
+  </ng-container>
+
+  <a
+    mat-button
+    color="primary"
+    href="https://inside.lcnem.com/category/news/"
+    class="big-button"
+  >
+    過去のニュース一覧
+  </a>
+</app-section>

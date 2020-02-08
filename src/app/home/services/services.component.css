@@ -1,0 +1,12 @@
+.item {
+  width: 300px;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.mat-card-image {
+  object-fit: cover;
+  height: 210px;
+}

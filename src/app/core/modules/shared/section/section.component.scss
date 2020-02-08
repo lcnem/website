@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+section {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  &.black {
+    color: white;
+    background: #222222;
+  }
+
+  &.mat-orange {
+    color: white;
+    background: mat-color(mat-palette($mat-orange));
+  }
+
+  &.mat-gray {
+    color: white;
+    background: mat-color(mat-palette($mat-gray));
+  }
+
+  &.mat-blue {
+    color: white;
+    background: mat-color(mat-palette($mat-blue));
+  }
+
+  &.mat-pink {
+    color: white;
+    background: mat-color(mat-palette($mat-pink));
+  }
+}
