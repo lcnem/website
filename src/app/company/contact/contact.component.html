@@ -20,8 +20,28 @@
       <mat-label [ngSwitch]="''">
         <ng-container *ngSwitchDefault>件名</ng-container>
       </mat-label>
-      <input #subject matInput required ngModel name="subject" />
-      <!--TODO: オートコンプリート-->
+      <mat-select
+        #subject
+        matInput
+        required
+        ngModel
+        name="subject"
+        [ngSwitch]="''"
+      >
+        <ng-container *ngSwitchDefault>
+          <mat-option value="システム設計・開発">システム設計・開発</mat-option>
+          <mat-option value="サブスクリプション型ブロックチェーン開発サービス"
+            >サブスクリプション型ブロックチェーン開発サービス</mat-option
+          >
+          <mat-option value="MVP設計コンサルティング・開発サービス"
+            >MVP設計コンサルティング・開発サービス</mat-option
+          >
+          <mat-option value="Firebase移行サービス"
+            >Firebase移行サービス</mat-option
+          >
+          <mat-option value="その他">その他</mat-option>
+        </ng-container>
+      </mat-select>
     </mat-form-field>
     <mat-form-field fxFill>
       <mat-label [ngSwitch]="''">
@@ -29,17 +49,28 @@
           メッセージを入力してください
         </ng-container>
       </mat-label>
-      <textarea #body matInput required ngModel name="body"></textarea>
+      <textarea
+        #body
+        rows="12"
+        style="resize: none;"
+        matInput
+        required
+        ngModel
+        name="body"
+      ></textarea>
     </mat-form-field>
-    <div>
-      <a routerLink="/privacy-policy" [ngSwitch]="''">
+    <div fxLayout="row">
+      <div>
+        <mat-checkbox fxFill required ngModel name="agree" [ngSwitch]="''">
+          <ng-container *ngSwitchDefault>
+            プライバシーポリシーに同意する
+          </ng-container>
+        </mat-checkbox>
+      </div>
+      <span fxFlex="1 1 auto"></span>
+      <a routerLink="/terms" [ngSwitch]="''">
         <ng-container *ngSwitchDefault>プライバシーポリシー</ng-container>
       </a>
-      <mat-checkbox fxFill required ngModel name="agree" [ngSwitch]="''">
-        <ng-container *ngSwitchDefault>
-          同意する
-        </ng-container>
-      </mat-checkbox>
     </div>
 
     <button

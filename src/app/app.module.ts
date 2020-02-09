@@ -25,8 +25,8 @@ import { ProductsComponent } from './home/products/products.component';
 import { PartnersComponent } from './home/partners/partners.component';
 import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './home/footer/footer.component';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { TermsComponent } from './terms/terms.component';
+
 import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
 
 @NgModule({
@@ -40,13 +40,12 @@ import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
     ProductsComponent,
     PartnersComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxPageScrollCoreModule,
-    NgxPageScrollModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,

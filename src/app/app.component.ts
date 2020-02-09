@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { TitleService } from 'angular-firebase-template';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,15 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'website';
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private title: TitleService) {
+    this.title.baseTitle = 'LCNEM, Inc.';
+  }
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        document.getElementById('mat-drawer-content')!.scrollTo(0, 0);
+        document.getElementById('sidenav-content')!.scrollTo(0, 0);
       }
     });
-  }
-
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
   }
 }

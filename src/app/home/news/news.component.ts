@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./news.component.css'],
 })
 export class NewsComponent implements OnInit {
-  inside$: Observable<Data>;
+  inside$: Observable<Data[]>;
   constructor(private feed: FeedService) {
     this.inside$ = this.feed.inside$;
   }
