@@ -6,7 +6,7 @@ import * as admin from "firebase-admin";
 export const path = "feeds";
 
 export const inside = functions.pubsub
-  .topic("feeds_inside")
+  .topic("feed_inside")
   .onPublish((message, context) => {
     try {
       request.get(
