@@ -26,4 +26,5 @@ export const inside = functions.pubsub
     } catch (e) {
       console.error(e);
     }
+    return 0;
   });
