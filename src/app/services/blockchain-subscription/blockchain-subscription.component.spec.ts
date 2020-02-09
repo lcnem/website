@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BlockchainSubscriptionComponent } from './blockchain-subscription.component';
 
+/*
 describe('BlockchainSubscriptionComponent', () => {
   let component: BlockchainSubscriptionComponent;
   let fixture: ComponentFixture<BlockchainSubscriptionComponent>;
@@ -22,3 +23,4 @@ describe('BlockchainSubscriptionComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+*/
