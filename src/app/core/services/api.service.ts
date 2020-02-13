@@ -13,6 +13,7 @@ export class ApiService {
     email: string,
     subject: string,
     body: string,
+    type: 'sales' | 'support' | 'info',
   ) {
     return this.functions
       .httpsCallable('mail_send')({
@@ -21,6 +22,7 @@ export class ApiService {
         email,
         subject,
         body,
+        type,
       })
       .toPromise();
   }

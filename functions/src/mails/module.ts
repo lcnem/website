@@ -9,10 +9,11 @@ export const send = functions.https.onCall(
       name: string;
       subject: string;
       body: string;
+      type: "sales" | "support" | "info";
     },
     context
   ) => {
-    const body_ =
+    const body =
       data.lang === "en"
         ? `Dear ${data.name}.
 Your inquiry has been submitted.
@@ -32,13 +33,13 @@ ${data.body}`;
         functions.config().gas.send_mail,
         {
           form: {
-            lang: data.lang,
             email: data.email,
             subject: data.subject,
-            body: body_
+            body: body,
+            type: data.type
           }
         },
-        (error, response, _) => {
+        (error, response, body_) => {
           if (error) {
             reject(error);
             return;

@@ -2,7 +2,15 @@
   <h2 class="bold-heading">CONTACT</h2>
   <form
     #form="ngForm"
-    (submit)="onSubmit(name.value, email.value, subject.value, body.value)"
+    (submit)="
+      onSubmit(
+        name.value,
+        email.value,
+        subject.value[0],
+        body.value,
+        subject.value[1]
+      )
+    "
   >
     <mat-form-field fxFill>
       <mat-label [ngSwitch]="''">
@@ -29,17 +37,33 @@
         [ngSwitch]="''"
       >
         <ng-container *ngSwitchDefault>
-          <mat-option value="システム設計・開発">システム設計・開発</mat-option>
-          <mat-option value="サブスクリプション型ブロックチェーン開発サービス"
-            >サブスクリプション型ブロックチェーン開発サービス</mat-option
+          <mat-option
+            [value]="['システム設計・開発', subjectTypes.SYSTEM_INTEGRATION]"
+            >システム設計・開発</mat-option
           >
-          <mat-option value="MVP設計コンサルティング・開発サービス"
-            >MVP設計コンサルティング・開発サービス</mat-option
+          <mat-option
+            [value]="[
+              'サブスクリプション型ブロックチェーン開発サービス',
+              subjectTypes.BLOCKCHAIN_SUBSCRIPTION
+            ]"
+            >サブスクリプション型ブロックチェーン開発サービス
+          </mat-option>
+          <mat-option
+            [value]="[
+              'MVP設計コンサルティング・開発サービス',
+              subjectTypes.MVP
+            ]"
+            >MVP設計コンサルティング・開発サービス
+          </mat-option>
+          <mat-option [value]="['Firebase移行サービス', subjectTypes.FIREBASE]"
+            >Firebase移行サービス
+          </mat-option>
+          <mat-option [value]="['弊社へのセールス', subjectTypes.SALES]"
+            >弊社へのセールス</mat-option
           >
-          <mat-option value="Firebase移行サービス"
-            >Firebase移行サービス</mat-option
+          <mat-option [value]="['その他', subjectTypes.OTHERS]"
+            >その他</mat-option
           >
-          <mat-option value="その他">その他</mat-option>
         </ng-container>
       </mat-select>
     </mat-form-field>
