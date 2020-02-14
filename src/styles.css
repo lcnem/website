@@ -17,8 +17,3 @@ mat-progress-spinner {
   font-family: 'HelveticaNeue-CondensedBold';
   font-weight: bold;
 }
-
-.big-button {
-  font-size: 2em;
-  line-height: 180% !important;
-}

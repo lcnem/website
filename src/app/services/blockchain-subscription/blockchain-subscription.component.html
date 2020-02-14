@@ -1,7 +1,6 @@
 <app-section [color]="'mat-blue'">
   <h2 class="bold-heading" [ngSwitch]="''">
-    <ng-container *ngSwitchDefault
-      >サブスクリプション型ブロックチェーン開発サービス
+    <ng-container *ngSwitchDefault>サブスクリプション型ブロックチェーン開発サービス
     </ng-container>
   </h2>
   <p>
@@ -23,7 +22,7 @@
     <br />
     LCNEMならば、低コストなサブスクリプション型でブロックチェーンの導入を実験できます。
   </p>
-  <button mat-button class="big-button" routerLink="/company/contact">
+  <button mat-raised-button routerLink="/company/contact">
     お問い合わせはこちら
   </button>
 </app-section>
@@ -31,11 +30,7 @@
   <h2 class="bold-heading" [ngSwitch]="''">
     <ng-container *ngSwitchDefault>費用</ng-container>
   </h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around start"
-  >
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around start">
     <div fxFlex="100">
       <mat-card>
         <mat-card-header>
@@ -90,9 +85,7 @@
         </mat-card-header>
         <mat-card-content>
           <p>
-            <a routerLink="/services/system-integration"
-              >システム設計・開発サービス</a
-            >での承りとさせていただきます。 費用は見積もりの上要相談となります。
+            <a routerLink="/services/system-integration">システム設計・開発サービス</a>での承りとさせていただきます。 費用は見積もりの上要相談となります。
           </p>
         </mat-card-content>
       </mat-card>
