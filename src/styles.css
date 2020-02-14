@@ -17,3 +17,7 @@ mat-progress-spinner {
   font-family: 'HelveticaNeue-CondensedBold';
   font-weight: bold;
 }
+
+.product-name {
+  font-size: 2em;
+}
