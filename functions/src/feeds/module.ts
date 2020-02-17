@@ -1,28 +1,23 @@
 import * as functions from "firebase-functions";
-import * as request from "request";
-import * as xml2js from "xml2js";
 import * as admin from "firebase-admin";
+import * as xml2js from "xml2js";
+import fetch from "node-fetch";
 
 export const path = "feeds";
 
 export const inside = functions.pubsub
   .topic("feed_inside")
-  .onPublish((message, context) => {
+  .onPublish(async (message, context) => {
     try {
-      request.get(
-        "https://inside.lcnem.com/category/news/feed/",
-        {
-          json: false
-        },
-        async (_, __, body) => {
-          const data = await xml2js.parseStringPromise(body);
-          await admin
-            .firestore()
-            .collection(path)
-            .doc("inside")
-            .set(data);
-        }
-      );
+      const data = await fetch("https://inside.lcnem.com/category/news/feed/")
+        .then(response => response.text())
+        .then(text => xml2js.parseStringPromise(text));
+
+      await admin
+        .firestore()
+        .collection(path)
+        .doc("inside")
+        .set(data);
     } catch (e) {
       console.error(e);
     }
