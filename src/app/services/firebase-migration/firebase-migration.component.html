@@ -16,19 +16,14 @@
     <br />
     このようなお悩みをお持ちのお客様を対象に、既存のシステムのFirebaseへの移行、FirebaseのFirebase内移行に関するコンサルティングや実装を行っております。
   </p>
-  <button mat-button class="big-button" routerLink="/company/contact">
+  <button mat-raised-button routerLink="/company/contact">
     お問い合わせはこちら
   </button>
 </app-section>
 <app-section [color]="'mat-gray'">
   <h2 class="bold-heading">実績一覧</h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around center"
-  >
-    <ng-container
-      *ngFor="
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around center">
+    <ng-container *ngFor="
         let e of [
           [
             'https://www.polipoli.work/',
@@ -36,8 +31,7 @@
             'assets/images/partners/polipoli.svg'
           ]
         ]
-      "
-    >
+      ">
       <div>
         <div matRipple>
           <a href="{{ e[0] }}" target="_blank">

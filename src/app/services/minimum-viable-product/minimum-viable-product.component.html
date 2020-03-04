@@ -1,8 +1,6 @@
 <app-section [color]="'mat-pink'">
   <h2 class="bold-heading" [ngSwitch]="''">
-    <ng-container *ngSwitchDefault
-      >MVP設計コンサルティング・開発サービス</ng-container
-    >
+    <ng-container *ngSwitchDefault>MVP設計コンサルティング・開発サービス</ng-container>
   </h2>
   <p>
     MVP(Minimum Viable
@@ -19,15 +17,13 @@
     <br />
     MVPを通じた製品やサービスの仮説検証に、ぜひ我々の力を発揮させてください。
   </p>
-  <button mat-button class="big-button" routerLink="/company/contact">
+  <button mat-raised-button routerLink="/company/contact">
     お問い合わせはこちら
   </button>
 </app-section>
 <app-section>
   <h2 class="bold-heading" [ngSwitch]="''">
-    <ng-container *ngSwitchDefault
-      >ウォーターフォール型開発とアジャイル開発の違いとは？</ng-container
-    >
+    <ng-container *ngSwitchDefault>ウォーターフォール型開発とアジャイル開発の違いとは？</ng-container>
   </h2>
   <p>
     ウォーターフォール開発とは、上流工程から下流工程へ順次移行していく開発手法で、
@@ -60,11 +56,7 @@
   <h2 class="bold-heading" [ngSwitch]="''">
     <ng-container *ngSwitchDefault>内容</ng-container>
   </h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around start"
-  >
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around start">
     <div fxFlex="100">
       <mat-card>
         <mat-card-header>
@@ -124,13 +116,8 @@
 </app-section>
 <app-section [color]="'mat-gray'">
   <h2 class="bold-heading">実績一覧</h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around center"
-  >
-    <ng-container
-      *ngFor="
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around center">
+    <ng-container *ngFor="
         let e of [
           [
             'https://www.polipoli.work/',
@@ -138,8 +125,7 @@
             'assets/images/partners/polipoli.svg'
           ]
         ]
-      "
-    >
+      ">
       <div>
         <div matRipple>
           <a href="{{ e[0] }}" target="_blank">

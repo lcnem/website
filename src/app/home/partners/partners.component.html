@@ -1,12 +1,7 @@
 <app-section [color]="'mat-gray'">
   <h2 class="bold-heading">PARTNERS</h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around center"
-  >
-    <ng-container
-      *ngFor="
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around center">
+    <ng-container *ngFor="
         let e of [
           [
             'http://etherinc.co/',
@@ -32,10 +27,14 @@
             'https://www.tyrellsys.com/',
             'tyrell systems',
             'assets/images/partners/tyrellsystems.svg'
+          ],
+          [
+            'https://makersfarm.jp/',
+            'makers farm',
+            'assets/images/partners/makersfarm.png'
           ]
         ]
-      "
-    >
+      ">
       <div>
         <div matRipple>
           <a href="{{ e[0] }}" target="_blank">
