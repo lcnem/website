@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { LoadingDialogService } from 'angular-firebase-template';
-import { ApiService } from 'src/app/core/services/api.service';
+import { ApiService } from 'src/domain/api.service';
 import { Router } from '@angular/router';
 
 enum SubjectTypes {
