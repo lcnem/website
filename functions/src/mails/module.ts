@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
-import * as request from "request";
+import fetch from "node-fetch";
+import * as querystring from "querystring";
 
 export const send = functions.https.onCall(
   async (
@@ -28,30 +29,15 @@ ${data.body}`
 お問い合わせ内容:
 ${data.body}`;
 
-    await new Promise<void>((resolve, reject) => {
-      request.post(
-        functions.config().gas.send_mail,
-        {
-          form: {
-            email: data.email,
-            subject: data.subject,
-            body: body,
-            type: data.type
-          }
-        },
-        (error, response, body_) => {
-          if (error) {
-            reject(error);
-            return;
-          }
-          resolve();
-        }
-      );
-    }).catch(_ => {
-      throw new functions.https.HttpsError(
-        "internal",
-        "failed to send an email"
-      );
+    await fetch(functions.config().gas.send_mail, {
+      method: "POST",
+      body: querystring.stringify({
+        email: data.email,
+        subject: data.subject,
+        body: body,
+        type: data.type
+      }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" }
     });
   }
 );
