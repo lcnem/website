@@ -13,8 +13,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
-import { SharedModule } from '../presentation/shared.module';
-import { MaterialModule } from '../presentation/material.module';
+import { ViewModule } from '../view/view.module';
+import { MaterialModule } from '../view/material.module';
 import { AboutComponent } from './home/about/about.component';
 import { OfficersComponent } from './home/officers/officers.component';
 import { ServicesComponent } from './home/services/services.component';
@@ -54,8 +54,8 @@ import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
     AngularFirestoreModule,
     AngularFireFunctionsModule,
     AngularFirebaseTemplateModule.forRoot({}),
-    SharedModule,
     MaterialModule,
+    ViewModule,
     CompanyModule,
     ServicesModule,
   ],

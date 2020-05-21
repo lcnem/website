@@ -8,8 +8,8 @@ import { BlockchainSubscriptionComponent } from './blockchain-subscription/block
 import { SystemIntegrationComponent } from './system-integration/system-integration.component';
 import { MinimumViableProductComponent } from './minimum-viable-product/minimum-viable-product.component';
 import { FirebaseMigrationComponent } from './firebase-migration/firebase-migration.component';
-import { SharedModule } from 'src/presentation/shared.module';
-import { MaterialModule } from 'src/presentation/material.module';
+import { ViewModule } from 'src/view/view.module';
+import { MaterialModule } from 'src/view/material.module';
 import { CompanyModule } from '../company/company.module';
 
 @NgModule({
@@ -25,7 +25,7 @@ import { CompanyModule } from '../company/company.module';
     FlexLayoutModule,
     MaterialModule,
     ServicesRoutingModule,
-    SharedModule,
+    ViewModule,
     CompanyModule,
   ],
 })

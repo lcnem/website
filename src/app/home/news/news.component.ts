@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FeedService, Data } from 'src/domain/feeds/feed.service';
+import { FeedService, Data } from 'src/model/feeds/feed.service';
 import { Observable } from 'rxjs';
 
 @Component({
