@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blockchain-subscription',
@@ -7,12 +6,6 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./blockchain-subscription.component.css'],
 })
 export class BlockchainSubscriptionComponent implements OnInit {
-  public safeSite: SafeResourceUrl;
-  constructor(sanitizer: DomSanitizer) {
-    this.safeSite = sanitizer.bypassSecurityTrustResourceUrl(
-      `assets/terms/blockchain-subscription/ja.txt`,
-    );
-  }
-
+  constructor() {}
   ngOnInit() {}
 }

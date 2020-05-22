@@ -1,0 +1,152 @@
+<app-section [color]="'mat-pink'">
+  <h2 class="bold-heading" [ngSwitch]="''">
+    <ng-container *ngSwitchDefault
+      >MVP設計コンサルティング・開発サービス</ng-container
+    >
+  </h2>
+  <p>
+    MVP(Minimum Viable
+    Product)とは、「顧客に価値を提供できる最低限の製品」のことです。
+    <br />
+    これからのシステム開発では、従来のウォーターフォール型の開発方式が最適とは限りません。
+    <br />
+    むしろ、アジャイル型のシステム開発こそが不確実性に満ちた未来の開発にふさわしいと言えます。
+    <br />
+    <br />
+    我々は、テック人材が不足しているお客様に、月額制でプロダクト設計の
+    <br />
+    コンサルティングと開発を提供いたします。
+    <br />
+    MVPを通じた製品やサービスの仮説検証に、ぜひ我々の力を発揮させてください。
+  </p>
+  <button mat-raised-button routerLink="/company/contact">
+    お問い合わせはこちら
+  </button>
+</app-section>
+<app-section>
+  <h2 class="bold-heading" [ngSwitch]="''">
+    <ng-container *ngSwitchDefault
+      >ウォーターフォール型開発とアジャイル開発の違いとは？</ng-container
+    >
+  </h2>
+  <p>
+    ウォーターフォール開発とは、上流工程から下流工程へ順次移行していく開発手法で、
+  </p>
+  <p>
+    「水が下に落ちていく様に各工程が進んでいく様子」を模した名前となっています。
+  </p>
+  <p>
+    この形式は実際に動くものを触るまでに長い時間がかかるというデメリットがあります。
+  </p>
+  <p>
+    刻一刻とそのあり方を変える市場に対応するには、ウォーターフォール型は不向きなのです。
+  </p>
+  <br />
+  <br />
+  <p>
+    そこで、我々はMVPの開発と仮説検証を通じて、お客様の経営戦略をサポートいたします。
+  </p>
+  <p>
+    アジャイル開発の手法は「常に動くものを開発・修正していく」方式ですので、
+  </p>
+  <p>
+    お客様の製品・サービスが市場にマッチしていないときは、すぐさまやり直したり、
+  </p>
+  <p>
+    逆にマッチした場合は、余分なコストをすべてその製品・サービスに注力できます。
+  </p>
+</app-section>
+<app-section>
+  <h2 class="bold-heading" [ngSwitch]="''">
+    <ng-container *ngSwitchDefault>内容</ng-container>
+  </h2>
+  <div
+    fxLayout="row wrap"
+    fxLayoutGap="16px grid"
+    fxLayoutAlign="space-around start"
+  >
+    <div fxFlex="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>費用</mat-card-title>
+          <mat-card-subtitle>20万円/月～</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            MVP開発期間中は月30万円、リリース後の対応は月20万にて承ります。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>突然の仕様変更</mat-card-title>
+          <mat-card-subtitle>対応可能</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            MVPは何度も仕様変更して当たり前のものです。お客様のニーズに合わせ、契約中は柔軟に対応させていただきます。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>​​コミュニケーション</mat-card-title>
+          <mat-card-subtitle>Slackの利用</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            お客様のSlackチャンネルにご招待いただくか、共有チャンネルにご招待いただくことで、迅速かつ綿密なコミュニケーションを図ります。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex="100">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>技術引き継ぎ</mat-card-title>
+          <mat-card-subtitle>
+            対応可能
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            MVPをリリース後、弊社の力なしにプロダクトを保守していきたいとお考えのお客様には、設計意図や実装の詳細を伝授・引き継ぎをして終了することが可能です。
+            テック人材の不足するスタートアップ企業の補助輪としてもお使いいただけます。
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</app-section>
+<app-section [color]="'mat-gray'">
+  <h2 class="bold-heading">実績一覧</h2>
+  <div
+    fxLayout="row wrap"
+    fxLayoutGap="16px grid"
+    fxLayoutAlign="space-around center"
+  >
+    <ng-container
+      *ngFor="
+        let e of [
+          [
+            'https://www.polipoli.work/',
+            'PoliPoli',
+            'assets/images/partners/polipoli.svg'
+          ]
+        ]
+      "
+    >
+      <div>
+        <div matRipple>
+          <a href="{{ e[0] }}" target="_blank">
+            <img class="partner-image" alt="{{ e[1] }}" src="{{ e[2] }}" />
+          </a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</app-section>

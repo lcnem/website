@@ -5,11 +5,11 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent, SectionComponent, TwitterTimelineComponent],
-  imports: [CommonModule, FlexLayoutModule, RouterModule, MaterialModule],
-  exports: [SectionComponent, TwitterTimelineComponent],
+  imports: [CommonModule, RouterModule, FlexLayoutModule, MaterialModule],
+  exports: [AppComponent, SectionComponent, TwitterTimelineComponent],
 })
 export class ViewModule {}

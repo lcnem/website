@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FeedService, Data } from 'src/model/feeds/feed.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  inside$: Observable<Data[] | undefined>;
+  constructor(private feed: FeedService) {
+    this.inside$ = this.feed.inside$;
+  }
 
   ngOnInit() {}
 }

@@ -15,34 +15,14 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { ViewModule } from '../view/view.module';
 import { MaterialModule } from '../view/material.module';
-import { AboutComponent } from './home/about/about.component';
-import { OfficersComponent } from './home/officers/officers.component';
-import { ServicesComponent } from './home/services/services.component';
-import { NewsComponent } from './home/news/news.component';
-import { CompanyModule } from './company/company.module';
-import { ServicesModule } from './services/services.module';
-import { ProductsComponent } from './home/products/products.component';
-import { PartnersComponent } from './home/partners/partners.component';
-import { HeaderComponent } from './home/header/header.component';
-import { FooterComponent } from './home/footer/footer.component';
 import { TermsComponent } from './terms/terms.component';
 
 import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
+import { HomeViewModule } from 'src/view/home/home.module';
+import { TermsViewModule } from 'src/view/terms/terms.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    OfficersComponent,
-    ServicesComponent,
-    NewsComponent,
-    ProductsComponent,
-    PartnersComponent,
-    HeaderComponent,
-    FooterComponent,
-    TermsComponent,
-  ],
+  declarations: [AppComponent, HomeComponent, TermsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -56,8 +36,8 @@ import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
     AngularFirebaseTemplateModule.forRoot({}),
     MaterialModule,
     ViewModule,
-    CompanyModule,
-    ServicesModule,
+    HomeViewModule,
+    TermsViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

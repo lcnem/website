@@ -10,7 +10,7 @@ import { MinimumViableProductComponent } from './minimum-viable-product/minimum-
 import { FirebaseMigrationComponent } from './firebase-migration/firebase-migration.component';
 import { ViewModule } from 'src/view/view.module';
 import { MaterialModule } from 'src/view/material.module';
-import { CompanyModule } from '../company/company.module';
+import { ServicesViewModule } from 'src/view/services/services.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { CompanyModule } from '../company/company.module';
     MaterialModule,
     ServicesRoutingModule,
     ViewModule,
-    CompanyModule,
+    ServicesViewModule,
   ],
 })
 export class ServicesModule {}
