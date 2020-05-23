@@ -13,7 +13,13 @@
     "target": "es2015",
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
-    "strict": true
+    "strict": true,
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@environments/*": ["src/environments/*"],
+      "@model/*": ["src/model/*"],
+      "@view/*": ["src/view/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
