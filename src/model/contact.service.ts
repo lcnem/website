@@ -4,7 +4,7 @@ import { AngularFireFunctions } from '@angular/fire/functions';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiService {
+export class ContactService {
   constructor(private functions: AngularFireFunctions) {}
 
   sendMail(

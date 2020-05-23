@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
   inside$: Observable<Data[] | undefined>;
   constructor(private feed: FeedService) {
-    this.inside$ = this.feed.inside$;
+    this.inside$ = this.feed.inside$();
   }
 
   ngOnInit() {}
