@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { IFeedsInfrastructureService } from './feed.service';
 
 type _Data = {
   rss: {
@@ -17,7 +18,7 @@ type _Data = {
 @Injectable({
   providedIn: 'root',
 })
-export class FeedsInfrastructureService {
+export class FeedsInfrastructureService implements IFeedsInfrastructureService {
   static readonly collectionPath = 'feeds';
   static readonly documentID = 'inside';
 
