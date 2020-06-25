@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
-import fetch from "node-fetch";
 import * as querystring from "querystring";
+import axios from "axios";
 
 export const send = functions.https.onCall(
   async (
@@ -29,15 +29,14 @@ ${data.body}`
 お問い合わせ内容:
 ${data.body}`;
 
-    await fetch(functions.config().gas.send_mail, {
-      method: "POST",
+    await axios.post(functions.config().gas.send_mail, {
       body: querystring.stringify({
         email: data.email,
         subject: data.subject,
         body: body,
-        type: data.type
+        type: data.type,
       }),
-      headers: { "Content-Type": "application/x-www-form-urlencoded" }
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
     });
   }
 );
