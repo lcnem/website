@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { LoadingDialogService } from 'angular-firebase-template';
 import { ContactService } from 'src/model/contact.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +12,7 @@ export class ContactApplicationService {
     private router: Router,
     private loadingDialog: LoadingDialogService,
     private api: ContactService,
+    private snackBar: MatSnackBar,
   ) {}
 
   async sendMail(
@@ -21,19 +22,18 @@ export class ContactApplicationService {
     body: string,
     to: 'sales' | 'support' | 'info',
   ) {
-    const message$ = new BehaviorSubject('送信しています');
-
-    this.loadingDialog.open(message$);
+    const dialogRef = this.loadingDialog.open('送信しています');
 
     try {
       await this.api.sendMail('ja', name, email, subject, body, to);
     } catch {
-      message$.error('エラーが発生しました');
+      this.snackBar.open('エラーが発生しました', undefined, { duration: 6000 });
       return;
+    } finally {
+      dialogRef.close();
     }
 
-    message$.next('送信しました');
-    message$.complete();
+    this.snackBar.open('送信しました', undefined, { duration: 6000 });
     await this.router.navigate(['']);
   }
 }
