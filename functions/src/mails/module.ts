@@ -1,5 +1,5 @@
 import * as functions from "firebase-functions";
-import * as querystring from "querystring";
+import * as qs from "qs";
 import axios from "axios";
 
 export const send = functions.https.onCall(
@@ -29,14 +29,18 @@ ${data.body}`
 お問い合わせ内容:
 ${data.body}`;
 
-    await axios.post(functions.config().gas.send_mail, {
-      body: querystring.stringify({
-        email: data.email,
-        subject: data.subject,
-        body: body,
-        type: data.type,
-      }),
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    });
+    try {
+      await axios.post(
+        functions.config().gas.send_mail,
+        qs.stringify({
+          email: data.email,
+          subject: data.subject,
+          body: body,
+          type: data.type,
+        })
+      );
+    } catch {
+      throw new functions.https.HttpsError("internal", "");
+    }
   }
 );
