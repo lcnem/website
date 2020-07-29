@@ -17,7 +17,7 @@ import { ViewModule } from '../view/view.module';
 import { MaterialModule } from '../view/material.module';
 import { TermsComponent } from './terms/terms.component';
 
-import { AngularFirebaseTemplateModule } from 'angular-firebase-template';
+import { LoadingDialogModule } from 'ng-loading-dialog';
 import { HomeViewModule } from 'src/view/home/home.module';
 import { TermsViewModule } from 'src/view/terms/terms.module';
 
@@ -33,7 +33,7 @@ import { TermsViewModule } from 'src/view/terms/terms.module';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireFunctionsModule,
-    AngularFirebaseTemplateModule.forRoot({}),
+    LoadingDialogModule,
     MaterialModule,
     ViewModule,
     HomeViewModule,

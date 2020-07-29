@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { TitleService } from 'angular-firebase-template';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,7 @@ import { TitleService } from 'angular-firebase-template';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router, private title: TitleService) {
-    this.title.baseTitle = 'LCNEM, Inc.';
-  }
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.router.events.subscribe((event) => {

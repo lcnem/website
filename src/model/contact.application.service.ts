@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LoadingDialogService } from 'angular-firebase-template';
+import { LoadingDialogService } from 'ng-loading-dialog';
 import { ContactService } from 'src/model/contact.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
