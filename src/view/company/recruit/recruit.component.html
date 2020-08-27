@@ -1,46 +1,12 @@
 <app-section>
   <h2 id="recruit">RECRUIT</h2>
 </app-section>
-<app-section [color]="'mat-pink'">
-  <h3>Vision</h3>
 
-  <p style="font-size: 3em;">
-    情報の非対称性を、情報技術で解消する。
-  </p>
-</app-section>
-
-<app-section [color]="'mat-gray'">
-  <p>
-    このミッションを一緒に実現していける方を募集しています。
-    このミッションを実現するためにも、かけがえのない資産となる知識（知的資産）を弊社内で共有する環境を作っています。
-    ミッションを実現したいというだけでなく、知的資産を得たい、または自分の知的資産をこのミッション実現のために活かしたいという方を大歓迎しています。
-  </p>
-</app-section>
-
-<app-section>
-  <h3>Business developer</h3>
-
-  <p>
-    弊社のミッションを実現すること、知的資産を共有していく環境を弊社に築いていくこと、弊社の価値を向上させていくことができる方を募集しています。
-  </p>
-
-  <button
-    mat-button
-    class="big-button"
-    [color]="'primary'"
-    [routerLink]="'/company/contact'"
-  >
-    まずは話を聞いてみる
-  </button>
-</app-section>
-<mat-divider></mat-divider>
 <app-section>
   <h3>Software Engineer</h3>
 
   <p>
-    弊社に携わるといっても、以下の弊社の使用技術をすべて予めマスターする必要はありません。
-    以下のリストは応募者への要求リストではなく、弊社が伝えられる知的資産リストと言えます。
-    現代的な開発環境の下で、価値を共創していきましょう。
+    フルタイムではなく週数日から！フリーランスとしてコミットできるエンジニアの方を募集しています。
   </p>
 
   <button
@@ -51,13 +17,30 @@
   >
     まずは話を聞いてみる
   </button>
-
-  <h4>主な使用技術</h4>
+</app-section>
+<app-section>
+  <h3>Software Engineer & Learner</h3>
 
   <p>
-    現代的なフロントエンド開発から、サーバーレスアーキテクチャによるバックエンド開発、ブロックチェーンや機械学習の知識、現代的プログラミング言語、コンテナ運用まで幅広く最新の技術を使用しています。
+    技術向上したいエンジニア向け！弊社の技術を学びつつ、実装を行っていただきます。フルタイム限定となっております。
   </p>
 
+  <button
+    mat-button
+    class="big-button"
+    [color]="'primary'"
+    [routerLink]="'/company/contact'"
+  >
+    まずは話を聞いてみる
+  </button>
+</app-section>
+<app-section>
+  <h3>主な使用技術</h3>
+
+  <p>
+    モダンなフロントエンド開発から、サーバーレスアーキテクチャによるバックエンド開発、コンテナによるバックエンド運用、ブロックチェーンや機械学習の知識など幅広く最新の技術を使用しています。
+    CTOを中心として統一されている、洗練された方法論で開発を行っています。
+  </p>
   <div
     fxLayout="row wrap"
     fxLayoutGap="16px grid"
@@ -79,7 +62,13 @@
       "
     >
       <div>
-        <img class="tech-logo" src="{{ e[0] }}" alt="{{ e[1] }}" />
+        <img
+          class="tech-logo"
+          src="{{ e[0] }}"
+          alt="{{ e[1] }}"
+          width="100px"
+          height="100px"
+        />
       </div>
     </ng-container>
   </div>
