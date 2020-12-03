@@ -8,7 +8,7 @@ import { Data } from 'src/model/feeds/feed.service';
 })
 export class NewsComponent implements OnInit {
   @Input()
-  inside?: Data[];
+  inside?: Data[] | null;
 
   constructor() {}
 
