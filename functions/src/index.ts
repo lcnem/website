@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { feed } from "./feeds";
+// import { feed } from "./feeds";
 import { mail } from "./mails";
 
 admin.initializeApp({
@@ -15,5 +15,5 @@ admin.initializeApp({
   databaseURL: functions.config().admin.database_url
 });
 
-export const feed_inside = feed.inside;
+// export const feed_inside = feed.inside;
 export const mail_send = mail.send;

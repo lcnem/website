@@ -1,2 +1,1 @@
-import * as feed from "./module";
-export { feed };
+export * as feed from "./module";
