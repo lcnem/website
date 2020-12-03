@@ -1,2 +1,1 @@
-import * as mail from "./module";
-export { mail };
+export * as mail from "./module";

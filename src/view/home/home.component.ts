@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Data } from 'src/model/feeds/feed.service';
 
 @Component({
   selector: 'view-home',
@@ -7,9 +6,6 @@ import { Data } from 'src/model/feeds/feed.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  @Input()
-  inside?: Data[] | null;
-
   constructor() {}
 
   ngOnInit(): void {}
