@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about/about.component';
+import { TechnologiesComponent } from './technologies/technologies.component';
 import { OfficersComponent } from './officers/officers.component';
 import { ServicesComponent } from './services/services.component';
 import { NewsComponent } from './news/news.component';
@@ -18,6 +19,7 @@ import { ViewModule } from '../view.module';
   declarations: [
     HomeComponent,
     AboutComponent,
+    TechnologiesComponent,
     OfficersComponent,
     ServicesComponent,
     NewsComponent,
@@ -35,4 +37,4 @@ import { ViewModule } from '../view.module';
   ],
   exports: [HomeComponent],
 })
-export class HomeViewModule {}
+export class HomeViewModule { }

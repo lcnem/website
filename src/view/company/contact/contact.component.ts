@@ -5,6 +5,7 @@ enum SubjectTypes {
   BLOCKCHAIN_SUBSCRIPTION,
   MVP,
   FIREBASE,
+  RECRUIT,
   SALES,
   OTHERS,
 }
@@ -30,7 +31,7 @@ export class ContactComponent implements OnInit {
     this.appSubmit = new EventEmitter();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onSubmit(
     name: string,

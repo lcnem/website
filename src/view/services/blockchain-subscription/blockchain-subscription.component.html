@@ -1,7 +1,6 @@
 <app-section [color]="'mat-blue'">
-  <h2 class="bold-heading" [ngSwitch]="''">
-    <ng-container *ngSwitchDefault
-      >サブスクリプション型ブロックチェーン開発サービス
+  <h2 [ngSwitch]="''">
+    <ng-container *ngSwitchDefault>サブスクリプション型ブロックチェーン開発サービス
     </ng-container>
   </h2>
   <p>
@@ -19,7 +18,7 @@
     CosmosSDKの経験から、弊社は低コストでスピーディーに開発を行います。
     <br />
     <br />
-    ブロックチェーンの実証実験に100万円を積む時代は過ぎ去りました。
+    ブロックチェーンの実証実験に4000万円を積む時代は過ぎ去りました。
     <br />
     LCNEMならば、低コストなサブスクリプション型でブロックチェーンの導入を実験できます。
   </p>
@@ -28,14 +27,10 @@
   </button>
 </app-section>
 <app-section>
-  <h2 class="bold-heading" [ngSwitch]="''">
+  <h2 [ngSwitch]="''">
     <ng-container *ngSwitchDefault>費用</ng-container>
   </h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around start"
-  >
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around start">
     <div fxFlex="100">
       <mat-card>
         <mat-card-header>
@@ -55,11 +50,11 @@
       <mat-card>
         <mat-card-header>
           <mat-card-title>開発・保守</mat-card-title>
-          <mat-card-subtitle>月額9万円</mat-card-subtitle>
+          <mat-card-subtitle>月額80万円</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <p>
-            月額9万円定額で、貴社の理想の独自ブロックチェーンを開発・保守します。
+            月額80万円定額で、貴社の理想の独自ブロックチェーンを開発・保守します。
             開発にはCosmosSDKを用います。
           </p>
         </mat-card-content>
@@ -69,11 +64,11 @@
       <mat-card>
         <mat-card-header>
           <mat-card-title>運用</mat-card-title>
-          <mat-card-subtitle>月額2万円×ノード数</mat-card-subtitle>
+          <mat-card-subtitle>月額8万円×ノード数</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <p>
-            月額2万円×ノード数定額で、
+            月額8万円×ノード数定額で、
             CosmosSDKを用いてつくられた貴社の独自のブロックチェーンを運用します。
             開発・保守とは別料金となります。
           </p>
@@ -90,9 +85,7 @@
         </mat-card-header>
         <mat-card-content>
           <p>
-            <a routerLink="/services/system-integration"
-              >システム設計・開発サービス</a
-            >での承りとさせていただきます。 費用は見積もりの上要相談となります。
+            <a routerLink="/services/system-integration">システム設計・開発サービス</a>での承りとさせていただきます。 費用は見積もりの上要相談となります。
           </p>
         </mat-card-content>
       </mat-card>

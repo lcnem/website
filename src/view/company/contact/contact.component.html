@@ -1,8 +1,6 @@
 <app-section>
   <h2 class="bold-heading">CONTACT</h2>
-  <form
-    #form="ngForm"
-    (submit)="
+  <form #form="ngForm" (submit)="
       onSubmit(
         name.value,
         email.value,
@@ -10,8 +8,7 @@
         body.value,
         subject.value[1]
       )
-    "
-  >
+    ">
     <mat-form-field fxFill>
       <mat-label [ngSwitch]="''">
         <ng-container *ngSwitchDefault>お名前</ng-container>
@@ -28,42 +25,28 @@
       <mat-label [ngSwitch]="''">
         <ng-container *ngSwitchDefault>件名</ng-container>
       </mat-label>
-      <mat-select
-        #subject
-        matInput
-        required
-        ngModel
-        name="subject"
-        [ngSwitch]="''"
-      >
+      <mat-select #subject matInput required ngModel name="subject" [ngSwitch]="''">
         <ng-container *ngSwitchDefault>
-          <mat-option
-            [value]="['システム設計・開発', subjectTypes.SYSTEM_INTEGRATION]"
-            >システム設計・開発</mat-option
-          >
-          <mat-option
-            [value]="[
+          <mat-option [value]="['システム設計・開発', subjectTypes.SYSTEM_INTEGRATION]">システム設計・開発</mat-option>
+          <mat-option [value]="[
               'サブスクリプション型ブロックチェーン開発サービス',
               subjectTypes.BLOCKCHAIN_SUBSCRIPTION
-            ]"
-            >サブスクリプション型ブロックチェーン開発サービス
+            ]">サブスクリプション型ブロックチェーン開発サービス
           </mat-option>
-          <mat-option
-            [value]="[
+          <mat-option [value]="[
               'MVP設計コンサルティング・開発サービス',
               subjectTypes.MVP
-            ]"
-            >MVP設計コンサルティング・開発サービス
+            ]">MVP設計コンサルティング・開発サービス
           </mat-option>
-          <mat-option [value]="['Firebase移行サービス', subjectTypes.FIREBASE]"
-            >Firebase移行サービス
+          <mat-option [value]="['Firebase移行サービス', subjectTypes.FIREBASE]">Firebase移行サービス
           </mat-option>
-          <mat-option [value]="['弊社へのセールス', subjectTypes.SALES]"
-            >弊社へのセールス</mat-option
-          >
-          <mat-option [value]="['その他', subjectTypes.OTHERS]"
-            >その他</mat-option
-          >
+          <mat-option [value]="[
+              'recruit',
+              subjectTypes.RECRUIT
+            ]">Recruit
+          </mat-option>
+          <mat-option [value]="['弊社へのセールス', subjectTypes.SALES]">弊社へのセールス</mat-option>
+          <mat-option [value]="['その他', subjectTypes.OTHERS]">その他</mat-option>
         </ng-container>
       </mat-select>
     </mat-form-field>
@@ -73,15 +56,7 @@
           メッセージを入力してください
         </ng-container>
       </mat-label>
-      <textarea
-        #body
-        rows="12"
-        style="resize: none;"
-        matInput
-        required
-        ngModel
-        name="body"
-      ></textarea>
+      <textarea #body rows="12" style="resize: none;" matInput required ngModel name="body"></textarea>
     </mat-form-field>
     <div fxLayout="row">
       <div>
@@ -97,13 +72,7 @@
       </a>
     </div>
 
-    <button
-      mat-raised-button
-      fxFill
-      [color]="'accent'"
-      [disabled]="form.invalid"
-      [ngSwitch]="''"
-    >
+    <button mat-raised-button fxFill [color]="'accent'" [disabled]="form.invalid" [ngSwitch]="''">
       <ng-container *ngSwitchDefault>送信する</ng-container>
     </button>
   </form>

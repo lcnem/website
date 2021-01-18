@@ -1,8 +1,6 @@
 <app-section [color]="'mat-pink'">
-  <h2 class="bold-heading" [ngSwitch]="''">
-    <ng-container *ngSwitchDefault
-      >MVP設計コンサルティング・開発サービス</ng-container
-    >
+  <h2 [ngSwitch]="''">
+    <ng-container *ngSwitchDefault>MVP設計提案/開発サービス</ng-container>
   </h2>
   <p>
     MVP(Minimum Viable
@@ -24,56 +22,45 @@
   </button>
 </app-section>
 <app-section>
-  <h2 class="bold-heading" [ngSwitch]="''">
-    <ng-container *ngSwitchDefault
-      >ウォーターフォール型開発とアジャイル開発の違いとは？</ng-container
-    >
+  <h2 [ngSwitch]="''">
+    <ng-container *ngSwitchDefault>ウォーターフォール型開発とアジャイル開発の違いとは？</ng-container>
   </h2>
   <p>
     ウォーターフォール開発とは、上流工程から下流工程へ順次移行していく開発手法で、
-  </p>
-  <p>
+    <br />
     「水が下に落ちていく様に各工程が進んでいく様子」を模した名前となっています。
-  </p>
-  <p>
+    <br />
+    <br />
     この形式は実際に動くものを触るまでに長い時間がかかるというデメリットがあります。
-  </p>
-  <p>
+    <br />
+    <br />
     刻一刻とそのあり方を変える市場に対応するには、ウォーターフォール型は不向きなのです。
-  </p>
-  <br />
-  <br />
-  <p>
+    <br />
+    <br />
     そこで、我々はMVPの開発と仮説検証を通じて、お客様の経営戦略をサポートいたします。
-  </p>
-  <p>
+    <br />
+    <br />
     アジャイル開発の手法は「常に動くものを開発・修正していく」方式ですので、
-  </p>
-  <p>
+    <br />
     お客様の製品・サービスが市場にマッチしていないときは、すぐさまやり直したり、
-  </p>
-  <p>
+    <br />
     逆にマッチした場合は、余分なコストをすべてその製品・サービスに注力できます。
   </p>
 </app-section>
 <app-section>
-  <h2 class="bold-heading" [ngSwitch]="''">
+  <h2 [ngSwitch]="''">
     <ng-container *ngSwitchDefault>内容</ng-container>
   </h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around start"
-  >
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around start">
     <div fxFlex="100">
       <mat-card>
         <mat-card-header>
           <mat-card-title>費用</mat-card-title>
-          <mat-card-subtitle>20万円/月～</mat-card-subtitle>
+          <mat-card-subtitle>60万円/月～</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <p>
-            MVP開発期間中は月30万円、リリース後の対応は月20万にて承ります。
+            MVP開発期間中は月60万円、リリース後の対応は月20万にて承ります。
           </p>
         </mat-card-content>
       </mat-card>
@@ -124,13 +111,8 @@
 </app-section>
 <app-section [color]="'mat-gray'">
   <h2 class="bold-heading">実績一覧</h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around center"
-  >
-    <ng-container
-      *ngFor="
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around center">
+    <ng-container *ngFor="
         let e of [
           [
             'https://www.polipoli.work/',
@@ -138,8 +120,7 @@
             'assets/images/partners/polipoli.svg'
           ]
         ]
-      "
-    >
+      ">
       <div>
         <div matRipple>
           <a href="{{ e[0] }}" target="_blank">

@@ -1,16 +1,11 @@
 <app-section>
   <h2 class="bold-heading">OFFICERS</h2>
-  <div
-    fxLayout="row"
-    fxLayout.xs="row wrap"
-    fxLayoutGap="16px grid"
-    class="officer-wrapper"
-  >
+  <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutGap="16px grid" class="officer-wrapper">
     <div fxFlex="256px" fxFlex.xs="100">
       <img class="officer-image" src="assets/images/luster/yu.jpg" />
     </div>
     <div fxFlex="1 1 auto" fxFlex.xs="100">
-      <h3 class="bold-heading" [ngSwitch]="'ja'">
+      <h3 [ngSwitch]="'ja'">
         <ng-container *ngSwitchCase="'ja'">木村 優</ng-container>
         <ng-container *ngSwitchDefault>Yu Kimura</ng-container>
       </h3>
@@ -23,34 +18,21 @@
         幅広い知見をもとに活動している。
       </p>
       <div fxLayout="row">
-        <a
-          mat-icon-button
-          href="https://twitter.com/KimuraYu45z"
-          target="_blank"
-        >
+        <a mat-icon-button href="https://twitter.com/KimuraYu45z" target="_blank">
           <img class="icon" src="assets/images/twitter.svg" />
         </a>
-        <a
-          mat-icon-button
-          href="https://facebook.com/KimuraYu45z"
-          target="_blank"
-        >
+        <a mat-icon-button href="https://facebook.com/KimuraYu45z" target="_blank">
           <img class="icon" src="assets/images/facebook.svg" />
         </a>
       </div>
     </div>
   </div>
-  <div
-    fxLayout="row"
-    fxLayout.xs="row wrap"
-    fxLayoutGap="16px grid"
-    class="officer-wrapper"
-  >
+  <div fxLayout="row" fxLayout.xs="row wrap" fxLayoutGap="16px grid" class="officer-wrapper">
     <div fxFlex="256px" fxFlex.xs="100">
       <img class="officer-image" src="assets/images/luster/takeru.jpg" />
     </div>
     <div fxFlex="1 1 auto" fxFlex.xs="100">
-      <h3 class="bold-heading" [ngSwitch]="'ja'">
+      <h3 [ngSwitch]="'ja'">
         <ng-container *ngSwitchCase="'ja'">下島 健</ng-container>
         <ng-container *ngSwitchDefault>Takeru Shimojima</ng-container>
       </h3>
@@ -62,18 +44,10 @@
         また、経営・戦略コンサルタントとしても、トップ企業の経営陣にソリューションを提供している。
       </p>
       <div fxLayout="row">
-        <a
-          mat-icon-button
-          href="https://twitter.com/thetalcnem"
-          target="_blank"
-        >
+        <a mat-icon-button href="https://twitter.com/thetalcnem" target="_blank">
           <img class="icon" src="assets/images/twitter.svg" />
         </a>
-        <a
-          mat-icon-button
-          href="https://facebook.com/takeru.shimojima"
-          target="_blank"
-        >
+        <a mat-icon-button href="https://facebook.com/takeru.shimojima" target="_blank">
           <img class="icon" src="assets/images/facebook.svg" />
         </a>
       </div>

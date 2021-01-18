@@ -57,6 +57,8 @@ mat-progress-spinner {
 .bold-heading {
   font-family: 'HelveticaNeue-CondensedBold';
   font-weight: bold;
+  text-align: center;
+  font-size: 3em;
 }
 
 .product-name {
