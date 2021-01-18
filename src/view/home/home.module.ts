@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material.module';
 import { ViewModule } from '../view.module';
+import { ValuesComponent } from './values/values.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ViewModule } from '../view.module';
     PartnersComponent,
     HeaderComponent,
     FooterComponent,
+    ValuesComponent,
   ],
   imports: [
     CommonModule,
