@@ -1,12 +1,17 @@
 @import '~@angular/material/theming';
 
 section {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   &.black {
     color: white;
     background: #222222;
+  }
+
+  &.mat-purple {
+    color: white;
+    background: mat-color(mat-palette($mat-purple, 700, 500, 800));
   }
 
   &.mat-orange {

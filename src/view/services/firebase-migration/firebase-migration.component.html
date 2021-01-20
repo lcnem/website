@@ -1,5 +1,5 @@
-<app-section [color]="'mat-orange'">
-  <h2 class="bold-heading" [ngSwitch]="''">
+<app-section [color]="'mat-pink'">
+  <h2 [ngSwitch]="''">
     <ng-container *ngSwitchDefault>Firebase移行/DB設計サービス</ng-container>
   </h2>
   <p>
@@ -20,15 +20,10 @@
     お問い合わせはこちら
   </button>
 </app-section>
-<app-section [color]="'mat-gray'">
-  <h2 class="bold-heading">実績一覧</h2>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around center"
-  >
-    <ng-container
-      *ngFor="
+<app-section>
+  <h2>実績一覧</h2>
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="initial center">
+    <ng-container *ngFor="
         let e of [
           [
             'https://www.polipoli.work/',
@@ -36,8 +31,7 @@
             'assets/images/partners/polipoli.svg'
           ]
         ]
-      "
-    >
+      ">
       <div>
         <div matRipple>
           <a href="{{ e[0] }}" target="_blank">

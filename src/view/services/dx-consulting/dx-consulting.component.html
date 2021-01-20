@@ -1,0 +1,53 @@
+<app-section [color]="'mat-purple'">
+	<h2 [ngSwitch]="''">
+		<ng-container *ngSwitchDefault>DXコンサルティングサービス</ng-container>
+	</h2>
+	<p>
+		当社のブロックチェーン技術や機械学習を活用したDXコンサルティングを承っております。
+		<br />
+		我々のコンサルティングサービスは、お客様のITガバナンス、ITサービスマネジメントのゴール達成を目指します。<br /><br />
+		戦略コンサルティングファーム出身者と最先端技術を扱うエンジニアにより、<br />
+		ただ相談に乗ったり企画提案をするだけでなく、実際のプロダクト開発・サービス開発など、上流から下流まで伴走します。<br /><br />
+		また、経済学的な知見を活用することで、サービスを合理的な設計にすることが可能です。<br /><br />
+		アイデアの実現可否の判断から、具体的な開発まで一気通貫で対応しますので、ご相談くださいませ。<br />
+		<br />
+		<br />
+		実行内容<br />
+		1．リサーチを通して、クライアントビジネスを理解する。<br />
+		2．仮説を立て、戦略立案<br />
+		3．調査・検証<br />
+		4．UX/UIデザイン設計<br />
+		5．開発チーム構築<br />
+		6．リリース後の支援、グロースハック<br />
+	</p>
+	<button mat-raised-button routerLink="/company/contact">
+		お問い合わせはこちら
+	</button>
+</app-section>
+<!-- <app-section>
+	<h2>実績一覧</h2>
+	<div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="initial center">
+		<ng-container *ngFor="
+          let e of [
+            [
+              'https://www.proximax.io/',
+              'ProximaX',
+              'assets/images/partners/proximax.jpg'
+            ],
+            [
+              'https://www.polipoli.work/',
+              'PoliPoli',
+              'assets/images/partners/polipoli.svg'
+            ]
+          ]
+        ">
+			<div>
+				<div matRipple>
+					<a href="{{ e[0] }}" target="_blank">
+						<img class="partner-image" alt="{{ e[1] }}" src="{{ e[2] }}" />
+					</a>
+				</div>
+			</div>
+		</ng-container>
+	</div>
+</app-section> -->

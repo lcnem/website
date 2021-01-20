@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about/about.component';
+import { TechnologiesComponent } from './technologies/technologies.component';
 import { OfficersComponent } from './officers/officers.component';
 import { ServicesComponent } from './services/services.component';
 import { NewsComponent } from './news/news.component';
@@ -13,11 +14,13 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material.module';
 import { ViewModule } from '../view.module';
+import { ValuesComponent } from './values/values.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AboutComponent,
+    TechnologiesComponent,
     OfficersComponent,
     ServicesComponent,
     NewsComponent,
@@ -25,6 +28,7 @@ import { ViewModule } from '../view.module';
     PartnersComponent,
     HeaderComponent,
     FooterComponent,
+    ValuesComponent,
   ],
   imports: [
     CommonModule,
@@ -35,4 +39,4 @@ import { ViewModule } from '../view.module';
   ],
   exports: [HomeComponent],
 })
-export class HomeViewModule {}
+export class HomeViewModule { }
