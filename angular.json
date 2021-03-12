@@ -13,23 +13,26 @@
           "skipTests": true
         }
       },
-      "root": "",
+      "root": "projects/website",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "public",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/website",
+            "index": "projects/website/src/index.html",
+            "main": "projects/website/src/main.ts",
+            "polyfills": "projects/website/src/polyfills.ts",
+            "tsConfig": "projects/website/tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.png", "src/assets"],
+            "assets": [
+              "projects/website/src/favicon.png",
+              "projects/website/src/assets"
+            ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "projects/website/src/styles.css"
             ],
             "scripts": []
           },
@@ -37,8 +40,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/website/src/environments/environment.ts",
+                  "with": "projects/website/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -83,14 +86,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.png", "src/assets"],
+            "main": "projects/website/src/test.ts",
+            "polyfills": "projects/website/src/polyfills.ts",
+            "tsConfig": "projects/website/tsconfig.spec.json",
+            "karmaConfig": "projects/website/karma.conf.js",
+            "assets": [
+              "projects/website/src/favicon.png",
+              "projects/website/src/assets"
+            ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "projects/website/src/styles.css"
             ],
             "scripts": []
           }
@@ -99,17 +105,19 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "projects/website/tsconfig.app.json",
+              "projects/website/tsconfig.spec.json",
+              "projects/website/e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "protractorConfig": "projects/website/e2e/protractor.conf.js",
             "devServerTarget": "website:serve"
           },
           "configurations": {
