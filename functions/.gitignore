@@ -1,9 +1,16 @@
-## Compiled JavaScript files
+# Compiled JavaScript files
 **/*.js
 **/*.js.map
 
-# Typescript v1 declaration files
+# Except the ESLint config file
+!.eslintrc.js
+
+# TypeScript v1 declaration files
 typings/
 
+# Node.js dependency directory
 node_modules/
 .runtimeconfig.json
+
+!babel.config.js
+!webpack.config.js
