@@ -6,7 +6,7 @@ jobs:
   filter:
     runs-on: ubuntu-latest
     outputs:
-      angular-main: ${{ steps.filter.outputs.angular-website }}
+      angular-website: ${{ steps.filter.outputs.angular-website }}
       firestore: ${{ steps.filter.outputs.firestore }}
       functions: ${{ steps.filter.outputs.functions }}
       shared: ${{ steps.filter.outputs.shared }}
@@ -59,23 +59,23 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - run: npm ci
-      working-directory: ./firestore
-    - run: npm run build --if-present
-      working-directory: ./firestore
-    - run: npm run test
-      working-directory: ./firestore
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+        working-directory: ./firestore
+      - run: npm run build --if-present
+        working-directory: ./firestore
+      - run: npm run test
+        working-directory: ./firestore
   functions:
     needs: filter
     if: ${{ needs.filter.outputs.functions == 'true' }}
@@ -86,21 +86,21 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - run: npm install
-      working-directory: ./functions
-    - run: npm run build --if-present
-      working-directory: ./functions
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm install
+        working-directory: ./functions
+      - run: npm run build --if-present
+        working-directory: ./functions
   shared:
     needs: filter
     if: ${{ needs.filter.outputs.shared == 'true' }}
@@ -111,20 +111,20 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - run: npm ci
-      working-directory: ./shared
-    - run: npm run build --if-present
-      working-directory: ./shared
-    - run: npm run test
-      working-directory: ./shared
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+        working-directory: ./shared
+      - run: npm run build --if-present
+        working-directory: ./shared
+      - run: npm run test
+        working-directory: ./shared
