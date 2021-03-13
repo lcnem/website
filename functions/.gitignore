@@ -10,7 +10,6 @@ typings/
 
 # Node.js dependency directory
 node_modules/
-.runtimeconfig.json
 
-!babel.config.js
-!webpack.config.js
+.runtimeconfig.json
+/shared
