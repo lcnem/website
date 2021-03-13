@@ -102,15 +102,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/website/tsconfig.app.json",
-              "projects/website/tsconfig.spec.json",
-              "projects/website/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/website/**/*.ts",
+              "projects/website/**/*.html"
             ]
           }
         },

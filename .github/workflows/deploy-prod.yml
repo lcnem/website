@@ -29,5 +29,5 @@ jobs:
       - run: npm run build --prod --if-present
       - run: npm install
         working-directory: ./functions
-      - run: npm i -g firebase-tools typescript tslint
+      - run: npm i -g firebase-tools typescript eslint
       - run: firebase deploy --project default --token ${{ secrets.FIREBASE_TOKEN }}
