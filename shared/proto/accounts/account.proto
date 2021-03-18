@@ -1,0 +1,10 @@
+syntax = "proto3";
+package website;
+
+import "firebase_rules_options.proto";
+
+option (google.firebase.rules.firebase_rules).full_package_names = true;
+
+message Account {
+  string id = 1;
+}
