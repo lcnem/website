@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint \"src/**/*\"",
     "test": "firebase emulators:exec --only firestore \"jest\"",
     "preinstall": "cd ../shared && npm i && npm run build"
   },
