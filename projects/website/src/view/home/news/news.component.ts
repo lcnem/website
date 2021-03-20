@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Data } from 'src/model/feeds/feed.service';
+import { Data } from '../../../model/feeds/feed.service';
 
 @Component({
   selector: 'view-news',
@@ -10,7 +10,7 @@ export class NewsComponent implements OnInit {
   @Input()
   inside?: Data[] | null;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

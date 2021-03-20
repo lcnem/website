@@ -16,13 +16,7 @@
     "target": "es2015",
     "module": "es2020",
     "lib": ["es2018", "dom"],
-    "typeRoots": ["node_modules/@types"],
-    "paths": {
-      "@app/*": ["src/app/*"],
-      "@environments/*": ["src/environments/*"],
-      "@model/*": ["src/model/*"],
-      "@view/*": ["src/view/*"]
-    }
+    "typeRoots": ["node_modules/@types"]
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,

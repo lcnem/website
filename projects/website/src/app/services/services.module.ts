@@ -9,9 +9,9 @@ import { SystemIntegrationComponent } from './system-integration/system-integrat
 import { DxConsultingComponent } from './dx-consulting/dx-consulting.component';
 import { MinimumViableProductComponent } from './minimum-viable-product/minimum-viable-product.component';
 import { FirebaseMigrationComponent } from './firebase-migration/firebase-migration.component';
-import { ViewModule } from 'src/view/view.module';
-import { MaterialModule } from 'src/view/material.module';
-import { ServicesViewModule } from 'src/view/services/services.module';
+import { ViewModule } from '../../view/view.module';
+import { MaterialModule } from '../../view/material.module';
+import { ServicesViewModule } from '../../view/services/services.module';
 
 @NgModule({
   declarations: [

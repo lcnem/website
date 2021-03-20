@@ -18,8 +18,8 @@ import { MaterialModule } from '../view/material.module';
 import { TermsComponent } from './terms/terms.component';
 
 import { LoadingDialogModule } from 'ng-loading-dialog';
-import { HomeViewModule } from 'src/view/home/home.module';
-import { TermsViewModule } from 'src/view/terms/terms.module';
+import { HomeViewModule } from '../view/home/home.module';
+import { TermsViewModule } from '../view/terms/terms.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, TermsComponent],
@@ -42,4 +42,4 @@ import { TermsViewModule } from 'src/view/terms/terms.module';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

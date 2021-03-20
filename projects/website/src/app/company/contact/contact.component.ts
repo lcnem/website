@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactApplicationService } from 'src/model/contact.application.service';
+import { ContactApplicationService } from '../../../model/contact.application.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +7,9 @@ import { ContactApplicationService } from 'src/model/contact.application.service
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  constructor(private contactApplication: ContactApplicationService) {}
+  constructor(private contactApplication: ContactApplicationService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   async onSubmit(event: {
     name: string;

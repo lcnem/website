@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LoadingDialogService } from 'ng-loading-dialog';
-import { ContactService } from 'src/model/contact.service';
+import { ContactService } from './contact.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
