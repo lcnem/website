@@ -8,10 +8,10 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "install:shared": "cd ../shared && npm i",
-    "build:shared": "rm -r shared ; cd ../shared && tsc --module commonjs --target es2018 --outDir ../functions/shared",
+    "shared:install": "cd ../shared && npm i",
+    "shared:build": "rm -r shared ; cd ../shared && tsc --target commonjs --outDir ../functions/shared",
     "prepare": "firebase functions:config:get > .runtimeconfig.json || exit 0",
-    "preinstall": "(npm run install:shared && npm run build:shared && node bundle) || exit 0"
+    "preinstall": "(npm run shared:install && npm run shared:build && node bundle) || exit 0"
   },
   "main": "lib/index.js",
   "dependencies": {
