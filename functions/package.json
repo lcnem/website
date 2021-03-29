@@ -9,9 +9,9 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "shared:install": "cd ../shared && npm i",
-    "shared:build": "rm -r shared ; cd ../shared && tsc --target commonjs --outDir ../functions/shared",
+    "shared:build": "cd ../shared && tsc --build --clean && tsc --module commonjs && node bundle",
     "prepare": "firebase functions:config:get > .runtimeconfig.json || exit 0",
-    "preinstall": "(npm run shared:install && npm run shared:build && node bundle) || exit 0"
+    "preinstall": "(npm run shared:install && npm run shared:build && rm -r shared ; mv ../shared/dist shared) || exit 0"
   },
   "main": "lib/index.js",
   "dependencies": {
