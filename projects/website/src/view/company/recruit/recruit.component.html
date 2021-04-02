@@ -1,75 +1,94 @@
-<app-section>
+<app-section color="mat-blue">
   <h2 id="recruit">RECRUIT</h2>
 </app-section>
 
 <app-section>
   <h3>Software Engineer</h3>
 
+  <h4>業務内容</h4>
   <p>
-    フルタイムではなく週数日から！フリーランスとしてコミットできるエンジニアの方を募集しています。
+    ご経験やスキルに応じていずれかの業務をお任せします。
+    自社プロダクト・他社案件どちらにも携わっていただきます。
   </p>
+  <ul>
+    <li>ブロックチェーン(Symbol, Cosmos SDK)を活用したシステム開発/コンサルティング</li>
+    <li>Cosmos/IBC技術を活用したシステム開発/コンサルティング</li>
+    <li>機械学習(ベイズ統計学)を活用したシステム開発/コンサルティング</li>
+    <li>Webアプリケーションの開発</li>
+  </ul>
 
-  <button
-    mat-button
-    class="big-button"
-    [color]="'primary'"
-    [routerLink]="'/company/contact'"
-  >
-    まずは話を聞いてみる
-  </button>
-</app-section>
-<app-section>
-  <h3>Software Engineer & Learner</h3>
+  <h4>福利厚生</h4>
 
-  <p>
-    技術向上したいエンジニア向け！弊社の技術を学びつつ、実装を行っていただきます。フルタイム限定となっております。
-  </p>
+  <ul>
+    <li>社内勉強会における最先端の知識の共有</li>
+    <li>フルリモート</li>
+    <li>在宅勤務手当</li>
+    <li>技術書購入支援</li>
+    <li>有給休暇</li>
+    <li>現物株式またはストックオプションの付与</li>
+  </ul>
 
-  <button
-    mat-button
-    class="big-button"
-    [color]="'primary'"
-    [routerLink]="'/company/contact'"
-  >
+  <h4>求める人物像</h4>
+  <ul>
+    <li>何事にも好奇心を持ち、技術的フロンティアの開拓に積極的な方。</li>
+    <li>チームとのコミュニケーションを大切にし、情報共有できる方</li>
+  </ul>
+
+  <h4>必須スキル</h4>
+  <p>足りない知識は弊社内で補うことができるため、高い学習速度が望ましいです。</p>
+
+  <h4>歓迎スキル</h4>
+  <ul>
+    <li>事業立ち上げ経験</li>
+    <li>顧客企業やパートナー企業を含めた共同開発経験</li>
+    <li>新しいサービス、ツール、ソフトウェアの動向を追い、自らの手で検証した経験</li>
+    <li>中〜大規模サービスの設計、運用、構築経験</li>
+  </ul>
+
+  <button mat-button class="big-button" [color]="'primary'" [routerLink]="'/company/contact'">
     まずは話を聞いてみる
   </button>
 </app-section>
 <app-section>
   <h3>主な使用技術</h3>
+</app-section>
 
+<app-section color="mat-pink">
+  <h4>Angular</h4>
   <p>
-    モダンなフロントエンド開発から、サーバーレスアーキテクチャによるバックエンド開発、コンテナによるバックエンド運用、ブロックチェーンや機械学習の知識など幅広く最新の技術を使用しています。
-    CTOを中心として統一されている、洗練された方法論で開発を行っています。
+    Webアプリケーションのフロントエンド開発にはAngularを使用しています。
+    大部分の工程が自動化されており、ReactやVueなど他のフレームワークを使ってきた方でも、フロントエンド開発の理解があれば対応が可能です。
   </p>
-  <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    fxLayoutAlign="space-around center"
-  >
-    <ng-container
-      *ngFor="
-        let e of [
-          ['assets/images/technologies/angular.svg', 'Angular'],
-          ['assets/images/technologies/cosmos.svg', 'Cosmos'],
-          ['assets/images/technologies/docker.png', 'Docker'],
-          ['assets/images/technologies/firebase.svg', 'Firebase'],
-          ['assets/images/technologies/github.svg', 'GitHub'],
-          ['assets/images/technologies/go.svg', 'Go'],
-          ['assets/images/technologies/pwa.svg', 'Progressive Web Application'],
-          ['assets/images/technologies/rust.svg', 'Rust'],
-          ['assets/images/technologies/typescript.svg', 'TypeScript']
-        ]
-      "
-    >
-      <div>
-        <img
-          class="tech-logo"
-          src="{{ e[0] }}"
-          alt="{{ e[1] }}"
-          width="100px"
-          height="100px"
-        />
-      </div>
-    </ng-container>
-  </div>
+</app-section>
+<app-section color="mat-blue">
+  <h4>TypeScript</h4>
+  <p>
+    Angularを使用するため、フロントエンド開発にはTypeScriptを使用しています。
+    簡易的なサーバーサイドプログラムもTypeScriptを使用することがあります。
+  </p>
+</app-section>
+<app-section color="mat-gray">
+  <h4>Rust</h4>
+  <p>
+    機械学習(ベイズ統計学)の研究開発にはRustを使用しています。
+  </p>
+</app-section>
+<app-section color="mat-blue">
+  <h4>Golang</h4>
+  <p>
+    Cosmos SDKを使ったブロックチェーン開発にはGolangを使用しています。
+  </p>
+</app-section>
+<app-section color="black">
+  <h4>Git,GitHub</h4>
+  <p>
+    今や常識のソースコード管理としてGit,GitHubを使用しています。
+    CI/CDワークフロー自動化としてGitHub Actionsを使用しています。
+  </p>
+</app-section>
+<app-section color="mat-blue">
+  <h4>Docker</h4>
+  <p>
+    サーバーサイドアプリケーションの管理にDocker, Docker Composeを多用しています。
+  </p>
 </app-section>
