@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 section {
   padding-top: 32px;
@@ -11,26 +11,26 @@ section {
 
   &.mat-purple {
     color: white;
-    background: mat-color(mat-palette($mat-purple, 700, 500, 800));
+    background: mat.get-color-from-palette(mat.define-palette(mat.$purple-palette, 700, 500, 800));
   }
 
   &.mat-orange {
     color: white;
-    background: mat-color(mat-palette($mat-orange));
+    background: mat.get-color-from-palette(mat.define-palette(mat.$orange-palette));
   }
 
   &.mat-gray {
     color: white;
-    background: mat-color(mat-palette($mat-gray));
+    background: mat.get-color-from-palette(mat.define-palette(mat.$gray-palette));
   }
 
   &.mat-blue {
     color: white;
-    background: mat-color(mat-palette($mat-blue));
+    background: mat.get-color-from-palette(mat.define-palette(mat.$blue-palette));
   }
 
   &.mat-pink {
     color: white;
-    background: mat-color(mat-palette($mat-pink));
+    background: mat.get-color-from-palette(mat.define-palette(mat.$pink-palette));
   }
 }
