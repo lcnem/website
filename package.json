@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~12.0.2",
     "@angular/platform-browser-dynamic": "~12.0.2",
     "@angular/router": "~12.0.2",
+    "@ngneat/tailwind": "^7.0.3",
     "firebase": "^8.2.0",
     "ng-loading-dialog": "^11.1.0",
     "rxjs": "~6.6.6",
@@ -67,6 +68,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
+    "tailwindcss": "2.1.4",
     "ts-node": "~9.1.1",
     "typescript": "~4.2.4"
   }
