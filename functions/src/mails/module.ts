@@ -1,6 +1,6 @@
-import * as functions from "firebase-functions";
-import * as qs from "qs";
-import axios from "axios";
+import * as functions from 'firebase-functions';
+import * as qs from 'qs';
+import axios from 'axios';
 
 export const send = functions.https.onCall(
   async (
@@ -10,12 +10,12 @@ export const send = functions.https.onCall(
       name: string;
       subject: string;
       body: string;
-      type: "sales" | "support" | "info";
+      type: 'sales' | 'support' | 'info';
     },
-    context
+    context,
   ) => {
     const body =
-      data.lang === "en"
+      data.lang === 'en'
         ? `Dear ${data.name}.
 Your inquiry has been submitted.
 Thanks for your inquiry.
@@ -37,10 +37,10 @@ ${data.body}`;
           subject: data.subject,
           body: body,
           type: data.type,
-        })
+        }),
       );
     } catch {
-      throw new functions.https.HttpsError("internal", "");
+      throw new functions.https.HttpsError('internal', '');
     }
-  }
+  },
 );

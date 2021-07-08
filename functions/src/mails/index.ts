@@ -1,1 +1,1 @@
-export * as mail from "./module";
+export * as mail from './module';

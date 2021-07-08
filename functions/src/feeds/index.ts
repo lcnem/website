@@ -1,1 +1,1 @@
-export * as feed from "./module";
+export * as feed from './module';
